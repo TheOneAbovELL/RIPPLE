@@ -159,4 +159,4 @@ commands and protocol for each.
 [How each module works](docs/learning/)
 
 ---
-Final-year B.Tech project by **Omjee R Giri**.
+project by **Omjee R Giri**.
