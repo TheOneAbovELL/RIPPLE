@@ -1,0 +1,62 @@
+name: forget_holding__f3_uma
+description: uma asks to forget TALN after one margin update.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: forget_holding
+  family: forget
+  seed: 20261031
+memories:
+  margin:
+    content: TALN operating margin is 21%
+    structured:
+      subject: company:TALN
+      attribute: margin
+      value: 21
+  thesis:
+    kind: thesis
+    content: 'TALN thesis: rolling stock leader compounding on margins near 21%'
+  other_margin:
+    content: QUIL operating margin is 21%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 21
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 21%'
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'TALN thesis: margins now 19%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: TALN operating margin is 19%
+  structured:
+    subject: company:TALN
+    attribute: margin
+    value: 19
+  expect:
+    thesis@latest:
+      version: 2
+- forget: margin
+  expect:
+    margin:
+      deleted: true
+    thesis:
+      deleted: true
+    other_margin:
+      status: VALID
+    other_thesis:
+      status: VALID

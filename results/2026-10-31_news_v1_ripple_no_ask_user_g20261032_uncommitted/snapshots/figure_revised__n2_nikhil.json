@@ -1,0 +1,357 @@
+{
+  "scenario": "figure_revised__n2_nikhil",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 164 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 164 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 164 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 164 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 109 tonnes of grain lost in the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 109 tonnes of grain lost in the Hollowbay warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: 109 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: 109 tonnes of grain lost"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 164 people injured; Hollowbay warehouse flood: 109 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 164 people injured; Hollowbay warehouse flood: 109 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Courier: 164 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "2f51f898-296d-4874-8aa7-f56128e15c55",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 110 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 164 people injured"
+          },
+          "latest": {
+            "id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff bridge collapse: 110 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 109 tonnes of grain lost in the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 109 tonnes of grain lost in the Hollowbay warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: 109 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: 109 tonnes of grain lost"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 164 people injured; Hollowbay warehouse flood: 109 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "eb529369-242d-4f27-a545-e689d68fa191",
+            "status": "VALID",
+            "version": 2,
+            "content": "today: Duncliff bridge collapse: 110 people injured; Hollowbay warehouse flood: 109 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "claim@latest": {
+          "status": "VALID",
+          "content": "the Courier: 110 people injured in the Duncliff bridge collapse",
+          "version": 2,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Duncliff bridge collapse: 110 people injured",
+          "version": 2,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "today: Duncliff bridge collapse: 110 people injured; Hollowbay warehouse flood: 109 tonnes of grain lost",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "2f51f898-296d-4874-8aa7-f56128e15c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "eb529369-242d-4f27-a545-e689d68fa191",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "2f51f898-296d-4874-8aa7-f56128e15c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "eb529369-242d-4f27-a545-e689d68fa191",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "eb529369-242d-4f27-a545-e689d68fa191",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "2f51f898-296d-4874-8aa7-f56128e15c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "eb529369-242d-4f27-a545-e689d68fa191",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "eb529369-242d-4f27-a545-e689d68fa191",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "2f51f898-296d-4874-8aa7-f56128e15c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "c3ae379f-4be9-4c12-b8a2-fa82b94f990a",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

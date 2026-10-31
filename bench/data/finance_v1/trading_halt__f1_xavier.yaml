@@ -1,0 +1,77 @@
+name: trading_halt__f1_xavier
+description: Korval Freight is halted for 4 days pending a filing.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: trading_halt
+  family: temporary
+  seed: 20261031
+memories:
+  trading:
+    content: KRVL trades normally
+    structured:
+      subject: company:KRVL
+      attribute: trading_status
+      value: trading
+  review:
+    kind: alert
+    content: review KRVL every Friday
+  plan:
+    kind: derived
+    content: next KRVL review covers the margin trend
+links:
+- - trading
+  - review
+  - alert_for
+- - review
+  - plan
+  - depends_on_fact
+resolutions:
+  review:
+  - action: update
+    new_content: weekly review rescheduled around the halt
+    reason: re-derived from its parent
+    trigger: halt
+  plan:
+  - action: keep
+    reason: the review topic does not depend on trading days
+    trigger: halt
+events:
+- new: halt
+  content: KRVL trading halted for 4 days pending a filing
+  structured:
+    subject: company:KRVL
+    attribute: trading_status
+    value: halted
+  valid_to_days: 4
+  links:
+  - - halt
+    - review
+    - depends_on_time_period
+  expect:
+    halt:
+      status: VALID
+    review@latest:
+      status: VALID
+      version: 2
+    trading:
+      status: VALID
+      version: 1
+    plan:
+      status: VALID
+      version: 1
+- advance_days: 5
+  expect:
+    halt:
+      status: RETIRED
+    review@latest:
+      status: VALID
+      version: 3
+    trading:
+      status: VALID
+      version: 1
+    plan:
+      status: VALID
+      version: 1

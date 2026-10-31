@@ -1,0 +1,191 @@
+{
+  "scenario": "cgpa_rise__p1_dev",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: CGPA cutoff 7.6"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: CGPA cutoff 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for stark (7.4 < 7.6)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for stark (7.4 < 7.6)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "c2f18948-15f6-4558-8cd8-a8b5f0b2559a",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.9"
+          }
+        },
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: CGPA cutoff 7.6"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: CGPA cutoff 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for stark (7.4 < 7.6)"
+          },
+          "latest": {
+            "id": "e6a279cc-a025-461c-ad93-ca71e3db40b4",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for stark (7.9 >= 7.6)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          },
+          "latest": {
+            "id": "33b1660d-f3fe-48de-9ab6-27260ee31d73",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 7.9"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "stark_opening",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "e6a279cc-a025-461c-ad93-ca71e3db40b4"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 7.9",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for stark (7.9 >= 7.6)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "stark_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    }
+  ]
+}

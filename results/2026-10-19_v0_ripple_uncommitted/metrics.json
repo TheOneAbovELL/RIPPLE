@@ -1,0 +1,437 @@
+{
+  "suite": "v0",
+  "strategy": "ripple",
+  "split": "all",
+  "scenarios": 35,
+  "scenarios_runnable": 0,
+  "scenarios_not_runnable": 35,
+  "scenarios_passed": 0,
+  "checks": 0,
+  "checks_failed": 0,
+  "resolver_calls": 0,
+  "llm_calls": 0,
+  "memory_metrics": "TBD (pending run): bench/metrics.py is TODO(human)",
+  "wall_seconds": 0.201,
+  "per_scenario": [
+    {
+      "name": "cgpa_rise__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p0_jay",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p1_dev",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p2_harsh",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p3_esha",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p4_bharat",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "failures": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    }
+  ]
+}

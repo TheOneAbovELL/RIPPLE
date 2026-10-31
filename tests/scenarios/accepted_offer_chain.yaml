@@ -1,0 +1,27 @@
+name: accepted_offer_chain
+description: "Chain of three hops: offer -> availability -> eligibility -> recommendation; full-time items untouched."
+memories:
+  offer: {kind: fact, content: "no summer offer accepted", structured: {subject: student, attribute: accepted_offer, value: none}}
+  availability: {kind: derived, content: "available for summer 2027"}
+  eligibility: {kind: derived, content: "eligible for Globex summer internship"}
+  recommendation: {kind: derived, content: "apply to Globex summer internship"}
+  fulltime: {kind: derived, content: "apply to Initech full-time 2028"}
+  batch: {kind: fact, content: "batch 2028", structured: {subject: student, attribute: batch, value: 2028}}
+links:
+  - [offer, availability, depends_on_fact]
+  - [availability, eligibility, eligibility_of]
+  - [eligibility, recommendation, depends_on_fact]
+  - [batch, fulltime, eligibility_of]
+resolutions:
+  availability: {action: update, new_content: "not available for summer 2027 (Acme offer)"}
+  eligibility: {action: retire}
+  recommendation: {action: retire}
+events:
+  - update: offer
+    content: "accepted Acme summer 2027 offer"
+    structured: {subject: student, attribute: accepted_offer, value: acme_summer_2027}
+    expect:
+      availability@latest: {version: 2, status: VALID}
+      eligibility: {status: RETIRED}
+      recommendation: {status: RETIRED}
+      fulltime: {status: VALID, version: 1}

@@ -1,0 +1,204 @@
+{
+  "scenario": "other_story_develops__n0_meera",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff data breach: no decision yet"
+          },
+          "latest": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff data breach: no decision yet"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff data breach: awaiting a decision"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff data breach: awaiting a decision"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:outcome",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff data breach: no decision yet"
+          },
+          "latest": {
+            "id": "761ac61d-e1d3-46ec-acce-3d10e222f99a",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff data breach: inquiry opened"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff data breach: awaiting a decision"
+          },
+          "latest": {
+            "id": "8edb1431-6974-4c56-b0c0-c816c198656e",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff data breach: inquiry opened"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Duncliff data breach: inquiry opened",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_analysis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

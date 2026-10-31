@@ -1,0 +1,357 @@
+{
+  "scenario": "figure_revised__n4_ravi",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 205 homes without power in the Duncliff power outage"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 205 homes without power in the Duncliff power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff power outage: 205 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff power outage: 205 homes without power"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 57 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 57 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 57 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 57 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff power outage: 205 homes without power; Larkspur data breach: 57 accounts exposed"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff power outage: 205 homes without power; Larkspur data breach: 57 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Metro Desk: 205 homes without power in the Duncliff power outage"
+          },
+          "latest": {
+            "id": "65c86c49-2c5d-41ba-b1b1-f0773177da9e",
+            "status": "VALID",
+            "version": 2,
+            "content": "Metro Desk: 246 homes without power in the Duncliff power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff power outage: 205 homes without power"
+          },
+          "latest": {
+            "id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff power outage: 246 homes without power"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 57 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 57 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 57 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 57 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "today: Duncliff power outage: 205 homes without power; Larkspur data breach: 57 accounts exposed"
+          },
+          "latest": {
+            "id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+            "status": "VALID",
+            "version": 2,
+            "content": "today: Duncliff power outage: 246 homes without power; Larkspur data breach: 57 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "claim@latest": {
+          "status": "VALID",
+          "content": "Metro Desk: 246 homes without power in the Duncliff power outage",
+          "version": 2,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Duncliff power outage: 246 homes without power",
+          "version": 2,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "today: Duncliff power outage: 246 homes without power; Larkspur data breach: 57 accounts exposed",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "65c86c49-2c5d-41ba-b1b1-f0773177da9e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "65c86c49-2c5d-41ba-b1b1-f0773177da9e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "65c86c49-2c5d-41ba-b1b1-f0773177da9e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "a900d993-5fb4-468d-be69-c6616b45b4a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "65c86c49-2c5d-41ba-b1b1-f0773177da9e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "96e4b20f-2ed9-4c33-9330-258a8e6830e0",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

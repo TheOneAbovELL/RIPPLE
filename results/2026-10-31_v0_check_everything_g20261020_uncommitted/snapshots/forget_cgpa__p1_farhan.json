@@ -1,0 +1,297 @@
+{
+  "scenario": "forget_cgpa__p1_farhan",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for hooli"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for hooli"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "d4b282a1-9e31-475e-b29c-2ccfaf641087",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 8.4"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for hooli"
+          },
+          "latest": {
+            "id": "f3c1f937-cc08-4557-a22c-705be51ae4a1",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for hooli"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "f3c1f937-cc08-4557-a22c-705be51ae4a1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "d4b282a1-9e31-475e-b29c-2ccfaf641087",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": null,
+          "latest": null
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": null,
+          "latest": null
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows kubernetes"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for stark"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "cgpa": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "eligibility": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "skill": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fit": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "skill",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "skill",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

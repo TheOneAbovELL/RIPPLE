@@ -1,0 +1,266 @@
+{
+  "scenario": "conflicting_reports__n2_leo",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 77 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 77 homes without power in the Riverton power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Riverton power outage: 77 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 77 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 52 homes without power in the Riverton power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Riverton power outage: 77 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 77 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 52 homes without power in the Riverton power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Riverton power outage: 77 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: Riverton power outage: 77 homes without power"
+          },
+          "latest": {
+            "id": "ce257188-12d3-4bd6-8fce-0c0abc3c515f",
+            "status": "VALID",
+            "version": 2,
+            "content": "briefing: Riverton power outage, figure disputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "briefing: Riverton power outage, figure disputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "ce257188-12d3-4bd6-8fce-0c0abc3c515f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "ce257188-12d3-4bd6-8fce-0c0abc3c515f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "f74a5b68-a402-4609-9c30-fab4cfb1cf6f",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

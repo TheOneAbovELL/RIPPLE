@@ -1,0 +1,278 @@
+{
+  "scenario": "conflicting_reports__n1_tara",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 89 accounts exposed in the Eastmere data breach"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 89 accounts exposed in the Eastmere data breach"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Courier: 89 accounts exposed in the Eastmere data breach"
+          },
+          "latest": {
+            "id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+            "status": "VALID",
+            "version": 2,
+            "content": "Valley Wire: 118 accounts exposed in the Eastmere data breach"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Courier: 89 accounts exposed in the Eastmere data breach"
+          },
+          "latest": {
+            "id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+            "status": "VALID",
+            "version": 2,
+            "content": "Valley Wire: 118 accounts exposed in the Eastmere data breach"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere data breach: 89 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere data breach: 89 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "df3b5789-19da-4a30-8d76-94a2aeb5fb00",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

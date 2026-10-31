@@ -1,0 +1,357 @@
+{
+  "scenario": "figure_revised__n3_meera",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 38 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 38 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 38 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 38 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 176 accounts exposed in the Kestrel data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 176 accounts exposed in the Kestrel data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 176 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 176 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 38 people injured; Kestrel data breach: 176 accounts exposed"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 38 people injured; Kestrel data breach: 176 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Valley Wire: 38 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "a2c25a90-ee9c-438d-8e09-da5f0578e647",
+            "status": "VALID",
+            "version": 2,
+            "content": "Valley Wire: 29 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 38 people injured"
+          },
+          "latest": {
+            "id": "11451ce0-a294-4db8-b632-741012b6b03a",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff bridge collapse: 29 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 176 accounts exposed in the Kestrel data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 176 accounts exposed in the Kestrel data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 176 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 176 accounts exposed"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "today: Duncliff bridge collapse: 38 people injured; Kestrel data breach: 176 accounts exposed"
+          },
+          "latest": {
+            "id": "9a628a42-efe7-413a-995e-033be7861908",
+            "status": "VALID",
+            "version": 2,
+            "content": "today: Duncliff bridge collapse: 29 people injured; Kestrel data breach: 176 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "claim@latest": {
+          "status": "VALID",
+          "content": "Valley Wire: 29 people injured in the Duncliff bridge collapse",
+          "version": 2,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Duncliff bridge collapse: 29 people injured",
+          "version": 2,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "today: Duncliff bridge collapse: 29 people injured; Kestrel data breach: 176 accounts exposed",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "a2c25a90-ee9c-438d-8e09-da5f0578e647",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "11451ce0-a294-4db8-b632-741012b6b03a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "9a628a42-efe7-413a-995e-033be7861908",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "11451ce0-a294-4db8-b632-741012b6b03a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "a2c25a90-ee9c-438d-8e09-da5f0578e647",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "9a628a42-efe7-413a-995e-033be7861908",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "9a628a42-efe7-413a-995e-033be7861908",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "11451ce0-a294-4db8-b632-741012b6b03a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "a2c25a90-ee9c-438d-8e09-da5f0578e647",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "9a628a42-efe7-413a-995e-033be7861908",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "11451ce0-a294-4db8-b632-741012b6b03a",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "9a628a42-efe7-413a-995e-033be7861908",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "a2c25a90-ee9c-438d-8e09-da5f0578e647",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "11451ce0-a294-4db8-b632-741012b6b03a",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "scenario": "forget_story__n0_ravi",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 155 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 155 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 155 accounts exposed"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 155 accounts exposed"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 155 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "dbd031e3-ae53-4a1c-ace4-54d839fe2e1c",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Gazette: 193 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Larkspur data breach: 155 accounts exposed"
+          },
+          "latest": {
+            "id": "c3f3047b-9f0a-4c7b-956d-3bb13bf2cb1f",
+            "status": "VALID",
+            "version": 2,
+            "content": "Larkspur data breach: 193 accounts exposed"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "c3f3047b-9f0a-4c7b-956d-3bb13bf2cb1f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "dbd031e3-ae53-4a1c-ace4-54d839fe2e1c",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": null,
+          "latest": null
+        },
+        "summary": {
+          "alias": "summary",
+          "root": null,
+          "latest": null
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 212 homes without power in the Riverton power outage"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton power outage: 212 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "summary": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

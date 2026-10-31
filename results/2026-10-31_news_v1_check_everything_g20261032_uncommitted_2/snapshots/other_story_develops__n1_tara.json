@@ -1,0 +1,285 @@
+{
+  "scenario": "other_story_develops__n1_tara",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel warehouse flood: no decision yet"
+          },
+          "latest": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel warehouse flood: no decision yet"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel warehouse flood: awaiting a decision"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel warehouse flood: awaiting a decision"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:outcome",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Kestrel warehouse flood: no decision yet"
+          },
+          "latest": {
+            "id": "aab31880-749a-4bd2-b275-4b13a6fcc078",
+            "status": "VALID",
+            "version": 2,
+            "content": "Kestrel warehouse flood: repairs approved"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Kestrel warehouse flood: awaiting a decision"
+          },
+          "latest": {
+            "id": "0bbb35e9-e429-4c24-ab19-8d5c1ef686ea",
+            "status": "VALID",
+            "version": 2,
+            "content": "Kestrel warehouse flood: repairs approved"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Kestrel warehouse flood: repairs approved",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_analysis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "0bbb35e9-e429-4c24-ab19-8d5c1ef686ea",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "aab31880-749a-4bd2-b275-4b13a6fcc078",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "aab31880-749a-4bd2-b275-4b13a6fcc078",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "0bbb35e9-e429-4c24-ab19-8d5c1ef686ea",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

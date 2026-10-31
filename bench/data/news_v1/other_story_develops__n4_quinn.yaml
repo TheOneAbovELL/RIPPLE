@@ -1,0 +1,72 @@
+name: other_story_develops__n4_quinn
+description: The Larkspur factory fire story moves on (compensation agreed); nothing about Riverton ferry
+  accident changes.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n4_quinn
+  template: other_story_develops
+  family: unchanged
+  seed: 20261031
+memories:
+  outcome:
+    kind: claim
+    content: 'Larkspur factory fire: no decision yet'
+    structured:
+      subject: story:larkspur
+      attribute: outcome
+      value: pending
+  summary:
+    kind: summary
+    content: 'Larkspur factory fire: awaiting a decision'
+  other_claim:
+    kind: claim
+    content: 'Metro Desk: 158 passengers rescued in the Riverton ferry accident'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 158
+  other_summary:
+    kind: summary
+    content: 'Riverton ferry accident: 158 passengers rescued'
+  other_analysis:
+    kind: derived
+    content: Riverton ferry accident is the larger story this week
+links:
+- - outcome
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - other_claim
+  - other_analysis
+  - inferred_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Larkspur factory fire: compensation agreed'
+    reason: re-derived from its parent
+    trigger: outcome
+events:
+- update: outcome
+  content: 'Larkspur factory fire: compensation agreed'
+  structured:
+    subject: story:larkspur
+    attribute: outcome
+    value: compensation agreed
+  expect:
+    summary@latest:
+      status: VALID
+      content: 'Larkspur factory fire: compensation agreed'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_analysis:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

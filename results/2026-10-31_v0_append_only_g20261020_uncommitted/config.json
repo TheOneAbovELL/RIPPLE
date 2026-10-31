@@ -1,0 +1,48 @@
+{
+  "suite": "v0",
+  "strategy": "append_only",
+  "ablation": null,
+  "linker": "scenario",
+  "linker_details": "links written from the scenario file (gold graph); no link finder ran",
+  "split": "test",
+  "data": {
+    "source": "generated in memory by bench.generate with seeds.generator_seed; the first seed reproduces bench/data/jobs_v0 (checked against its manifest)",
+    "track": "jobs_v0",
+    "domain": "jobs",
+    "content": "synthetic",
+    "generator": {
+      "module": "bench.generate",
+      "version": 1
+    },
+    "generator_seeds": [
+      20261019,
+      20261020,
+      20261021
+    ],
+    "data_sha256_by_seed": {
+      "20261019": "26f01e9ab4d44e9be07348dc0c606a308e0178c40d80998ccd96c75a06097c0e",
+      "20261020": "ee71a9af90cea3325e67a7482b0c82acee12071699e8d52ed13232b496d5d913",
+      "20261021": "3658001907a3a683f146e31960171b3c532ccb84e5d893c8164dddca3a3e0164"
+    },
+    "curated": "not included: curated stories are not generated per seed",
+    "split": "test"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "source_sha256": "7e371da34fa18c96f10b76be91b8d0ce649b6257a08e5587aba382882098173b",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "bench/strategies.py append_only (no graph engine needed)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "retrieval_probe": "bench/probe.py: HybridRetriever, lexical BM25 in memory, every match, graph expansion on, flagged included; one query per gold alias (its first content)",
+  "models": {},
+  "prompt_versions": {},
+  "seeds": {
+    "kind": "generator",
+    "generator_seed": 20261020,
+    "run_seed": null,
+    "data_sha256": "ee71a9af90cea3325e67a7482b0c82acee12071699e8d52ed13232b496d5d913"
+  },
+  "run_at": "2026-10-31T09:34:46.211892+00:00"
+}

@@ -1,0 +1,59 @@
+name: shared_note__n0_meera
+description: meera shared the Riverton warehouse flood figure before it was corrected.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n0_meera
+  template: shared_note
+  family: snapshot
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 196
+  shared:
+    kind: shared
+    content: 'shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost'
+  summary:
+    kind: summary
+    content: 'Riverton warehouse flood: 196 tonnes of grain lost'
+links:
+- - claim
+  - shared
+  - shared_from
+- - claim
+  - summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Riverton warehouse flood: 131 tonnes of grain lost'
+    reason: re-derived from its parent
+    trigger: claim
+  shared:
+  - action: keep
+    reason: a shared note is a record of what was said then
+    trigger: claim
+events:
+- update: claim
+  content: 'Metro Desk: 131 tonnes of grain lost in the Riverton warehouse flood'
+  structured:
+    subject: story:riverton
+    attribute: figure
+    value: 131
+  expect:
+    claim:
+      status: RETIRED
+    shared:
+      status: VALID
+      content: 'shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost'
+      version: 1
+    summary@latest:
+      status: VALID
+      content: 'Riverton warehouse flood: 131 tonnes of grain lost'
+      version: 2

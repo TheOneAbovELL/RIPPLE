@@ -1,0 +1,297 @@
+{
+  "scenario": "forget_cascade",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          }
+        },
+        "skills": {
+          "alias": "skills",
+          "root": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          },
+          "latest": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "fdc2a40b-8b5d-4cbf-b160-a05918de22e9",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.9"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          }
+        },
+        "skills": {
+          "alias": "skills",
+          "root": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          },
+          "latest": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fdc2a40b-8b5d-4cbf-b160-a05918de22e9",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skills",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": null,
+          "latest": null
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": null,
+          "latest": null
+        },
+        "skills": {
+          "alias": "skills",
+          "root": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          },
+          "latest": {
+            "id": "skills",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows Python"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for Initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "cgpa": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "eligibility": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "skills": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fit": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skills",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "skills",
+          "memory_id": "skills",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "skills",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "skills",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

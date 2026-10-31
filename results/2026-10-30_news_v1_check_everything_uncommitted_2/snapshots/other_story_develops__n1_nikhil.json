@@ -1,0 +1,204 @@
+{
+  "scenario": "other_story_develops__n1_nikhil",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay data breach: no decision yet"
+          },
+          "latest": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay data breach: no decision yet"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay data breach: awaiting a decision"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay data breach: awaiting a decision"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:outcome",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay data breach: no decision yet"
+          },
+          "latest": {
+            "id": "77f22b19-9269-4ab2-8ec7-9f6b669242a5",
+            "status": "VALID",
+            "version": 2,
+            "content": "Hollowbay data breach: compensation agreed"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay data breach: awaiting a decision"
+          },
+          "latest": {
+            "id": "6aa5b63b-bb1e-4a1e-b208-2f222e8a233d",
+            "status": "VALID",
+            "version": 2,
+            "content": "Hollowbay data breach: compensation agreed"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Hollowbay data breach: compensation agreed",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_analysis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

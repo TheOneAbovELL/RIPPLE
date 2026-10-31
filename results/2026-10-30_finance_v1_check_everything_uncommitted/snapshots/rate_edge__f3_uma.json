@@ -1,0 +1,201 @@
+{
+  "scenario": "rate_edge__f3_uma",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 4.7%"
+          },
+          "latest": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 4.7%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis holds while the policy rate stays below 5.2%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis holds while the policy rate stays below 5.2%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review TALN monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review TALN monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:rate",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 4.7%"
+          },
+          "latest": {
+            "id": "0ae87736-e4ed-4f30-9126-47675edb97c7",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.1%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "TALN thesis holds while the policy rate stays below 5.2%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "TALN thesis holds while the policy rate stays below 5.2%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review TALN monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review TALN monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1
+    },
+    {
+      "index": 2,
+      "action": "answer:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 4.7%"
+          },
+          "latest": {
+            "id": "0ae87736-e4ed-4f30-9126-47675edb97c7",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.1%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "TALN thesis holds while the policy rate stays below 5.2%"
+          },
+          "latest": {
+            "id": "89c22ee7-2fe0-499f-bc8d-ca4fd46d044b",
+            "status": "VALID",
+            "version": 2,
+            "content": "TALN thesis holds while the policy rate stays below 5.7%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review TALN monthly"
+          },
+          "latest": {
+            "id": "b922061b-80a1-4c66-94a9-024a3583e6bc",
+            "status": "VALID",
+            "version": 2,
+            "content": "review TALN now: rate thesis under question"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "TALN thesis holds while the policy rate stays below 5.7%",
+          "version": 2,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "review TALN now: rate thesis under question",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

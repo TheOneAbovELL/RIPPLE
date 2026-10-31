@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p3_chitra",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-16"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-16"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-16"
+          },
+          "latest": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-16"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-12-24"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-12-24"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-24"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-24"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "initech_opening",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "initech_reminder"
+          ]
+        },
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_eligibility",
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:initech_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-16"
+          },
+          "latest": {
+            "id": "e45a9f57-94c5-4ad0-839f-885744f1c0ff",
+            "status": "VALID",
+            "version": 2,
+            "content": "Initech SDE intern: deadline 2026-12-17"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind two days before 2026-11-16"
+          },
+          "latest": {
+            "id": "dda83255-639e-47d5-99e1-752b4d956144",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind two days before 2026-12-17"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-12-24"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-12-24"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-24"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-24"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "e45a9f57-94c5-4ad0-839f-885744f1c0ff",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "dda83255-639e-47d5-99e1-752b4d956144"
+          ]
+        },
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_eligibility",
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "initech_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-17",
+          "version": 2,
+          "deleted": false
+        },
+        "globex_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "dda83255-639e-47d5-99e1-752b4d956144",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "e45a9f57-94c5-4ad0-839f-885744f1c0ff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "dda83255-639e-47d5-99e1-752b4d956144",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "e45a9f57-94c5-4ad0-839f-885744f1c0ff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "e45a9f57-94c5-4ad0-839f-885744f1c0ff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "dda83255-639e-47d5-99e1-752b4d956144",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

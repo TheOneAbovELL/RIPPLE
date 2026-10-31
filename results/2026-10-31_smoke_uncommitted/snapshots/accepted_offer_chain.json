@@ -1,0 +1,297 @@
+{
+  "scenario": "accepted_offer_chain",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for Globex summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for Globex summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Globex summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Globex summer internship"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Initech full-time 2028"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Initech full-time 2028"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:offer",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "2371937c-1c38-4879-adcb-bdebad967137",
+            "status": "VALID",
+            "version": 2,
+            "content": "accepted Acme summer 2027 offer"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "abe50972-6c6d-4c7d-9686-81a47a42c3a7",
+            "status": "VALID",
+            "version": 2,
+            "content": "not available for summer 2027 (Acme offer)"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "eligible for Globex summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "eligible for Globex summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "apply to Globex summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "apply to Globex summer internship"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Initech full-time 2028"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to Initech full-time 2028"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fulltime": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "availability",
+          "memory_id": "abe50972-6c6d-4c7d-9686-81a47a42c3a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "2371937c-1c38-4879-adcb-bdebad967137",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "abe50972-6c6d-4c7d-9686-81a47a42c3a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "2371937c-1c38-4879-adcb-bdebad967137",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "2371937c-1c38-4879-adcb-bdebad967137",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "abe50972-6c6d-4c7d-9686-81a47a42c3a7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+name: cgpa_rise__p1_dev
+description: dev's CGPA rises past the stark cutoff.
+meta:
+  track: jobs_v0
+  persona: p1_dev
+  template: cgpa_rise
+  family: changed
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.4
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.4
+  stark_opening:
+    kind: opening
+    content: 'Stark SDE intern: CGPA cutoff 7.6'
+    structured:
+      subject: opening:stark_opening
+      attribute: cgpa_cutoff
+      value: 7.6
+  eligibility:
+    kind: derived
+    content: not eligible for stark (7.4 < 7.6)
+  criteria:
+    kind: criteria
+    content: search openings with cutoff <= 7.4
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - stark_opening
+  - eligibility
+  - eligibility_of
+- - cgpa
+  - criteria
+  - criteria_from
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for stark (7.9 >= 7.6)
+    reason: re-derived from its parent
+    trigger: cgpa
+  criteria:
+  - action: update
+    new_content: search openings with cutoff <= 7.9
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.9
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.9
+  expect:
+    cgpa:
+      status: RETIRED
+      version: 1
+    cgpa@latest:
+      status: VALID
+      content: CGPA is 7.9
+      version: 2
+    eligibility@latest:
+      status: VALID
+      content: eligible for stark (7.9 >= 7.6)
+      version: 2
+    criteria@latest:
+      status: VALID
+      version: 2
+    stark_opening:
+      status: VALID
+      version: 1

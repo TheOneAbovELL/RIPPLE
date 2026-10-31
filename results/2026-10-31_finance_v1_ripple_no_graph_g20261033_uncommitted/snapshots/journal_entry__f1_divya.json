@@ -1,0 +1,195 @@
+{
+  "scenario": "journal_entry__f1_divya",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 27%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 27%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ORBX on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ORBX on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 23%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 23%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 27%"
+          },
+          "latest": {
+            "id": "56c4aebf-896d-4663-b4ee-2d16c1612e9d",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX thesis revised: margins can dip to 20%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ORBX on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ORBX on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 23%"
+          },
+          "latest": {
+            "id": "b6783a10-10c5-49e8-9c24-61ed1a86e76b",
+            "status": "VALID",
+            "version": 2,
+            "content": "look again if ORBX margin falls below 20%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "journal": {
+          "status": "VALID",
+          "content": "2026-10-01: started following ORBX on the margin thesis",
+          "version": 1,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "look again if ORBX margin falls below 20%",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "56c4aebf-896d-4663-b4ee-2d16c1612e9d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "b6783a10-10c5-49e8-9c24-61ed1a86e76b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "56c4aebf-896d-4663-b4ee-2d16c1612e9d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "b6783a10-10c5-49e8-9c24-61ed1a86e76b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "b6783a10-10c5-49e8-9c24-61ed1a86e76b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "56c4aebf-896d-4663-b4ee-2d16c1612e9d",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "scenario": "resume_update__p1_asha",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the go project for globex"
+          },
+          "latest": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the go project for globex"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:resume",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "528d1f59-590a-4ef0-8f7a-9498dcadbcec",
+            "status": "VALID",
+            "version": 2,
+            "content": "resume v2"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "highlight the go project for globex"
+          },
+          "latest": {
+            "id": "23ce6739-568e-48f4-bbda-64bab1151daa",
+            "status": "VALID",
+            "version": 2,
+            "content": "highlight the new go work for globex"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "resume": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "application": {
+          "status": "VALID",
+          "content": "applied to stark with resume v1",
+          "version": 1,
+          "deleted": false
+        },
+        "tailoring@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "resume",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "528d1f59-590a-4ef0-8f7a-9498dcadbcec",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "23ce6739-568e-48f4-bbda-64bab1151daa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "528d1f59-590a-4ef0-8f7a-9498dcadbcec",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "23ce6739-568e-48f4-bbda-64bab1151daa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "23ce6739-568e-48f4-bbda-64bab1151daa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "528d1f59-590a-4ef0-8f7a-9498dcadbcec",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

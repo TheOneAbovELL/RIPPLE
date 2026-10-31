@@ -1,0 +1,255 @@
+{
+  "scenario": "exam_block__p1_dev",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for interviews"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "new:exams",
+      "simulated_day": 0.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "bc0f6785-66e7-4ab1-b7d0-aa2246d419b8",
+            "status": "VALID",
+            "version": 2,
+            "content": "availability recomputed around the exam block"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          }
+        },
+        "exams": {
+          "alias": "exams",
+          "root": {
+            "id": "exams",
+            "status": "VALID",
+            "version": 1,
+            "content": "busy with exams for the next 36 days"
+          },
+          "latest": {
+            "id": "exams",
+            "status": "VALID",
+            "version": 1,
+            "content": "busy with exams for the next 36 days"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "exams": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "looking": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "advance_days:37",
+      "simulated_day": 37.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "97f3d337-7803-492e-8f67-f7c2879ee98b",
+            "status": "VALID",
+            "version": 3,
+            "content": "availability recomputed around the exam block"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the wonka interview slot"
+          }
+        },
+        "exams": {
+          "alias": "exams",
+          "root": {
+            "id": "exams",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "busy with exams for the next 36 days"
+          },
+          "latest": {
+            "id": "exams",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "busy with exams for the next 36 days"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "exams": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "looking": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 6,
+      "pending_questions": 0
+    }
+  ]
+}

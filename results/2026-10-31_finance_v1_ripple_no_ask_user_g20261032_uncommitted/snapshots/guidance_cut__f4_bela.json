@@ -1,0 +1,321 @@
+{
+  "scenario": "guidance_cut__f4_bela",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR guides 10% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR guides 10% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR revenue grows about 10% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR revenue grows about 10% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 28%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 28%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 28%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 28%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR guides 10% revenue growth"
+          },
+          "latest": {
+            "id": "04782a93-c84b-48da-9ec1-73bdcfd0da51",
+            "status": "VALID",
+            "version": 2,
+            "content": "VSTR guides 2% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR revenue grows about 10% next year"
+          },
+          "latest": {
+            "id": "e9750d97-5bbe-4bd1-ac51-728b3b6d80e4",
+            "status": "VALID",
+            "version": 2,
+            "content": "VSTR revenue grows about 2% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "cea10eb8-1ed3-474a-8e41-a2ec4a7a24f5",
+            "status": "VALID",
+            "version": 2,
+            "content": "VSTR thesis weakened: growth guided down to 2%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 28%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 28%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 28%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 28%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "VSTR revenue grows about 2% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "VSTR thesis weakened: growth guided down to 2%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "guidance",
+          "memory_id": "04782a93-c84b-48da-9ec1-73bdcfd0da51",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "cea10eb8-1ed3-474a-8e41-a2ec4a7a24f5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "e9750d97-5bbe-4bd1-ac51-728b3b6d80e4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "e9750d97-5bbe-4bd1-ac51-728b3b6d80e4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "04782a93-c84b-48da-9ec1-73bdcfd0da51",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "cea10eb8-1ed3-474a-8e41-a2ec4a7a24f5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "cea10eb8-1ed3-474a-8e41-a2ec4a7a24f5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "04782a93-c84b-48da-9ec1-73bdcfd0da51",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "e9750d97-5bbe-4bd1-ac51-728b3b6d80e4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "cea10eb8-1ed3-474a-8e41-a2ec4a7a24f5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "04782a93-c84b-48da-9ec1-73bdcfd0da51",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

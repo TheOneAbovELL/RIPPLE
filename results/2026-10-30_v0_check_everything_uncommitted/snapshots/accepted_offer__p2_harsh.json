@@ -1,0 +1,240 @@
+{
+  "scenario": "accepted_offer__p2_harsh",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for umbrella summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for umbrella summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to umbrella summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to umbrella summer internship"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to hooli full-time 2028"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to hooli full-time 2028"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:offer",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "71faa2e6-22a0-48e8-8e39-d8e9d67519c5",
+            "status": "VALID",
+            "version": 2,
+            "content": "accepted vandelay summer 2027 offer"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "f4e16608-8734-4a89-827b-e8a7c1ad12a0",
+            "status": "VALID",
+            "version": 2,
+            "content": "not available for summer 2027 (vandelay offer)"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "eligible for umbrella summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "eligible for umbrella summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "apply to umbrella summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "apply to umbrella summer internship"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2028"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to hooli full-time 2028"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to hooli full-time 2028"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fulltime": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "batch": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0
+    }
+  ]
+}

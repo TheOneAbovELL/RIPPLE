@@ -1,0 +1,359 @@
+{
+  "scenario": "cutoff_unknown__p0_jay",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          },
+          "latest": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip umbrella"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip umbrella"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.3"
+          }
+        },
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          },
+          "latest": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip umbrella"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip umbrella"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "eligibility",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "umbrella_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "eligibility",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "umbrella_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:eligibility",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.3"
+          }
+        },
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          },
+          "latest": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: CGPA cutoff 7.4"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          },
+          "latest": {
+            "id": "716e0c01-ee54-4993-8581-e650c0cb4278",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for umbrella (cutoff lowered to 7.3)"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "skip umbrella"
+          },
+          "latest": {
+            "id": "f682c8f2-d57e-4c45-8434-5ba2d92a466d",
+            "status": "VALID",
+            "version": 2,
+            "content": "apply to umbrella"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "umbrella_opening",
+          "opening_alias": "umbrella_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "716e0c01-ee54-4993-8581-e650c0cb4278",
+            "f682c8f2-d57e-4c45-8434-5ba2d92a466d"
+          ]
+        }
+      ],
+      "gold": {
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for umbrella (cutoff lowered to 7.3)",
+          "version": 2,
+          "deleted": false
+        },
+        "recommendation@latest": {
+          "status": "VALID",
+          "content": "apply to umbrella",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 6,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "716e0c01-ee54-4993-8581-e650c0cb4278",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "f682c8f2-d57e-4c45-8434-5ba2d92a466d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "umbrella_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "f682c8f2-d57e-4c45-8434-5ba2d92a466d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "umbrella_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "716e0c01-ee54-4993-8581-e650c0cb4278",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "8e58b253-e440-4a6e-af4a-f8b3f8799b4b",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

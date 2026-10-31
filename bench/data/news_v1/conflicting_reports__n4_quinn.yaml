@@ -1,0 +1,64 @@
+name: conflicting_reports__n4_quinn
+description: the Courier contradicts the Ledger on the Eastmere bridge collapse figure (no_longer_holds).
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n4_quinn
+  template: conflicting_reports
+  family: ask
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 64 people injured in the Eastmere bridge collapse'
+    structured:
+      subject: story:eastmere
+      attribute: figure
+      value: 64
+  summary:
+    kind: summary
+    content: 'Eastmere bridge collapse: 64 people injured'
+  briefing:
+    kind: briefing
+    content: 'briefing: Eastmere bridge collapse: 64 people injured'
+links:
+- - claim
+  - summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: ask
+    question: the Ledger says 64, the Courier says 85; which should your summary use?
+    reason: two outlets disagree and neither has corrected
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'briefing: Eastmere bridge collapse, figure disputed'
+    reason: re-derived from its parent
+    trigger: summary
+events:
+- update: claim
+  content: 'the Courier: 85 people injured in the Eastmere bridge collapse'
+  structured:
+    subject: story:eastmere
+    attribute: figure
+    value: 85
+  expect:
+    summary:
+      status: PENDING_USER
+    briefing:
+      status: SUSPECT
+      version: 1
+- answer: summary
+  reply: no_longer_holds
+  expect:
+    summary:
+      status: RETIRED
+    briefing@latest:
+      status: VALID
+      content: 'briefing: Eastmere bridge collapse, figure disputed'
+      version: 2

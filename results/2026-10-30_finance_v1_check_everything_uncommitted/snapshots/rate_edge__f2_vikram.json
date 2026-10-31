@@ -1,0 +1,201 @@
+{
+  "scenario": "rate_edge__f2_vikram",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.2%"
+          },
+          "latest": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.2%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis holds while the policy rate stays below 5.7%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis holds while the policy rate stays below 5.7%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:rate",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.2%"
+          },
+          "latest": {
+            "id": "beb46e23-f55c-4d30-ab53-640646cda3e5",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.6%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "ZNTH thesis holds while the policy rate stays below 5.7%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "ZNTH thesis holds while the policy rate stays below 5.7%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1
+    },
+    {
+      "index": 2,
+      "action": "answer:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.2%"
+          },
+          "latest": {
+            "id": "beb46e23-f55c-4d30-ab53-640646cda3e5",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.6%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH thesis holds while the policy rate stays below 5.7%"
+          },
+          "latest": {
+            "id": "9fb16b33-3d64-4a4f-ba74-a7ee1c8d9ba4",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH thesis holds while the policy rate stays below 6.2%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review ZNTH monthly"
+          },
+          "latest": {
+            "id": "ab827a0d-5163-4efb-8c01-a13a2ac3b9bd",
+            "status": "VALID",
+            "version": 2,
+            "content": "review ZNTH now: rate thesis under question"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "ZNTH thesis holds while the policy rate stays below 6.2%",
+          "version": 2,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "review ZNTH now: rate thesis under question",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

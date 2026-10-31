@@ -1,0 +1,43 @@
+# finance_v1 suite, strategy newest_wins — 2026-10-30T21:47:37.563789+00:00
+
+Scenarios passed: 0/35 runnable (0 not runnable) · checks failed: 68/175 · errors: 5 · resolver calls: 0 · LLM calls: 0 (scripted oracle resolver).
+
+Memory metrics: TBD (pending run): bench/metrics.py is TODO(human).
+
+| scenario | runnable | passed | checks failed | resolver calls | problems |
+|---|---|---|---|---|---|
+| guidance_cut__f0_wen | yes | no | 2/6 | 0 | estimate@latest: content 'ORBX revenue grows about 18% next year', expected 'ORBX revenue grows about 12% next year'; estimate@latest: version 1, expected 2; thesis@latest: content 'ORBX thesis: chip packaging leader compounding on margins near 32%', expected 'ORBX thesis weakened: growth guided down to 12%'; thesis@latest: version 1, expected 2 |
+| peer_margin__f0_wen | yes | no | 1/4 | 0 | thesis@latest: content 'VSTR thesis: lab testing leader compounding on margins near 31%', expected 'VSTR thesis: margins now 28%, re-checked'; thesis@latest: version 1, expected 2 |
+| trading_halt__f0_wen | yes | no | 2/8 | 0 | review@latest: version 1, expected 2; review@latest: version 1, expected 3 |
+| ceo_departure__f0_wen | yes | no | 3/5 | 0 | assumption@latest: version 1, expected 2; thesis: status VALID, expected RETIRED; alert: status VALID, expected RETIRED |
+| rate_edge__f0_wen | yes | no | 4/4 | 0 | answer:thesis: memory 'thesis' is VALID, not PENDING_USER; thesis: status VALID, expected PENDING_USER; alert: status VALID, expected SUSPECT; thesis@latest: content 'ORBX thesis holds while the policy rate stays below 6.0%', expected 'ORBX thesis holds while the policy rate stays below 6.5%'; thesis@latest: version 1, expected 2; alert@latest: content 'review ORBX monthly', expected 'review ORBX now: rate thesis under question'; alert@latest: version 1, expected 2 |
+| journal_entry__f0_wen | yes | no | 1/3 | 0 | alert@latest: content 'look again if ZNTH margin falls below 17%', expected 'look again if ZNTH margin falls below 16%'; alert@latest: version 1, expected 2 |
+| forget_holding__f0_wen | yes | no | 1/5 | 0 | thesis@latest: version 1, expected 2 |
+| guidance_cut__f1_xavier | yes | no | 2/6 | 0 | estimate@latest: content 'KRVL revenue grows about 10% next year', expected 'KRVL revenue grows about 4% next year'; estimate@latest: version 1, expected 2; thesis@latest: content 'KRVL thesis: logistics leader compounding on margins near 30%', expected 'KRVL thesis weakened: growth guided down to 4%'; thesis@latest: version 1, expected 2 |
+| peer_margin__f1_xavier | yes | no | 1/4 | 0 | thesis@latest: content 'ORBX thesis: chip packaging leader compounding on margins near 19%', expected 'ORBX thesis: margins now 22%, re-checked'; thesis@latest: version 1, expected 2 |
+| trading_halt__f1_xavier | yes | no | 2/8 | 0 | review@latest: version 1, expected 2; review@latest: version 1, expected 3 |
+| ceo_departure__f1_xavier | yes | no | 3/5 | 0 | assumption@latest: version 1, expected 2; thesis: status VALID, expected RETIRED; alert: status VALID, expected RETIRED |
+| rate_edge__f1_xavier | yes | no | 4/4 | 0 | answer:thesis: memory 'thesis' is VALID, not PENDING_USER; thesis: status VALID, expected PENDING_USER; alert: status VALID, expected SUSPECT; thesis: status VALID, expected RETIRED; alert@latest: content 'review KRVL monthly', expected 'review KRVL now: rate thesis under question'; alert@latest: version 1, expected 2 |
+| journal_entry__f1_xavier | yes | no | 1/3 | 0 | alert@latest: content 'look again if QUIL margin falls below 11%', expected 'look again if QUIL margin falls below 8%'; alert@latest: version 1, expected 2 |
+| forget_holding__f1_xavier | yes | no | 1/5 | 0 | thesis@latest: version 1, expected 2 |
+| guidance_cut__f2_vikram | yes | no | 2/6 | 0 | estimate@latest: content 'ZNTH revenue grows about 21% next year', expected 'ZNTH revenue grows about 14% next year'; estimate@latest: version 1, expected 2; thesis@latest: content 'ZNTH thesis: textiles leader compounding on margins near 22%', expected 'ZNTH thesis weakened: growth guided down to 14%'; thesis@latest: version 1, expected 2 |
+| peer_margin__f2_vikram | yes | no | 1/4 | 0 | thesis@latest: content 'QUIL thesis: streaming leader compounding on margins near 31%', expected 'QUIL thesis: margins now 34%, re-checked'; thesis@latest: version 1, expected 2 |
+| trading_halt__f2_vikram | yes | no | 2/8 | 0 | review@latest: version 1, expected 2; review@latest: version 1, expected 3 |
+| ceo_departure__f2_vikram | yes | no | 3/5 | 0 | assumption@latest: version 1, expected 2; thesis: status VALID, expected RETIRED; alert: status VALID, expected RETIRED |
+| rate_edge__f2_vikram | yes | no | 4/4 | 0 | answer:thesis: memory 'thesis' is VALID, not PENDING_USER; thesis: status VALID, expected PENDING_USER; alert: status VALID, expected SUSPECT; thesis@latest: content 'ZNTH thesis holds while the policy rate stays below 5.7%', expected 'ZNTH thesis holds while the policy rate stays below 6.2%'; thesis@latest: version 1, expected 2; alert@latest: content 'review ZNTH monthly', expected 'review ZNTH now: rate thesis under question'; alert@latest: version 1, expected 2 |
+| journal_entry__f2_vikram | yes | no | 1/3 | 0 | alert@latest: content 'look again if TALN margin falls below 20%', expected 'look again if TALN margin falls below 17%'; alert@latest: version 1, expected 2 |
+| forget_holding__f2_vikram | yes | no | 1/5 | 0 | thesis@latest: version 1, expected 2 |
+| guidance_cut__f3_uma | yes | no | 2/6 | 0 | estimate@latest: content 'TALN revenue grows about 16% next year', expected 'TALN revenue grows about 9% next year'; estimate@latest: version 1, expected 2; thesis@latest: content 'TALN thesis: rolling stock leader compounding on margins near 21%', expected 'TALN thesis weakened: growth guided down to 9%'; thesis@latest: version 1, expected 2 |
+| peer_margin__f3_uma | yes | no | 1/4 | 0 | thesis@latest: content 'QUIL thesis: streaming leader compounding on margins near 21%', expected 'QUIL thesis: margins now 24%, re-checked'; thesis@latest: version 1, expected 2 |
+| trading_halt__f3_uma | yes | no | 2/8 | 0 | review@latest: version 1, expected 2; review@latest: version 1, expected 3 |
+| ceo_departure__f3_uma | yes | no | 3/5 | 0 | assumption@latest: version 1, expected 2; thesis: status VALID, expected RETIRED; alert: status VALID, expected RETIRED |
+| rate_edge__f3_uma | yes | no | 4/4 | 0 | answer:thesis: memory 'thesis' is VALID, not PENDING_USER; thesis: status VALID, expected PENDING_USER; alert: status VALID, expected SUSPECT; thesis@latest: content 'TALN thesis holds while the policy rate stays below 5.2%', expected 'TALN thesis holds while the policy rate stays below 5.7%'; thesis@latest: version 1, expected 2; alert@latest: content 'review TALN monthly', expected 'review TALN now: rate thesis under question'; alert@latest: version 1, expected 2 |
+| journal_entry__f3_uma | yes | no | 1/3 | 0 | alert@latest: content 'look again if ZNTH margin falls below 16%', expected 'look again if ZNTH margin falls below 13%'; alert@latest: version 1, expected 2 |
+| forget_holding__f3_uma | yes | no | 1/5 | 0 | thesis@latest: version 1, expected 2 |
+| guidance_cut__f4_arjun | yes | no | 2/6 | 0 | estimate@latest: content 'MPLW revenue grows about 17% next year', expected 'MPLW revenue grows about 9% next year'; estimate@latest: version 1, expected 2; thesis@latest: content 'MPLW thesis: packaged food leader compounding on margins near 21%', expected 'MPLW thesis weakened: growth guided down to 9%'; thesis@latest: version 1, expected 2 |
+| peer_margin__f4_arjun | yes | no | 1/4 | 0 | thesis@latest: content 'KRVL thesis: logistics leader compounding on margins near 24%', expected 'KRVL thesis: margins now 27%, re-checked'; thesis@latest: version 1, expected 2 |
+| trading_halt__f4_arjun | yes | no | 2/8 | 0 | review@latest: version 1, expected 2; review@latest: version 1, expected 3 |
+| ceo_departure__f4_arjun | yes | no | 3/5 | 0 | assumption@latest: version 1, expected 2; thesis: status VALID, expected RETIRED; alert: status VALID, expected RETIRED |
+| rate_edge__f4_arjun | yes | no | 2/4 | 0 | answer:thesis: memory 'thesis' is VALID, not PENDING_USER; thesis: status VALID, expected PENDING_USER; alert: status VALID, expected SUSPECT |
+| journal_entry__f4_arjun | yes | no | 1/3 | 0 | alert@latest: content 'look again if ZNTH margin falls below 16%', expected 'look again if ZNTH margin falls below 14%'; alert@latest: version 1, expected 2 |
+| forget_holding__f4_arjun | yes | no | 1/5 | 0 | thesis@latest: version 1, expected 2 |

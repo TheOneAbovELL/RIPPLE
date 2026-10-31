@@ -1,0 +1,890 @@
+{
+  "suite": "linkpairs_summary",
+  "groups": [
+    {
+      "linker": "rule",
+      "base_model": null,
+      "track": "finance_v1",
+      "pairs_sha256": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be",
+      "transfer": false,
+      "split": "test",
+      "new_memory": "dependent",
+      "runs": [
+        "results/2026-10-31_linkpairs_finance_v1_rule_uncommitted"
+      ],
+      "seeds": [
+        null
+      ],
+      "typed": [
+        false
+      ],
+      "cells": {
+        "held_out=unknown": {
+          "pairs": [
+            406
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.4286,
+            "sd": null,
+            "min": 0.4286,
+            "max": 0.4286
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.3333,
+            "sd": null,
+            "min": 0.3333,
+            "max": 0.3333
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.375,
+            "sd": null,
+            "min": 0.375,
+            "max": 0.375
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "overall": {
+          "pairs": [
+            406
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.4286,
+            "sd": null,
+            "min": 0.4286,
+            "max": 0.4286
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.3333,
+            "sd": null,
+            "min": 0.3333,
+            "max": 0.3333
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.375,
+            "sd": null,
+            "min": 0.375,
+            "max": 0.375
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 1,
+          "mean": 0.000193,
+          "sd": null,
+          "min": 0.000193,
+          "max": 0.000193
+        },
+        "cpu_seconds_per_call": {
+          "n": 1,
+          "mean": 7.7e-05,
+          "sd": null,
+          "min": 7.7e-05,
+          "max": 7.7e-05
+        }
+      }
+    },
+    {
+      "linker": "rule",
+      "base_model": null,
+      "track": "jobs_v0",
+      "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+      "transfer": false,
+      "split": "test",
+      "new_memory": "dependent",
+      "runs": [
+        "results/2026-10-31_linkpairs_jobs_v0_rule_uncommitted"
+      ],
+      "seeds": [
+        null
+      ],
+      "typed": [
+        false
+      ],
+      "cells": {
+        "held_out=both": {
+          "pairs": [
+            100
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.6,
+            "sd": null,
+            "min": 0.6,
+            "max": 0.6
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5714,
+            "sd": null,
+            "min": 0.5714,
+            "max": 0.5714
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "held_out=persona": {
+          "pairs": [
+            140
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.1579,
+            "sd": null,
+            "min": 0.1579,
+            "max": 0.1579
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.2449,
+            "sd": null,
+            "min": 0.2449,
+            "max": 0.2449
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "held_out=template": {
+          "pairs": [
+            152
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5806,
+            "sd": null,
+            "min": 0.5806,
+            "max": 0.5806
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5625,
+            "sd": null,
+            "min": 0.5625,
+            "max": 0.5625
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "overall": {
+          "pairs": [
+            392
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5806,
+            "sd": null,
+            "min": 0.5806,
+            "max": 0.5806
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.3871,
+            "sd": null,
+            "min": 0.3871,
+            "max": 0.3871
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.4645,
+            "sd": null,
+            "min": 0.4645,
+            "max": 0.4645
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 1,
+          "mean": 0.000228,
+          "sd": null,
+          "min": 0.000228,
+          "max": 0.000228
+        },
+        "cpu_seconds_per_call": {
+          "n": 1,
+          "mean": 8e-05,
+          "sd": null,
+          "min": 8e-05,
+          "max": 8e-05
+        }
+      }
+    },
+    {
+      "linker": "rule",
+      "base_model": null,
+      "track": "jobs_v0",
+      "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+      "transfer": false,
+      "split": "test",
+      "new_memory": "parent",
+      "runs": [
+        "results/2026-10-31_linkpairs_jobs_v0_rule_uncommitted_2"
+      ],
+      "seeds": [
+        null
+      ],
+      "typed": [
+        false
+      ],
+      "cells": {
+        "held_out=both": {
+          "pairs": [
+            100
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.6,
+            "sd": null,
+            "min": 0.6,
+            "max": 0.6
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5714,
+            "sd": null,
+            "min": 0.5714,
+            "max": 0.5714
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "held_out=persona": {
+          "pairs": [
+            140
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.1579,
+            "sd": null,
+            "min": 0.1579,
+            "max": 0.1579
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.2449,
+            "sd": null,
+            "min": 0.2449,
+            "max": 0.2449
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "held_out=template": {
+          "pairs": [
+            152
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5806,
+            "sd": null,
+            "min": 0.5806,
+            "max": 0.5806
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.5455,
+            "sd": null,
+            "min": 0.5455,
+            "max": 0.5455
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5625,
+            "sd": null,
+            "min": 0.5625,
+            "max": 0.5625
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "overall": {
+          "pairs": [
+            392
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.5806,
+            "sd": null,
+            "min": 0.5806,
+            "max": 0.5806
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.3871,
+            "sd": null,
+            "min": 0.3871,
+            "max": 0.3871
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.4645,
+            "sd": null,
+            "min": 0.4645,
+            "max": 0.4645
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 1,
+          "mean": 0.000118,
+          "sd": null,
+          "min": 0.000118,
+          "max": 0.000118
+        },
+        "cpu_seconds_per_call": {
+          "n": 1,
+          "mean": 0.00012,
+          "sd": null,
+          "min": 0.00012,
+          "max": 0.00012
+        }
+      }
+    },
+    {
+      "linker": "trained",
+      "base_model": "answerdotai/ModernBERT-base",
+      "track": "finance_v1",
+      "pairs_sha256": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be",
+      "transfer": true,
+      "split": "test",
+      "new_memory": "dependent",
+      "runs": [
+        "results/2026-10-31_linkpairs_finance_v1_trained_uncommitted",
+        "results/2026-10-31_linkpairs_finance_v1_trained_uncommitted_2",
+        "results/2026-10-31_linkpairs_finance_v1_trained_uncommitted_3"
+      ],
+      "seeds": [
+        20261031,
+        20261032,
+        20261033
+      ],
+      "typed": [
+        false
+      ],
+      "cells": {
+        "held_out=unknown": {
+          "pairs": [
+            406
+          ],
+          "precision": {
+            "n": 2,
+            "mean": 0.5,
+            "sd": 0.7071,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.0139,
+            "sd": 0.0241,
+            "min": 0.0,
+            "max": 0.0417
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.0267,
+            "sd": 0.0462,
+            "min": 0.0,
+            "max": 0.08
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        },
+        "overall": {
+          "pairs": [
+            406
+          ],
+          "precision": {
+            "n": 2,
+            "mean": 0.5,
+            "sd": 0.7071,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.0139,
+            "sd": 0.0241,
+            "min": 0.0,
+            "max": 0.0417
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.0267,
+            "sd": 0.0462,
+            "min": 0.0,
+            "max": 0.08
+          },
+          "typed_f1": {
+            "n": 0,
+            "mean": null,
+            "sd": null,
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 3,
+          "mean": 0.254222,
+          "sd": 0.016193,
+          "min": 0.238931,
+          "max": 0.271187
+        },
+        "cpu_seconds_per_call": {
+          "n": 3,
+          "mean": 1.570813,
+          "sd": 0.018871,
+          "min": 1.552802,
+          "max": 1.59044
+        }
+      }
+    },
+    {
+      "linker": "trained",
+      "base_model": "answerdotai/ModernBERT-base",
+      "track": "jobs_v0",
+      "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+      "transfer": false,
+      "split": "test",
+      "new_memory": "dependent",
+      "runs": [
+        "results/2026-10-31_linkpairs_jobs_v0_trained_uncommitted",
+        "results/2026-10-31_linkpairs_jobs_v0_trained_uncommitted_2",
+        "results/2026-10-31_linkpairs_jobs_v0_trained_uncommitted_3"
+      ],
+      "seeds": [
+        20261031,
+        20261032,
+        20261033
+      ],
+      "typed": [
+        true
+      ],
+      "cells": {
+        "held_out=both": {
+          "pairs": [
+            100
+          ],
+          "precision": {
+            "n": 3,
+            "mean": 0.5741,
+            "sd": 0.0708,
+            "min": 0.5185,
+            "max": 0.6538
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.6364,
+            "sd": 0.1364,
+            "min": 0.5,
+            "max": 0.7727
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.6012,
+            "sd": 0.0958,
+            "min": 0.5238,
+            "max": 0.7083
+          },
+          "typed_f1": {
+            "n": 3,
+            "mean": 0.4906,
+            "sd": 0.0327,
+            "min": 0.4583,
+            "max": 0.5238
+          }
+        },
+        "held_out=persona": {
+          "pairs": [
+            140
+          ],
+          "precision": {
+            "n": 3,
+            "mean": 0.968,
+            "sd": 0.0022,
+            "min": 0.9655,
+            "max": 0.9697
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.7982,
+            "sd": 0.0548,
+            "min": 0.7368,
+            "max": 0.8421
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.8743,
+            "sd": 0.0342,
+            "min": 0.8358,
+            "max": 0.9014
+          },
+          "typed_f1": {
+            "n": 3,
+            "mean": 0.8743,
+            "sd": 0.0342,
+            "min": 0.8358,
+            "max": 0.9014
+          }
+        },
+        "held_out=template": {
+          "pairs": [
+            152
+          ],
+          "precision": {
+            "n": 3,
+            "mean": 0.6087,
+            "sd": 0.0326,
+            "min": 0.575,
+            "max": 0.64
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.6162,
+            "sd": 0.1147,
+            "min": 0.4848,
+            "max": 0.697
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.6065,
+            "sd": 0.0476,
+            "min": 0.5517,
+            "max": 0.6377
+          },
+          "typed_f1": {
+            "n": 3,
+            "mean": 0.4932,
+            "sd": 0.0585,
+            "min": 0.4348,
+            "max": 0.5517
+          }
+        },
+        "overall": {
+          "pairs": [
+            392
+          ],
+          "precision": {
+            "n": 3,
+            "mean": 0.7259,
+            "sd": 0.0424,
+            "min": 0.6771,
+            "max": 0.7532
+          },
+          "recall": {
+            "n": 3,
+            "mean": 0.6953,
+            "sd": 0.07,
+            "min": 0.6237,
+            "max": 0.7634
+          },
+          "f1": {
+            "n": 3,
+            "mean": 0.7085,
+            "sd": 0.0406,
+            "min": 0.6824,
+            "max": 0.7553
+          },
+          "typed_f1": {
+            "n": 3,
+            "mean": 0.6377,
+            "sd": 0.0387,
+            "min": 0.6138,
+            "max": 0.6824
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 3,
+          "mean": 0.297283,
+          "sd": 0.116393,
+          "min": 0.214084,
+          "max": 0.430292
+        },
+        "cpu_seconds_per_call": {
+          "n": 3,
+          "mean": 1.661604,
+          "sd": 0.090426,
+          "min": 1.582948,
+          "max": 1.760403
+        }
+      }
+    },
+    {
+      "linker": "trained",
+      "base_model": "answerdotai/ModernBERT-base",
+      "track": "jobs_v0",
+      "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+      "transfer": false,
+      "split": "test",
+      "new_memory": "parent",
+      "runs": [
+        "results/2026-10-31_linkpairs_jobs_v0_trained_uncommitted_4"
+      ],
+      "seeds": [
+        20261031
+      ],
+      "typed": [
+        true
+      ],
+      "cells": {
+        "held_out=both": {
+          "pairs": [
+            100
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.55,
+            "sd": null,
+            "min": 0.55,
+            "max": 0.55
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.5,
+            "sd": null,
+            "min": 0.5,
+            "max": 0.5
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5238,
+            "sd": null,
+            "min": 0.5238,
+            "max": 0.5238
+          },
+          "typed_f1": {
+            "n": 1,
+            "mean": 0.5238,
+            "sd": null,
+            "min": 0.5238,
+            "max": 0.5238
+          }
+        },
+        "held_out=persona": {
+          "pairs": [
+            140
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.9688,
+            "sd": null,
+            "min": 0.9688,
+            "max": 0.9688
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.8158,
+            "sd": null,
+            "min": 0.8158,
+            "max": 0.8158
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.8857,
+            "sd": null,
+            "min": 0.8857,
+            "max": 0.8857
+          },
+          "typed_f1": {
+            "n": 1,
+            "mean": 0.8857,
+            "sd": null,
+            "min": 0.8857,
+            "max": 0.8857
+          }
+        },
+        "held_out=template": {
+          "pairs": [
+            152
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.64,
+            "sd": null,
+            "min": 0.64,
+            "max": 0.64
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.4848,
+            "sd": null,
+            "min": 0.4848,
+            "max": 0.4848
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.5517,
+            "sd": null,
+            "min": 0.5517,
+            "max": 0.5517
+          },
+          "typed_f1": {
+            "n": 1,
+            "mean": 0.5517,
+            "sd": null,
+            "min": 0.5517,
+            "max": 0.5517
+          }
+        },
+        "overall": {
+          "pairs": [
+            392
+          ],
+          "precision": {
+            "n": 1,
+            "mean": 0.7532,
+            "sd": null,
+            "min": 0.7532,
+            "max": 0.7532
+          },
+          "recall": {
+            "n": 1,
+            "mean": 0.6237,
+            "sd": null,
+            "min": 0.6237,
+            "max": 0.6237
+          },
+          "f1": {
+            "n": 1,
+            "mean": 0.6824,
+            "sd": null,
+            "min": 0.6824,
+            "max": 0.6824
+          },
+          "typed_f1": {
+            "n": 1,
+            "mean": 0.6824,
+            "sd": null,
+            "min": 0.6824,
+            "max": 0.6824
+          }
+        }
+      },
+      "cost": {
+        "wall_seconds_per_call": {
+          "n": 1,
+          "mean": 0.547424,
+          "sd": null,
+          "min": 0.547424,
+          "max": 0.547424
+        },
+        "cpu_seconds_per_call": {
+          "n": 1,
+          "mean": 1.905971,
+          "sd": null,
+          "min": 1.905971,
+          "max": 1.905971
+        }
+      }
+    }
+  ],
+  "written_at": "2026-10-31T08:00:00.668445+00:00"
+}

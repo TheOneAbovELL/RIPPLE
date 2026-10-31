@@ -1,0 +1,3031 @@
+{
+  "components": {
+    "schemas": {
+      "AnswerIn": {
+        "additionalProperties": false,
+        "properties": {
+          "answer": {
+            "enum": [
+              "still_holds",
+              "no_longer_holds",
+              "correction"
+            ],
+            "title": "Answer",
+            "type": "string"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "maxLength": 4000,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content"
+          },
+          "structured": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StructuredFact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "valid_to": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid To"
+          }
+        },
+        "required": [
+          "answer"
+        ],
+        "title": "AnswerIn",
+        "type": "object"
+      },
+      "AnswerOut": {
+        "description": "Receipt for an answer. `memory` is the latest visible version; None when the\nanswer retired the memory (I1: a RETIRED row is never returned as a belief).",
+        "properties": {
+          "event": {
+            "$ref": "#/components/schemas/ChangeEvent"
+          },
+          "memory": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Memory"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "memory_id": {
+            "title": "Memory Id",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          }
+        },
+        "required": [
+          "memory_id",
+          "status",
+          "memory",
+          "event"
+        ],
+        "title": "AnswerOut",
+        "type": "object"
+      },
+      "Body_upload_resume_resume_post": {
+        "properties": {
+          "file": {
+            "contentMediaType": "application/octet-stream",
+            "description": "The resume as a PDF.",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_resume_resume_post",
+        "type": "object"
+      },
+      "CandidateOut": {
+        "properties": {
+          "candidate": {
+            "$ref": "#/components/schemas/ResumeCandidate"
+          }
+        },
+        "required": [
+          "candidate"
+        ],
+        "title": "CandidateOut",
+        "type": "object"
+      },
+      "CandidateStatus": {
+        "enum": [
+          "pending",
+          "confirmed",
+          "rejected"
+        ],
+        "title": "CandidateStatus",
+        "type": "string"
+      },
+      "CandidatesOut": {
+        "properties": {
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeCandidate"
+            },
+            "title": "Candidates",
+            "type": "array"
+          }
+        },
+        "required": [
+          "candidates"
+        ],
+        "title": "CandidatesOut",
+        "type": "object"
+      },
+      "ChangeEvent": {
+        "description": "One per ripple (ADR-0015); created in the trigger's transaction, appended per wave.",
+        "properties": {
+          "affected_ids": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Affected Ids",
+            "type": "array"
+          },
+          "completed_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed At"
+          },
+          "cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Usd"
+          },
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "decisions": {
+            "default": [],
+            "items": {
+              "$ref": "#/components/schemas/Decision"
+            },
+            "title": "Decisions",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "latency_ms": {
+            "default": 0,
+            "minimum": 0.0,
+            "title": "Latency Ms",
+            "type": "integer"
+          },
+          "parked": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "default": {},
+            "title": "Parked",
+            "type": "object"
+          },
+          "trace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trace Id"
+          },
+          "trigger_kind": {
+            "$ref": "#/components/schemas/TriggerKind"
+          },
+          "trigger_memory_id": {
+            "minLength": 1,
+            "title": "Trigger Memory Id",
+            "type": "string"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "trigger_kind",
+          "trigger_memory_id",
+          "created_at"
+        ],
+        "title": "ChangeEvent",
+        "type": "object"
+      },
+      "ChangeKind": {
+        "enum": [
+          "new",
+          "update",
+          "temporary",
+          "unchanged"
+        ],
+        "title": "ChangeKind",
+        "type": "string"
+      },
+      "ConfirmOut": {
+        "properties": {
+          "candidate": {
+            "$ref": "#/components/schemas/ResumeCandidate"
+          },
+          "intake": {
+            "$ref": "#/components/schemas/IntakeOut"
+          }
+        },
+        "required": [
+          "candidate",
+          "intake"
+        ],
+        "title": "ConfirmOut",
+        "type": "object"
+      },
+      "Decision": {
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/DecisionAction"
+          },
+          "evidence_refs": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Refs",
+            "type": "array"
+          },
+          "memory_id": {
+            "minLength": 1,
+            "title": "Memory Id",
+            "type": "string"
+          },
+          "new_version_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "New Version Id"
+          },
+          "question": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "wave": {
+            "minimum": 0.0,
+            "title": "Wave",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "memory_id",
+          "wave",
+          "action",
+          "reason"
+        ],
+        "title": "Decision",
+        "type": "object"
+      },
+      "DecisionAction": {
+        "enum": [
+          "keep",
+          "update",
+          "retire",
+          "ask"
+        ],
+        "title": "DecisionAction",
+        "type": "string"
+      },
+      "EditIn": {
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "structured": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StructuredFact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "valid_to": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid To"
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "title": "EditIn",
+        "type": "object"
+      },
+      "EventMemoryOut": {
+        "description": "A memory an event names: its text and its status now (RETIRED marks the past).",
+        "properties": {
+          "content": {
+            "title": "Content",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          }
+        },
+        "required": [
+          "content",
+          "status"
+        ],
+        "title": "EventMemoryOut",
+        "type": "object"
+      },
+      "EventsOut": {
+        "description": "GET /events: newest first; `total` counts every event the user has.",
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/ChangeEvent"
+            },
+            "title": "Events",
+            "type": "array"
+          },
+          "memories": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/EventMemoryOut"
+            },
+            "title": "Memories",
+            "type": "object"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "events",
+          "memories",
+          "total"
+        ],
+        "title": "EventsOut",
+        "type": "object"
+      },
+      "ExportOut": {
+        "description": "Everything Ripple holds about the user (FR-15), including retired history.",
+        "properties": {
+          "change_events": {
+            "items": {
+              "$ref": "#/components/schemas/ChangeEvent"
+            },
+            "title": "Change Events",
+            "type": "array"
+          },
+          "exported_at": {
+            "format": "date-time",
+            "title": "Exported At",
+            "type": "string"
+          },
+          "feedback": {
+            "items": {
+              "$ref": "#/components/schemas/Feedback"
+            },
+            "title": "Feedback",
+            "type": "array"
+          },
+          "forget_events": {
+            "items": {
+              "$ref": "#/components/schemas/ForgetEvent"
+            },
+            "title": "Forget Events",
+            "type": "array"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "title": "Links",
+            "type": "array"
+          },
+          "memories": {
+            "items": {
+              "$ref": "#/components/schemas/Memory"
+            },
+            "title": "Memories",
+            "type": "array"
+          },
+          "resume_candidates": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeCandidate"
+            },
+            "title": "Resume Candidates",
+            "type": "array"
+          },
+          "resume_uploads": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeUpload"
+            },
+            "title": "Resume Uploads",
+            "type": "array"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "required": [
+          "exported_at",
+          "user",
+          "memories",
+          "links",
+          "change_events",
+          "forget_events",
+          "resume_candidates"
+        ],
+        "title": "ExportOut",
+        "type": "object"
+      },
+      "Feedback": {
+        "properties": {
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/FeedbackKind"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "maxLength": 280,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "target_memory_id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "title": "Target Memory Id",
+            "type": "string"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "user_id",
+          "target_memory_id",
+          "kind",
+          "note",
+          "created_at"
+        ],
+        "title": "Feedback",
+        "type": "object"
+      },
+      "FeedbackIn": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/FeedbackKind"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "maxLength": 280,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "target_memory_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Target Memory Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "target_memory_id",
+          "kind"
+        ],
+        "title": "FeedbackIn",
+        "type": "object"
+      },
+      "FeedbackKind": {
+        "enum": [
+          "saved",
+          "applied",
+          "dismissed",
+          "question_useful",
+          "question_not_useful"
+        ],
+        "title": "FeedbackKind",
+        "type": "string"
+      },
+      "FeedbackListOut": {
+        "properties": {
+          "feedback": {
+            "items": {
+              "$ref": "#/components/schemas/Feedback"
+            },
+            "title": "Feedback",
+            "type": "array"
+          }
+        },
+        "required": [
+          "feedback"
+        ],
+        "title": "FeedbackListOut",
+        "type": "object"
+      },
+      "ForgetEvent": {
+        "description": "Forget is deletion, not a state change, so it is logged apart from ChangeEvents (I7).",
+        "properties": {
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "deleted_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Deleted Ids",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "root_memory_id": {
+            "minLength": 1,
+            "title": "Root Memory Id",
+            "type": "string"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "root_memory_id",
+          "deleted_ids",
+          "created_at"
+        ],
+        "title": "ForgetEvent",
+        "type": "object"
+      },
+      "ForgetOut": {
+        "properties": {
+          "event": {
+            "$ref": "#/components/schemas/ForgetEvent"
+          }
+        },
+        "required": [
+          "event"
+        ],
+        "title": "ForgetOut",
+        "type": "object"
+      },
+      "GraphOut": {
+        "description": "The user's visible memories and the links between them, for the map page.\n\nSame I1 boundary as GET /memories: RETIRED rows are absent, so links to them are\nabsent too; SUSPECT and PENDING_USER rows carry `flagged`.",
+        "properties": {
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "title": "Links",
+            "type": "array"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryOut"
+            },
+            "title": "Nodes",
+            "type": "array"
+          }
+        },
+        "required": [
+          "nodes",
+          "links"
+        ],
+        "title": "GraphOut",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "HistoryOut": {
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/ChangeEvent"
+            },
+            "title": "Events",
+            "type": "array"
+          },
+          "versions": {
+            "items": {
+              "$ref": "#/components/schemas/Memory"
+            },
+            "title": "Versions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "versions",
+          "events"
+        ],
+        "title": "HistoryOut",
+        "type": "object"
+      },
+      "IntakeOut": {
+        "properties": {
+          "change_kind": {
+            "$ref": "#/components/schemas/ChangeKind"
+          },
+          "event": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChangeEvent"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "links_written": {
+            "title": "Links Written",
+            "type": "integer"
+          },
+          "memory": {
+            "$ref": "#/components/schemas/Memory"
+          }
+        },
+        "required": [
+          "memory",
+          "change_kind",
+          "links_written",
+          "event"
+        ],
+        "title": "IntakeOut",
+        "type": "object"
+      },
+      "Link": {
+        "description": "Dependency edge, stored parent_id -> dependent_id (docs/03, direction convention).",
+        "properties": {
+          "confidence": {
+            "default": 1.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "created_by": {
+            "$ref": "#/components/schemas/LinkCreator"
+          },
+          "dependent_id": {
+            "minLength": 1,
+            "title": "Dependent Id",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "link_class": {
+            "$ref": "#/components/schemas/LinkClass"
+          },
+          "link_type": {
+            "minLength": 1,
+            "title": "Link Type",
+            "type": "string"
+          },
+          "parent_id": {
+            "minLength": 1,
+            "title": "Parent Id",
+            "type": "string"
+          },
+          "strength": {
+            "default": 1.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Strength",
+            "type": "number"
+          },
+          "verified_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verified At"
+          }
+        },
+        "required": [
+          "id",
+          "parent_id",
+          "dependent_id",
+          "link_type",
+          "link_class",
+          "strength",
+          "created_by",
+          "confidence",
+          "created_at",
+          "verified_at"
+        ],
+        "title": "Link",
+        "type": "object"
+      },
+      "LinkClass": {
+        "description": "The only link semantics core knows (ADR-0013).",
+        "enum": [
+          "depends_on",
+          "snapshot_of"
+        ],
+        "title": "LinkClass",
+        "type": "string"
+      },
+      "LinkCodeOut": {
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "expires_at": {
+            "format": "date-time",
+            "title": "Expires At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "expires_at"
+        ],
+        "title": "LinkCodeOut",
+        "type": "object"
+      },
+      "LinkCreator": {
+        "enum": [
+          "rule",
+          "llm",
+          "model",
+          "human"
+        ],
+        "title": "LinkCreator",
+        "type": "string"
+      },
+      "LinkTypeOut": {
+        "properties": {
+          "link_class": {
+            "$ref": "#/components/schemas/LinkClass"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "link_class"
+        ],
+        "title": "LinkTypeOut",
+        "type": "object"
+      },
+      "MeOut": {
+        "properties": {
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "display_name": {
+            "title": "Display Name",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "telegram_linked": {
+            "title": "Telegram Linked",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "created_at",
+          "telegram_linked"
+        ],
+        "title": "MeOut",
+        "type": "object"
+      },
+      "MemoriesOut": {
+        "properties": {
+          "memories": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryOut"
+            },
+            "title": "Memories",
+            "type": "array"
+          }
+        },
+        "required": [
+          "memories"
+        ],
+        "title": "MemoriesOut",
+        "type": "object"
+      },
+      "Memory": {
+        "properties": {
+          "confidence": {
+            "default": 1.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "content": {
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "created_by": {
+            "minLength": 1,
+            "title": "Created By",
+            "type": "string"
+          },
+          "domain": {
+            "minLength": 1,
+            "title": "Domain",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "minLength": 1,
+            "title": "Kind",
+            "type": "string"
+          },
+          "recorded_at": {
+            "format": "date-time",
+            "title": "Recorded At",
+            "type": "string"
+          },
+          "sensitivity": {
+            "$ref": "#/components/schemas/Sensitivity",
+            "default": "low"
+          },
+          "source_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Ref"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status",
+            "default": "VALID"
+          },
+          "structured": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StructuredFact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Supersedes Id"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          },
+          "valid_from": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid From"
+          },
+          "valid_to": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid To"
+          },
+          "version": {
+            "default": 1,
+            "minimum": 1.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "user_id",
+          "domain",
+          "kind",
+          "content",
+          "structured",
+          "status",
+          "valid_from",
+          "valid_to",
+          "recorded_at",
+          "confidence",
+          "sensitivity",
+          "source_ref",
+          "created_by",
+          "version",
+          "supersedes_id"
+        ],
+        "title": "Memory",
+        "type": "object"
+      },
+      "MemoryDetailOut": {
+        "properties": {
+          "flagged": {
+            "title": "Flagged",
+            "type": "boolean"
+          },
+          "history": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HistoryOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "memory": {
+            "$ref": "#/components/schemas/Memory"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SourceOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "why": {
+            "items": {
+              "$ref": "#/components/schemas/ParentOut"
+            },
+            "title": "Why",
+            "type": "array"
+          }
+        },
+        "required": [
+          "memory",
+          "flagged",
+          "why",
+          "history"
+        ],
+        "title": "MemoryDetailOut",
+        "type": "object"
+      },
+      "MemoryOut": {
+        "properties": {
+          "flagged": {
+            "title": "Flagged",
+            "type": "boolean"
+          },
+          "memory": {
+            "$ref": "#/components/schemas/Memory"
+          }
+        },
+        "required": [
+          "memory",
+          "flagged"
+        ],
+        "title": "MemoryOut",
+        "type": "object"
+      },
+      "OpeningIn": {
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "default": "paste",
+            "enum": [
+              "paste",
+              "email"
+            ],
+            "title": "Source",
+            "type": "string"
+          },
+          "source_ref": {
+            "anyOf": [
+              {
+                "maxLength": 512,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Ref"
+          },
+          "text": {
+            "maxLength": 50000,
+            "minLength": 1,
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "title": "OpeningIn",
+        "type": "object"
+      },
+      "OpeningOut": {
+        "properties": {
+          "event_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Event Id"
+          },
+          "fields": {
+            "items": {
+              "$ref": "#/components/schemas/ParsedFieldOut"
+            },
+            "title": "Fields",
+            "type": "array"
+          },
+          "memory_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Memory Ids",
+            "type": "array"
+          },
+          "opening_memory_id": {
+            "title": "Opening Memory Id",
+            "type": "string"
+          },
+          "source_ref": {
+            "title": "Source Ref",
+            "type": "string"
+          },
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          }
+        },
+        "required": [
+          "opening_memory_id",
+          "memory_ids",
+          "event_id",
+          "source_ref",
+          "summary",
+          "fields"
+        ],
+        "title": "OpeningOut",
+        "type": "object"
+      },
+      "ParentOut": {
+        "description": "One reason the belief is held: the parent memory and the edge to it.",
+        "properties": {
+          "confidence": {
+            "title": "Confidence",
+            "type": "number"
+          },
+          "created_by": {
+            "$ref": "#/components/schemas/LinkCreator"
+          },
+          "link_class": {
+            "$ref": "#/components/schemas/LinkClass"
+          },
+          "link_id": {
+            "title": "Link Id",
+            "type": "string"
+          },
+          "link_type": {
+            "title": "Link Type",
+            "type": "string"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/Memory"
+          }
+        },
+        "required": [
+          "link_id",
+          "link_type",
+          "link_class",
+          "created_by",
+          "confidence",
+          "parent"
+        ],
+        "title": "ParentOut",
+        "type": "object"
+      },
+      "ParsedFieldOut": {
+        "properties": {
+          "attribute": {
+            "title": "Attribute",
+            "type": "string"
+          },
+          "confidence": {
+            "title": "Confidence",
+            "type": "number"
+          },
+          "span_end": {
+            "title": "Span End",
+            "type": "integer"
+          },
+          "span_start": {
+            "title": "Span Start",
+            "type": "integer"
+          },
+          "span_text": {
+            "title": "Span Text",
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "required": [
+          "attribute",
+          "value",
+          "span_start",
+          "span_end",
+          "span_text",
+          "confidence"
+        ],
+        "title": "ParsedFieldOut",
+        "type": "object"
+      },
+      "ProfileAttributeOut": {
+        "description": "One attribute of the user's own facts, as the domain adapter declares it.",
+        "properties": {
+          "choices": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Choices"
+          },
+          "multi_valued": {
+            "title": "Multi Valued",
+            "type": "boolean"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "permanent": {
+            "title": "Permanent",
+            "type": "boolean"
+          },
+          "stated_by_user": {
+            "title": "Stated By User",
+            "type": "boolean"
+          },
+          "value_type": {
+            "enum": [
+              "number",
+              "integer",
+              "bool",
+              "text"
+            ],
+            "title": "Value Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "value_type",
+          "permanent",
+          "multi_valued",
+          "stated_by_user"
+        ],
+        "title": "ProfileAttributeOut",
+        "type": "object"
+      },
+      "QuestionOut": {
+        "description": "One parked question (ripple.core.answers.PendingQuestion over the wire).",
+        "properties": {
+          "asked_at": {
+            "format": "date-time",
+            "title": "Asked At",
+            "type": "string"
+          },
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "memory": {
+            "$ref": "#/components/schemas/Memory"
+          },
+          "question": {
+            "title": "Question",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "memory",
+          "question",
+          "reason",
+          "asked_at",
+          "event_id"
+        ],
+        "title": "QuestionOut",
+        "type": "object"
+      },
+      "QuestionsOut": {
+        "properties": {
+          "questions": {
+            "items": {
+              "$ref": "#/components/schemas/QuestionOut"
+            },
+            "title": "Questions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "questions"
+        ],
+        "title": "QuestionsOut",
+        "type": "object"
+      },
+      "RecommendationOut": {
+        "properties": {
+          "company": {
+            "title": "Company",
+            "type": "string"
+          },
+          "deadline": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deadline"
+          },
+          "eligible": {
+            "title": "Eligible",
+            "type": "boolean"
+          },
+          "fit_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Fit Reasons",
+            "type": "array"
+          },
+          "fit_score": {
+            "title": "Fit Score",
+            "type": "number"
+          },
+          "flagged": {
+            "title": "Flagged",
+            "type": "boolean"
+          },
+          "opening_memory_id": {
+            "title": "Opening Memory Id",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "opening_memory_id",
+          "title",
+          "company",
+          "eligible",
+          "fit_score",
+          "fit_reasons",
+          "deadline",
+          "flagged"
+        ],
+        "title": "RecommendationOut",
+        "type": "object"
+      },
+      "RecommendationsOut": {
+        "properties": {
+          "recommendations": {
+            "items": {
+              "$ref": "#/components/schemas/RecommendationOut"
+            },
+            "title": "Recommendations",
+            "type": "array"
+          }
+        },
+        "required": [
+          "recommendations"
+        ],
+        "title": "RecommendationsOut",
+        "type": "object"
+      },
+      "ResumeCandidate": {
+        "properties": {
+          "attribute": {
+            "minLength": 1,
+            "title": "Attribute",
+            "type": "string"
+          },
+          "confidence": {
+            "default": 1.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "content": {
+            "title": "Content",
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "decided_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decided At"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "memory_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Memory Id"
+          },
+          "span_end": {
+            "minimum": 0.0,
+            "title": "Span End",
+            "type": "integer"
+          },
+          "span_start": {
+            "minimum": 0.0,
+            "title": "Span Start",
+            "type": "integer"
+          },
+          "span_text": {
+            "title": "Span Text",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CandidateStatus",
+            "default": "pending"
+          },
+          "upload_id": {
+            "minLength": 1,
+            "title": "Upload Id",
+            "type": "string"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "required": [
+          "user_id",
+          "upload_id",
+          "attribute",
+          "value",
+          "span_start",
+          "span_end",
+          "span_text",
+          "content",
+          "created_at"
+        ],
+        "title": "ResumeCandidate",
+        "type": "object"
+      },
+      "ResumeUpload": {
+        "properties": {
+          "filename": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Filename",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "sha256": {
+            "maxLength": 64,
+            "minLength": 64,
+            "title": "Sha256",
+            "type": "string"
+          },
+          "text": {
+            "maxLength": 200000,
+            "title": "Text",
+            "type": "string"
+          },
+          "uploaded_at": {
+            "format": "date-time",
+            "title": "Uploaded At",
+            "type": "string"
+          },
+          "user_id": {
+            "minLength": 1,
+            "title": "User Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id",
+          "filename",
+          "sha256",
+          "text",
+          "uploaded_at"
+        ],
+        "title": "ResumeUpload",
+        "type": "object"
+      },
+      "ResumeUploadOut": {
+        "properties": {
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/ResumeCandidate"
+            },
+            "title": "Candidates",
+            "type": "array"
+          },
+          "upload_id": {
+            "title": "Upload Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "upload_id",
+          "candidates"
+        ],
+        "title": "ResumeUploadOut",
+        "type": "object"
+      },
+      "Sensitivity": {
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "title": "Sensitivity",
+        "type": "string"
+      },
+      "SourceOut": {
+        "description": "Where a resume fact came from: the upload and, when the source_ref carries a\nspan, the exact characters and the line around them (ADR-0097).",
+        "properties": {
+          "end": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End"
+          },
+          "filename": {
+            "title": "Filename",
+            "type": "string"
+          },
+          "line": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line"
+          },
+          "quote": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quote"
+          },
+          "start": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start"
+          },
+          "upload_id": {
+            "title": "Upload Id",
+            "type": "string"
+          },
+          "uploaded_at": {
+            "format": "date-time",
+            "title": "Uploaded At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "upload_id",
+          "filename",
+          "uploaded_at",
+          "start",
+          "end",
+          "quote",
+          "line"
+        ],
+        "title": "SourceOut",
+        "type": "object"
+      },
+      "StatementIn": {
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "kind": {
+            "default": "fact",
+            "enum": [
+              "fact",
+              "derived"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "origin": {
+            "default": "conversation",
+            "enum": [
+              "conversation",
+              "inspector"
+            ],
+            "title": "Origin",
+            "type": "string"
+          },
+          "sensitivity": {
+            "$ref": "#/components/schemas/Sensitivity",
+            "default": "low"
+          },
+          "source_ref": {
+            "anyOf": [
+              {
+                "maxLength": 512,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Ref"
+          },
+          "structured": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StructuredFact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "title": "StatementIn",
+        "type": "object"
+      },
+      "Status": {
+        "enum": [
+          "VALID",
+          "SUSPECT",
+          "RETIRED",
+          "PENDING_USER"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "StructuredFact": {
+        "description": "subject / attribute / value, the part rules and the rule linker can read.",
+        "properties": {
+          "attribute": {
+            "minLength": 1,
+            "title": "Attribute",
+            "type": "string"
+          },
+          "subject": {
+            "minLength": 1,
+            "title": "Subject",
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "required": [
+          "subject",
+          "attribute",
+          "value"
+        ],
+        "title": "StructuredFact",
+        "type": "object"
+      },
+      "TriggerKind": {
+        "enum": [
+          "ripple",
+          "expiry",
+          "user_edit",
+          "user_answer"
+        ],
+        "title": "TriggerKind",
+        "type": "string"
+      },
+      "User": {
+        "properties": {
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "display_name": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Display Name",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "telegram_chat_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Telegram Chat Id"
+          }
+        },
+        "required": [
+          "display_name",
+          "created_at"
+        ],
+        "title": "User",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      },
+      "VocabularyOut": {
+        "description": "What the domain adapter declares, so the dashboard hardcodes no domain values.",
+        "properties": {
+          "attributes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Attributes",
+            "type": "array"
+          },
+          "domain": {
+            "title": "Domain",
+            "type": "string"
+          },
+          "kinds": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Kinds",
+            "type": "array"
+          },
+          "link_types": {
+            "items": {
+              "$ref": "#/components/schemas/LinkTypeOut"
+            },
+            "title": "Link Types",
+            "type": "array"
+          },
+          "profile_attributes": {
+            "items": {
+              "$ref": "#/components/schemas/ProfileAttributeOut"
+            },
+            "title": "Profile Attributes",
+            "type": "array"
+          },
+          "profile_subject": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Profile Subject"
+          }
+        },
+        "required": [
+          "domain",
+          "kinds",
+          "attributes",
+          "link_types",
+          "profile_subject",
+          "profile_attributes"
+        ],
+        "title": "VocabularyOut",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "Ripple",
+    "version": "0.0.1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/events": {
+      "get": {
+        "operationId": "list_events_events_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 20,
+              "maximum": 100,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Only events that decided on at least one belief.",
+            "in": "query",
+            "name": "rippled_only",
+            "required": false,
+            "schema": {
+              "default": true,
+              "description": "Only events that decided on at least one belief.",
+              "title": "Rippled Only",
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Events",
+        "tags": [
+          "me"
+        ]
+      }
+    },
+    "/feedback": {
+      "get": {
+        "operationId": "list_feedback_feedback_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "target_memory_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Target Memory Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbackListOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Feedback",
+        "tags": [
+          "feedback"
+        ]
+      },
+      "post": {
+        "operationId": "post_feedback_feedback_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeedbackIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Feedback"
+                }
+              }
+            },
+            "description": "Already recorded; the first row."
+          },
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Feedback"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Post Feedback",
+        "tags": [
+          "feedback"
+        ]
+      }
+    },
+    "/graph": {
+      "get": {
+        "operationId": "get_graph_graph_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Graph",
+        "tags": [
+          "memories"
+        ]
+      }
+    },
+    "/me": {
+      "delete": {
+        "operationId": "delete_me_me_delete",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Delete Me",
+        "tags": [
+          "me"
+        ]
+      },
+      "get": {
+        "operationId": "get_me_me_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Me",
+        "tags": [
+          "me"
+        ]
+      }
+    },
+    "/me/export": {
+      "get": {
+        "operationId": "export_me_me_export_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Export Me",
+        "tags": [
+          "me"
+        ]
+      }
+    },
+    "/me/telegram/link": {
+      "post": {
+        "description": "A one-time code to send to the bot; the worker consumes it (ADR-0025).",
+        "operationId": "create_telegram_link_code_me_telegram_link_post",
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkCodeOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Create Telegram Link Code",
+        "tags": [
+          "me"
+        ]
+      }
+    },
+    "/memories": {
+      "get": {
+        "operationId": "list_memories_memories_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "kind",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 32,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Kind"
+            }
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "VALID",
+                    "SUSPECT",
+                    "PENDING_USER"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "description": "Include SUSPECT and PENDING_USER (flagged).",
+            "in": "query",
+            "name": "flagged",
+            "required": false,
+            "schema": {
+              "default": true,
+              "description": "Include SUSPECT and PENDING_USER (flagged).",
+              "title": "Flagged",
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoriesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Memories",
+        "tags": [
+          "memories"
+        ]
+      }
+    },
+    "/memories/{memory_id}": {
+      "get": {
+        "operationId": "get_memory_memories__memory_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Include the version chain and events.",
+            "in": "query",
+            "name": "history",
+            "required": false,
+            "schema": {
+              "default": false,
+              "description": "Include the version chain and events.",
+              "title": "History",
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryDetailOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Memory",
+        "tags": [
+          "memories"
+        ]
+      }
+    },
+    "/memories/{memory_id}/edit": {
+      "post": {
+        "description": "A new version created_by user that ripples as a user_edit (FR-12, ADR-0042).\n\nThe inspector names the memory, so there is nothing to detect: the write goes\nstraight to versioning rather than through change detection.",
+        "operationId": "edit_memory_memories__memory_id__edit_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntakeOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Edit Memory",
+        "tags": [
+          "memories"
+        ]
+      }
+    },
+    "/memories/{memory_id}/forget": {
+      "post": {
+        "description": "Hard deletion of the whole version chain and its depends_on subtree (I7).",
+        "operationId": "forget_memory_memories__memory_id__forget_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForgetOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Forget Memory",
+        "tags": [
+          "memories"
+        ]
+      }
+    },
+    "/openings": {
+      "post": {
+        "operationId": "post_opening_openings_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpeningIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpeningOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Post Opening",
+        "tags": [
+          "openings"
+        ]
+      }
+    },
+    "/questions": {
+      "get": {
+        "operationId": "list_questions_questions_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuestionsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Questions",
+        "tags": [
+          "questions"
+        ]
+      }
+    },
+    "/questions/{memory_id}/answer": {
+      "post": {
+        "operationId": "answer_question_questions__memory_id__answer_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Answer Question",
+        "tags": [
+          "questions"
+        ]
+      }
+    },
+    "/recommendations": {
+      "get": {
+        "operationId": "list_recommendations_recommendations_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 10,
+              "maximum": 50,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Recommendations",
+        "tags": [
+          "recommendations"
+        ]
+      }
+    },
+    "/resume": {
+      "post": {
+        "operationId": "upload_resume_resume_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_resume_resume_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResumeUploadOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Upload Resume",
+        "tags": [
+          "resume"
+        ]
+      }
+    },
+    "/resume/candidates": {
+      "get": {
+        "operationId": "list_candidates_resume_candidates_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "default": "pending",
+              "enum": [
+                "pending",
+                "confirmed",
+                "rejected",
+                "all"
+              ],
+              "title": "Status",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Candidates",
+        "tags": [
+          "resume"
+        ]
+      }
+    },
+    "/resume/candidates/{candidate_id}/confirm": {
+      "post": {
+        "operationId": "confirm_candidate_resume_candidates__candidate_id__confirm_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "candidate_id",
+            "required": true,
+            "schema": {
+              "title": "Candidate Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfirmOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Confirm Candidate",
+        "tags": [
+          "resume"
+        ]
+      }
+    },
+    "/resume/candidates/{candidate_id}/reject": {
+      "post": {
+        "operationId": "reject_candidate_resume_candidates__candidate_id__reject_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "candidate_id",
+            "required": true,
+            "schema": {
+              "title": "Candidate Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Reject Candidate",
+        "tags": [
+          "resume"
+        ]
+      }
+    },
+    "/statements": {
+      "post": {
+        "operationId": "post_statement_statements_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatementIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntakeOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Post Statement",
+        "tags": [
+          "statements"
+        ]
+      }
+    },
+    "/vocabulary": {
+      "get": {
+        "operationId": "get_vocabulary_vocabulary_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VocabularyOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Vocabulary",
+        "tags": [
+          "me"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "description": "Write flow: a statement becomes a memory and ripples.",
+      "name": "statements"
+    },
+    {
+      "description": "Inspector: see, explain, edit and forget beliefs.",
+      "name": "memories"
+    },
+    {
+      "description": "Questions the resolver parked for the user (FR-7).",
+      "name": "questions"
+    },
+    {
+      "description": "Resume upload and candidate confirmation (FR-1, I5).",
+      "name": "resume"
+    },
+    {
+      "description": "Pasted or forwarded job descriptions (FR-2).",
+      "name": "openings"
+    },
+    {
+      "description": "Ranked openings for the user.",
+      "name": "recommendations"
+    },
+    {
+      "description": "Identity, Telegram linking, export and deletion (FR-15).",
+      "name": "me"
+    },
+    {
+      "description": "Pilot feedback on recommendations and questions (ADR-0105).",
+      "name": "feedback"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ripple-local",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "--no-sync", "python", "-m", "tools.local_run", "--seed-demo", "--fresh", "--port", "8765"],
+      "port": 8765
+    }
+  ]
+}

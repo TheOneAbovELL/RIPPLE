@@ -1,0 +1,38 @@
+{
+  "suite": "finance_v1",
+  "strategy": "ripple",
+  "split": "all",
+  "data": {
+    "source": "bench/data/finance_v1",
+    "track": "finance_v1",
+    "domain": "finance",
+    "content": "synthetic",
+    "data_sha256": "8b514dc76e0a577264e73fa956b9e727b28c3589005484dbf1ac3c7cf59ad037",
+    "extra_files": {
+      "pairs.jsonl": "8e2b13ff8e5d5c18dc71f8314e6618c11cad14b89424660758ff77d698041f4f"
+    },
+    "curated": {
+      "count": 0,
+      "sha256": null
+    },
+    "generator": {
+      "module": "bench.generate_finance",
+      "version": 1
+    },
+    "split": "all"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "ripple.core.engine.WaveEngine (TODO(human); not runnable until implemented)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "models": null,
+  "prompt_versions": null,
+  "seeds": {
+    "generator_seed": 20261031,
+    "run_seed": null
+  },
+  "run_at": "2026-10-30T21:47:39.966316+00:00"
+}

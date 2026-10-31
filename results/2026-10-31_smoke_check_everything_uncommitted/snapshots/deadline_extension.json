@@ -1,0 +1,255 @@
+{
+  "scenario": "deadline_extension",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "acme_deadline": {
+          "alias": "acme_deadline",
+          "root": {
+            "id": "acme_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme deadline 2026-11-05"
+          },
+          "latest": {
+            "id": "acme_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme deadline 2026-11-05"
+          }
+        },
+        "acme_reminder": {
+          "alias": "acme_reminder",
+          "root": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-03 about Acme"
+          },
+          "latest": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-03 about Acme"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-10 about Globex"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-10 about Globex"
+          }
+        },
+        "globex_deadline": {
+          "alias": "globex_deadline",
+          "root": {
+            "id": "globex_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex deadline 2026-11-12"
+          },
+          "latest": {
+            "id": "globex_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex deadline 2026-11-12"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "acme_deadline",
+          "opening_alias": "acme_deadline",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "acme_reminder"
+          ]
+        },
+        {
+          "opening_id": "globex_deadline",
+          "opening_alias": "globex_deadline",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:acme_deadline",
+      "simulated_day": 0.0,
+      "memories": {
+        "acme_deadline": {
+          "alias": "acme_deadline",
+          "root": {
+            "id": "acme_deadline",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Acme deadline 2026-11-05"
+          },
+          "latest": {
+            "id": "86cbc8d0-7907-47ab-852c-687693e2af8b",
+            "status": "VALID",
+            "version": 2,
+            "content": "Acme deadline 2026-11-19"
+          }
+        },
+        "acme_reminder": {
+          "alias": "acme_reminder",
+          "root": {
+            "id": "acme_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind on 2026-11-03 about Acme"
+          },
+          "latest": {
+            "id": "843d8871-ab62-4a59-9207-7aeb98bfb7a0",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind on 2026-11-17 about Acme"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-10 about Globex"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind on 2026-11-10 about Globex"
+          }
+        },
+        "globex_deadline": {
+          "alias": "globex_deadline",
+          "root": {
+            "id": "globex_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex deadline 2026-11-12"
+          },
+          "latest": {
+            "id": "globex_deadline",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex deadline 2026-11-12"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "86cbc8d0-7907-47ab-852c-687693e2af8b",
+          "opening_alias": "acme_deadline",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "843d8871-ab62-4a59-9207-7aeb98bfb7a0"
+          ]
+        },
+        {
+          "opening_id": "globex_deadline",
+          "opening_alias": "globex_deadline",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "acme_reminder@latest": {
+          "status": null,
+          "content": "remind on 2026-11-17 about Acme",
+          "version": 2,
+          "deleted": false
+        },
+        "globex_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "843d8871-ab62-4a59-9207-7aeb98bfb7a0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "86cbc8d0-7907-47ab-852c-687693e2af8b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "globex_deadline",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "843d8871-ab62-4a59-9207-7aeb98bfb7a0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_deadline",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "86cbc8d0-7907-47ab-852c-687693e2af8b",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

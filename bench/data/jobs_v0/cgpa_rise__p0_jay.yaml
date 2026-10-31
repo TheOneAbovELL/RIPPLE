@@ -1,0 +1,74 @@
+name: cgpa_rise__p0_jay
+description: jay's CGPA rises past the umbrella cutoff.
+meta:
+  track: jobs_v0
+  persona: p0_jay
+  template: cgpa_rise
+  family: changed
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.2
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.2
+  umbrella_opening:
+    kind: opening
+    content: 'Umbrella SDE intern: CGPA cutoff 7.4'
+    structured:
+      subject: opening:umbrella_opening
+      attribute: cgpa_cutoff
+      value: 7.4
+  eligibility:
+    kind: derived
+    content: not eligible for umbrella (7.2 < 7.4)
+  criteria:
+    kind: criteria
+    content: search openings with cutoff <= 7.2
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - umbrella_opening
+  - eligibility
+  - eligibility_of
+- - cgpa
+  - criteria
+  - criteria_from
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for umbrella (7.6 >= 7.4)
+    reason: re-derived from its parent
+    trigger: cgpa
+  criteria:
+  - action: update
+    new_content: search openings with cutoff <= 7.6
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.6
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.6
+  expect:
+    cgpa:
+      status: RETIRED
+      version: 1
+    cgpa@latest:
+      status: VALID
+      content: CGPA is 7.6
+      version: 2
+    eligibility@latest:
+      status: VALID
+      content: eligible for umbrella (7.6 >= 7.4)
+      version: 2
+    criteria@latest:
+      status: VALID
+      version: 2
+    umbrella_opening:
+      status: VALID
+      version: 1

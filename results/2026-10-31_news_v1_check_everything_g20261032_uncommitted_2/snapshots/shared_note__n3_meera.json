@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n3_meera",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove power outage: 177 homes without power"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "21fb53a8-8525-4365-907d-02baacef47d1",
+            "status": "VALID",
+            "version": 2,
+            "content": "Valley Wire: 221 homes without power in the Ashgrove power outage"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove power outage: 177 homes without power"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "e0b1d9da-67ff-44c6-8444-d8cda6102598",
+            "status": "VALID",
+            "version": 2,
+            "content": "Ashgrove power outage: 221 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Ashgrove power outage: 177 homes without power",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Ashgrove power outage: 221 homes without power",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "21fb53a8-8525-4365-907d-02baacef47d1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "e0b1d9da-67ff-44c6-8444-d8cda6102598",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "21fb53a8-8525-4365-907d-02baacef47d1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "e0b1d9da-67ff-44c6-8444-d8cda6102598",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "e0b1d9da-67ff-44c6-8444-d8cda6102598",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "21fb53a8-8525-4365-907d-02baacef47d1",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

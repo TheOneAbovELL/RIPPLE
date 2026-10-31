@@ -1,0 +1,84 @@
+{
+  "content": "synthetic (RippleBench v0 jobs track)",
+  "counts": {
+    "by_split_link_type": {
+      "test/criteria_from": 10,
+      "test/depends_on_fact": 16,
+      "test/depends_on_time_period": 2,
+      "test/eligibility_of": 42,
+      "test/fit_of": 2,
+      "test/none": 299,
+      "test/reminder_for": 19,
+      "test/sent_with_resume": 2,
+      "train/depends_on_fact": 15,
+      "train/depends_on_time_period": 3,
+      "train/eligibility_of": 22,
+      "train/fit_of": 3,
+      "train/none": 148,
+      "train/reminder_for": 6,
+      "train/sent_with_resume": 3
+    },
+    "by_split_provenance_label": {
+      "test/rule/link": 53,
+      "test/scenario/link": 40,
+      "test/scenario/no_link": 299,
+      "train/rule/link": 16,
+      "train/scenario/link": 36,
+      "train/scenario/no_link": 148
+    },
+    "personas": [
+      "p0_jay",
+      "p1_dev",
+      "p2_harsh",
+      "p3_esha",
+      "p4_bharat"
+    ],
+    "prevalence_by_split": {
+      "test": 0.2372,
+      "train": 0.26
+    },
+    "same_texts_different_labels": 0,
+    "test_duplicate_texts": 10,
+    "test_pairs_sharing_a_text_with_train": 198,
+    "total": 592
+  },
+  "file": "jobs_v0_pairs.jsonl",
+  "file_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+  "format": "C5 LabelledPair JSON Lines (bench/linkpairs.py)",
+  "generator": {
+    "module": "training.jobs_pairs",
+    "version": 1
+  },
+  "negative_ratio": 3,
+  "process": {
+    "candidate_pairs": 904,
+    "dropped_conflicting_rule_labels": 0,
+    "dropped_conflicting_scenario_labels": 0,
+    "dropped_rule_vs_closed_world": 0,
+    "excluded_indirect": 44,
+    "negatives_available": 704,
+    "negatives_reversed_link": 156,
+    "negatives_sampled_other": 312,
+    "positives_rule_only": 0,
+    "rule_vs_scenario_agree": 69,
+    "rule_vs_scenario_disagree": 0,
+    "rule_vs_scenario_missed": 87,
+    "train_dropped_text_in_test": 32
+  },
+  "seed": 20261031,
+  "source": {
+    "data_sha256": "26f01e9ab4d44e9be07348dc0c606a308e0178c40d80998ccd96c75a06097c0e",
+    "dir": "bench/data/jobs_v0",
+    "generator_seed": 20261019,
+    "test_personas": [
+      "p3_esha",
+      "p4_bharat"
+    ],
+    "test_templates": [
+      "cgpa_rise",
+      "deadline_moved"
+    ],
+    "track": "jobs_v0"
+  },
+  "track": "jobs_v0"
+}

@@ -1,0 +1,216 @@
+{
+  "scenario": "guidance_cut__f0_wen",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          },
+          "latest": {
+            "id": "5387c5a3-9d71-4b4c-bf04-b5568ae5723e",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX guides 12% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          },
+          "latest": {
+            "id": "bb9bb6ab-e7e7-421e-9e95-6e79e0707bdc",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX revenue grows about 12% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          },
+          "latest": {
+            "id": "c9feca93-bcdc-4bfa-a265-ff87bdff6bfd",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX thesis weakened: growth guided down to 12%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "ORBX revenue grows about 12% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "ORBX thesis weakened: growth guided down to 12%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

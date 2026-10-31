@@ -1,0 +1,204 @@
+{
+  "scenario": "peer_margin__f1_xavier",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          },
+          "latest": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          }
+        },
+        "other_alert": {
+          "alias": "other_alert",
+          "root": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if QUIL margin falls below 11%"
+          },
+          "latest": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if QUIL margin falls below 11%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          },
+          "latest": {
+            "id": "7be9b6e4-241d-4070-8033-27293d6eae2f",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX operating margin is 22%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "2122e376-d2e0-4ab0-90ad-d3d67b969839",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX thesis: margins now 22%, re-checked"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          }
+        },
+        "other_alert": {
+          "alias": "other_alert",
+          "root": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if QUIL margin falls below 11%"
+          },
+          "latest": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if QUIL margin falls below 11%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "ORBX thesis: margins now 22%, re-checked",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_alert": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+name: cutoff_unknown__p2_harsh
+description: harsh's CGPA edges up; the vandelay cutoff is unclear (correction).
+meta:
+  track: jobs_v0
+  persona: p2_harsh
+  template: cutoff_unknown
+  family: ask
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.1
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.1
+  vandelay_opening:
+    kind: opening
+    content: 'Vandelay SDE intern: CGPA cutoff 7.3'
+    structured:
+      subject: opening:vandelay_opening
+      attribute: cgpa_cutoff
+      value: 7.3
+  eligibility:
+    kind: derived
+    content: not eligible for vandelay
+  recommendation:
+    kind: derived
+    content: skip vandelay
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - vandelay_opening
+  - eligibility
+  - eligibility_of
+- - eligibility
+  - recommendation
+  - depends_on_fact
+resolutions:
+  eligibility:
+  - action: ask
+    question: Is the vandelay cutoff still 7.3?
+    reason: the new CGPA sits on the cutoff
+    trigger: cgpa
+  recommendation:
+  - action: update
+    new_content: apply to vandelay
+    reason: re-derived from its parent
+    trigger: eligibility
+events:
+- update: cgpa
+  content: CGPA is 7.2
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.2
+  expect:
+    eligibility:
+      status: PENDING_USER
+    recommendation:
+      status: SUSPECT
+      version: 1
+- answer: eligibility
+  content: eligible for vandelay (cutoff lowered to 7.2)
+  reply: correction
+  expect:
+    eligibility@latest:
+      status: VALID
+      content: eligible for vandelay (cutoff lowered to 7.2)
+      version: 2
+    recommendation@latest:
+      status: VALID
+      content: apply to vandelay
+      version: 2

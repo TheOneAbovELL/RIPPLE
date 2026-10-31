@@ -1,0 +1,171 @@
+{
+  "scenario": "keep_stops_propagation",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "interest": {
+          "alias": "interest",
+          "root": {
+            "id": "interest",
+            "status": "VALID",
+            "version": 1,
+            "content": "interested in quant roles"
+          },
+          "latest": {
+            "id": "interest",
+            "status": "VALID",
+            "version": 1,
+            "content": "interested in quant roles"
+          }
+        },
+        "ranking": {
+          "alias": "ranking",
+          "root": {
+            "id": "ranking",
+            "status": "VALID",
+            "version": 1,
+            "content": "Jane Street ranked first"
+          },
+          "latest": {
+            "id": "ranking",
+            "status": "VALID",
+            "version": 1,
+            "content": "Jane Street ranked first"
+          }
+        },
+        "notes": {
+          "alias": "notes",
+          "root": {
+            "id": "notes",
+            "status": "VALID",
+            "version": 1,
+            "content": "interview prep notes on probability puzzles"
+          },
+          "latest": {
+            "id": "notes",
+            "status": "VALID",
+            "version": 1,
+            "content": "interview prep notes on probability puzzles"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:interest",
+      "simulated_day": 0.0,
+      "memories": {
+        "interest": {
+          "alias": "interest",
+          "root": {
+            "id": "interest",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "interested in quant roles"
+          },
+          "latest": {
+            "id": "c183f7f8-a7cb-4841-b4c9-b9caeb8d0a44",
+            "status": "VALID",
+            "version": 2,
+            "content": "no longer interested in quant roles"
+          }
+        },
+        "ranking": {
+          "alias": "ranking",
+          "root": {
+            "id": "ranking",
+            "status": "VALID",
+            "version": 1,
+            "content": "Jane Street ranked first"
+          },
+          "latest": {
+            "id": "ranking",
+            "status": "VALID",
+            "version": 1,
+            "content": "Jane Street ranked first"
+          }
+        },
+        "notes": {
+          "alias": "notes",
+          "root": {
+            "id": "notes",
+            "status": "VALID",
+            "version": 1,
+            "content": "interview prep notes on probability puzzles"
+          },
+          "latest": {
+            "id": "notes",
+            "status": "VALID",
+            "version": 1,
+            "content": "interview prep notes on probability puzzles"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "ranking@latest": {
+          "status": null,
+          "content": "Jane Street ranked fortieth",
+          "version": 2,
+          "deleted": false
+        },
+        "notes": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "ranking",
+          "memory_id": "ranking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "ranking",
+          "memory_id": "c183f7f8-a7cb-4841-b4c9-b9caeb8d0a44",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "ranking",
+          "memory_id": "notes",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "notes",
+          "memory_id": "notes",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "notes",
+          "memory_id": "c183f7f8-a7cb-4841-b4c9-b9caeb8d0a44",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "notes",
+          "memory_id": "ranking",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

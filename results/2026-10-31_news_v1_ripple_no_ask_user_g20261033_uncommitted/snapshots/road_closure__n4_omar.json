@@ -1,0 +1,428 @@
+{
+  "scenario": "road_closure__n4_omar",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around ashgrove"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around ashgrove"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:closure",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around ashgrove"
+          },
+          "latest": {
+            "id": "c7891d09-2411-4287-8bb4-45e7b869ccdf",
+            "status": "VALID",
+            "version": 2,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the bridge road closed for 16 days after the Ashgrove bridge collapse"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the bridge road closed for 16 days after the Ashgrove bridge collapse"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "closure",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "c7891d09-2411-4287-8bb4-45e7b869ccdf",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "c7891d09-2411-4287-8bb4-45e7b869ccdf",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "c7891d09-2411-4287-8bb4-45e7b869ccdf",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "c7891d09-2411-4287-8bb4-45e7b869ccdf",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "advance_days:17",
+      "simulated_day": 17.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in ashgrove"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around ashgrove"
+          },
+          "latest": {
+            "id": "e904ccc4-b28b-40a2-a946-fc54f0338c55",
+            "status": "VALID",
+            "version": 3,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for ashgrove: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the bridge road closed for 16 days after the Ashgrove bridge collapse"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the bridge road closed for 16 days after the Ashgrove bridge collapse"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "closure",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "e904ccc4-b28b-40a2-a946-fc54f0338c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "e904ccc4-b28b-40a2-a946-fc54f0338c55",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "e904ccc4-b28b-40a2-a946-fc54f0338c55",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "e904ccc4-b28b-40a2-a946-fc54f0338c55",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

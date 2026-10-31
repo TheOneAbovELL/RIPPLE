@@ -1,0 +1,232 @@
+{
+  "scenario": "forget_cgpa__p0_jay",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "d0be5857-1149-48a9-8b2f-01c9608ca46b",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.5"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for umbrella"
+          },
+          "latest": {
+            "id": "f1d5c715-87d9-4374-8a05-257feaa635ea",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for umbrella"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "forget:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": null,
+          "latest": null
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": null,
+          "latest": null
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for initech"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "cgpa": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "eligibility": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "skill": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fit": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+name: forget_story__n4_quinn
+description: quinn asks to forget the Eastmere bridge collapse after one revision.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n4_quinn
+  template: forget_story
+  family: forget
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 64 people injured in the Eastmere bridge collapse'
+    structured:
+      subject: story:eastmere
+      attribute: figure
+      value: 64
+  summary:
+    kind: summary
+    content: 'Eastmere bridge collapse: 64 people injured'
+  other_claim:
+    kind: claim
+    content: 'the Gazette: 44 workers evacuated in the Larkspur factory fire'
+    structured:
+      subject: story:larkspur
+      attribute: figure
+      value: 44
+  other_summary:
+    kind: summary
+    content: 'Larkspur factory fire: 44 workers evacuated'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Eastmere bridge collapse: 52 people injured'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Ledger: 52 people injured in the Eastmere bridge collapse'
+  structured:
+    subject: story:eastmere
+    attribute: figure
+    value: 52
+  expect:
+    summary@latest:
+      version: 2
+- forget: claim
+  expect:
+    claim:
+      deleted: true
+    summary:
+      deleted: true
+    other_claim:
+      status: VALID
+    other_summary:
+      status: VALID

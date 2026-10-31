@@ -1,0 +1,284 @@
+{
+  "scenario": "deadline_moved__p4_bharat",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: deadline 2026-11-28"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: deadline 2026-11-28"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-28"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-28"
+          }
+        },
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE engineer: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE engineer: deadline 2026-11-22"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          }
+        },
+        "stark_eligibility": {
+          "alias": "stark_eligibility",
+          "root": {
+            "id": "stark_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for stark"
+          },
+          "latest": {
+            "id": "stark_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for stark"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "stark_opening",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "stark_reminder",
+            "stark_eligibility"
+          ]
+        },
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:globex_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Globex SDE intern: deadline 2026-11-28"
+          },
+          "latest": {
+            "id": "1f65031f-41f2-4853-acd5-760d83a47e6e",
+            "status": "VALID",
+            "version": 2,
+            "content": "Globex SDE intern: deadline 2026-12-18"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-28"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-28"
+          }
+        },
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE engineer: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE engineer: deadline 2026-11-22"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          }
+        },
+        "stark_eligibility": {
+          "alias": "stark_eligibility",
+          "root": {
+            "id": "stark_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for stark"
+          },
+          "latest": {
+            "id": "stark_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for stark"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "stark_opening",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "stark_reminder",
+            "stark_eligibility"
+          ]
+        },
+        {
+          "opening_id": "1f65031f-41f2-4853-acd5-760d83a47e6e",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "globex_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-18",
+          "version": 2,
+          "deleted": false
+        },
+        "stark_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "stark_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "stark_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

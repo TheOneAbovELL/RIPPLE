@@ -1,0 +1,367 @@
+{
+  "track": "jobs_v0",
+  "generator": {
+    "module": "bench.generate",
+    "version": 1
+  },
+  "seed": 20261019,
+  "personas": {
+    "all": [
+      "p0_jay",
+      "p1_dev",
+      "p2_harsh",
+      "p3_esha",
+      "p4_bharat"
+    ],
+    "train": [
+      "p0_jay",
+      "p1_dev",
+      "p2_harsh"
+    ],
+    "test": [
+      "p3_esha",
+      "p4_bharat"
+    ]
+  },
+  "templates": {
+    "all": {
+      "cgpa_rise": "changed",
+      "deadline_moved": "unchanged",
+      "exam_block": "temporary",
+      "accepted_offer": "chain",
+      "cutoff_unknown": "ask",
+      "resume_update": "snapshot",
+      "forget_cgpa": "forget"
+    },
+    "train": [
+      "accepted_offer",
+      "cutoff_unknown",
+      "exam_block",
+      "forget_cgpa",
+      "resume_update"
+    ],
+    "test": [
+      "cgpa_rise",
+      "deadline_moved"
+    ]
+  },
+  "split_rule": "train = train persona AND train template; everything else is test; held_out names the unseen half; strict test = both",
+  "data_sha256": "26f01e9ab4d44e9be07348dc0c606a308e0178c40d80998ccd96c75a06097c0e",
+  "scenarios": [
+    {
+      "file": "cgpa_rise__p0_jay.yaml",
+      "name": "cgpa_rise__p0_jay",
+      "persona": "p0_jay",
+      "template": "cgpa_rise",
+      "family": "changed",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "deadline_moved__p0_jay.yaml",
+      "name": "deadline_moved__p0_jay",
+      "persona": "p0_jay",
+      "template": "deadline_moved",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "exam_block__p0_jay.yaml",
+      "name": "exam_block__p0_jay",
+      "persona": "p0_jay",
+      "template": "exam_block",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "accepted_offer__p0_jay.yaml",
+      "name": "accepted_offer__p0_jay",
+      "persona": "p0_jay",
+      "template": "accepted_offer",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cutoff_unknown__p0_jay.yaml",
+      "name": "cutoff_unknown__p0_jay",
+      "persona": "p0_jay",
+      "template": "cutoff_unknown",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "resume_update__p0_jay.yaml",
+      "name": "resume_update__p0_jay",
+      "persona": "p0_jay",
+      "template": "resume_update",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_cgpa__p0_jay.yaml",
+      "name": "forget_cgpa__p0_jay",
+      "persona": "p0_jay",
+      "template": "forget_cgpa",
+      "family": "forget",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cgpa_rise__p1_dev.yaml",
+      "name": "cgpa_rise__p1_dev",
+      "persona": "p1_dev",
+      "template": "cgpa_rise",
+      "family": "changed",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "deadline_moved__p1_dev.yaml",
+      "name": "deadline_moved__p1_dev",
+      "persona": "p1_dev",
+      "template": "deadline_moved",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "exam_block__p1_dev.yaml",
+      "name": "exam_block__p1_dev",
+      "persona": "p1_dev",
+      "template": "exam_block",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "accepted_offer__p1_dev.yaml",
+      "name": "accepted_offer__p1_dev",
+      "persona": "p1_dev",
+      "template": "accepted_offer",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cutoff_unknown__p1_dev.yaml",
+      "name": "cutoff_unknown__p1_dev",
+      "persona": "p1_dev",
+      "template": "cutoff_unknown",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "resume_update__p1_dev.yaml",
+      "name": "resume_update__p1_dev",
+      "persona": "p1_dev",
+      "template": "resume_update",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_cgpa__p1_dev.yaml",
+      "name": "forget_cgpa__p1_dev",
+      "persona": "p1_dev",
+      "template": "forget_cgpa",
+      "family": "forget",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cgpa_rise__p2_harsh.yaml",
+      "name": "cgpa_rise__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "cgpa_rise",
+      "family": "changed",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "deadline_moved__p2_harsh.yaml",
+      "name": "deadline_moved__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "deadline_moved",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "exam_block__p2_harsh.yaml",
+      "name": "exam_block__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "exam_block",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "accepted_offer__p2_harsh.yaml",
+      "name": "accepted_offer__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "accepted_offer",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cutoff_unknown__p2_harsh.yaml",
+      "name": "cutoff_unknown__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "cutoff_unknown",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "resume_update__p2_harsh.yaml",
+      "name": "resume_update__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "resume_update",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_cgpa__p2_harsh.yaml",
+      "name": "forget_cgpa__p2_harsh",
+      "persona": "p2_harsh",
+      "template": "forget_cgpa",
+      "family": "forget",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "cgpa_rise__p3_esha.yaml",
+      "name": "cgpa_rise__p3_esha",
+      "persona": "p3_esha",
+      "template": "cgpa_rise",
+      "family": "changed",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "deadline_moved__p3_esha.yaml",
+      "name": "deadline_moved__p3_esha",
+      "persona": "p3_esha",
+      "template": "deadline_moved",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "exam_block__p3_esha.yaml",
+      "name": "exam_block__p3_esha",
+      "persona": "p3_esha",
+      "template": "exam_block",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "accepted_offer__p3_esha.yaml",
+      "name": "accepted_offer__p3_esha",
+      "persona": "p3_esha",
+      "template": "accepted_offer",
+      "family": "chain",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "cutoff_unknown__p3_esha.yaml",
+      "name": "cutoff_unknown__p3_esha",
+      "persona": "p3_esha",
+      "template": "cutoff_unknown",
+      "family": "ask",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "resume_update__p3_esha.yaml",
+      "name": "resume_update__p3_esha",
+      "persona": "p3_esha",
+      "template": "resume_update",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "forget_cgpa__p3_esha.yaml",
+      "name": "forget_cgpa__p3_esha",
+      "persona": "p3_esha",
+      "template": "forget_cgpa",
+      "family": "forget",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "cgpa_rise__p4_bharat.yaml",
+      "name": "cgpa_rise__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "cgpa_rise",
+      "family": "changed",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "deadline_moved__p4_bharat.yaml",
+      "name": "deadline_moved__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "deadline_moved",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "exam_block__p4_bharat.yaml",
+      "name": "exam_block__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "exam_block",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "accepted_offer__p4_bharat.yaml",
+      "name": "accepted_offer__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "accepted_offer",
+      "family": "chain",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "cutoff_unknown__p4_bharat.yaml",
+      "name": "cutoff_unknown__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "cutoff_unknown",
+      "family": "ask",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "resume_update__p4_bharat.yaml",
+      "name": "resume_update__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "resume_update",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "forget_cgpa__p4_bharat.yaml",
+      "name": "forget_cgpa__p4_bharat",
+      "persona": "p4_bharat",
+      "template": "forget_cgpa",
+      "family": "forget",
+      "split": "test",
+      "held_out": "persona"
+    }
+  ]
+}

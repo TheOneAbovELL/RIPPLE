@@ -1,0 +1,8 @@
+# Trained link-finder folders (ADR-0126): weights and tokenizer files stay local; each
+# folder's ripple_artifact.json (label space, train pair sha256, seed, threshold, base
+# model revision, training history) is tracked so a results/ run can be traced to it.
+*
+!.gitignore
+!README.md
+!*/
+!*/ripple_artifact.json

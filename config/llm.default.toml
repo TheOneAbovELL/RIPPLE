@@ -1,0 +1,23 @@
+# Default Router configuration (ADR-0010, ADR-0027). Copy to config/llm.toml to override;
+# RIPPLE_LLM_CONFIG points the app at a file. Model ids are config, never code.
+#
+# Prices: USD per million tokens. Leave a model out of [prices] and its cost is
+# reported as null rather than guessed (I8). Fill from the provider's price page and
+# record the date here when you do.
+
+max_retries = 2            # schema retries per model (I4)
+transport_retries = 2      # transport retries per model before falling back
+backoff_base_seconds = 0.5
+
+[tasks]
+resolver        = [{ provider = "anthropic", model = "claude-sonnet-5-5" }, { provider = "anthropic", model = "claude-haiku-5-5" }]
+linker          = [{ provider = "anthropic", model = "claude-haiku-5-5" }]
+change_detector = [{ provider = "anthropic", model = "claude-haiku-5-5" }]
+jd_parser       = [{ provider = "anthropic", model = "claude-haiku-5-5" }]
+resume_parser   = [{ provider = "anthropic", model = "claude-sonnet-5-5" }]
+conversation    = [{ provider = "anthropic", model = "claude-sonnet-5-5" }]
+tailor          = [{ provider = "anthropic", model = "claude-sonnet-5-5" }]
+intent          = [{ provider = "anthropic", model = "claude-haiku-5-5" }]
+
+[prices]
+# "claude-haiku-5-5"  = { input = 0.0, output = 0.0, source = "TBD (pending)", recorded = "" }

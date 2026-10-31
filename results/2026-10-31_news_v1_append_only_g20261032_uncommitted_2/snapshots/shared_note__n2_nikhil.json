@@ -1,0 +1,213 @@
+{
+  "scenario": "shared_note__n2_nikhil",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 11 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "56e6d381-2608-4870-8e48-95fd3f54a69e",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 9 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 11 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Riverton ferry accident: 11 passengers rescued",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Riverton ferry accident: 9 passengers rescued",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "56e6d381-2608-4870-8e48-95fd3f54a69e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "56e6d381-2608-4870-8e48-95fd3f54a69e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "56e6d381-2608-4870-8e48-95fd3f54a69e",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

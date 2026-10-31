@@ -1,0 +1,189 @@
+{
+  "scenario": "resume_update__p0_dev",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the python project for acme"
+          },
+          "latest": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the python project for acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:resume",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "5a4f95b5-d4e7-4426-b0c8-a069f85ceac8",
+            "status": "VALID",
+            "version": 2,
+            "content": "resume v2"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "highlight the python project for acme"
+          },
+          "latest": {
+            "id": "e3deffb1-2aed-4b57-a2c2-7b785ca30d26",
+            "status": "VALID",
+            "version": 2,
+            "content": "highlight the new python work for acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "resume": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "application": {
+          "status": "VALID",
+          "content": "applied to stark with resume v1",
+          "version": 1,
+          "deleted": false
+        },
+        "tailoring@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "resume",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "5a4f95b5-d4e7-4426-b0c8-a069f85ceac8",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "e3deffb1-2aed-4b57-a2c2-7b785ca30d26",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "5a4f95b5-d4e7-4426-b0c8-a069f85ceac8",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "e3deffb1-2aed-4b57-a2c2-7b785ca30d26",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "e3deffb1-2aed-4b57-a2c2-7b785ca30d26",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "5a4f95b5-d4e7-4426-b0c8-a069f85ceac8",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "scenario": "shared_note__n0_meera",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "0090f706-2355-40e5-9bab-f86a6142c57c",
+            "status": "VALID",
+            "version": 2,
+            "content": "Metro Desk: 131 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Riverton warehouse flood: 196 tonnes of grain lost",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Riverton warehouse flood: 131 tonnes of grain lost",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

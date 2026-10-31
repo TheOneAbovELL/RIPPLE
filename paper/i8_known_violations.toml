@@ -1,0 +1,7 @@
+# I8 known violations (ADR-0111), listed 2026-10-31 by WS-17.
+# Result-like numbers in docs that do not trace to results/. Each stays listed until
+# the owning document is fixed (cite the results/ folder in the same paragraph, use a
+# macro, or reword); then the entry is removed or its count lowered. The test fails on
+# any violation not listed here and on any entry that no longer matches (count too high).
+# WS-17 does not edit other workstreams' documents; the fixes go to the coordinator.
+# 2026-10-31 checkpoint C4: all seven listed by WS-17 fixed at the source; none remain.

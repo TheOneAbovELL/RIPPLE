@@ -1,0 +1,59 @@
+name: shared_note__n2_leo
+description: leo shared the Kestrel data breach figure before it was corrected.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n2_leo
+  template: shared_note
+  family: snapshot
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 164 accounts exposed in the Kestrel data breach'
+    structured:
+      subject: story:kestrel
+      attribute: figure
+      value: 164
+  shared:
+    kind: shared
+    content: 'shared with the study group: Kestrel data breach: 164 accounts exposed'
+  summary:
+    kind: summary
+    content: 'Kestrel data breach: 164 accounts exposed'
+links:
+- - claim
+  - shared
+  - shared_from
+- - claim
+  - summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Kestrel data breach: 196 accounts exposed'
+    reason: re-derived from its parent
+    trigger: claim
+  shared:
+  - action: keep
+    reason: a shared note is a record of what was said then
+    trigger: claim
+events:
+- update: claim
+  content: 'the Ledger: 196 accounts exposed in the Kestrel data breach'
+  structured:
+    subject: story:kestrel
+    attribute: figure
+    value: 196
+  expect:
+    claim:
+      status: RETIRED
+    shared:
+      status: VALID
+      content: 'shared with the study group: Kestrel data breach: 164 accounts exposed'
+      version: 1
+    summary@latest:
+      status: VALID
+      content: 'Kestrel data breach: 196 accounts exposed'
+      version: 2

@@ -1,0 +1,216 @@
+{
+  "scenario": "guidance_cut__f3_uma",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          },
+          "latest": {
+            "id": "73b8bc4c-a416-4a31-9fcd-253cfaec2562",
+            "status": "VALID",
+            "version": 2,
+            "content": "TALN guides 9% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "TALN revenue grows about 9% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "TALN thesis weakened: growth guided down to 9%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

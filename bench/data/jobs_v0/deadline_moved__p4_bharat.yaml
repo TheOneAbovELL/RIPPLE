@@ -1,0 +1,81 @@
+name: deadline_moved__p4_bharat
+description: globex extends its deadline; nothing about stark changes.
+meta:
+  track: jobs_v0
+  persona: p4_bharat
+  template: deadline_moved
+  family: unchanged
+  seed: 20261019
+memories:
+  globex_opening:
+    kind: opening
+    content: 'Globex SDE intern: deadline 2026-11-28'
+    structured:
+      subject: opening:globex_opening
+      attribute: deadline
+      value: '2026-11-28T23:59:00+05:30'
+  globex_reminder:
+    kind: derived
+    content: remind two days before 2026-11-28
+  stark_opening:
+    kind: opening
+    content: 'Stark SDE engineer: deadline 2026-11-22'
+    structured:
+      subject: opening:stark_opening
+      attribute: deadline
+      value: '2026-11-22T23:59:00+05:30'
+  stark_reminder:
+    kind: derived
+    content: remind two days before 2026-11-22
+  cgpa:
+    content: CGPA is 8.4
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 8.4
+  stark_eligibility:
+    kind: derived
+    content: eligible for stark
+links:
+- - globex_opening
+  - globex_reminder
+  - reminder_for
+- - stark_opening
+  - stark_reminder
+  - reminder_for
+- - cgpa
+  - stark_eligibility
+  - eligibility_of
+- - stark_opening
+  - stark_eligibility
+  - eligibility_of
+resolutions:
+  globex_reminder:
+  - action: update
+    new_content: remind two days before 2026-12-18
+    reason: re-derived from its parent
+    trigger: globex_opening
+events:
+- update: globex_opening
+  content: 'Globex SDE intern: deadline 2026-12-18'
+  structured:
+    subject: opening:globex_opening
+    attribute: deadline
+    value: '2026-12-18T23:59:00+05:30'
+  expect:
+    globex_reminder@latest:
+      status: VALID
+      content: remind two days before 2026-12-18
+      version: 2
+    stark_reminder:
+      status: VALID
+      version: 1
+    stark_eligibility:
+      status: VALID
+      version: 1
+    stark_opening:
+      status: VALID
+      version: 1
+    cgpa:
+      status: VALID
+      version: 1

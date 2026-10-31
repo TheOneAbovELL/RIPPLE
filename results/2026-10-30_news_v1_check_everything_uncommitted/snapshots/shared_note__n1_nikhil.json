@@ -1,0 +1,138 @@
+{
+  "scenario": "shared_note__n1_nikhil",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove ferry accident: 131 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 131 passengers rescued in the Ashgrove ferry accident"
+          },
+          "latest": {
+            "id": "ea786db4-728f-4aaf-acda-1a6193cd4c09",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Ledger: 157 passengers rescued in the Ashgrove ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove ferry accident: 131 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Ashgrove ferry accident: 131 passengers rescued"
+          },
+          "latest": {
+            "id": "c6f83111-876e-4adc-8d0d-a347a39a7d5b",
+            "status": "VALID",
+            "version": 2,
+            "content": "Ashgrove ferry accident: 157 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Ashgrove ferry accident: 131 passengers rescued",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Ashgrove ferry accident: 157 passengers rescued",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0
+    }
+  ]
+}

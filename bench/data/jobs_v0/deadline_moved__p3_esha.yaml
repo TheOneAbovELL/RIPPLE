@@ -1,0 +1,81 @@
+name: deadline_moved__p3_esha
+description: hooli extends its deadline; nothing about wonka changes.
+meta:
+  track: jobs_v0
+  persona: p3_esha
+  template: deadline_moved
+  family: unchanged
+  seed: 20261019
+memories:
+  hooli_opening:
+    kind: opening
+    content: 'Hooli SDE intern: deadline 2026-12-06'
+    structured:
+      subject: opening:hooli_opening
+      attribute: deadline
+      value: '2026-12-06T23:59:00+05:30'
+  hooli_reminder:
+    kind: derived
+    content: remind two days before 2026-12-06
+  wonka_opening:
+    kind: opening
+    content: 'Wonka SDE engineer: deadline 2026-12-07'
+    structured:
+      subject: opening:wonka_opening
+      attribute: deadline
+      value: '2026-12-07T23:59:00+05:30'
+  wonka_reminder:
+    kind: derived
+    content: remind two days before 2026-12-07
+  cgpa:
+    content: CGPA is 7.5
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.5
+  wonka_eligibility:
+    kind: derived
+    content: eligible for wonka
+links:
+- - hooli_opening
+  - hooli_reminder
+  - reminder_for
+- - wonka_opening
+  - wonka_reminder
+  - reminder_for
+- - cgpa
+  - wonka_eligibility
+  - eligibility_of
+- - wonka_opening
+  - wonka_eligibility
+  - eligibility_of
+resolutions:
+  hooli_reminder:
+  - action: update
+    new_content: remind two days before 2026-12-16
+    reason: re-derived from its parent
+    trigger: hooli_opening
+events:
+- update: hooli_opening
+  content: 'Hooli SDE intern: deadline 2026-12-16'
+  structured:
+    subject: opening:hooli_opening
+    attribute: deadline
+    value: '2026-12-16T23:59:00+05:30'
+  expect:
+    hooli_reminder@latest:
+      status: VALID
+      content: remind two days before 2026-12-16
+      version: 2
+    wonka_reminder:
+      status: VALID
+      version: 1
+    wonka_eligibility:
+      status: VALID
+      version: 1
+    wonka_opening:
+      status: VALID
+      version: 1
+    cgpa:
+      status: VALID
+      version: 1

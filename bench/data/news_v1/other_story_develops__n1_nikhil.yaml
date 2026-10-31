@@ -1,0 +1,72 @@
+name: other_story_develops__n1_nikhil
+description: The Hollowbay data breach story moves on (compensation agreed); nothing about Ashgrove ferry
+  accident changes.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n1_nikhil
+  template: other_story_develops
+  family: unchanged
+  seed: 20261031
+memories:
+  outcome:
+    kind: claim
+    content: 'Hollowbay data breach: no decision yet'
+    structured:
+      subject: story:hollowbay
+      attribute: outcome
+      value: pending
+  summary:
+    kind: summary
+    content: 'Hollowbay data breach: awaiting a decision'
+  other_claim:
+    kind: claim
+    content: 'the Ledger: 131 passengers rescued in the Ashgrove ferry accident'
+    structured:
+      subject: story:ashgrove
+      attribute: figure
+      value: 131
+  other_summary:
+    kind: summary
+    content: 'Ashgrove ferry accident: 131 passengers rescued'
+  other_analysis:
+    kind: derived
+    content: Ashgrove ferry accident is the larger story this week
+links:
+- - outcome
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - other_claim
+  - other_analysis
+  - inferred_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Hollowbay data breach: compensation agreed'
+    reason: re-derived from its parent
+    trigger: outcome
+events:
+- update: outcome
+  content: 'Hollowbay data breach: compensation agreed'
+  structured:
+    subject: story:hollowbay
+    attribute: outcome
+    value: compensation agreed
+  expect:
+    summary@latest:
+      status: VALID
+      content: 'Hollowbay data breach: compensation agreed'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_analysis:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

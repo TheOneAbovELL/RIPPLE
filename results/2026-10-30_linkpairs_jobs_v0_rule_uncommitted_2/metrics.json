@@ -1,0 +1,170 @@
+{
+  "overall": {
+    "tp": 36,
+    "fp": 26,
+    "fn": 57,
+    "tn": 273,
+    "typed_tp": 0,
+    "n": 392,
+    "precision": 0.5806451612903226,
+    "recall": 0.3870967741935484,
+    "f1": 0.4645161290322581,
+    "typed_precision": null,
+    "typed_recall": null,
+    "typed_f1": null
+  },
+  "by_provenance": {
+    "rule": {
+      "tp": 32,
+      "fp": 0,
+      "fn": 21,
+      "tn": 0,
+      "typed_tp": 0,
+      "n": 53,
+      "precision": null,
+      "recall": 0.6037735849056604,
+      "f1": null,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    },
+    "scenario": {
+      "tp": 4,
+      "fp": 26,
+      "fn": 36,
+      "tn": 273,
+      "typed_tp": 0,
+      "n": 339,
+      "precision": 0.13333333333333333,
+      "recall": 0.1,
+      "f1": 0.11428571428571428,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    }
+  },
+  "by_held_out": {
+    "both": {
+      "tp": 12,
+      "fp": 8,
+      "fn": 10,
+      "tn": 70,
+      "typed_tp": 0,
+      "n": 100,
+      "precision": 0.6,
+      "recall": 0.5454545454545454,
+      "f1": 0.5714285714285714,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    },
+    "persona": {
+      "tp": 6,
+      "fp": 5,
+      "fn": 32,
+      "tn": 97,
+      "typed_tp": 0,
+      "n": 140,
+      "precision": 0.5454545454545454,
+      "recall": 0.15789473684210525,
+      "f1": 0.24489795918367346,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    },
+    "template": {
+      "tp": 18,
+      "fp": 13,
+      "fn": 15,
+      "tn": 106,
+      "typed_tp": 0,
+      "n": 152,
+      "precision": 0.5806451612903226,
+      "recall": 0.5454545454545454,
+      "f1": 0.5625,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    }
+  },
+  "by_gold_link_type": {
+    "criteria_from": {
+      "tp": 10,
+      "fn": 0,
+      "recall": 1.0,
+      "typed_recall": null,
+      "seen_in_train": false
+    },
+    "depends_on_fact": {
+      "tp": 0,
+      "fn": 16,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "depends_on_time_period": {
+      "tp": 2,
+      "fn": 0,
+      "recall": 1.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "eligibility_of": {
+      "tp": 22,
+      "fn": 20,
+      "recall": 0.5238095238095238,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "fit_of": {
+      "tp": 0,
+      "fn": 2,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "reminder_for": {
+      "tp": 0,
+      "fn": 19,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "sent_with_resume": {
+      "tp": 2,
+      "fn": 0,
+      "recall": 1.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    }
+  },
+  "false_positives_by_negative_kind": {
+    "reversed link": {
+      "n": 93,
+      "fp": 0,
+      "fp_rate": 0.0
+    },
+    "same scenario, no link": {
+      "n": 206,
+      "fp": 26,
+      "fp_rate": 0.1262135922330097
+    }
+  },
+  "type_confusion": {
+    "criteria_from -> depends_on_fact": 10,
+    "depends_on_fact -> none": 16,
+    "depends_on_time_period -> depends_on_fact": 2,
+    "eligibility_of -> depends_on_fact": 22,
+    "eligibility_of -> none": 20,
+    "fit_of -> none": 2,
+    "none -> depends_on_fact": 26,
+    "none -> none": 273,
+    "reminder_for -> none": 19,
+    "sent_with_resume -> depends_on_fact": 2
+  },
+  "reversed_proposals": 61,
+  "abstentions": 0,
+  "linker_calls": 392,
+  "llm_calls": 0,
+  "elapsed_seconds": 0.032
+}

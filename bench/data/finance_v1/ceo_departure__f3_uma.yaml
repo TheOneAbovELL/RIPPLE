@@ -1,0 +1,83 @@
+name: ceo_departure__f3_uma
+description: J. Castellano leaves Quillon Studios; the thesis built on the plan unwinds.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: ceo_departure
+  family: chain
+  seed: 20261031
+memories:
+  leader:
+    content: J. Castellano runs Quillon Studios
+    structured:
+      subject: company:QUIL
+      attribute: leadership
+      value: J. Castellano
+  assumption:
+    kind: assumption
+    content: J. Castellano's cost plan keeps QUIL margins rising
+  thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 21%'
+  alert:
+    kind: alert
+    content: look again if QUIL margin falls below 17%
+  other_margin:
+    content: ZNTH operating margin is 20%
+    structured:
+      subject: company:ZNTH
+      attribute: margin
+      value: 20
+  other_thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 20%'
+links:
+- - leader
+  - assumption
+  - premise_of
+- - assumption
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  assumption:
+  - action: update
+    new_content: QUIL cost plan uncertain under R. Okonjo
+    reason: re-derived from its parent
+    trigger: leader
+  thesis:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: leader
+  alert:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: leader
+events:
+- update: leader
+  content: R. Okonjo replaces J. Castellano at Quillon Studios
+  structured:
+    subject: company:QUIL
+    attribute: leadership
+    value: R. Okonjo
+  expect:
+    assumption@latest:
+      status: VALID
+      version: 2
+    thesis:
+      status: RETIRED
+    alert:
+      status: RETIRED
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

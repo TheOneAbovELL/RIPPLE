@@ -1,0 +1,85 @@
+name: attribution_retracted__n4_quinn
+description: Officials withdraw the blame on faulty wiring for the Larkspur factory fire; a chain unwinds.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n4_quinn
+  template: attribution_retracted
+  family: chain
+  seed: 20261031
+memories:
+  attribution:
+    kind: claim
+    content: officials blame faulty wiring for the Larkspur factory fire
+    structured:
+      subject: story:larkspur
+      attribute: attribution
+      value: faulty wiring
+  analysis:
+    kind: derived
+    content: faulty wiring caused the Larkspur factory fire
+  follow_up:
+    kind: derived
+    content: follow inspections linked to faulty wiring
+  briefing_item:
+    kind: briefing
+    content: 'briefing: faulty wiring blamed for the Larkspur factory fire'
+  other_claim:
+    kind: claim
+    content: 'Metro Desk: 158 passengers rescued in the Riverton ferry accident'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 158
+  other_summary:
+    kind: summary
+    content: 'Riverton ferry accident: 158 passengers rescued'
+links:
+- - attribution
+  - analysis
+  - inferred_from
+- - analysis
+  - follow_up
+  - inferred_from
+- - follow_up
+  - briefing_item
+  - briefing_from
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  analysis:
+  - action: update
+    new_content: cause of the Larkspur factory fire not established
+    reason: re-derived from its parent
+    trigger: attribution
+  follow_up:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+  briefing_item:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+events:
+- update: attribution
+  content: 'officials withdraw the blame on faulty wiring: the investigation is still open'
+  structured:
+    subject: story:larkspur
+    attribute: attribution
+    value: unknown
+  expect:
+    analysis@latest:
+      status: VALID
+      version: 2
+    follow_up:
+      status: RETIRED
+    briefing_item:
+      status: RETIRED
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

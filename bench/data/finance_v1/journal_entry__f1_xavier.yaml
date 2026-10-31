@@ -1,0 +1,51 @@
+name: journal_entry__f1_xavier
+description: xavier revises the QUIL thesis; the journal keeps v1.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: journal_entry
+  family: snapshot
+  seed: 20261031
+memories:
+  thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 15%'
+  journal:
+    kind: journal
+    content: '2026-10-01: started following QUIL on the margin thesis'
+  alert:
+    kind: alert
+    content: look again if QUIL margin falls below 11%
+links:
+- - thesis
+  - journal
+  - journaled_with
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  alert:
+  - action: update
+    new_content: look again if QUIL margin falls below 8%
+    reason: re-derived from its parent
+    trigger: thesis
+  journal:
+  - action: keep
+    reason: a journal entry records the decision as it was made
+    trigger: thesis
+events:
+- update: thesis
+  content: 'QUIL thesis revised: margins can dip to 8%'
+  expect:
+    thesis:
+      status: RETIRED
+    journal:
+      status: VALID
+      content: '2026-10-01: started following QUIL on the margin thesis'
+      version: 1
+    alert@latest:
+      status: VALID
+      content: look again if QUIL margin falls below 8%
+      version: 2

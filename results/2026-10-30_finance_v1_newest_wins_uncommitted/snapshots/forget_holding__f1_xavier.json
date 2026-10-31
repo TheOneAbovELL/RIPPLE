@@ -1,0 +1,232 @@
+{
+  "scenario": "forget_holding__f1_xavier",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 30%"
+          },
+          "latest": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 30%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 30%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 30%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "KRVL operating margin is 30%"
+          },
+          "latest": {
+            "id": "27ec2b1a-e9f9-42f0-b9ba-206d81b90a76",
+            "status": "VALID",
+            "version": 2,
+            "content": "KRVL operating margin is 32%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 30%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 30%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "forget:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": null,
+          "latest": null
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": null,
+          "latest": null
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 19%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "margin": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "thesis": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

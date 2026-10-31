@@ -1,0 +1,278 @@
+{
+  "scenario": "rate_edge__f0_wen",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.5%"
+          },
+          "latest": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.5%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:rate",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.5%"
+          },
+          "latest": {
+            "id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.9%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.5%"
+          },
+          "latest": {
+            "id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.9%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis holds while the policy rate stays below 6.0%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ORBX monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "ORBX thesis holds while the policy rate stays below 6.5%",
+          "version": 2,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "review ORBX now: rate thesis under question",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "f910ebed-d7a6-4748-b22f-a6cff1f833c3",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

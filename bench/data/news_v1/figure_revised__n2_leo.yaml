@@ -1,0 +1,90 @@
+name: figure_revised__n2_leo
+description: the Gazette revises the Riverton power outage figure; leo's briefing follows.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n2_leo
+  template: figure_revised
+  family: changed
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 77 homes without power in the Riverton power outage'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 77
+  summary:
+    kind: summary
+    content: 'Riverton power outage: 77 homes without power'
+  other_claim:
+    kind: claim
+    content: 'Valley Wire: 83 workers evacuated in the Ashgrove factory fire'
+    structured:
+      subject: story:ashgrove
+      attribute: figure
+      value: 83
+  other_summary:
+    kind: summary
+    content: 'Ashgrove factory fire: 83 workers evacuated'
+  briefing:
+    kind: briefing
+    content: 'today: Riverton power outage: 77 homes without power; Ashgrove factory fire: 83 workers
+      evacuated'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+- - other_summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Riverton power outage: 102 homes without power'
+    reason: re-derived from its parent
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'today: Riverton power outage: 102 homes without power; Ashgrove factory fire: 83 workers
+      evacuated'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Gazette: 102 homes without power in the Riverton power outage'
+  structured:
+    subject: story:riverton
+    attribute: figure
+    value: 102
+  expect:
+    claim:
+      status: RETIRED
+      version: 1
+    claim@latest:
+      status: VALID
+      content: 'the Gazette: 102 homes without power in the Riverton power outage'
+      version: 2
+    summary@latest:
+      status: VALID
+      content: 'Riverton power outage: 102 homes without power'
+      version: 2
+    briefing@latest:
+      status: VALID
+      content: 'today: Riverton power outage: 102 homes without power; Ashgrove factory fire: 83 workers
+        evacuated'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

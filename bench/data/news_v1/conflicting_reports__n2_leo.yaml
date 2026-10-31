@@ -1,0 +1,64 @@
+name: conflicting_reports__n2_leo
+description: the Courier contradicts the Gazette on the Riverton power outage figure (no_longer_holds).
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n2_leo
+  template: conflicting_reports
+  family: ask
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 77 homes without power in the Riverton power outage'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 77
+  summary:
+    kind: summary
+    content: 'Riverton power outage: 77 homes without power'
+  briefing:
+    kind: briefing
+    content: 'briefing: Riverton power outage: 77 homes without power'
+links:
+- - claim
+  - summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: ask
+    question: the Gazette says 77, the Courier says 52; which should your summary use?
+    reason: two outlets disagree and neither has corrected
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'briefing: Riverton power outage, figure disputed'
+    reason: re-derived from its parent
+    trigger: summary
+events:
+- update: claim
+  content: 'the Courier: 52 homes without power in the Riverton power outage'
+  structured:
+    subject: story:riverton
+    attribute: figure
+    value: 52
+  expect:
+    summary:
+      status: PENDING_USER
+    briefing:
+      status: SUSPECT
+      version: 1
+- answer: summary
+  reply: no_longer_holds
+  expect:
+    summary:
+      status: RETIRED
+    briefing@latest:
+      status: VALID
+      content: 'briefing: Riverton power outage, figure disputed'
+      version: 2

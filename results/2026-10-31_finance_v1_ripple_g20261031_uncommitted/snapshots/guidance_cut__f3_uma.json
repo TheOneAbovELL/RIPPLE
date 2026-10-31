@@ -1,0 +1,321 @@
+{
+  "scenario": "guidance_cut__f3_uma",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "TALN guides 16% revenue growth"
+          },
+          "latest": {
+            "id": "41d81c1f-fc17-4b86-bb57-d4d21df4e077",
+            "status": "VALID",
+            "version": 2,
+            "content": "TALN guides 9% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "TALN revenue grows about 16% next year"
+          },
+          "latest": {
+            "id": "d94ac66d-4b97-4068-add5-36a3cf8bc035",
+            "status": "VALID",
+            "version": 2,
+            "content": "TALN revenue grows about 9% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "TALN thesis: rolling stock leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "1c4e83fa-af88-4ef5-a95d-b6c5f83ff95c",
+            "status": "VALID",
+            "version": 2,
+            "content": "TALN thesis weakened: growth guided down to 9%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "TALN revenue grows about 9% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "TALN thesis weakened: growth guided down to 9%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "guidance",
+          "memory_id": "41d81c1f-fc17-4b86-bb57-d4d21df4e077",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "1c4e83fa-af88-4ef5-a95d-b6c5f83ff95c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "d94ac66d-4b97-4068-add5-36a3cf8bc035",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "d94ac66d-4b97-4068-add5-36a3cf8bc035",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "41d81c1f-fc17-4b86-bb57-d4d21df4e077",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "1c4e83fa-af88-4ef5-a95d-b6c5f83ff95c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "1c4e83fa-af88-4ef5-a95d-b6c5f83ff95c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "41d81c1f-fc17-4b86-bb57-d4d21df4e077",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "d94ac66d-4b97-4068-add5-36a3cf8bc035",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "1c4e83fa-af88-4ef5-a95d-b6c5f83ff95c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "41d81c1f-fc17-4b86-bb57-d4d21df4e077",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

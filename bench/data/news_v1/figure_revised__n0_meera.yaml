@@ -1,0 +1,90 @@
+name: figure_revised__n0_meera
+description: the Gazette revises the Hollowbay power outage figure; meera's briefing follows.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n0_meera
+  template: figure_revised
+  family: changed
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 156 homes without power in the Hollowbay power outage'
+    structured:
+      subject: story:hollowbay
+      attribute: figure
+      value: 156
+  summary:
+    kind: summary
+    content: 'Hollowbay power outage: 156 homes without power'
+  other_claim:
+    kind: claim
+    content: 'Metro Desk: 130 accounts exposed in the Duncliff data breach'
+    structured:
+      subject: story:duncliff
+      attribute: figure
+      value: 130
+  other_summary:
+    kind: summary
+    content: 'Duncliff data breach: 130 accounts exposed'
+  briefing:
+    kind: briefing
+    content: 'today: Hollowbay power outage: 156 homes without power; Duncliff data breach: 130 accounts
+      exposed'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+- - other_summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Hollowbay power outage: 125 homes without power'
+    reason: re-derived from its parent
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'today: Hollowbay power outage: 125 homes without power; Duncliff data breach: 130 accounts
+      exposed'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Gazette: 125 homes without power in the Hollowbay power outage'
+  structured:
+    subject: story:hollowbay
+    attribute: figure
+    value: 125
+  expect:
+    claim:
+      status: RETIRED
+      version: 1
+    claim@latest:
+      status: VALID
+      content: 'the Gazette: 125 homes without power in the Hollowbay power outage'
+      version: 2
+    summary@latest:
+      status: VALID
+      content: 'Hollowbay power outage: 125 homes without power'
+      version: 2
+    briefing@latest:
+      status: VALID
+      content: 'today: Hollowbay power outage: 125 homes without power; Duncliff data breach: 130 accounts
+        exposed'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

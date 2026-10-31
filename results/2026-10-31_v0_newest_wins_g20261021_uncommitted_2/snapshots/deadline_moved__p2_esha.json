@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p2_esha",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "acme_opening": {
+          "alias": "acme_opening",
+          "root": {
+            "id": "acme_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: deadline 2026-12-12"
+          },
+          "latest": {
+            "id": "acme_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: deadline 2026-12-12"
+          }
+        },
+        "acme_reminder": {
+          "alias": "acme_reminder",
+          "root": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-12"
+          },
+          "latest": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-12"
+          }
+        },
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE engineer: deadline 2026-11-04"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE engineer: deadline 2026-11-04"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          },
+          "latest": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          }
+        },
+        "initech_eligibility": {
+          "alias": "initech_eligibility",
+          "root": {
+            "id": "initech_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for initech"
+          },
+          "latest": {
+            "id": "initech_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for initech"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "initech_opening",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "initech_reminder",
+            "initech_eligibility"
+          ]
+        },
+        {
+          "opening_id": "acme_opening",
+          "opening_alias": "acme_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "acme_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:acme_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "acme_opening": {
+          "alias": "acme_opening",
+          "root": {
+            "id": "acme_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Acme SDE intern: deadline 2026-12-12"
+          },
+          "latest": {
+            "id": "a0a2fbe8-4a7f-4539-9f65-68e0110fe98d",
+            "status": "VALID",
+            "version": 2,
+            "content": "Acme SDE intern: deadline 2026-12-17"
+          }
+        },
+        "acme_reminder": {
+          "alias": "acme_reminder",
+          "root": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-12"
+          },
+          "latest": {
+            "id": "acme_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-12"
+          }
+        },
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE engineer: deadline 2026-11-04"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE engineer: deadline 2026-11-04"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          },
+          "latest": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.4"
+          }
+        },
+        "initech_eligibility": {
+          "alias": "initech_eligibility",
+          "root": {
+            "id": "initech_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for initech"
+          },
+          "latest": {
+            "id": "initech_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for initech"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "initech_opening",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "initech_reminder",
+            "initech_eligibility"
+          ]
+        },
+        {
+          "opening_id": "a0a2fbe8-4a7f-4539-9f65-68e0110fe98d",
+          "opening_alias": "acme_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "acme_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "acme_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-17",
+          "version": 2,
+          "deleted": false
+        },
+        "initech_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "initech_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "initech_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "acme_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "initech_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "a0a2fbe8-4a7f-4539-9f65-68e0110fe98d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_reminder",
+          "memory_id": "initech_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "initech_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "acme_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "a0a2fbe8-4a7f-4539-9f65-68e0110fe98d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_reminder",
+          "memory_id": "initech_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "initech_eligibility",
+          "memory_id": "initech_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_eligibility",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "initech_eligibility",
+          "memory_id": "initech_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "initech_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "a0a2fbe8-4a7f-4539-9f65-68e0110fe98d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "initech_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "acme_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "initech_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

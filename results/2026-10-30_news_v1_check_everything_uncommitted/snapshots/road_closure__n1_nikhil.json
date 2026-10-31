@@ -1,0 +1,255 @@
+{
+  "scenario": "road_closure__n1_nikhil",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "new:closure",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "7778c869-2be3-4561-a479-dad9a0d1af96",
+            "status": "VALID",
+            "version": 2,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the ring road closed for 14 days after the Larkspur power outage"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the ring road closed for 14 days after the Larkspur power outage"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "advance_days:15",
+      "simulated_day": 15.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "23b2fcd5-1f5f-46a4-8f23-8a2303039d12",
+            "status": "VALID",
+            "version": 3,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the ring road closed for 14 days after the Larkspur power outage"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the ring road closed for 14 days after the Larkspur power outage"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 6,
+      "pending_questions": 0
+    }
+  ]
+}

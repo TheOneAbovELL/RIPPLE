@@ -1,0 +1,285 @@
+{
+  "scenario": "forget_story__n0_sana",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "bcffa7c8-b64b-434d-8560-e095e0eaac5f",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Ledger: 153 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "46a0cc36-2bd2-420e-9530-43d40f87df39",
+            "status": "VALID",
+            "version": 2,
+            "content": "Duncliff bridge collapse: 153 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "46a0cc36-2bd2-420e-9530-43d40f87df39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "bcffa7c8-b64b-434d-8560-e095e0eaac5f",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": null,
+          "latest": null
+        },
+        "summary": {
+          "alias": "summary",
+          "root": null,
+          "latest": null
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 11 accounts exposed in the Larkspur data breach"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Larkspur data breach: 11 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "summary": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

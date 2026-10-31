@@ -1,0 +1,284 @@
+{
+  "scenario": "deadline_moved__p2_harsh",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-11-19"
+          },
+          "latest": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-11-19"
+          }
+        },
+        "umbrella_reminder": {
+          "alias": "umbrella_reminder",
+          "root": {
+            "id": "umbrella_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          },
+          "latest": {
+            "id": "umbrella_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-04"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-04"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.1"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        },
+        {
+          "opening_id": "umbrella_opening",
+          "opening_alias": "umbrella_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "umbrella_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:umbrella_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-11-19"
+          },
+          "latest": {
+            "id": "69e117fd-ae46-4bdf-8d69-d976c906e7ef",
+            "status": "VALID",
+            "version": 2,
+            "content": "Umbrella SDE intern: deadline 2026-12-23"
+          }
+        },
+        "umbrella_reminder": {
+          "alias": "umbrella_reminder",
+          "root": {
+            "id": "umbrella_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          },
+          "latest": {
+            "id": "6ded1625-7c1b-45ef-bab6-80f6801b8478",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind two days before 2026-12-23"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-04"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-04"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-04"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.1"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        },
+        {
+          "opening_id": "69e117fd-ae46-4bdf-8d69-d976c906e7ef",
+          "opening_alias": null,
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "6ded1625-7c1b-45ef-bab6-80f6801b8478"
+          ]
+        }
+      ],
+      "gold": {
+        "umbrella_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-23",
+          "version": 2,
+          "deleted": false
+        },
+        "hooli_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0
+    }
+  ]
+}

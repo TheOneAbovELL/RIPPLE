@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p4_bharat",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-12-13"
+          },
+          "latest": {
+            "id": "umbrella_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-12-13"
+          }
+        },
+        "umbrella_reminder": {
+          "alias": "umbrella_reminder",
+          "root": {
+            "id": "umbrella_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-13"
+          },
+          "latest": {
+            "id": "umbrella_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-13"
+          }
+        },
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE engineer: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE engineer: deadline 2026-11-22"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          }
+        },
+        "wonka_eligibility": {
+          "alias": "wonka_eligibility",
+          "root": {
+            "id": "wonka_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for wonka"
+          },
+          "latest": {
+            "id": "wonka_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for wonka"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_eligibility",
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "umbrella_opening",
+          "opening_alias": "umbrella_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "umbrella_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:umbrella_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "umbrella_opening": {
+          "alias": "umbrella_opening",
+          "root": {
+            "id": "umbrella_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Umbrella SDE intern: deadline 2026-12-13"
+          },
+          "latest": {
+            "id": "8862d22d-6ea3-4dab-b084-320669c2184e",
+            "status": "VALID",
+            "version": 2,
+            "content": "Umbrella SDE intern: deadline 2026-12-27"
+          }
+        },
+        "umbrella_reminder": {
+          "alias": "umbrella_reminder",
+          "root": {
+            "id": "umbrella_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind two days before 2026-12-13"
+          },
+          "latest": {
+            "id": "c85a24d7-7f59-480c-9d08-d4034066d9fd",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind two days before 2026-12-27"
+          }
+        },
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE engineer: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE engineer: deadline 2026-11-22"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          }
+        },
+        "wonka_eligibility": {
+          "alias": "wonka_eligibility",
+          "root": {
+            "id": "wonka_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for wonka"
+          },
+          "latest": {
+            "id": "wonka_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for wonka"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_eligibility",
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "8862d22d-6ea3-4dab-b084-320669c2184e",
+          "opening_alias": "umbrella_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "c85a24d7-7f59-480c-9d08-d4034066d9fd"
+          ]
+        }
+      ],
+      "gold": {
+        "umbrella_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-27",
+          "version": 2,
+          "deleted": false
+        },
+        "wonka_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "wonka_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "wonka_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "umbrella_reminder",
+          "memory_id": "c85a24d7-7f59-480c-9d08-d4034066d9fd",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "umbrella_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "umbrella_reminder",
+          "memory_id": "8862d22d-6ea3-4dab-b084-320669c2184e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "umbrella_reminder",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "umbrella_reminder",
+          "memory_id": "wonka_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "c85a24d7-7f59-480c-9d08-d4034066d9fd",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "8862d22d-6ea3-4dab-b084-320669c2184e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "wonka_eligibility",
+          "memory_id": "wonka_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_eligibility",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "wonka_eligibility",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "8862d22d-6ea3-4dab-b084-320669c2184e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "wonka_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "c85a24d7-7f59-480c-9d08-d4034066d9fd",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "wonka_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

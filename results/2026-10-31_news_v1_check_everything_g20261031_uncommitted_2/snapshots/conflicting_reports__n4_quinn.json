@@ -1,0 +1,266 @@
+{
+  "scenario": "conflicting_reports__n4_quinn",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 64 people injured in the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 64 people injured in the Eastmere bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere bridge collapse: 64 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 64 people injured in the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 85 people injured in the Eastmere bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Eastmere bridge collapse: 64 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 64 people injured in the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 85 people injured in the Eastmere bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 64 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: Eastmere bridge collapse: 64 people injured"
+          },
+          "latest": {
+            "id": "74741ab8-791d-4b42-98bf-e88de77703fe",
+            "status": "VALID",
+            "version": 2,
+            "content": "briefing: Eastmere bridge collapse, figure disputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "briefing: Eastmere bridge collapse, figure disputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "74741ab8-791d-4b42-98bf-e88de77703fe",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "74741ab8-791d-4b42-98bf-e88de77703fe",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "183d9dde-ff6c-4e89-8d8c-4f79190c9e73",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "scenario": "ceo_departure__f0_bela",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "J. Castellano runs Zenith Looms"
+          },
+          "latest": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "J. Castellano runs Zenith Looms"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "J. Castellano's cost plan keeps ZNTH margins rising"
+          },
+          "latest": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "J. Castellano's cost plan keeps ZNTH margins rising"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 14%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 14%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 10%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 10%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 26%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 26%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 26%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 26%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:leader",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "J. Castellano runs Zenith Looms"
+          },
+          "latest": {
+            "id": "52a75659-6465-49d4-b906-7ff89f1117d0",
+            "status": "VALID",
+            "version": 2,
+            "content": "R. Okonjo replaces J. Castellano at Zenith Looms"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "J. Castellano's cost plan keeps ZNTH margins rising"
+          },
+          "latest": {
+            "id": "86c4d917-7661-418f-8234-9c09ec990fc1",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH cost plan uncertain under R. Okonjo"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 14%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 14%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 10%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 10%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 26%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 26%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 26%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 26%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "assumption@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "assumption",
+          "memory_id": "86c4d917-7661-418f-8234-9c09ec990fc1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "52a75659-6465-49d4-b906-7ff89f1117d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "86c4d917-7661-418f-8234-9c09ec990fc1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "52a75659-6465-49d4-b906-7ff89f1117d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "86c4d917-7661-418f-8234-9c09ec990fc1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "52a75659-6465-49d4-b906-7ff89f1117d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

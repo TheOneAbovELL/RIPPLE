@@ -1,0 +1,83 @@
+name: ceo_departure__f1_xavier
+description: S. Varadan leaves Orbix Fabworks; the thesis built on the plan unwinds.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: ceo_departure
+  family: chain
+  seed: 20261031
+memories:
+  leader:
+    content: S. Varadan runs Orbix Fabworks
+    structured:
+      subject: company:ORBX
+      attribute: leadership
+      value: S. Varadan
+  assumption:
+    kind: assumption
+    content: S. Varadan's cost plan keeps ORBX margins rising
+  thesis:
+    kind: thesis
+    content: 'ORBX thesis: chip packaging leader compounding on margins near 19%'
+  alert:
+    kind: alert
+    content: look again if ORBX margin falls below 15%
+  other_margin:
+    content: QUIL operating margin is 15%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 15
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 15%'
+links:
+- - leader
+  - assumption
+  - premise_of
+- - assumption
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  assumption:
+  - action: update
+    new_content: ORBX cost plan uncertain under R. Okonjo
+    reason: re-derived from its parent
+    trigger: leader
+  thesis:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: leader
+  alert:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: leader
+events:
+- update: leader
+  content: R. Okonjo replaces S. Varadan at Orbix Fabworks
+  structured:
+    subject: company:ORBX
+    attribute: leadership
+    value: R. Okonjo
+  expect:
+    assumption@latest:
+      status: VALID
+      version: 2
+    thesis:
+      status: RETIRED
+    alert:
+      status: RETIRED
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

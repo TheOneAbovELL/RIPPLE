@@ -1,0 +1,64 @@
+name: conflicting_reports__n0_meera
+description: the Courier contradicts the Gazette on the Hollowbay power outage figure (no_longer_holds).
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n0_meera
+  template: conflicting_reports
+  family: ask
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 156 homes without power in the Hollowbay power outage'
+    structured:
+      subject: story:hollowbay
+      attribute: figure
+      value: 156
+  summary:
+    kind: summary
+    content: 'Hollowbay power outage: 156 homes without power'
+  briefing:
+    kind: briefing
+    content: 'briefing: Hollowbay power outage: 156 homes without power'
+links:
+- - claim
+  - summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: ask
+    question: the Gazette says 156, the Courier says 208; which should your summary use?
+    reason: two outlets disagree and neither has corrected
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'briefing: Hollowbay power outage, figure disputed'
+    reason: re-derived from its parent
+    trigger: summary
+events:
+- update: claim
+  content: 'the Courier: 208 homes without power in the Hollowbay power outage'
+  structured:
+    subject: story:hollowbay
+    attribute: figure
+    value: 208
+  expect:
+    summary:
+      status: PENDING_USER
+    briefing:
+      status: SUSPECT
+      version: 1
+- answer: summary
+  reply: no_longer_holds
+  expect:
+    summary:
+      status: RETIRED
+    briefing@latest:
+      status: VALID
+      content: 'briefing: Hollowbay power outage, figure disputed'
+      version: 2

@@ -1,0 +1,131 @@
+{
+  "overall": {
+    "tp": 0,
+    "fp": 1,
+    "fn": 72,
+    "tn": 333,
+    "typed_tp": 0,
+    "n": 406,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "typed_precision": null,
+    "typed_recall": null,
+    "typed_f1": null
+  },
+  "by_provenance": {
+    "scenario": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 72,
+      "tn": 333,
+      "typed_tp": 0,
+      "n": 406,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    }
+  },
+  "by_held_out": {
+    "unknown": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 72,
+      "tn": 333,
+      "typed_tp": 0,
+      "n": 406,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": null,
+      "typed_f1": null
+    }
+  },
+  "by_gold_link_type": {
+    "alert_for": {
+      "tp": 0,
+      "fn": 19,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": false
+    },
+    "depends_on_fact": {
+      "tp": 0,
+      "fn": 5,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "depends_on_time_period": {
+      "tp": 0,
+      "fn": 5,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": true
+    },
+    "estimate_from": {
+      "tp": 0,
+      "fn": 5,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": false
+    },
+    "journaled_with": {
+      "tp": 0,
+      "fn": 4,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": false
+    },
+    "premise_of": {
+      "tp": 0,
+      "fn": 34,
+      "recall": 0.0,
+      "typed_recall": null,
+      "seen_in_train": false
+    }
+  },
+  "false_positives_by_negative_kind": {
+    "reversed edge": {
+      "n": 72,
+      "fp": 1,
+      "fp_rate": 0.013888888888888888
+    },
+    "same structured key": {
+      "n": 10,
+      "fp": 0,
+      "fp_rate": 0.0
+    },
+    "unspecified": {
+      "n": 252,
+      "fp": 0,
+      "fp_rate": 0.0
+    }
+  },
+  "type_confusion": {
+    "alert_for -> none": 19,
+    "depends_on_fact -> none": 5,
+    "depends_on_time_period -> none": 5,
+    "estimate_from -> none": 5,
+    "journaled_with -> none": 4,
+    "none -> depends_on_fact": 1,
+    "none -> none": 333,
+    "premise_of -> none": 34
+  },
+  "reversed_proposals": 1,
+  "abstentions": 0,
+  "linker_calls": 406,
+  "llm_calls": 0,
+  "elapsed_seconds": 110.102,
+  "cost": {
+    "wall_seconds_per_call": 0.271187,
+    "cpu_seconds_per_call": 1.569196,
+    "cpu_seconds": 637.094,
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "note": "process CPU time over all threads; an LLM call's provider-side cost is not in it"
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "scenario": "accepted_offer__p2_esha",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for acme summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for acme summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to acme summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to acme summer internship"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2027"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2027"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to initech full-time 2027"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to initech full-time 2027"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:offer",
+      "simulated_day": 0.0,
+      "memories": {
+        "offer": {
+          "alias": "offer",
+          "root": {
+            "id": "offer",
+            "status": "VALID",
+            "version": 1,
+            "content": "no summer offer accepted"
+          },
+          "latest": {
+            "id": "844633b6-0b9e-4b06-8b31-124fec907874",
+            "status": "VALID",
+            "version": 2,
+            "content": "accepted hooli summer 2027 offer"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for summer 2027"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for acme summer internship"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for acme summer internship"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to acme summer internship"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to acme summer internship"
+          }
+        },
+        "batch": {
+          "alias": "batch",
+          "root": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2027"
+          },
+          "latest": {
+            "id": "batch",
+            "status": "VALID",
+            "version": 1,
+            "content": "batch 2027"
+          }
+        },
+        "fulltime": {
+          "alias": "fulltime",
+          "root": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to initech full-time 2027"
+          },
+          "latest": {
+            "id": "fulltime",
+            "status": "VALID",
+            "version": 1,
+            "content": "apply to initech full-time 2027"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fulltime": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "batch": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "availability",
+          "memory_id": "availability",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "844633b6-0b9e-4b06-8b31-124fec907874",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "offer",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "availability",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "844633b6-0b9e-4b06-8b31-124fec907874",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "offer",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "availability",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "844633b6-0b9e-4b06-8b31-124fec907874",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "offer",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "recommendation",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "availability",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "844633b6-0b9e-4b06-8b31-124fec907874",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fulltime",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "batch",
+          "memory_id": "batch",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "batch",
+          "memory_id": "availability",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "batch",
+          "memory_id": "844633b6-0b9e-4b06-8b31-124fec907874",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "batch",
+          "memory_id": "fulltime",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "batch",
+          "memory_id": "eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

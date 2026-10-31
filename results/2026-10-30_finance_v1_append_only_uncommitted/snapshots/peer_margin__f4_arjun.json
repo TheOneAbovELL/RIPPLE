@@ -1,0 +1,204 @@
+{
+  "scenario": "peer_margin__f4_arjun",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          },
+          "latest": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          }
+        },
+        "other_alert": {
+          "alias": "other_alert",
+          "root": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 16%"
+          },
+          "latest": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 16%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          },
+          "latest": {
+            "id": "2b09b164-8322-475d-ba03-5e5f3556f8d8",
+            "status": "VALID",
+            "version": 2,
+            "content": "KRVL operating margin is 27%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          }
+        },
+        "other_alert": {
+          "alias": "other_alert",
+          "root": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 16%"
+          },
+          "latest": {
+            "id": "other_alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 16%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "KRVL thesis: margins now 27%, re-checked",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_alert": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n2_leo",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 164 accounts exposed in the Kestrel data breach"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 164 accounts exposed in the Kestrel data breach"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Kestrel data breach: 164 accounts exposed"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Kestrel data breach: 164 accounts exposed"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 164 accounts exposed"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Kestrel data breach: 164 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 164 accounts exposed in the Kestrel data breach"
+          },
+          "latest": {
+            "id": "b61d42d6-baa3-42ff-8e04-f590dcea0fbe",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Ledger: 196 accounts exposed in the Kestrel data breach"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Kestrel data breach: 164 accounts exposed"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Kestrel data breach: 164 accounts exposed"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Kestrel data breach: 164 accounts exposed"
+          },
+          "latest": {
+            "id": "24fb4713-a88d-4e1d-800a-b99d177d7aa1",
+            "status": "VALID",
+            "version": 2,
+            "content": "Kestrel data breach: 196 accounts exposed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Kestrel data breach: 164 accounts exposed",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Kestrel data breach: 196 accounts exposed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "b61d42d6-baa3-42ff-8e04-f590dcea0fbe",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "24fb4713-a88d-4e1d-800a-b99d177d7aa1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "b61d42d6-baa3-42ff-8e04-f590dcea0fbe",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "24fb4713-a88d-4e1d-800a-b99d177d7aa1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "24fb4713-a88d-4e1d-800a-b99d177d7aa1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "b61d42d6-baa3-42ff-8e04-f590dcea0fbe",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

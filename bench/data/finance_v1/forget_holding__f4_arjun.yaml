@@ -1,0 +1,62 @@
+name: forget_holding__f4_arjun
+description: arjun asks to forget MPLW after one margin update.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f4_arjun
+  template: forget_holding
+  family: forget
+  seed: 20261031
+memories:
+  margin:
+    content: MPLW operating margin is 21%
+    structured:
+      subject: company:MPLW
+      attribute: margin
+      value: 21
+  thesis:
+    kind: thesis
+    content: 'MPLW thesis: packaged food leader compounding on margins near 21%'
+  other_margin:
+    content: KRVL operating margin is 24%
+    structured:
+      subject: company:KRVL
+      attribute: margin
+      value: 24
+  other_thesis:
+    kind: thesis
+    content: 'KRVL thesis: logistics leader compounding on margins near 24%'
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'MPLW thesis: margins now 19%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: MPLW operating margin is 19%
+  structured:
+    subject: company:MPLW
+    attribute: margin
+    value: 19
+  expect:
+    thesis@latest:
+      version: 2
+- forget: margin
+  expect:
+    margin:
+      deleted: true
+    thesis:
+      deleted: true
+    other_margin:
+      status: VALID
+    other_thesis:
+      status: VALID

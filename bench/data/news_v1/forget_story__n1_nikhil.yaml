@@ -1,0 +1,64 @@
+name: forget_story__n1_nikhil
+description: nikhil asks to forget the Larkspur power outage after one revision.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n1_nikhil
+  template: forget_story
+  family: forget
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'Valley Wire: 141 homes without power in the Larkspur power outage'
+    structured:
+      subject: story:larkspur
+      attribute: figure
+      value: 141
+  summary:
+    kind: summary
+    content: 'Larkspur power outage: 141 homes without power'
+  other_claim:
+    kind: claim
+    content: 'the Courier: 236 accounts exposed in the Hollowbay data breach'
+    structured:
+      subject: story:hollowbay
+      attribute: figure
+      value: 236
+  other_summary:
+    kind: summary
+    content: 'Hollowbay data breach: 236 accounts exposed'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Larkspur power outage: 106 homes without power'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'Valley Wire: 106 homes without power in the Larkspur power outage'
+  structured:
+    subject: story:larkspur
+    attribute: figure
+    value: 106
+  expect:
+    summary@latest:
+      version: 2
+- forget: claim
+  expect:
+    claim:
+      deleted: true
+    summary:
+      deleted: true
+    other_claim:
+      status: VALID
+    other_summary:
+      status: VALID

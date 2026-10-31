@@ -1,0 +1,321 @@
+{
+  "scenario": "guidance_cut__f0_wen",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX guides 18% revenue growth"
+          },
+          "latest": {
+            "id": "f40440b6-e74d-4752-b877-f86b2d9a9310",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX guides 12% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX revenue grows about 18% next year"
+          },
+          "latest": {
+            "id": "f128ba1c-e84b-4aec-bf91-6faf726b8e7c",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX revenue grows about 12% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 32%"
+          },
+          "latest": {
+            "id": "23c7a340-1ac3-4f13-956e-6bc4acff7ef7",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX thesis weakened: growth guided down to 12%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "ORBX revenue grows about 12% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "ORBX thesis weakened: growth guided down to 12%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "guidance",
+          "memory_id": "f40440b6-e74d-4752-b877-f86b2d9a9310",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "23c7a340-1ac3-4f13-956e-6bc4acff7ef7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "f128ba1c-e84b-4aec-bf91-6faf726b8e7c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "f128ba1c-e84b-4aec-bf91-6faf726b8e7c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "f40440b6-e74d-4752-b877-f86b2d9a9310",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "23c7a340-1ac3-4f13-956e-6bc4acff7ef7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "23c7a340-1ac3-4f13-956e-6bc4acff7ef7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "f40440b6-e74d-4752-b877-f86b2d9a9310",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "f128ba1c-e84b-4aec-bf91-6faf726b8e7c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "23c7a340-1ac3-4f13-956e-6bc4acff7ef7",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "f40440b6-e74d-4752-b877-f86b2d9a9310",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

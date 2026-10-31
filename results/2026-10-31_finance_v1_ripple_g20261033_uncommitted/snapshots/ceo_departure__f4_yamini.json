@@ -1,0 +1,339 @@
+{
+  "scenario": "ceo_departure__f4_yamini",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "A. Mensforth runs Vestra Diagnostics"
+          },
+          "latest": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "A. Mensforth runs Vestra Diagnostics"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "A. Mensforth's cost plan keeps VSTR margins rising"
+          },
+          "latest": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "A. Mensforth's cost plan keeps VSTR margins rising"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 23%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 23%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if VSTR margin falls below 19%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if VSTR margin falls below 19%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:leader",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "A. Mensforth runs Vestra Diagnostics"
+          },
+          "latest": {
+            "id": "32f4ffd1-d893-4155-bd89-70b03287ce8f",
+            "status": "VALID",
+            "version": 2,
+            "content": "S. Varadan replaces A. Mensforth at Vestra Diagnostics"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "A. Mensforth's cost plan keeps VSTR margins rising"
+          },
+          "latest": {
+            "id": "685e0fcb-8442-4a15-8486-4d76a3de3f1d",
+            "status": "VALID",
+            "version": 2,
+            "content": "VSTR cost plan uncertain under S. Varadan"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 23%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR thesis: lab testing leader compounding on margins near 23%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if VSTR margin falls below 19%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if VSTR margin falls below 19%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 21%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX operating margin is 21%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 21%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "assumption@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "assumption",
+          "memory_id": "685e0fcb-8442-4a15-8486-4d76a3de3f1d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "32f4ffd1-d893-4155-bd89-70b03287ce8f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "assumption",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "685e0fcb-8442-4a15-8486-4d76a3de3f1d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "32f4ffd1-d893-4155-bd89-70b03287ce8f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "685e0fcb-8442-4a15-8486-4d76a3de3f1d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "32f4ffd1-d893-4155-bd89-70b03287ce8f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

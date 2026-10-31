@@ -1,0 +1,74 @@
+name: cgpa_rise__p4_bharat
+description: bharat's CGPA rises past the umbrella cutoff.
+meta:
+  track: jobs_v0
+  persona: p4_bharat
+  template: cgpa_rise
+  family: changed
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 8.4
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 8.4
+  umbrella_opening:
+    kind: opening
+    content: 'Umbrella SDE intern: CGPA cutoff 8.6'
+    structured:
+      subject: opening:umbrella_opening
+      attribute: cgpa_cutoff
+      value: 8.6
+  eligibility:
+    kind: derived
+    content: not eligible for umbrella (8.4 < 8.6)
+  criteria:
+    kind: criteria
+    content: search openings with cutoff <= 8.4
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - umbrella_opening
+  - eligibility
+  - eligibility_of
+- - cgpa
+  - criteria
+  - criteria_from
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for umbrella (8.9 >= 8.6)
+    reason: re-derived from its parent
+    trigger: cgpa
+  criteria:
+  - action: update
+    new_content: search openings with cutoff <= 8.9
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 8.9
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 8.9
+  expect:
+    cgpa:
+      status: RETIRED
+      version: 1
+    cgpa@latest:
+      status: VALID
+      content: CGPA is 8.9
+      version: 2
+    eligibility@latest:
+      status: VALID
+      content: eligible for umbrella (8.9 >= 8.6)
+      version: 2
+    criteria@latest:
+      status: VALID
+      version: 2
+    umbrella_opening:
+      status: VALID
+      version: 1

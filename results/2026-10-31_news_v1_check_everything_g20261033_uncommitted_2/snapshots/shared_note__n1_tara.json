@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n1_tara",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Hollowbay factory fire: 238 workers evacuated"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          },
+          "latest": {
+            "id": "5f4644aa-995b-4445-acb1-eebefb0ef121",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Gazette: 191 workers evacuated in the Hollowbay factory fire"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Hollowbay factory fire: 238 workers evacuated"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "fca02061-9bb8-44e9-841b-9dfb83e7b202",
+            "status": "VALID",
+            "version": 2,
+            "content": "Hollowbay factory fire: 191 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Hollowbay factory fire: 238 workers evacuated",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Hollowbay factory fire: 191 workers evacuated",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "5f4644aa-995b-4445-acb1-eebefb0ef121",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "fca02061-9bb8-44e9-841b-9dfb83e7b202",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "5f4644aa-995b-4445-acb1-eebefb0ef121",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "fca02061-9bb8-44e9-841b-9dfb83e7b202",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "fca02061-9bb8-44e9-841b-9dfb83e7b202",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "5f4644aa-995b-4445-acb1-eebefb0ef121",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "scenario": "forget_holding__f2_vikram",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 22%"
+          },
+          "latest": {
+            "id": "margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 22%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 22%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 22%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": {
+            "id": "margin",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH operating margin is 22%"
+          },
+          "latest": {
+            "id": "135ae356-0c97-4795-b50f-ae9dd16c61ac",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH operating margin is 24%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 22%"
+          },
+          "latest": {
+            "id": "4953857d-04ff-4aed-9490-fc2766540974",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH thesis: margins now 24%, re-checked"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "4953857d-04ff-4aed-9490-fc2766540974",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "135ae356-0c97-4795-b50f-ae9dd16c61ac",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:margin",
+      "simulated_day": 0.0,
+      "memories": {
+        "margin": {
+          "alias": "margin",
+          "root": null,
+          "latest": null
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": null,
+          "latest": null
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 31%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 31%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "margin": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "thesis": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

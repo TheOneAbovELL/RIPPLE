@@ -1,0 +1,428 @@
+{
+  "scenario": "trading_halt__f2_vikram",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH every Friday"
+          },
+          "latest": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review ZNTH every Friday"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:halt",
+      "simulated_day": 0.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review ZNTH every Friday"
+          },
+          "latest": {
+            "id": "13d92ce2-5c6c-4556-8195-143dfbffa154",
+            "status": "VALID",
+            "version": 2,
+            "content": "weekly review rescheduled around the halt"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          }
+        },
+        "halt": {
+          "alias": "halt",
+          "root": {
+            "id": "halt",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trading halted for 12 days pending a filing"
+          },
+          "latest": {
+            "id": "halt",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trading halted for 12 days pending a filing"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "halt": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "review@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "trading": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "plan": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "halt",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "13d92ce2-5c6c-4556-8195-143dfbffa154",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "13d92ce2-5c6c-4556-8195-143dfbffa154",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "13d92ce2-5c6c-4556-8195-143dfbffa154",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "13d92ce2-5c6c-4556-8195-143dfbffa154",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "advance_days:13",
+      "simulated_day": 13.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review ZNTH every Friday"
+          },
+          "latest": {
+            "id": "13b98471-36f2-419e-b6b2-c70071d5d91d",
+            "status": "VALID",
+            "version": 3,
+            "content": "weekly review rescheduled around the halt"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next ZNTH review covers the margin trend"
+          }
+        },
+        "halt": {
+          "alias": "halt",
+          "root": {
+            "id": "halt",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH trading halted for 12 days pending a filing"
+          },
+          "latest": {
+            "id": "halt",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH trading halted for 12 days pending a filing"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "halt": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "review@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "trading": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "plan": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "halt",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "13b98471-36f2-419e-b6b2-c70071d5d91d",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "13b98471-36f2-419e-b6b2-c70071d5d91d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "13b98471-36f2-419e-b6b2-c70071d5d91d",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "13b98471-36f2-419e-b6b2-c70071d5d91d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "scenario": "attribution_retracted__n3_meera",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Kestrel data breach"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Kestrel data breach"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a phishing campaign caused the Kestrel data breach"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a phishing campaign caused the Kestrel data breach"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Kestrel data breach"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Kestrel data breach"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Kestrel data breach"
+          },
+          "latest": {
+            "id": "e906258e-442d-4088-b30d-dd8b2d69a1d4",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on a phishing campaign: the investigation is still open"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "a phishing campaign caused the Kestrel data breach"
+          },
+          "latest": {
+            "id": "746bb34d-253a-4701-a32d-d20e9f77e18b",
+            "status": "VALID",
+            "version": 2,
+            "content": "cause of the Kestrel data breach not established"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Kestrel data breach"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Kestrel data breach"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 177 homes without power in the Ashgrove power outage"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove power outage: 177 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "analysis",
+          "memory_id": "746bb34d-253a-4701-a32d-d20e9f77e18b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "e906258e-442d-4088-b30d-dd8b2d69a1d4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "e906258e-442d-4088-b30d-dd8b2d69a1d4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "746bb34d-253a-4701-a32d-d20e9f77e18b",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "746bb34d-253a-4701-a32d-d20e9f77e18b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "e906258e-442d-4088-b30d-dd8b2d69a1d4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "e906258e-442d-4088-b30d-dd8b2d69a1d4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "746bb34d-253a-4701-a32d-d20e9f77e18b",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

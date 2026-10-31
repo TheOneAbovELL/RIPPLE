@@ -1,0 +1,48 @@
+{
+  "suite": "finance_v1",
+  "strategy": "check_everything",
+  "ablation": null,
+  "linker": "scenario",
+  "linker_details": "links written from the scenario file (gold graph); no link finder ran",
+  "split": "test",
+  "data": {
+    "source": "generated in memory by bench.generate_finance with seeds.generator_seed; the first seed reproduces bench/data/finance_v1 (checked against its manifest)",
+    "track": "finance_v1",
+    "domain": "finance",
+    "content": "synthetic",
+    "generator": {
+      "module": "bench.generate_finance",
+      "version": 1
+    },
+    "generator_seeds": [
+      20261031,
+      20261032,
+      20261033
+    ],
+    "data_sha256_by_seed": {
+      "20261031": "8b514dc76e0a577264e73fa956b9e727b28c3589005484dbf1ac3c7cf59ad037",
+      "20261032": "cde3be083e5560cb595f1ea334cf27d530bbe44b4c1d920dc65583f4c6a8429b",
+      "20261033": "183c3f95127fc7e65f13c4863c4c47f57823a399ae65fe6069d73a9274fa9c4d"
+    },
+    "curated": "not included: curated stories are not generated per seed",
+    "split": "test"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "source_sha256": "7e371da34fa18c96f10b76be91b8d0ce649b6257a08e5587aba382882098173b",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "bench/strategies.py check_everything (one-shot wave over every VALID memory; graph read only to order it parents first, ADR-0104)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "retrieval_probe": "bench/probe.py: HybridRetriever, lexical BM25 in memory, every match, graph expansion on, flagged included; one query per gold alias (its first content)",
+  "models": {},
+  "prompt_versions": {},
+  "seeds": {
+    "kind": "generator",
+    "generator_seed": 20261031,
+    "run_seed": null,
+    "data_sha256": "8b514dc76e0a577264e73fa956b9e727b28c3589005484dbf1ac3c7cf59ad037"
+  },
+  "run_at": "2026-10-31T09:35:39.903021+00:00"
+}

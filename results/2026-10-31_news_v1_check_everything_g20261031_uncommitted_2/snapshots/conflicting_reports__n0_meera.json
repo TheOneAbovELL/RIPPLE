@@ -1,0 +1,266 @@
+{
+  "scenario": "conflicting_reports__n0_meera",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 156 homes without power in the Hollowbay power outage"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 156 homes without power in the Hollowbay power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Hollowbay power outage: 156 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 156 homes without power in the Hollowbay power outage"
+          },
+          "latest": {
+            "id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 208 homes without power in the Hollowbay power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Hollowbay power outage: 156 homes without power"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Gazette: 156 homes without power in the Hollowbay power outage"
+          },
+          "latest": {
+            "id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 208 homes without power in the Hollowbay power outage"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay power outage: 156 homes without power"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: Hollowbay power outage: 156 homes without power"
+          },
+          "latest": {
+            "id": "e1047b96-19e1-43c0-bf1a-d841628bed91",
+            "status": "VALID",
+            "version": 2,
+            "content": "briefing: Hollowbay power outage, figure disputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "briefing: Hollowbay power outage, figure disputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "e1047b96-19e1-43c0-bf1a-d841628bed91",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "e1047b96-19e1-43c0-bf1a-d841628bed91",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "0fcc2055-eddb-4e16-8c24-97959a857af1",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

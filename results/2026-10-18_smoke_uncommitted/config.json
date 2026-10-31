@@ -1,0 +1,13 @@
+{
+  "suite": "smoke",
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted (tests/scenarios/runner.py AliasResolver)",
+  "engine": "ripple.core.engine.WaveEngine",
+  "models": null,
+  "prompt_versions": null,
+  "seeds": null,
+  "run_at": "2026-10-18T22:00:02.082705+00:00"
+}

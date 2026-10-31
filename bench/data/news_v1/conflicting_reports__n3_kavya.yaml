@@ -1,0 +1,64 @@
+name: conflicting_reports__n3_kavya
+description: the Courier contradicts the Ledger on the Kestrel bridge collapse figure (still_holds).
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n3_kavya
+  template: conflicting_reports
+  family: ask
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 203 people injured in the Kestrel bridge collapse'
+    structured:
+      subject: story:kestrel
+      attribute: figure
+      value: 203
+  summary:
+    kind: summary
+    content: 'Kestrel bridge collapse: 203 people injured'
+  briefing:
+    kind: briefing
+    content: 'briefing: Kestrel bridge collapse: 203 people injured'
+links:
+- - claim
+  - summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: ask
+    question: the Ledger says 203, the Courier says 253; which should your summary use?
+    reason: two outlets disagree and neither has corrected
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'briefing: Kestrel bridge collapse, figure disputed'
+    reason: re-derived from its parent
+    trigger: summary
+events:
+- update: claim
+  content: 'the Courier: 253 people injured in the Kestrel bridge collapse'
+  structured:
+    subject: story:kestrel
+    attribute: figure
+    value: 253
+  expect:
+    summary:
+      status: PENDING_USER
+    briefing:
+      status: SUSPECT
+      version: 1
+- answer: summary
+  reply: still_holds
+  expect:
+    summary:
+      status: VALID
+      version: 1
+    briefing:
+      status: VALID
+      version: 1

@@ -1,0 +1,357 @@
+{
+  "scenario": "figure_revised__n3_kavya",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 25 people injured in the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 25 people injured in the Eastmere bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 25 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 25 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 186 workers evacuated in the Riverton factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 186 workers evacuated in the Riverton factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 186 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 186 workers evacuated"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Eastmere bridge collapse: 25 people injured; Riverton factory fire: 186 workers evacuated"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "today: Eastmere bridge collapse: 25 people injured; Riverton factory fire: 186 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Metro Desk: 25 people injured in the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "72411364-e47e-49da-a287-1b6c0aa370db",
+            "status": "VALID",
+            "version": 2,
+            "content": "Metro Desk: 20 people injured in the Eastmere bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Eastmere bridge collapse: 25 people injured"
+          },
+          "latest": {
+            "id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+            "status": "VALID",
+            "version": 2,
+            "content": "Eastmere bridge collapse: 20 people injured"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 186 workers evacuated in the Riverton factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 186 workers evacuated in the Riverton factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 186 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 186 workers evacuated"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "today: Eastmere bridge collapse: 25 people injured; Riverton factory fire: 186 workers evacuated"
+          },
+          "latest": {
+            "id": "8d288d1e-34c5-436a-9782-e90752183f39",
+            "status": "VALID",
+            "version": 2,
+            "content": "today: Eastmere bridge collapse: 20 people injured; Riverton factory fire: 186 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "claim@latest": {
+          "status": "VALID",
+          "content": "Metro Desk: 20 people injured in the Eastmere bridge collapse",
+          "version": 2,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Eastmere bridge collapse: 20 people injured",
+          "version": 2,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "today: Eastmere bridge collapse: 20 people injured; Riverton factory fire: 186 workers evacuated",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "72411364-e47e-49da-a287-1b6c0aa370db",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "8d288d1e-34c5-436a-9782-e90752183f39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "72411364-e47e-49da-a287-1b6c0aa370db",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "8d288d1e-34c5-436a-9782-e90752183f39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "8d288d1e-34c5-436a-9782-e90752183f39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "72411364-e47e-49da-a287-1b6c0aa370db",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "8d288d1e-34c5-436a-9782-e90752183f39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "8d288d1e-34c5-436a-9782-e90752183f39",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "72411364-e47e-49da-a287-1b6c0aa370db",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "440988c2-8412-4077-ad0c-c39ccfc1d508",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

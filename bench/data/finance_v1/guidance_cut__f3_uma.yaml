@@ -1,0 +1,81 @@
+name: guidance_cut__f3_uma
+description: Talon Railcar cuts guidance; uma's estimate and thesis follow.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: guidance_cut
+  family: changed
+  seed: 20261031
+memories:
+  guidance:
+    content: TALN guides 16% revenue growth
+    structured:
+      subject: company:TALN
+      attribute: guidance
+      value: 16
+  estimate:
+    kind: derived
+    content: TALN revenue grows about 16% next year
+  thesis:
+    kind: thesis
+    content: 'TALN thesis: rolling stock leader compounding on margins near 21%'
+  other_margin:
+    content: QUIL operating margin is 21%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 21
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 21%'
+links:
+- - guidance
+  - estimate
+  - estimate_from
+- - guidance
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  estimate:
+  - action: update
+    new_content: TALN revenue grows about 9% next year
+    reason: re-derived from its parent
+    trigger: guidance
+  thesis:
+  - action: update
+    new_content: 'TALN thesis weakened: growth guided down to 9%'
+    reason: re-derived from its parent
+    trigger: guidance
+events:
+- update: guidance
+  content: TALN guides 9% revenue growth
+  structured:
+    subject: company:TALN
+    attribute: guidance
+    value: 9
+  expect:
+    guidance:
+      status: RETIRED
+      version: 1
+    guidance@latest:
+      status: VALID
+      version: 2
+    estimate@latest:
+      status: VALID
+      content: TALN revenue grows about 9% next year
+      version: 2
+    thesis@latest:
+      status: VALID
+      content: 'TALN thesis weakened: growth guided down to 9%'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

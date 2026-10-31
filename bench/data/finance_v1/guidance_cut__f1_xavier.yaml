@@ -1,0 +1,81 @@
+name: guidance_cut__f1_xavier
+description: Korval Freight cuts guidance; xavier's estimate and thesis follow.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: guidance_cut
+  family: changed
+  seed: 20261031
+memories:
+  guidance:
+    content: KRVL guides 10% revenue growth
+    structured:
+      subject: company:KRVL
+      attribute: guidance
+      value: 10
+  estimate:
+    kind: derived
+    content: KRVL revenue grows about 10% next year
+  thesis:
+    kind: thesis
+    content: 'KRVL thesis: logistics leader compounding on margins near 30%'
+  other_margin:
+    content: ORBX operating margin is 19%
+    structured:
+      subject: company:ORBX
+      attribute: margin
+      value: 19
+  other_thesis:
+    kind: thesis
+    content: 'ORBX thesis: chip packaging leader compounding on margins near 19%'
+links:
+- - guidance
+  - estimate
+  - estimate_from
+- - guidance
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  estimate:
+  - action: update
+    new_content: KRVL revenue grows about 4% next year
+    reason: re-derived from its parent
+    trigger: guidance
+  thesis:
+  - action: update
+    new_content: 'KRVL thesis weakened: growth guided down to 4%'
+    reason: re-derived from its parent
+    trigger: guidance
+events:
+- update: guidance
+  content: KRVL guides 4% revenue growth
+  structured:
+    subject: company:KRVL
+    attribute: guidance
+    value: 4
+  expect:
+    guidance:
+      status: RETIRED
+      version: 1
+    guidance@latest:
+      status: VALID
+      version: 2
+    estimate@latest:
+      status: VALID
+      content: KRVL revenue grows about 4% next year
+      version: 2
+    thesis@latest:
+      status: VALID
+      content: 'KRVL thesis weakened: growth guided down to 4%'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

@@ -1,0 +1,141 @@
+# Production topology for one VPS (ADR-0029). Caddy is the only public listener.
+#   cp .env.example .env   # fill every value; never commit .env
+#   export RIPPLE_IMAGE=ghcr.io/<owner>/ripple:<sha-or-tag>
+#   docker compose -f infra/docker-compose.prod.yml up -d
+# Upgrades: change RIPPLE_IMAGE, `pull`, `up -d` (migrate runs first and exits 0).
+# Rollback: if the release added a migration, downgrade with the NEW image first
+# (`docker compose ... run --rm migrate alembic downgrade <rev>`), then set the previous
+# RIPPLE_IMAGE and `up -d`; an older image cannot read a newer revision (docs/ops/deploy.md).
+
+x-app-env: &app-env
+  DATABASE_URL: postgresql+psycopg://ripple:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/ripple
+  REDIS_URL: redis://redis:6379/0
+  RIPPLE_LLM_CONFIG: ${RIPPLE_LLM_CONFIG:-config/llm.default.toml}
+  RIPPLE_LOG_JSON: "true"
+
+x-app: &app
+  image: ${RIPPLE_IMAGE:?set RIPPLE_IMAGE to the published image tag}
+  env_file: ../.env
+  environment:
+    <<: *app-env
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options: { max-size: "50m", max-file: "5" }
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: ripple
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: ripple
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ripple -d ripple"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    # Not published: only services on this network reach it.
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "noeviction"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  migrate:
+    <<: *app
+    command: ["migrate"]
+    restart: "no"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    <<: *app
+    command: ["api"]
+    expose: ["8000"]
+    environment:
+      # A service-level `environment` replaces the anchor's, so it merges x-app-env back.
+      <<: *app-env
+      # Behind Caddy every request arrives from Caddy's address; without this all
+      # users would share one per-address rate-limit bucket (ADR-0098).
+      RIPPLE_TRUST_PROXY: "true"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/healthz', timeout=3).status == 200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  mcp:
+    <<: *app
+    command: ["mcp"]
+    expose: ["8765"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  worker:
+    <<: *app
+    command: ["worker"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+
+  caddy:
+    image: caddy:2.9-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      RIPPLE_DOMAIN: ${RIPPLE_DOMAIN:?set RIPPLE_DOMAIN, e.g. ripple.example.edu}
+      ACME_EMAIL: ${ACME_EMAIL:?set ACME_EMAIL for Let's Encrypt notices}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./web-dist:/srv/web:ro   # the dashboard's static export (apps/web/out), copied by the deploy step
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  backup:
+    image: pgvector/pgvector:pg17
+    entrypoint: ["/bin/sh", "/scripts/backup.sh"]
+    environment:
+      PGHOST: postgres
+      PGUSER: ripple
+      PGPASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      PGDATABASE: ripple
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-30}
+      BACKUP_S3_URL: ${BACKUP_S3_URL:-}   # optional, e.g. s3://bucket/ripple; needs AWS_* in .env
+    volumes:
+      - ./scripts:/scripts:ro
+      - backups:/backups
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  redis-data:
+  caddy-data:
+  caddy-config:
+  backups:

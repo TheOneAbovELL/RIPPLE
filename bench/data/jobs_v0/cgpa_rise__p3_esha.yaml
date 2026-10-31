@@ -1,0 +1,74 @@
+name: cgpa_rise__p3_esha
+description: esha's CGPA rises past the vandelay cutoff.
+meta:
+  track: jobs_v0
+  persona: p3_esha
+  template: cgpa_rise
+  family: changed
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.5
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.5
+  vandelay_opening:
+    kind: opening
+    content: 'Vandelay SDE intern: CGPA cutoff 7.7'
+    structured:
+      subject: opening:vandelay_opening
+      attribute: cgpa_cutoff
+      value: 7.7
+  eligibility:
+    kind: derived
+    content: not eligible for vandelay (7.5 < 7.7)
+  criteria:
+    kind: criteria
+    content: search openings with cutoff <= 7.5
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - vandelay_opening
+  - eligibility
+  - eligibility_of
+- - cgpa
+  - criteria
+  - criteria_from
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for vandelay (7.9 >= 7.7)
+    reason: re-derived from its parent
+    trigger: cgpa
+  criteria:
+  - action: update
+    new_content: search openings with cutoff <= 7.9
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.9
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.9
+  expect:
+    cgpa:
+      status: RETIRED
+      version: 1
+    cgpa@latest:
+      status: VALID
+      content: CGPA is 7.9
+      version: 2
+    eligibility@latest:
+      status: VALID
+      content: eligible for vandelay (7.9 >= 7.7)
+      version: 2
+    criteria@latest:
+      status: VALID
+      version: 2
+    vandelay_opening:
+      status: VALID
+      version: 1

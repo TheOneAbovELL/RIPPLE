@@ -1,0 +1,24 @@
+name: cgpa_change
+description: A CGPA rise makes an opening eligible and loosens the search criteria.
+memories:
+  cgpa: {kind: fact, content: "CGPA is 7.6", structured: {subject: student, attribute: cgpa, value: 7.6}}
+  acme_cutoff: {kind: opening, content: "Acme SDE intern: CGPA cutoff 7.8", structured: {subject: acme, attribute: cgpa_cutoff, value: 7.8}}
+  eligibility: {kind: derived, content: "not eligible for Acme (7.6 < 7.8)"}
+  criteria: {kind: criteria, content: "search openings with cutoff <= 7.6"}
+links:
+  - [cgpa, eligibility, eligibility_of]
+  - [acme_cutoff, eligibility, eligibility_of]
+  - [cgpa, criteria, criteria_from]
+resolutions:
+  eligibility: {action: update, new_content: "eligible for Acme (7.9 >= 7.8)"}
+  criteria: {action: update, new_content: "search openings with cutoff <= 7.9"}
+events:
+  - update: cgpa
+    content: "CGPA is 7.9"
+    structured: {subject: student, attribute: cgpa, value: 7.9}
+    expect:
+      cgpa: {status: RETIRED, version: 1}
+      cgpa@latest: {status: VALID, version: 2, content: "CGPA is 7.9"}
+      eligibility@latest: {status: VALID, version: 2, content: "eligible for Acme (7.9 >= 7.8)"}
+      criteria@latest: {status: VALID, version: 2}
+      acme_cutoff: {status: VALID, version: 1}

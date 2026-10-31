@@ -1,0 +1,278 @@
+{
+  "scenario": "rate_edge__f1_divya",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 4.6%"
+          },
+          "latest": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 4.6%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis holds while the policy rate stays below 5.1%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "VSTR thesis holds while the policy rate stays below 5.1%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review VSTR monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review VSTR monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:rate",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 4.6%"
+          },
+          "latest": {
+            "id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.0%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "VSTR thesis holds while the policy rate stays below 5.1%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "VSTR thesis holds while the policy rate stays below 5.1%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review VSTR monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review VSTR monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "thesis",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "alert",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "thesis",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 4.6%"
+          },
+          "latest": {
+            "id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.0%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "VSTR thesis holds while the policy rate stays below 5.1%"
+          },
+          "latest": {
+            "id": "b6a88bac-fcf0-49d5-95cf-6ad01937d393",
+            "status": "VALID",
+            "version": 2,
+            "content": "VSTR thesis holds while the policy rate stays below 5.6%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review VSTR monthly"
+          },
+          "latest": {
+            "id": "015d6548-fcfc-490c-b04c-289c696ea467",
+            "status": "VALID",
+            "version": 2,
+            "content": "review VSTR now: rate thesis under question"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "VSTR thesis holds while the policy rate stays below 5.6%",
+          "version": 2,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "review VSTR now: rate thesis under question",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "b6a88bac-fcf0-49d5-95cf-6ad01937d393",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "015d6548-fcfc-490c-b04c-289c696ea467",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "015d6548-fcfc-490c-b04c-289c696ea467",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "b6a88bac-fcf0-49d5-95cf-6ad01937d393",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "8b5852cd-1a63-4b6f-a152-b67eb2856e57",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

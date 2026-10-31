@@ -1,0 +1,59 @@
+name: shared_note__n3_kavya
+description: kavya shared the Riverton factory fire figure before it was corrected.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n3_kavya
+  template: shared_note
+  family: snapshot
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 58 workers evacuated in the Riverton factory fire'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 58
+  shared:
+    kind: shared
+    content: 'shared with the study group: Riverton factory fire: 58 workers evacuated'
+  summary:
+    kind: summary
+    content: 'Riverton factory fire: 58 workers evacuated'
+links:
+- - claim
+  - shared
+  - shared_from
+- - claim
+  - summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Riverton factory fire: 39 workers evacuated'
+    reason: re-derived from its parent
+    trigger: claim
+  shared:
+  - action: keep
+    reason: a shared note is a record of what was said then
+    trigger: claim
+events:
+- update: claim
+  content: 'the Gazette: 39 workers evacuated in the Riverton factory fire'
+  structured:
+    subject: story:riverton
+    attribute: figure
+    value: 39
+  expect:
+    claim:
+      status: RETIRED
+    shared:
+      status: VALID
+      content: 'shared with the study group: Riverton factory fire: 58 workers evacuated'
+      version: 1
+    summary@latest:
+      status: VALID
+      content: 'Riverton factory fire: 39 workers evacuated'
+      version: 2

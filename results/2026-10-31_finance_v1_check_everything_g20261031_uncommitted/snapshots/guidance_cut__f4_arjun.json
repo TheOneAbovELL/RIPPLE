@@ -1,0 +1,321 @@
+{
+  "scenario": "guidance_cut__f4_arjun",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW guides 17% revenue growth"
+          },
+          "latest": {
+            "id": "guidance",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW guides 17% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW revenue grows about 17% next year"
+          },
+          "latest": {
+            "id": "estimate",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW revenue grows about 17% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 21%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:guidance",
+      "simulated_day": 0.0,
+      "memories": {
+        "guidance": {
+          "alias": "guidance",
+          "root": {
+            "id": "guidance",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "MPLW guides 17% revenue growth"
+          },
+          "latest": {
+            "id": "0deb1567-3635-4dab-93e8-7328da6b6148",
+            "status": "VALID",
+            "version": 2,
+            "content": "MPLW guides 9% revenue growth"
+          }
+        },
+        "estimate": {
+          "alias": "estimate",
+          "root": {
+            "id": "estimate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "MPLW revenue grows about 17% next year"
+          },
+          "latest": {
+            "id": "040c4aab-3db8-4dae-b2f7-9cf725615415",
+            "status": "VALID",
+            "version": 2,
+            "content": "MPLW revenue grows about 9% next year"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "6396e2ab-78f0-4e3e-951c-417eecd7455f",
+            "status": "VALID",
+            "version": 2,
+            "content": "MPLW thesis weakened: growth guided down to 9%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL operating margin is 24%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "guidance": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "guidance@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "estimate@latest": {
+          "status": "VALID",
+          "content": "MPLW revenue grows about 9% next year",
+          "version": 2,
+          "deleted": false
+        },
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "MPLW thesis weakened: growth guided down to 9%",
+          "version": 2,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "guidance",
+          "memory_id": "0deb1567-3635-4dab-93e8-7328da6b6148",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "6396e2ab-78f0-4e3e-951c-417eecd7455f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "guidance",
+          "memory_id": "040c4aab-3db8-4dae-b2f7-9cf725615415",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "040c4aab-3db8-4dae-b2f7-9cf725615415",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "0deb1567-3635-4dab-93e8-7328da6b6148",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "estimate",
+          "memory_id": "6396e2ab-78f0-4e3e-951c-417eecd7455f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "6396e2ab-78f0-4e3e-951c-417eecd7455f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "0deb1567-3635-4dab-93e8-7328da6b6148",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "040c4aab-3db8-4dae-b2f7-9cf725615415",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "6396e2ab-78f0-4e3e-951c-417eecd7455f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_thesis",
+          "memory_id": "0deb1567-3635-4dab-93e8-7328da6b6148",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_margin",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_margin",
+          "memory_id": "other_thesis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

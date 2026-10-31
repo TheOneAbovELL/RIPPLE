@@ -1,0 +1,78 @@
+# Local services for development and the pilot (docs/02-architecture.md, ADR-0004, ADR-0017).
+# Infra only:   docker compose -f infra/docker-compose.yml up -d
+# With the app: docker compose -f infra/docker-compose.yml --profile app up -d --build
+# Stop:         docker compose -f infra/docker-compose.yml down       (add -v to drop data)
+#
+# Image tags: pgvector publishes <pgvector>-pg<major> tags; the floating pg17 tag is used
+# until the first successful `docker pull` on the author's machine, after which the
+# exact tag it resolved to must be pinned here and in .github/workflows/ci.yml.
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: ripple-postgres
+    environment:
+      POSTGRES_USER: ripple
+      POSTGRES_PASSWORD: change-me
+      POSTGRES_DB: ripple
+    ports:
+      - "5432:5432"
+    volumes:
+      - ripple-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ripple -d ripple"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: ripple-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - ripple-redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    profiles: ["app"]
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    image: ripple:local
+    command: ["api"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+psycopg://ripple:change-me@postgres:5432/ripple
+      REDIS_URL: redis://redis:6379/0
+      RIPPLE_MIGRATE_ON_START: "1"  # development has no migrate service; only the api migrates
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  worker:
+    profiles: ["app"]
+    image: ripple:local
+    command: ["worker"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+psycopg://ripple:change-me@postgres:5432/ripple
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  ripple-postgres:
+  ripple-redis:

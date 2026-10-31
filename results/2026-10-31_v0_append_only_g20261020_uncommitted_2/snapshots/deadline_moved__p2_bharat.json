@@ -1,0 +1,447 @@
+{
+  "scenario": "deadline_moved__p2_bharat",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-12-04"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-12-04"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-04"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-04"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-25"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-25"
+          }
+        },
+        "vandelay_reminder": {
+          "alias": "vandelay_reminder",
+          "root": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-25"
+          },
+          "latest": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-25"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          }
+        },
+        "vandelay_eligibility": {
+          "alias": "vandelay_eligibility",
+          "root": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          },
+          "latest": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "vandelay_eligibility",
+            "vandelay_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:wonka_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-12-04"
+          },
+          "latest": {
+            "id": "17758714-f112-4112-a804-5874acef7b36",
+            "status": "VALID",
+            "version": 2,
+            "content": "Wonka SDE intern: deadline 2026-12-17"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-04"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-04"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-25"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-25"
+          }
+        },
+        "vandelay_reminder": {
+          "alias": "vandelay_reminder",
+          "root": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-25"
+          },
+          "latest": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-25"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          }
+        },
+        "vandelay_eligibility": {
+          "alias": "vandelay_eligibility",
+          "root": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          },
+          "latest": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "17758714-f112-4112-a804-5874acef7b36",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "vandelay_eligibility",
+            "vandelay_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "wonka_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-17",
+          "version": 2,
+          "deleted": false
+        },
+        "vandelay_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "vandelay_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "vandelay_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "17758714-f112-4112-a804-5874acef7b36",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "17758714-f112-4112-a804-5874acef7b36",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "17758714-f112-4112-a804-5874acef7b36",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

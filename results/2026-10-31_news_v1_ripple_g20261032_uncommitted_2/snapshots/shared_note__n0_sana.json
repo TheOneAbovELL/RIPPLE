@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n0_sana",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 47 tonnes of grain lost in the Ashgrove warehouse flood"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 47 tonnes of grain lost in the Ashgrove warehouse flood"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove warehouse flood: 47 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove warehouse flood: 47 tonnes of grain lost"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove warehouse flood: 47 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove warehouse flood: 47 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 47 tonnes of grain lost in the Ashgrove warehouse flood"
+          },
+          "latest": {
+            "id": "2a102968-e9c1-4cb9-aa9c-2408473c799c",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Ledger: 38 tonnes of grain lost in the Ashgrove warehouse flood"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove warehouse flood: 47 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Ashgrove warehouse flood: 47 tonnes of grain lost"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Ashgrove warehouse flood: 47 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "5c46b0c6-079c-48c7-8619-16d07be146d0",
+            "status": "VALID",
+            "version": 2,
+            "content": "Ashgrove warehouse flood: 38 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Ashgrove warehouse flood: 47 tonnes of grain lost",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Ashgrove warehouse flood: 38 tonnes of grain lost",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "2a102968-e9c1-4cb9-aa9c-2408473c799c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "5c46b0c6-079c-48c7-8619-16d07be146d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "2a102968-e9c1-4cb9-aa9c-2408473c799c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "5c46b0c6-079c-48c7-8619-16d07be146d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "5c46b0c6-079c-48c7-8619-16d07be146d0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "2a102968-e9c1-4cb9-aa9c-2408473c799c",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

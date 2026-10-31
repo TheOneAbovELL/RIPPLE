@@ -1,0 +1,62 @@
+name: forget_holding__f0_wen
+description: wen asks to forget ORBX after one margin update.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f0_wen
+  template: forget_holding
+  family: forget
+  seed: 20261031
+memories:
+  margin:
+    content: ORBX operating margin is 32%
+    structured:
+      subject: company:ORBX
+      attribute: margin
+      value: 32
+  thesis:
+    kind: thesis
+    content: 'ORBX thesis: chip packaging leader compounding on margins near 32%'
+  other_margin:
+    content: VSTR operating margin is 31%
+    structured:
+      subject: company:VSTR
+      attribute: margin
+      value: 31
+  other_thesis:
+    kind: thesis
+    content: 'VSTR thesis: lab testing leader compounding on margins near 31%'
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'ORBX thesis: margins now 34%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: ORBX operating margin is 34%
+  structured:
+    subject: company:ORBX
+    attribute: margin
+    value: 34
+  expect:
+    thesis@latest:
+      version: 2
+- forget: margin
+  expect:
+    margin:
+      deleted: true
+    thesis:
+      deleted: true
+    other_margin:
+      status: VALID
+    other_thesis:
+      status: VALID

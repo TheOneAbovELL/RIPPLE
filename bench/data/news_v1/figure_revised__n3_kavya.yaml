@@ -1,0 +1,90 @@
+name: figure_revised__n3_kavya
+description: the Ledger revises the Kestrel bridge collapse figure; kavya's briefing follows.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n3_kavya
+  template: figure_revised
+  family: changed
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 203 people injured in the Kestrel bridge collapse'
+    structured:
+      subject: story:kestrel
+      attribute: figure
+      value: 203
+  summary:
+    kind: summary
+    content: 'Kestrel bridge collapse: 203 people injured'
+  other_claim:
+    kind: claim
+    content: 'Valley Wire: 65 homes without power in the Ashgrove power outage'
+    structured:
+      subject: story:ashgrove
+      attribute: figure
+      value: 65
+  other_summary:
+    kind: summary
+    content: 'Ashgrove power outage: 65 homes without power'
+  briefing:
+    kind: briefing
+    content: 'today: Kestrel bridge collapse: 203 people injured; Ashgrove power outage: 65 homes without
+      power'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+- - other_summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Kestrel bridge collapse: 153 people injured'
+    reason: re-derived from its parent
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'today: Kestrel bridge collapse: 153 people injured; Ashgrove power outage: 65 homes
+      without power'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Ledger: 153 people injured in the Kestrel bridge collapse'
+  structured:
+    subject: story:kestrel
+    attribute: figure
+    value: 153
+  expect:
+    claim:
+      status: RETIRED
+      version: 1
+    claim@latest:
+      status: VALID
+      content: 'the Ledger: 153 people injured in the Kestrel bridge collapse'
+      version: 2
+    summary@latest:
+      status: VALID
+      content: 'Kestrel bridge collapse: 153 people injured'
+      version: 2
+    briefing@latest:
+      status: VALID
+      content: 'today: Kestrel bridge collapse: 153 people injured; Ashgrove power outage: 65 homes without
+        power'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

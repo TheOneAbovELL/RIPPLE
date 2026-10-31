@@ -1,0 +1,85 @@
+name: attribution_retracted__n3_kavya
+description: Officials withdraw the blame on storm damage for the Ashgrove power outage; a chain unwinds.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n3_kavya
+  template: attribution_retracted
+  family: chain
+  seed: 20261031
+memories:
+  attribution:
+    kind: claim
+    content: officials blame storm damage for the Ashgrove power outage
+    structured:
+      subject: story:ashgrove
+      attribute: attribution
+      value: storm damage
+  analysis:
+    kind: derived
+    content: storm damage caused the Ashgrove power outage
+  follow_up:
+    kind: derived
+    content: follow inspections linked to storm damage
+  briefing_item:
+    kind: briefing
+    content: 'briefing: storm damage blamed for the Ashgrove power outage'
+  other_claim:
+    kind: claim
+    content: 'the Gazette: 58 workers evacuated in the Riverton factory fire'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 58
+  other_summary:
+    kind: summary
+    content: 'Riverton factory fire: 58 workers evacuated'
+links:
+- - attribution
+  - analysis
+  - inferred_from
+- - analysis
+  - follow_up
+  - inferred_from
+- - follow_up
+  - briefing_item
+  - briefing_from
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  analysis:
+  - action: update
+    new_content: cause of the Ashgrove power outage not established
+    reason: re-derived from its parent
+    trigger: attribution
+  follow_up:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+  briefing_item:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+events:
+- update: attribution
+  content: 'officials withdraw the blame on storm damage: the investigation is still open'
+  structured:
+    subject: story:ashgrove
+    attribute: attribution
+    value: unknown
+  expect:
+    analysis@latest:
+      status: VALID
+      version: 2
+    follow_up:
+      status: RETIRED
+    briefing_item:
+      status: RETIRED
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

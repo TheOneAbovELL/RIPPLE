@@ -1,0 +1,284 @@
+{
+  "scenario": "cgpa_rise__p4_gauri",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          }
+        },
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: CGPA cutoff 8.7"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: CGPA cutoff 8.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for wonka (8.5 < 8.7)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for wonka (8.5 < 8.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "df85706e-1d97-4be4-ac34-c198d711ce3c",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 9.0"
+          }
+        },
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: CGPA cutoff 8.7"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: CGPA cutoff 8.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for wonka (8.5 < 8.7)"
+          },
+          "latest": {
+            "id": "d75d8d89-9a3e-44da-aa9c-96a61306fc83",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for wonka (9.0 >= 8.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          },
+          "latest": {
+            "id": "ae36c0e3-f743-4e9e-b98f-a4e166f13c69",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 9.0"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "d75d8d89-9a3e-44da-aa9c-96a61306fc83"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 9.0",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for wonka (9.0 >= 8.7)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "wonka_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "df85706e-1d97-4be4-ac34-c198d711ce3c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "ae36c0e3-f743-4e9e-b98f-a4e166f13c69",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "d75d8d89-9a3e-44da-aa9c-96a61306fc83",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "d75d8d89-9a3e-44da-aa9c-96a61306fc83",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "df85706e-1d97-4be4-ac34-c198d711ce3c",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "ae36c0e3-f743-4e9e-b98f-a4e166f13c69",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "df85706e-1d97-4be4-ac34-c198d711ce3c",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "d75d8d89-9a3e-44da-aa9c-96a61306fc83",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "wonka_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "d75d8d89-9a3e-44da-aa9c-96a61306fc83",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "df85706e-1d97-4be4-ac34-c198d711ce3c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_opening",
+          "memory_id": "ae36c0e3-f743-4e9e-b98f-a4e166f13c69",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

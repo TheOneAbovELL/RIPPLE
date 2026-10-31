@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p0_jay",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-11-22"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-23"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-23"
+          }
+        },
+        "vandelay_reminder": {
+          "alias": "vandelay_reminder",
+          "root": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-23"
+          },
+          "latest": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-23"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.3"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.3"
+          }
+        },
+        "vandelay_eligibility": {
+          "alias": "vandelay_eligibility",
+          "root": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          },
+          "latest": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "stark_opening",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "stark_reminder"
+          ]
+        },
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "vandelay_eligibility",
+            "vandelay_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:stark_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-11-22"
+          },
+          "latest": {
+            "id": "26a4e8e9-0c99-4c87-9014-301253d8a2b1",
+            "status": "VALID",
+            "version": 2,
+            "content": "Stark SDE intern: deadline 2026-12-17"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind two days before 2026-11-22"
+          },
+          "latest": {
+            "id": "fd418842-78db-44e6-833a-ed30c0fe6f79",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind two days before 2026-12-17"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-23"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE engineer: deadline 2026-12-23"
+          }
+        },
+        "vandelay_reminder": {
+          "alias": "vandelay_reminder",
+          "root": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-23"
+          },
+          "latest": {
+            "id": "vandelay_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-23"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.3"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.3"
+          }
+        },
+        "vandelay_eligibility": {
+          "alias": "vandelay_eligibility",
+          "root": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          },
+          "latest": {
+            "id": "vandelay_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for vandelay"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "26a4e8e9-0c99-4c87-9014-301253d8a2b1",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "fd418842-78db-44e6-833a-ed30c0fe6f79"
+          ]
+        },
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "vandelay_eligibility",
+            "vandelay_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "stark_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-17",
+          "version": 2,
+          "deleted": false
+        },
+        "vandelay_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "vandelay_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "vandelay_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "fd418842-78db-44e6-833a-ed30c0fe6f79",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "26a4e8e9-0c99-4c87-9014-301253d8a2b1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "fd418842-78db-44e6-833a-ed30c0fe6f79",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "26a4e8e9-0c99-4c87-9014-301253d8a2b1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_reminder",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_eligibility",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "26a4e8e9-0c99-4c87-9014-301253d8a2b1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "fd418842-78db-44e6-833a-ed30c0fe6f79",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "vandelay_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

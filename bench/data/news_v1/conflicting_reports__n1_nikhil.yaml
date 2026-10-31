@@ -1,0 +1,64 @@
+name: conflicting_reports__n1_nikhil
+description: the Courier contradicts Valley Wire on the Larkspur power outage figure (no_longer_holds).
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n1_nikhil
+  template: conflicting_reports
+  family: ask
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'Valley Wire: 141 homes without power in the Larkspur power outage'
+    structured:
+      subject: story:larkspur
+      attribute: figure
+      value: 141
+  summary:
+    kind: summary
+    content: 'Larkspur power outage: 141 homes without power'
+  briefing:
+    kind: briefing
+    content: 'briefing: Larkspur power outage: 141 homes without power'
+links:
+- - claim
+  - summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: ask
+    question: Valley Wire says 141, the Courier says 94; which should your summary use?
+    reason: two outlets disagree and neither has corrected
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'briefing: Larkspur power outage, figure disputed'
+    reason: re-derived from its parent
+    trigger: summary
+events:
+- update: claim
+  content: 'the Courier: 94 homes without power in the Larkspur power outage'
+  structured:
+    subject: story:larkspur
+    attribute: figure
+    value: 94
+  expect:
+    summary:
+      status: PENDING_USER
+    briefing:
+      status: SUSPECT
+      version: 1
+- answer: summary
+  reply: no_longer_holds
+  expect:
+    summary:
+      status: RETIRED
+    briefing@latest:
+      status: VALID
+      content: 'briefing: Larkspur power outage, figure disputed'
+      version: 2

@@ -1,0 +1,191 @@
+{
+  "scenario": "cgpa_rise__p3_esha",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.5"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.7"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for vandelay (7.5 < 7.7)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for vandelay (7.5 < 7.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.5"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.5"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.5"
+          },
+          "latest": {
+            "id": "8612cdfb-50a4-4ea6-9b15-d5b33688e08c",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.9"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.7"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for vandelay (7.5 < 7.7)"
+          },
+          "latest": {
+            "id": "b91bc1fc-3ff1-4b7b-9e86-5063485ea580",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for vandelay (7.9 >= 7.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.5"
+          },
+          "latest": {
+            "id": "7b07be5e-0c3a-4937-a27b-0f6d5d2b402e",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 7.9"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "b91bc1fc-3ff1-4b7b-9e86-5063485ea580"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 7.9",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for vandelay (7.9 >= 7.7)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "vandelay_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0
+    }
+  ]
+}

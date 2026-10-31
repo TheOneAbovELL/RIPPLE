@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p1_asha",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-12-19"
+          },
+          "latest": {
+            "id": "stark_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-12-19"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-19"
+          },
+          "latest": {
+            "id": "stark_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-12-19"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-02"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-02"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-02"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-02"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder",
+            "globex_eligibility"
+          ]
+        },
+        {
+          "opening_id": "stark_opening",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "stark_reminder"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:stark_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "stark_opening": {
+          "alias": "stark_opening",
+          "root": {
+            "id": "stark_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Stark SDE intern: deadline 2026-12-19"
+          },
+          "latest": {
+            "id": "8406c3f6-bc2c-41a8-9b4e-5bfb58b8e937",
+            "status": "VALID",
+            "version": 2,
+            "content": "Stark SDE intern: deadline 2026-12-24"
+          }
+        },
+        "stark_reminder": {
+          "alias": "stark_reminder",
+          "root": {
+            "id": "stark_reminder",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "remind two days before 2026-12-19"
+          },
+          "latest": {
+            "id": "85a3235d-3c89-4828-9dc8-a0593b950387",
+            "status": "VALID",
+            "version": 2,
+            "content": "remind two days before 2026-12-24"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-02"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-02"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-02"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-02"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder",
+            "globex_eligibility"
+          ]
+        },
+        {
+          "opening_id": "8406c3f6-bc2c-41a8-9b4e-5bfb58b8e937",
+          "opening_alias": "stark_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "85a3235d-3c89-4828-9dc8-a0593b950387"
+          ]
+        }
+      ],
+      "gold": {
+        "stark_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-24",
+          "version": 2,
+          "deleted": false
+        },
+        "globex_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "85a3235d-3c89-4828-9dc8-a0593b950387",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "8406c3f6-bc2c-41a8-9b4e-5bfb58b8e937",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "stark_reminder",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "85a3235d-3c89-4828-9dc8-a0593b950387",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "8406c3f6-bc2c-41a8-9b4e-5bfb58b8e937",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_reminder",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_eligibility",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "8406c3f6-bc2c-41a8-9b4e-5bfb58b8e937",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "85a3235d-3c89-4828-9dc8-a0593b950387",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "globex_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

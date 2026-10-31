@@ -1,0 +1,284 @@
+{
+  "scenario": "cgpa_rise__p1_asha",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.6"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for vandelay (7.4 < 7.6)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for vandelay (7.4 < 7.6)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "b6e61aca-3411-4db8-8a6b-c76c7267bdbb",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.8"
+          }
+        },
+        "vandelay_opening": {
+          "alias": "vandelay_opening",
+          "root": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.6"
+          },
+          "latest": {
+            "id": "vandelay_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Vandelay SDE intern: CGPA cutoff 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for vandelay (7.4 < 7.6)"
+          },
+          "latest": {
+            "id": "d9a155c6-56ea-44c8-9675-2071fa89b6ee",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for vandelay (7.8 >= 7.6)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.4"
+          },
+          "latest": {
+            "id": "4b565b00-5e62-4d84-b273-242975f7d4a3",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 7.8"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "vandelay_opening",
+          "opening_alias": "vandelay_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "d9a155c6-56ea-44c8-9675-2071fa89b6ee"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 7.8",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for vandelay (7.8 >= 7.6)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "vandelay_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "b6e61aca-3411-4db8-8a6b-c76c7267bdbb",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "4b565b00-5e62-4d84-b273-242975f7d4a3",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "d9a155c6-56ea-44c8-9675-2071fa89b6ee",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "d9a155c6-56ea-44c8-9675-2071fa89b6ee",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "b6e61aca-3411-4db8-8a6b-c76c7267bdbb",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "4b565b00-5e62-4d84-b273-242975f7d4a3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "b6e61aca-3411-4db8-8a6b-c76c7267bdbb",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "d9a155c6-56ea-44c8-9675-2071fa89b6ee",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "vandelay_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "d9a155c6-56ea-44c8-9675-2071fa89b6ee",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "b6e61aca-3411-4db8-8a6b-c76c7267bdbb",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "vandelay_opening",
+          "memory_id": "4b565b00-5e62-4d84-b273-242975f7d4a3",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

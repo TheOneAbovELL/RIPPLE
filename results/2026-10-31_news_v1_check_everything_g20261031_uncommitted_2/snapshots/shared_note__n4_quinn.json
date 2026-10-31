@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n4_quinn",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 158 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 158 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 158 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 158 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 158 passengers rescued"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 158 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Metro Desk: 158 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "66ce206e-b52c-4624-a46a-46bbdad54b44",
+            "status": "VALID",
+            "version": 2,
+            "content": "Metro Desk: 189 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 158 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Riverton ferry accident: 158 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Riverton ferry accident: 158 passengers rescued"
+          },
+          "latest": {
+            "id": "65d998f1-a7c7-4bca-bdd1-d9565b7927ef",
+            "status": "VALID",
+            "version": 2,
+            "content": "Riverton ferry accident: 189 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Riverton ferry accident: 158 passengers rescued",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Riverton ferry accident: 189 passengers rescued",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "66ce206e-b52c-4624-a46a-46bbdad54b44",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "65d998f1-a7c7-4bca-bdd1-d9565b7927ef",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "66ce206e-b52c-4624-a46a-46bbdad54b44",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "65d998f1-a7c7-4bca-bdd1-d9565b7927ef",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "65d998f1-a7c7-4bca-bdd1-d9565b7927ef",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "66ce206e-b52c-4624-a46a-46bbdad54b44",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

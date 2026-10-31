@@ -1,0 +1,81 @@
+name: accepted_offer__p4_bharat
+description: bharat accepts a wonka summer offer; a three-hop chain retires.
+meta:
+  track: jobs_v0
+  persona: p4_bharat
+  template: accepted_offer
+  family: chain
+  seed: 20261019
+memories:
+  offer:
+    content: no summer offer accepted
+    structured:
+      subject: student
+      attribute: accepted_offer
+      value: none
+  availability:
+    kind: derived
+    content: available for summer 2027
+  eligibility:
+    kind: derived
+    content: eligible for globex summer internship
+  recommendation:
+    kind: derived
+    content: apply to globex summer internship
+  batch:
+    content: batch 2028
+    structured:
+      subject: student
+      attribute: batch
+      value: 2028
+  fulltime:
+    kind: derived
+    content: apply to stark full-time 2028
+links:
+- - offer
+  - availability
+  - depends_on_fact
+- - availability
+  - eligibility
+  - eligibility_of
+- - eligibility
+  - recommendation
+  - depends_on_fact
+- - batch
+  - fulltime
+  - eligibility_of
+resolutions:
+  availability:
+  - action: update
+    new_content: not available for summer 2027 (wonka offer)
+    reason: re-derived from its parent
+    trigger: offer
+  eligibility:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: offer
+  recommendation:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: offer
+events:
+- update: offer
+  content: accepted wonka summer 2027 offer
+  structured:
+    subject: student
+    attribute: accepted_offer
+    value: wonka_summer_2027
+  expect:
+    availability@latest:
+      status: VALID
+      version: 2
+    eligibility:
+      status: RETIRED
+    recommendation:
+      status: RETIRED
+    fulltime:
+      status: VALID
+      version: 1
+    batch:
+      status: VALID
+      version: 1

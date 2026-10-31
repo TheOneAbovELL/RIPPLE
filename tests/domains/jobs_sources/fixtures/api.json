@@ -1,0 +1,27 @@
+{
+  "meta": {"count": 2, "terms": "https://api.example.org/terms"},
+  "data": {
+    "jobs": [
+      {
+        "id": 101,
+        "title": "Backend Developer Intern",
+        "company": {"name": "Globex Corp"},
+        "url": "/postings/101",
+        "description": "<p>Globex Corp is hiring a <b>Backend Developer Intern</b>.</p><p>CGPA 7.0 and above, 2027 batch. Skills: Go, PostgreSQL.</p><p>Apply by 20 December 2026.</p>"
+      },
+      {
+        "id": 102,
+        "title": "Posting without a description",
+        "company": {"name": "Globex Corp"},
+        "url": "/postings/102",
+        "description": ""
+      },
+      {
+        "id": 103,
+        "title": "Research Intern",
+        "company": {"name": "Initech"},
+        "description": "Initech is hiring a Research Intern. CGPA 8.0 and above. Skills: Python. Apply by 1 December 2026."
+      }
+    ]
+  }
+}

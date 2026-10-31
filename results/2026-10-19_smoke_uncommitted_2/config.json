@@ -1,0 +1,20 @@
+{
+  "suite": "smoke",
+  "strategy": "ripple",
+  "split": null,
+  "data": {
+    "source": "tests/scenarios/*.yaml",
+    "count": 11
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "ripple.core.engine.WaveEngine (TODO(human); not runnable until implemented)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "models": null,
+  "prompt_versions": null,
+  "seeds": null,
+  "run_at": "2026-10-19T05:12:17.233603+00:00"
+}

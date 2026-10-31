@@ -1,0 +1,284 @@
+{
+  "scenario": "cgpa_rise__p4_bharat",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: CGPA cutoff 8.3"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: CGPA cutoff 8.3"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for globex (8.1 < 8.3)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for globex (8.1 < 8.3)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.1"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.1"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 8.1"
+          },
+          "latest": {
+            "id": "d6a9552d-5cef-4baf-b8e2-dc33e32ac996",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 8.6"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: CGPA cutoff 8.3"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE intern: CGPA cutoff 8.3"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for globex (8.1 < 8.3)"
+          },
+          "latest": {
+            "id": "e8893998-b8f8-49a3-99c2-22cdccf7023c",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for globex (8.6 >= 8.3)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.1"
+          },
+          "latest": {
+            "id": "ebf5048b-abd3-45d2-86a3-c97fb421c6f1",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 8.6"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "e8893998-b8f8-49a3-99c2-22cdccf7023c"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 8.6",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for globex (8.6 >= 8.3)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "globex_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "d6a9552d-5cef-4baf-b8e2-dc33e32ac996",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "e8893998-b8f8-49a3-99c2-22cdccf7023c",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "ebf5048b-abd3-45d2-86a3-c97fb421c6f1",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "e8893998-b8f8-49a3-99c2-22cdccf7023c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "d6a9552d-5cef-4baf-b8e2-dc33e32ac996",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "ebf5048b-abd3-45d2-86a3-c97fb421c6f1",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "d6a9552d-5cef-4baf-b8e2-dc33e32ac996",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "e8893998-b8f8-49a3-99c2-22cdccf7023c",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "globex_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "e8893998-b8f8-49a3-99c2-22cdccf7023c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "d6a9552d-5cef-4baf-b8e2-dc33e32ac996",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_opening",
+          "memory_id": "ebf5048b-abd3-45d2-86a3-c97fb421c6f1",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

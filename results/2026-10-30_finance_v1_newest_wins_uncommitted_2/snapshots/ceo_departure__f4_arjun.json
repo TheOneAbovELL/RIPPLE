@@ -1,0 +1,240 @@
+{
+  "scenario": "ceo_departure__f4_arjun",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist runs Korval Freight"
+          },
+          "latest": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist runs Korval Freight"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist's cost plan keeps KRVL margins rising"
+          },
+          "latest": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist's cost plan keeps KRVL margins rising"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if KRVL margin falls below 20%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if KRVL margin falls below 20%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:leader",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "M. Lindqvist runs Korval Freight"
+          },
+          "latest": {
+            "id": "e9571e1d-20e0-4305-8561-512f9e1be9dc",
+            "status": "VALID",
+            "version": 2,
+            "content": "R. Okonjo replaces M. Lindqvist at Korval Freight"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist's cost plan keeps KRVL margins rising"
+          },
+          "latest": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "M. Lindqvist's cost plan keeps KRVL margins rising"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL thesis: logistics leader compounding on margins near 24%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if KRVL margin falls below 20%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if KRVL margin falls below 20%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH operating margin is 20%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 20%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "assumption@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "scenario": "ceo_departure__f1_xavier",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "S. Varadan runs Orbix Fabworks"
+          },
+          "latest": {
+            "id": "leader",
+            "status": "VALID",
+            "version": 1,
+            "content": "S. Varadan runs Orbix Fabworks"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "S. Varadan's cost plan keeps ORBX margins rising"
+          },
+          "latest": {
+            "id": "assumption",
+            "status": "VALID",
+            "version": 1,
+            "content": "S. Varadan's cost plan keeps ORBX margins rising"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 15%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 15%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:leader",
+      "simulated_day": 0.0,
+      "memories": {
+        "leader": {
+          "alias": "leader",
+          "root": {
+            "id": "leader",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "S. Varadan runs Orbix Fabworks"
+          },
+          "latest": {
+            "id": "1d2bb713-5165-4957-bf7f-9681920b625f",
+            "status": "VALID",
+            "version": 2,
+            "content": "R. Okonjo replaces S. Varadan at Orbix Fabworks"
+          }
+        },
+        "assumption": {
+          "alias": "assumption",
+          "root": {
+            "id": "assumption",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "S. Varadan's cost plan keeps ORBX margins rising"
+          },
+          "latest": {
+            "id": "6228ecc9-f6bc-4da8-b6db-6a01f75b0820",
+            "status": "VALID",
+            "version": 2,
+            "content": "ORBX cost plan uncertain under R. Okonjo"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ORBX thesis: chip packaging leader compounding on margins near 19%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 15%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ORBX margin falls below 15%"
+          }
+        },
+        "other_margin": {
+          "alias": "other_margin",
+          "root": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          },
+          "latest": {
+            "id": "other_margin",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL operating margin is 15%"
+          }
+        },
+        "other_thesis": {
+          "alias": "other_thesis",
+          "root": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          },
+          "latest": {
+            "id": "other_thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "QUIL thesis: streaming leader compounding on margins near 15%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "assumption@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_thesis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_margin": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0
+    }
+  ]
+}

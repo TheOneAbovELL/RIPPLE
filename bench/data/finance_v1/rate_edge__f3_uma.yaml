@@ -1,0 +1,66 @@
+name: rate_edge__f3_uma
+description: The policy rate nears uma's 5.2% line (correction).
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: rate_edge
+  family: ask
+  seed: 20261031
+memories:
+  rate:
+    content: policy rate is 4.7%
+    structured:
+      subject: macro
+      attribute: policy_rate
+      value: 4.7
+  thesis:
+    kind: thesis
+    content: TALN thesis holds while the policy rate stays below 5.2%
+  alert:
+    kind: alert
+    content: review TALN monthly
+links:
+- - rate
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: ask
+    question: The policy rate is now 5.1%, just under your 5.2% line. Does your thesis still hold?
+    reason: the new rate sits on the line the thesis names
+    trigger: rate
+  alert:
+  - action: update
+    new_content: 'review TALN now: rate thesis under question'
+    reason: re-derived from its parent
+    trigger: thesis
+events:
+- update: rate
+  content: policy rate is 5.1%
+  structured:
+    subject: macro
+    attribute: policy_rate
+    value: 5.1
+  expect:
+    thesis:
+      status: PENDING_USER
+    alert:
+      status: SUSPECT
+      version: 1
+- answer: thesis
+  content: TALN thesis holds while the policy rate stays below 5.7%
+  reply: correction
+  expect:
+    thesis@latest:
+      status: VALID
+      content: TALN thesis holds while the policy rate stays below 5.7%
+      version: 2
+    alert@latest:
+      status: VALID
+      content: 'review TALN now: rate thesis under question'
+      version: 2

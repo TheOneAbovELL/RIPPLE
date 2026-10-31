@@ -1,0 +1,69 @@
+name: peer_margin__f4_arjun
+description: Korval Freight reports a new margin; nothing about Zenith Looms changes.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f4_arjun
+  template: peer_margin
+  family: unchanged
+  seed: 20261031
+memories:
+  margin:
+    content: KRVL operating margin is 24%
+    structured:
+      subject: company:KRVL
+      attribute: margin
+      value: 24
+  thesis:
+    kind: thesis
+    content: 'KRVL thesis: logistics leader compounding on margins near 24%'
+  other_margin:
+    content: ZNTH operating margin is 20%
+    structured:
+      subject: company:ZNTH
+      attribute: margin
+      value: 20
+  other_thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 20%'
+  other_alert:
+    kind: alert
+    content: look again if ZNTH margin falls below 16%
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+- - other_thesis
+  - other_alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'KRVL thesis: margins now 27%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: KRVL operating margin is 27%
+  structured:
+    subject: company:KRVL
+    attribute: margin
+    value: 27
+  expect:
+    thesis@latest:
+      status: VALID
+      content: 'KRVL thesis: margins now 27%, re-checked'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_alert:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

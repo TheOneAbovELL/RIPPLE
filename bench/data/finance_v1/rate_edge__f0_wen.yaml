@@ -1,0 +1,66 @@
+name: rate_edge__f0_wen
+description: The policy rate nears wen's 6.0% line (correction).
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f0_wen
+  template: rate_edge
+  family: ask
+  seed: 20261031
+memories:
+  rate:
+    content: policy rate is 5.5%
+    structured:
+      subject: macro
+      attribute: policy_rate
+      value: 5.5
+  thesis:
+    kind: thesis
+    content: ORBX thesis holds while the policy rate stays below 6.0%
+  alert:
+    kind: alert
+    content: review ORBX monthly
+links:
+- - rate
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: ask
+    question: The policy rate is now 5.9%, just under your 6.0% line. Does your thesis still hold?
+    reason: the new rate sits on the line the thesis names
+    trigger: rate
+  alert:
+  - action: update
+    new_content: 'review ORBX now: rate thesis under question'
+    reason: re-derived from its parent
+    trigger: thesis
+events:
+- update: rate
+  content: policy rate is 5.9%
+  structured:
+    subject: macro
+    attribute: policy_rate
+    value: 5.9
+  expect:
+    thesis:
+      status: PENDING_USER
+    alert:
+      status: SUSPECT
+      version: 1
+- answer: thesis
+  content: ORBX thesis holds while the policy rate stays below 6.5%
+  reply: correction
+  expect:
+    thesis@latest:
+      status: VALID
+      content: ORBX thesis holds while the policy rate stays below 6.5%
+      version: 2
+    alert@latest:
+      status: VALID
+      content: 'review ORBX now: rate thesis under question'
+      version: 2

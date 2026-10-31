@@ -1,0 +1,64 @@
+name: forget_story__n2_leo
+description: leo asks to forget the Riverton power outage after one revision.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n2_leo
+  template: forget_story
+  family: forget
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 77 homes without power in the Riverton power outage'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 77
+  summary:
+    kind: summary
+    content: 'Riverton power outage: 77 homes without power'
+  other_claim:
+    kind: claim
+    content: 'Valley Wire: 83 workers evacuated in the Ashgrove factory fire'
+    structured:
+      subject: story:ashgrove
+      attribute: figure
+      value: 83
+  other_summary:
+    kind: summary
+    content: 'Ashgrove factory fire: 83 workers evacuated'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Riverton power outage: 102 homes without power'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Gazette: 102 homes without power in the Riverton power outage'
+  structured:
+    subject: story:riverton
+    attribute: figure
+    value: 102
+  expect:
+    summary@latest:
+      version: 2
+- forget: claim
+  expect:
+    claim:
+      deleted: true
+    summary:
+      deleted: true
+    other_claim:
+      status: VALID
+    other_summary:
+      status: VALID

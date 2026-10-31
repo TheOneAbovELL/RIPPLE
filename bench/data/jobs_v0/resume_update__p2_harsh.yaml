@@ -1,0 +1,55 @@
+name: resume_update__p2_harsh
+description: harsh uploads resume v2; the umbrella application keeps v1.
+meta:
+  track: jobs_v0
+  persona: p2_harsh
+  template: resume_update
+  family: snapshot
+  seed: 20261019
+memories:
+  resume:
+    content: resume v1
+    structured:
+      subject: student
+      attribute: resume
+      value: v1
+  application:
+    kind: application
+    content: applied to umbrella with resume v1
+  tailoring:
+    kind: derived
+    content: highlight the rust project for hooli
+links:
+- - resume
+  - application
+  - sent_with_resume
+- - resume
+  - tailoring
+  - depends_on_fact
+resolutions:
+  tailoring:
+  - action: update
+    new_content: highlight the new rust work for hooli
+    reason: re-derived from its parent
+    trigger: resume
+  application:
+  - action: keep
+    reason: a sent application is a historical record
+    trigger: resume
+events:
+- update: resume
+  content: resume v2
+  structured:
+    subject: student
+    attribute: resume
+    value: v2
+  expect:
+    resume:
+      status: RETIRED
+    application:
+      status: VALID
+      content: applied to umbrella with resume v1
+      version: 1
+    tailoring@latest:
+      status: VALID
+      version: 2

@@ -1,0 +1,189 @@
+{
+  "scenario": "resume_update__p0_jay",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the django project for vandelay"
+          },
+          "latest": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the django project for vandelay"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:resume",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "a38ede16-d45b-4ca4-a863-66711e20fdaa",
+            "status": "VALID",
+            "version": 2,
+            "content": "resume v2"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to stark with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "highlight the django project for vandelay"
+          },
+          "latest": {
+            "id": "5f950ea4-e390-419f-9a56-c69aa6bebaac",
+            "status": "VALID",
+            "version": 2,
+            "content": "highlight the new django work for vandelay"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "resume": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "application": {
+          "status": "VALID",
+          "content": "applied to stark with resume v1",
+          "version": 1,
+          "deleted": false
+        },
+        "tailoring@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "resume",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "a38ede16-d45b-4ca4-a863-66711e20fdaa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "5f950ea4-e390-419f-9a56-c69aa6bebaac",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "a38ede16-d45b-4ca4-a863-66711e20fdaa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "5f950ea4-e390-419f-9a56-c69aa6bebaac",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "5f950ea4-e390-419f-9a56-c69aa6bebaac",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "a38ede16-d45b-4ca4-a863-66711e20fdaa",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

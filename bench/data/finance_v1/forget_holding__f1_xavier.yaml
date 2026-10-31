@@ -1,0 +1,62 @@
+name: forget_holding__f1_xavier
+description: xavier asks to forget KRVL after one margin update.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: forget_holding
+  family: forget
+  seed: 20261031
+memories:
+  margin:
+    content: KRVL operating margin is 30%
+    structured:
+      subject: company:KRVL
+      attribute: margin
+      value: 30
+  thesis:
+    kind: thesis
+    content: 'KRVL thesis: logistics leader compounding on margins near 30%'
+  other_margin:
+    content: ORBX operating margin is 19%
+    structured:
+      subject: company:ORBX
+      attribute: margin
+      value: 19
+  other_thesis:
+    kind: thesis
+    content: 'ORBX thesis: chip packaging leader compounding on margins near 19%'
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'KRVL thesis: margins now 32%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: KRVL operating margin is 32%
+  structured:
+    subject: company:KRVL
+    attribute: margin
+    value: 32
+  expect:
+    thesis@latest:
+      version: 2
+- forget: margin
+  expect:
+    margin:
+      deleted: true
+    thesis:
+      deleted: true
+    other_margin:
+      status: VALID
+    other_thesis:
+      status: VALID

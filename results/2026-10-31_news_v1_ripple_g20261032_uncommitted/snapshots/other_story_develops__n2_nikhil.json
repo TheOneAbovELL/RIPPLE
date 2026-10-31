@@ -1,0 +1,285 @@
+{
+  "scenario": "other_story_develops__n2_nikhil",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: no decision yet"
+          },
+          "latest": {
+            "id": "outcome",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: no decision yet"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: awaiting a decision"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: awaiting a decision"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:outcome",
+      "simulated_day": 0.0,
+      "memories": {
+        "outcome": {
+          "alias": "outcome",
+          "root": {
+            "id": "outcome",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: no decision yet"
+          },
+          "latest": {
+            "id": "382439a2-dbf2-4f73-8aa8-d305f4376414",
+            "status": "VALID",
+            "version": 2,
+            "content": "Hollowbay warehouse flood: inquiry opened"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Hollowbay warehouse flood: awaiting a decision"
+          },
+          "latest": {
+            "id": "3453f596-34eb-41a5-8a23-f44f3e78fa8d",
+            "status": "VALID",
+            "version": 2,
+            "content": "Hollowbay warehouse flood: inquiry opened"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        },
+        "other_analysis": {
+          "alias": "other_analysis",
+          "root": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident is the larger story this week"
+          },
+          "latest": {
+            "id": "other_analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident is the larger story this week"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Hollowbay warehouse flood: inquiry opened",
+          "version": 2,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_analysis": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "3453f596-34eb-41a5-8a23-f44f3e78fa8d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "382439a2-dbf2-4f73-8aa8-d305f4376414",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "382439a2-dbf2-4f73-8aa8-d305f4376414",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_analysis",
+          "memory_id": "3453f596-34eb-41a5-8a23-f44f3e78fa8d",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_analysis",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

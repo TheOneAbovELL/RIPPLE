@@ -1,0 +1,111 @@
+[project]
+name = "ripple"
+version = "0.0.1"
+description = "A domain-agnostic consistency layer for agent memory: when a fact changes, every belief that depended on it is updated."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Omjee R Giri" }]
+dependencies = [
+    "alembic==1.20.0",
+    "anthropic==1.15.0",
+    "arq==0.28.0",
+    "fastapi==0.146.0",
+    "httpx==0.28.1",
+    "langfuse==5.0.4",
+    "langgraph==1.2.16",
+    "langgraph-checkpoint-postgres==3.2.0",
+    "mcp==2.3.0",
+    "psycopg[binary]==3.3.6",
+    "pydantic==2.14.1",
+    "pypdf==6.21.1",
+    "python-multipart==0.0.32",
+    "pyyaml==6.0.3",
+    "sqlalchemy[asyncio]==2.1.5",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pgserver==0.1.4",
+    "pyright==1.1.414",
+    "pytest==9.1.1",
+    "ruff==0.17.1",
+    "types-pyyaml==6.0.12.20260906",
+]
+linkfinder = [
+    "tokenizers==0.23.3",
+    "torch==2.15.0",
+    "transformers==5.22.1",
+]
+
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ripple"]
+
+[tool.uv]
+package = true
+default-groups = ["dev", "linkfinder"]
+
+# torch from the CPU-only index on every platform: the trained link finder runs on CPU
+# (ADR-0125), and the PyPI Linux wheel would pull CUDA.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+
+# ---------------------------------------------------------------- ruff
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests", "bench", "training", "paper", "tools"]
+
+[tool.ruff.lint]
+select = [
+  "E", "F", "W",   # pycodestyle, pyflakes
+  "I",             # isort
+  "UP",            # pyupgrade
+  "B",             # bugbear
+  "SIM",           # simplify
+  "N",             # pep8 naming
+  "ANN",           # type annotations (python.md: full type hints)
+  "RUF",
+]
+ignore = [
+  "ANN401",  # Any is sometimes the honest type at a boundary
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ANN"]  # test functions need no return annotations
+"tests/**/test_*invariants*.py" = ["N802"]  # CLAUDE.md mandates test_invariant_I<n>_... names
+
+[tool.ruff.format]
+quote-style = "double"
+# ruff 0.17 also formats Python blocks inside Markdown; docs keep their snippets as written.
+exclude = ["*.md"]
+
+# ---------------------------------------------------------------- pyright
+[tool.pyright]
+pythonVersion = "3.12"
+include = ["src", "tests", "bench", "training", "paper", "tools"]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "standard"
+reportMissingImports = true
+# python.md: pyright strict for src/ripple/core
+strict = ["src/ripple/core"]
+
+# ---------------------------------------------------------------- pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+markers = [
+  "slow: needs running services or a network; excluded by `-m 'not slow'`",
+]

@@ -1,0 +1,428 @@
+{
+  "scenario": "road_closure__n0_ravi",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:closure",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "28dd6fe3-4121-41ad-9f00-deaf99644626",
+            "status": "VALID",
+            "version": 2,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the council portal closed for 15 days after the Larkspur data breach"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the council portal closed for 15 days after the Larkspur data breach"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "closure",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "28dd6fe3-4121-41ad-9f00-deaf99644626",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "28dd6fe3-4121-41ad-9f00-deaf99644626",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "28dd6fe3-4121-41ad-9f00-deaf99644626",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "closure",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "28dd6fe3-4121-41ad-9f00-deaf99644626",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "advance_days:16",
+      "simulated_day": 16.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in larkspur"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "no travel disruption expected around larkspur"
+          },
+          "latest": {
+            "id": "db33ac9b-2e53-4c47-b2e8-0da17aaf9794",
+            "status": "VALID",
+            "version": 3,
+            "content": "travel advice recomputed around the closure"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for larkspur: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the council portal closed for 15 days after the Larkspur data breach"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the council portal closed for 15 days after the Larkspur data breach"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 6,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "closure",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "db33ac9b-2e53-4c47-b2e8-0da17aaf9794",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "closure",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "db33ac9b-2e53-4c47-b2e8-0da17aaf9794",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "travel_advice",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "region",
+          "memory_id": "db33ac9b-2e53-4c47-b2e8-0da17aaf9794",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "region",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "db33ac9b-2e53-4c47-b2e8-0da17aaf9794",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

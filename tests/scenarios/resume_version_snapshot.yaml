@@ -1,0 +1,20 @@
+name: resume_version_snapshot
+description: A new resume version never ripples into past applications (snapshot_of).
+memories:
+  resume: {kind: fact, content: "resume v1", structured: {subject: student, attribute: resume, value: v1}}
+  application: {kind: application, content: "applied to Acme with resume v1"}
+  tailoring: {kind: derived, content: "highlight the PyTorch project for Globex"}
+links:
+  - [resume, application, sent_with_resume]
+  - [resume, tailoring, depends_on_fact]
+resolutions:
+  tailoring: {action: update, new_content: "highlight the new RL project for Globex"}
+  application: {action: retire}
+events:
+  - update: resume
+    content: "resume v2"
+    structured: {subject: student, attribute: resume, value: v2}
+    expect:
+      resume: {status: RETIRED}
+      application: {status: VALID, version: 1, content: "applied to Acme with resume v1"}
+      tailoring@latest: {version: 2}

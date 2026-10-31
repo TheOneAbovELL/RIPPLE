@@ -1,0 +1,266 @@
+{
+  "scenario": "conflicting_reports__n4_omar",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 33 people injured in the Ashgrove bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 33 people injured in the Ashgrove bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Ashgrove bridge collapse: 33 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 33 people injured in the Ashgrove bridge collapse"
+          },
+          "latest": {
+            "id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 39 people injured in the Ashgrove bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Ashgrove bridge collapse: 33 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 33 people injured in the Ashgrove bridge collapse"
+          },
+          "latest": {
+            "id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 39 people injured in the Ashgrove bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Ashgrove bridge collapse: 33 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: Ashgrove bridge collapse: 33 people injured"
+          },
+          "latest": {
+            "id": "be9ed696-69ea-4597-8009-86847c9511b0",
+            "status": "VALID",
+            "version": 2,
+            "content": "briefing: Ashgrove bridge collapse, figure disputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "briefing: Ashgrove bridge collapse, figure disputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 4,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "be9ed696-69ea-4597-8009-86847c9511b0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "be9ed696-69ea-4597-8009-86847c9511b0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "c0c70fae-e618-4f1b-84a5-b724e7466abc",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

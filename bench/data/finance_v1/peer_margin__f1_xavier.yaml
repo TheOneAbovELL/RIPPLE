@@ -1,0 +1,69 @@
+name: peer_margin__f1_xavier
+description: Orbix Fabworks reports a new margin; nothing about Quillon Studios changes.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: peer_margin
+  family: unchanged
+  seed: 20261031
+memories:
+  margin:
+    content: ORBX operating margin is 19%
+    structured:
+      subject: company:ORBX
+      attribute: margin
+      value: 19
+  thesis:
+    kind: thesis
+    content: 'ORBX thesis: chip packaging leader compounding on margins near 19%'
+  other_margin:
+    content: QUIL operating margin is 15%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 15
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 15%'
+  other_alert:
+    kind: alert
+    content: look again if QUIL margin falls below 11%
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+- - other_thesis
+  - other_alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'ORBX thesis: margins now 22%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: ORBX operating margin is 22%
+  structured:
+    subject: company:ORBX
+    attribute: margin
+    value: 22
+  expect:
+    thesis@latest:
+      status: VALID
+      content: 'ORBX thesis: margins now 22%, re-checked'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_alert:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

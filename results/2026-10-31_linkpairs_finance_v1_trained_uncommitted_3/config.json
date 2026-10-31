@@ -1,0 +1,170 @@
+{
+  "suite": "linkpairs",
+  "track": "finance_v1",
+  "linker": "trained",
+  "linker_details": {
+    "module": "ripple.linking.trained",
+    "model_dir": "training/artifacts/modernbert-base_seed20261033",
+    "base_model": "answerdotai/ModernBERT-base",
+    "seed": 20261033,
+    "threshold": 0.1,
+    "threshold_source": "validation personas",
+    "chosen_epoch": 7,
+    "training": {
+      "fit_examples": 128,
+      "validation_examples": 72,
+      "fit_label_counts": {
+        "depends_on_fact": 10,
+        "depends_on_time_period": 2,
+        "eligibility_of": 14,
+        "fit_of": 2,
+        "none": 94,
+        "reminder_for": 4,
+        "sent_with_resume": 2
+      },
+      "validation_label_counts": {
+        "depends_on_fact": 5,
+        "depends_on_time_period": 1,
+        "eligibility_of": 8,
+        "fit_of": 1,
+        "none": 54,
+        "reminder_for": 2,
+        "sent_with_resume": 1
+      },
+      "validation": {
+        "f1": 0.972972972972973,
+        "threshold": 0.1,
+        "precision": 0.9473684210526315,
+        "recall": 1.0
+      },
+      "train_seconds": 585.5,
+      "torch_threads": 6,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 2.134803906083107,
+          "f1": 0.6060606060606061,
+          "threshold": 0.25,
+          "precision": 0.6666666666666666,
+          "recall": 0.5555555555555556
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.4074993878602982,
+          "f1": 0.6875,
+          "threshold": 0.5,
+          "precision": 0.7857142857142857,
+          "recall": 0.6111111111111112
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.7183735519647598,
+          "f1": 0.8571428571428571,
+          "threshold": 0.15,
+          "precision": 0.75,
+          "recall": 1.0
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.36782977543771267,
+          "f1": 0.9090909090909091,
+          "threshold": 0.85,
+          "precision": 1.0,
+          "recall": 0.8333333333333334
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.2209015116095543,
+          "f1": 0.9,
+          "threshold": 0.25,
+          "precision": 0.8181818181818182,
+          "recall": 1.0
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.22012557042762637,
+          "f1": 0.9473684210526315,
+          "threshold": 0.75,
+          "precision": 0.9,
+          "recall": 1.0
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.09948485600762069,
+          "f1": 0.972972972972973,
+          "threshold": 0.1,
+          "precision": 0.9473684210526315,
+          "recall": 1.0
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.043855660216649994,
+          "f1": 0.972972972972973,
+          "threshold": 0.7,
+          "precision": 0.9473684210526315,
+          "recall": 1.0
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.028172093501780182,
+          "f1": 0.972972972972973,
+          "threshold": 0.5,
+          "precision": 0.9473684210526315,
+          "recall": 1.0
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.007142898757592775,
+          "f1": 0.972972972972973,
+          "threshold": 0.5,
+          "precision": 0.9473684210526315,
+          "recall": 1.0
+        }
+      ]
+    },
+    "validation_personas": [
+      "p2_harsh"
+    ],
+    "torch_threads": 6
+  },
+  "plumbing_only": false,
+  "typed": false,
+  "models": {
+    "linker": "training/artifacts/modernbert-base_seed20261033",
+    "base_model": "answerdotai/ModernBERT-base",
+    "base_model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "prompt_versions": {},
+  "seeds": {
+    "pair_seed": null,
+    "run_seed": 20261031
+  },
+  "split": "test",
+  "new_memory": "dependent",
+  "data": {
+    "pairs_file": "bench/data/finance_v1/pairs.jsonl",
+    "pairs_sha256": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be"
+  },
+  "pair_count": 406,
+  "provenances": [
+    "scenario"
+  ],
+  "transfer": {
+    "train_pairs_file": "training/data/jobs_v0_pairs.jsonl",
+    "train_pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+    "pairs_sharing_a_text_with_train": 0,
+    "gold_link_types": [
+      "alert_for",
+      "depends_on_fact",
+      "depends_on_time_period",
+      "estimate_from",
+      "journaled_with",
+      "premise_of"
+    ],
+    "gold_types_in_label_space": false
+  },
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "run_at": "2026-10-31T07:59:58.046560+00:00"
+}

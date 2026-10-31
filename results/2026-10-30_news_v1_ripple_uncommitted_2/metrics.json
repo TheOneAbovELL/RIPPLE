@@ -1,0 +1,508 @@
+{
+  "suite": "news_v1",
+  "strategy": "ripple",
+  "split": "all",
+  "scenarios": 35,
+  "scenarios_runnable": 0,
+  "scenarios_not_runnable": 35,
+  "scenarios_passed": 0,
+  "checks": 0,
+  "checks_failed": 0,
+  "errors": 0,
+  "resolver_calls": 0,
+  "llm_calls": 0,
+  "memory_metrics": "TBD (pending run): bench/metrics.py is TODO(human)",
+  "wall_seconds": 0.171,
+  "per_scenario": [
+    {
+      "name": "figure_revised__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n0_meera",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n1_nikhil",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n2_leo",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n3_kavya",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n4_quinn",
+      "strategy": "ripple",
+      "runnable": false,
+      "passed": false,
+      "checks": 0,
+      "checks_failed": 0,
+      "failures": [],
+      "errors": [
+        "not runnable: TODO(human) engine: TODO(human): roadmap Phase 1 '[human] Ripple engine' \u2014 see the class docstring and tests/core/test_engine.py"
+      ],
+      "events_run": 0,
+      "resolver_calls": 0
+    }
+  ]
+}

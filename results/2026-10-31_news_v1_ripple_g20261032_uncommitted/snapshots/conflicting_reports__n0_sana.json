@@ -1,0 +1,266 @@
+{
+  "scenario": "conflicting_reports__n0_sana",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: Duncliff bridge collapse: 203 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 253 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "briefing: Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "briefing: Duncliff bridge collapse: 203 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "briefing",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "briefing",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "summary",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:summary",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the Ledger: 203 people injured in the Duncliff bridge collapse"
+          },
+          "latest": {
+            "id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+            "status": "VALID",
+            "version": 2,
+            "content": "the Courier: 253 people injured in the Duncliff bridge collapse"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Duncliff bridge collapse: 203 people injured"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: Duncliff bridge collapse: 203 people injured"
+          },
+          "latest": {
+            "id": "f6f462d2-61ce-4668-809a-7500ef493ef0",
+            "status": "VALID",
+            "version": 2,
+            "content": "briefing: Duncliff bridge collapse, figure disputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "summary": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing@latest": {
+          "status": "VALID",
+          "content": "briefing: Duncliff bridge collapse, figure disputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "summary",
+          "memory_id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "f6f462d2-61ce-4668-809a-7500ef493ef0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "f6f462d2-61ce-4668-809a-7500ef493ef0",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing",
+          "memory_id": "8115c53b-691d-4554-8c6e-3b508fd5ab7e",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

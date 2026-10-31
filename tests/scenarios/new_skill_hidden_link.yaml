@@ -1,0 +1,17 @@
+name: new_skill_hidden_link
+description: A new skill fact is parent of the existing fit belief that cites it; unrelated fits stay.
+memories:
+  globex_fit: {kind: derived, content: "weak fit for Globex, which asks for PyTorch"}
+  initech_fit: {kind: derived, content: "strong fit for Initech, which asks for Django"}
+resolutions:
+  globex_fit: {action: update, new_content: "strong fit for Globex now that the PyTorch project is done"}
+events:
+  - new: pytorch
+    kind: fact
+    content: "finished a PyTorch project"
+    structured: {subject: student, attribute: skills, value: pytorch}
+    links:
+      - [pytorch, globex_fit, fit_of]
+    expect:
+      globex_fit@latest: {version: 2, content: "strong fit for Globex now that the PyTorch project is done"}
+      initech_fit: {status: VALID, version: 1}

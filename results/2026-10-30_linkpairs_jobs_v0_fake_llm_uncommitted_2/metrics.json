@@ -1,0 +1,169 @@
+{
+  "overall": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 93,
+    "tn": 299,
+    "typed_tp": 0,
+    "n": 392,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "typed_precision": null,
+    "typed_recall": 0.0,
+    "typed_f1": 0.0
+  },
+  "by_provenance": {
+    "rule": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 53,
+      "tn": 0,
+      "typed_tp": 0,
+      "n": 53,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "typed_precision": null,
+      "typed_recall": 0.0,
+      "typed_f1": null
+    },
+    "scenario": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 40,
+      "tn": 299,
+      "typed_tp": 0,
+      "n": 339,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": 0.0,
+      "typed_f1": 0.0
+    }
+  },
+  "by_held_out": {
+    "both": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 22,
+      "tn": 78,
+      "typed_tp": 0,
+      "n": 100,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": 0.0,
+      "typed_f1": 0.0
+    },
+    "persona": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 38,
+      "tn": 102,
+      "typed_tp": 0,
+      "n": 140,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": 0.0,
+      "typed_f1": 0.0
+    },
+    "template": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 33,
+      "tn": 119,
+      "typed_tp": 0,
+      "n": 152,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "typed_precision": null,
+      "typed_recall": 0.0,
+      "typed_f1": 0.0
+    }
+  },
+  "by_gold_link_type": {
+    "criteria_from": {
+      "tp": 0,
+      "fn": 10,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": false
+    },
+    "depends_on_fact": {
+      "tp": 0,
+      "fn": 16,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    },
+    "depends_on_time_period": {
+      "tp": 0,
+      "fn": 2,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    },
+    "eligibility_of": {
+      "tp": 0,
+      "fn": 42,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    },
+    "fit_of": {
+      "tp": 0,
+      "fn": 2,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    },
+    "reminder_for": {
+      "tp": 0,
+      "fn": 19,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    },
+    "sent_with_resume": {
+      "tp": 0,
+      "fn": 2,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": true
+    }
+  },
+  "false_positives_by_negative_kind": {
+    "reversed link": {
+      "n": 93,
+      "fp": 0,
+      "fp_rate": 0.0
+    },
+    "same scenario, no link": {
+      "n": 206,
+      "fp": 0,
+      "fp_rate": 0.0
+    }
+  },
+  "type_confusion": {
+    "criteria_from -> none": 10,
+    "depends_on_fact -> none": 16,
+    "depends_on_time_period -> none": 2,
+    "eligibility_of -> none": 42,
+    "fit_of -> none": 2,
+    "none -> none": 299,
+    "reminder_for -> none": 19,
+    "sent_with_resume -> none": 2
+  },
+  "reversed_proposals": 0,
+  "abstentions": 0,
+  "linker_calls": 392,
+  "llm_calls": 392,
+  "elapsed_seconds": 0.316,
+  "note": "PLUMBING CHECK: the LLM linker ran on FakeLLM scripted to propose nothing. These counts show the harness runs end to end; they measure no model."
+}

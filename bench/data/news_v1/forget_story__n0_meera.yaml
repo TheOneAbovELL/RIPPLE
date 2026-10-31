@@ -1,0 +1,64 @@
+name: forget_story__n0_meera
+description: meera asks to forget the Hollowbay power outage after one revision.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n0_meera
+  template: forget_story
+  family: forget
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Gazette: 156 homes without power in the Hollowbay power outage'
+    structured:
+      subject: story:hollowbay
+      attribute: figure
+      value: 156
+  summary:
+    kind: summary
+    content: 'Hollowbay power outage: 156 homes without power'
+  other_claim:
+    kind: claim
+    content: 'Metro Desk: 130 accounts exposed in the Duncliff data breach'
+    structured:
+      subject: story:duncliff
+      attribute: figure
+      value: 130
+  other_summary:
+    kind: summary
+    content: 'Duncliff data breach: 130 accounts exposed'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Hollowbay power outage: 187 homes without power'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Gazette: 187 homes without power in the Hollowbay power outage'
+  structured:
+    subject: story:hollowbay
+    attribute: figure
+    value: 187
+  expect:
+    summary@latest:
+      version: 2
+- forget: claim
+  expect:
+    claim:
+      deleted: true
+    summary:
+      deleted: true
+    other_claim:
+      status: VALID
+    other_summary:
+      status: VALID

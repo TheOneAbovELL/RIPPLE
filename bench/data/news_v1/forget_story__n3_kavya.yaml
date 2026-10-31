@@ -1,0 +1,64 @@
+name: forget_story__n3_kavya
+description: kavya asks to forget the Kestrel bridge collapse after one revision.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n3_kavya
+  template: forget_story
+  family: forget
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 203 people injured in the Kestrel bridge collapse'
+    structured:
+      subject: story:kestrel
+      attribute: figure
+      value: 203
+  summary:
+    kind: summary
+    content: 'Kestrel bridge collapse: 203 people injured'
+  other_claim:
+    kind: claim
+    content: 'Valley Wire: 65 homes without power in the Ashgrove power outage'
+    structured:
+      subject: story:ashgrove
+      attribute: figure
+      value: 65
+  other_summary:
+    kind: summary
+    content: 'Ashgrove power outage: 65 homes without power'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Kestrel bridge collapse: 153 people injured'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Ledger: 153 people injured in the Kestrel bridge collapse'
+  structured:
+    subject: story:kestrel
+    attribute: figure
+    value: 153
+  expect:
+    summary@latest:
+      version: 2
+- forget: claim
+  expect:
+    claim:
+      deleted: true
+    summary:
+      deleted: true
+    other_claim:
+      status: VALID
+    other_summary:
+      status: VALID

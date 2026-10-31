@@ -1,0 +1,404 @@
+{
+  "scenario": "exam_block__p0_dev",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "availability",
+            "status": "VALID",
+            "version": 1,
+            "content": "available for interviews"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:exams",
+      "simulated_day": 0.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "1b8a4de0-445e-461c-a25c-380daa16d0d3",
+            "status": "VALID",
+            "version": 2,
+            "content": "availability recomputed around the exam block"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          }
+        },
+        "exams": {
+          "alias": "exams",
+          "root": {
+            "id": "exams",
+            "status": "VALID",
+            "version": 1,
+            "content": "busy with exams for the next 37 days"
+          },
+          "latest": {
+            "id": "exams",
+            "status": "VALID",
+            "version": 1,
+            "content": "busy with exams for the next 37 days"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "exams": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "looking": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "exams",
+          "memory_id": "exams",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "exams",
+          "memory_id": "1b8a4de0-445e-461c-a25c-380daa16d0d3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "exams",
+          "memory_id": "reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "exams",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "exams",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "1b8a4de0-445e-461c-a25c-380daa16d0d3",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "looking",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "looking",
+          "memory_id": "exams",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "looking",
+          "memory_id": "1b8a4de0-445e-461c-a25c-380daa16d0d3",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "1b8a4de0-445e-461c-a25c-380daa16d0d3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "exams",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "advance_days:38",
+      "simulated_day": 38.0,
+      "memories": {
+        "looking": {
+          "alias": "looking",
+          "root": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          },
+          "latest": {
+            "id": "looking",
+            "status": "VALID",
+            "version": 1,
+            "content": "actively looking for internships"
+          }
+        },
+        "availability": {
+          "alias": "availability",
+          "root": {
+            "id": "availability",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "available for interviews"
+          },
+          "latest": {
+            "id": "eb5e79de-f3aa-40f4-99c3-aa53e3b70db3",
+            "status": "VALID",
+            "version": 3,
+            "content": "availability recomputed around the exam block"
+          }
+        },
+        "reminder": {
+          "alias": "reminder",
+          "root": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          },
+          "latest": {
+            "id": "reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind about the stark interview slot"
+          }
+        },
+        "exams": {
+          "alias": "exams",
+          "root": {
+            "id": "exams",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "busy with exams for the next 37 days"
+          },
+          "latest": {
+            "id": "exams",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "busy with exams for the next 37 days"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "exams": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "availability@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "looking": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 6,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "exams",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "exams",
+          "memory_id": "eb5e79de-f3aa-40f4-99c3-aa53e3b70db3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "exams",
+          "memory_id": "reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "availability",
+          "memory_id": "eb5e79de-f3aa-40f4-99c3-aa53e3b70db3",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "looking",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "looking",
+          "memory_id": "eb5e79de-f3aa-40f4-99c3-aa53e3b70db3",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "eb5e79de-f3aa-40f4-99c3-aa53e3b70db3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "reminder",
+          "memory_id": "looking",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

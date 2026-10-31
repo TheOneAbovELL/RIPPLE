@@ -1,0 +1,284 @@
+{
+  "scenario": "cgpa_change",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          }
+        },
+        "acme_cutoff": {
+          "alias": "acme_cutoff",
+          "root": {
+            "id": "acme_cutoff",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: CGPA cutoff 7.8"
+          },
+          "latest": {
+            "id": "acme_cutoff",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: CGPA cutoff 7.8"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme (7.6 < 7.8)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme (7.6 < 7.8)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.6"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.6"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "3b4be317-7c37-48a2-b1c3-718192fbdc42",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.9"
+          }
+        },
+        "acme_cutoff": {
+          "alias": "acme_cutoff",
+          "root": {
+            "id": "acme_cutoff",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: CGPA cutoff 7.8"
+          },
+          "latest": {
+            "id": "acme_cutoff",
+            "status": "VALID",
+            "version": 1,
+            "content": "Acme SDE intern: CGPA cutoff 7.8"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for Acme (7.6 < 7.8)"
+          },
+          "latest": {
+            "id": "142b8330-2405-49ef-b4a2-3fc64868e5b9",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for Acme (7.9 >= 7.8)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 7.6"
+          },
+          "latest": {
+            "id": "1be6cc0f-4fd4-41c6-abab-a975817eeedc",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 7.9"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "acme_cutoff",
+          "opening_alias": "acme_cutoff",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "142b8330-2405-49ef-b4a2-3fc64868e5b9"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 7.9",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for Acme (7.9 >= 7.8)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "acme_cutoff": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "3b4be317-7c37-48a2-b1c3-718192fbdc42",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "acme_cutoff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "142b8330-2405-49ef-b4a2-3fc64868e5b9",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "1be6cc0f-4fd4-41c6-abab-a975817eeedc",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "142b8330-2405-49ef-b4a2-3fc64868e5b9",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "acme_cutoff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "3b4be317-7c37-48a2-b1c3-718192fbdc42",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "1be6cc0f-4fd4-41c6-abab-a975817eeedc",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "acme_cutoff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "3b4be317-7c37-48a2-b1c3-718192fbdc42",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "142b8330-2405-49ef-b4a2-3fc64868e5b9",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "acme_cutoff",
+          "memory_id": "acme_cutoff",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_cutoff",
+          "memory_id": "142b8330-2405-49ef-b4a2-3fc64868e5b9",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_cutoff",
+          "memory_id": "3b4be317-7c37-48a2-b1c3-718192fbdc42",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "acme_cutoff",
+          "memory_id": "1be6cc0f-4fd4-41c6-abab-a975817eeedc",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

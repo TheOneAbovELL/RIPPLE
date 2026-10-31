@@ -1,0 +1,575 @@
+{
+  "suite": "news_v1",
+  "strategy": "newest_wins",
+  "split": "all",
+  "scenarios": 35,
+  "scenarios_runnable": 35,
+  "scenarios_not_runnable": 0,
+  "scenarios_passed": 0,
+  "checks": 175,
+  "checks_failed": 68,
+  "errors": 5,
+  "resolver_calls": 0,
+  "llm_calls": 0,
+  "memory_metrics": "TBD (pending run): bench/metrics.py is TODO(human)",
+  "wall_seconds": 0.263,
+  "per_scenario": [
+    {
+      "name": "figure_revised__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 6,
+      "checks_failed": 2,
+      "failures": [
+        "summary@latest: content 'Hollowbay power outage: 156 homes without power', expected 'Hollowbay power outage: 125 homes without power'",
+        "summary@latest: version 1, expected 2",
+        "briefing@latest: content 'today: Hollowbay power outage: 156 homes without power; Duncliff data breach: 130 accounts exposed', expected 'today: Hollowbay power outage: 125 homes without power; Duncliff data breach: 130 accounts exposed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Duncliff data breach: awaiting a decision', expected 'Duncliff data breach: inquiry opened'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "checks_failed": 2,
+      "failures": [
+        "travel_advice@latest: version 1, expected 2",
+        "travel_advice@latest: version 1, expected 3"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 3,
+      "failures": [
+        "analysis@latest: version 1, expected 2",
+        "follow_up: status VALID, expected RETIRED",
+        "briefing_item: status VALID, expected RETIRED"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 4,
+      "failures": [
+        "summary: status VALID, expected PENDING_USER",
+        "briefing: status VALID, expected SUSPECT",
+        "summary: status VALID, expected RETIRED",
+        "briefing@latest: content 'briefing: Hollowbay power outage: 156 homes without power', expected 'briefing: Hollowbay power outage, figure disputed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [
+        "answer:summary: memory 'summary' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Riverton warehouse flood: 196 tonnes of grain lost', expected 'Riverton warehouse flood: 131 tonnes of grain lost'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n0_meera",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 6,
+      "checks_failed": 2,
+      "failures": [
+        "summary@latest: content 'Larkspur power outage: 141 homes without power', expected 'Larkspur power outage: 113 homes without power'",
+        "summary@latest: version 1, expected 2",
+        "briefing@latest: content 'today: Larkspur power outage: 141 homes without power; Hollowbay data breach: 236 accounts exposed', expected 'today: Larkspur power outage: 113 homes without power; Hollowbay data breach: 236 accounts exposed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Hollowbay data breach: awaiting a decision', expected 'Hollowbay data breach: compensation agreed'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "checks_failed": 2,
+      "failures": [
+        "travel_advice@latest: version 1, expected 2",
+        "travel_advice@latest: version 1, expected 3"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 3,
+      "failures": [
+        "analysis@latest: version 1, expected 2",
+        "follow_up: status VALID, expected RETIRED",
+        "briefing_item: status VALID, expected RETIRED"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 4,
+      "failures": [
+        "summary: status VALID, expected PENDING_USER",
+        "briefing: status VALID, expected SUSPECT",
+        "summary: status VALID, expected RETIRED",
+        "briefing@latest: content 'briefing: Larkspur power outage: 141 homes without power', expected 'briefing: Larkspur power outage, figure disputed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [
+        "answer:summary: memory 'summary' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Ashgrove ferry accident: 131 passengers rescued', expected 'Ashgrove ferry accident: 157 passengers rescued'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n1_nikhil",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 6,
+      "checks_failed": 2,
+      "failures": [
+        "summary@latest: content 'Riverton power outage: 77 homes without power', expected 'Riverton power outage: 102 homes without power'",
+        "summary@latest: version 1, expected 2",
+        "briefing@latest: content 'today: Riverton power outage: 77 homes without power; Ashgrove factory fire: 83 workers evacuated', expected 'today: Riverton power outage: 102 homes without power; Ashgrove factory fire: 83 workers evacuated'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Ashgrove factory fire: awaiting a decision', expected 'Ashgrove factory fire: compensation agreed'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "checks_failed": 2,
+      "failures": [
+        "travel_advice@latest: version 1, expected 2",
+        "travel_advice@latest: version 1, expected 3"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 3,
+      "failures": [
+        "analysis@latest: version 1, expected 2",
+        "follow_up: status VALID, expected RETIRED",
+        "briefing_item: status VALID, expected RETIRED"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 4,
+      "failures": [
+        "summary: status VALID, expected PENDING_USER",
+        "briefing: status VALID, expected SUSPECT",
+        "summary: status VALID, expected RETIRED",
+        "briefing@latest: content 'briefing: Riverton power outage: 77 homes without power', expected 'briefing: Riverton power outage, figure disputed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [
+        "answer:summary: memory 'summary' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Kestrel data breach: 164 accounts exposed', expected 'Kestrel data breach: 196 accounts exposed'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n2_leo",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 6,
+      "checks_failed": 2,
+      "failures": [
+        "summary@latest: content 'Kestrel bridge collapse: 203 people injured', expected 'Kestrel bridge collapse: 153 people injured'",
+        "summary@latest: version 1, expected 2",
+        "briefing@latest: content 'today: Kestrel bridge collapse: 203 people injured; Ashgrove power outage: 65 homes without power', expected 'today: Kestrel bridge collapse: 153 people injured; Ashgrove power outage: 65 homes without power'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Ashgrove power outage: awaiting a decision', expected 'Ashgrove power outage: repairs approved'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "checks_failed": 2,
+      "failures": [
+        "travel_advice@latest: version 1, expected 2",
+        "travel_advice@latest: version 1, expected 3"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 3,
+      "failures": [
+        "analysis@latest: version 1, expected 2",
+        "follow_up: status VALID, expected RETIRED",
+        "briefing_item: status VALID, expected RETIRED"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 2,
+      "failures": [
+        "summary: status VALID, expected PENDING_USER",
+        "briefing: status VALID, expected SUSPECT"
+      ],
+      "errors": [
+        "answer:summary: memory 'summary' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Riverton factory fire: 58 workers evacuated', expected 'Riverton factory fire: 39 workers evacuated'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n3_kavya",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "figure_revised__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 6,
+      "checks_failed": 2,
+      "failures": [
+        "summary@latest: content 'Eastmere bridge collapse: 64 people injured', expected 'Eastmere bridge collapse: 52 people injured'",
+        "summary@latest: version 1, expected 2",
+        "briefing@latest: content 'today: Eastmere bridge collapse: 64 people injured; Larkspur factory fire: 44 workers evacuated', expected 'today: Eastmere bridge collapse: 52 people injured; Larkspur factory fire: 44 workers evacuated'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "other_story_develops__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Larkspur factory fire: awaiting a decision', expected 'Larkspur factory fire: compensation agreed'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "road_closure__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "checks_failed": 2,
+      "failures": [
+        "travel_advice@latest: version 1, expected 2",
+        "travel_advice@latest: version 1, expected 3"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "attribution_retracted__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 3,
+      "failures": [
+        "analysis@latest: version 1, expected 2",
+        "follow_up: status VALID, expected RETIRED",
+        "briefing_item: status VALID, expected RETIRED"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "conflicting_reports__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "checks_failed": 4,
+      "failures": [
+        "summary: status VALID, expected PENDING_USER",
+        "briefing: status VALID, expected SUSPECT",
+        "summary: status VALID, expected RETIRED",
+        "briefing@latest: content 'briefing: Eastmere bridge collapse: 64 people injured', expected 'briefing: Eastmere bridge collapse, figure disputed'",
+        "briefing@latest: version 1, expected 2"
+      ],
+      "errors": [
+        "answer:summary: memory 'summary' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "shared_note__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: content 'Riverton ferry accident: 158 passengers rescued', expected 'Riverton ferry accident: 189 passengers rescued'",
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_story__n4_quinn",
+      "strategy": "newest_wins",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "checks_failed": 1,
+      "failures": [
+        "summary@latest: version 1, expected 2"
+      ],
+      "errors": [],
+      "events_run": 2,
+      "resolver_calls": 0
+    }
+  ]
+}

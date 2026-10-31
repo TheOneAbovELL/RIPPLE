@@ -1,0 +1,21 @@
+.env
+CLAUDE.local.md
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Results: raw run outputs are large; metrics.json, config.json and report.md are kept
+results/*/raw/
+
+# Node (apps/web, Phase 4)
+node_modules/
+
+# Paper development view written by `python -m paper.numbers --draft` (ADR-0110)
+docs/paper/generated/draft/

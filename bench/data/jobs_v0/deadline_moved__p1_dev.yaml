@@ -1,0 +1,81 @@
+name: deadline_moved__p1_dev
+description: wonka extends its deadline; nothing about globex changes.
+meta:
+  track: jobs_v0
+  persona: p1_dev
+  template: deadline_moved
+  family: unchanged
+  seed: 20261019
+memories:
+  wonka_opening:
+    kind: opening
+    content: 'Wonka SDE intern: deadline 2026-11-12'
+    structured:
+      subject: opening:wonka_opening
+      attribute: deadline
+      value: '2026-11-12T23:59:00+05:30'
+  wonka_reminder:
+    kind: derived
+    content: remind two days before 2026-11-12
+  globex_opening:
+    kind: opening
+    content: 'Globex SDE engineer: deadline 2026-11-24'
+    structured:
+      subject: opening:globex_opening
+      attribute: deadline
+      value: '2026-11-24T23:59:00+05:30'
+  globex_reminder:
+    kind: derived
+    content: remind two days before 2026-11-24
+  cgpa:
+    content: CGPA is 7.4
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.4
+  globex_eligibility:
+    kind: derived
+    content: eligible for globex
+links:
+- - wonka_opening
+  - wonka_reminder
+  - reminder_for
+- - globex_opening
+  - globex_reminder
+  - reminder_for
+- - cgpa
+  - globex_eligibility
+  - eligibility_of
+- - globex_opening
+  - globex_eligibility
+  - eligibility_of
+resolutions:
+  wonka_reminder:
+  - action: update
+    new_content: remind two days before 2026-12-16
+    reason: re-derived from its parent
+    trigger: wonka_opening
+events:
+- update: wonka_opening
+  content: 'Wonka SDE intern: deadline 2026-12-16'
+  structured:
+    subject: opening:wonka_opening
+    attribute: deadline
+    value: '2026-12-16T23:59:00+05:30'
+  expect:
+    wonka_reminder@latest:
+      status: VALID
+      content: remind two days before 2026-12-16
+      version: 2
+    globex_reminder:
+      status: VALID
+      version: 1
+    globex_eligibility:
+      status: VALID
+      version: 1
+    globex_opening:
+      status: VALID
+      version: 1
+    cgpa:
+      status: VALID
+      version: 1

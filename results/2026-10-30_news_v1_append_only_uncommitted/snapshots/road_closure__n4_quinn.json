@@ -1,0 +1,255 @@
+{
+  "scenario": "road_closure__n4_quinn",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "new:closure",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the bridge road closed for 13 days after the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the bridge road closed for 13 days after the Eastmere bridge collapse"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "advance_days:14",
+      "simulated_day": 14.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in eastmere"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around eastmere"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for eastmere: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the bridge road closed for 13 days after the Eastmere bridge collapse"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the bridge road closed for 13 days after the Eastmere bridge collapse"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

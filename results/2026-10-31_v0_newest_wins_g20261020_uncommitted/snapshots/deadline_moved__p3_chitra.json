@@ -1,0 +1,419 @@
+{
+  "scenario": "deadline_moved__p3_chitra",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-14"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-14"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-14"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-14"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-19"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-19"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:wonka_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-14"
+          },
+          "latest": {
+            "id": "cdc329c8-6167-43ba-b662-8b4cb382152b",
+            "status": "VALID",
+            "version": 2,
+            "content": "Wonka SDE intern: deadline 2026-12-16"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-14"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-14"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-19"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-19"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-19"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        },
+        {
+          "opening_id": "cdc329c8-6167-43ba-b662-8b4cb382152b",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "wonka_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-16",
+          "version": 2,
+          "deleted": false
+        },
+        "hooli_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "hooli_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "cdc329c8-6167-43ba-b662-8b4cb382152b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "wonka_reminder",
+          "memory_id": "hooli_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "hooli_reminder",
+          "memory_id": "hooli_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_reminder",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_reminder",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_reminder",
+          "memory_id": "cdc329c8-6167-43ba-b662-8b4cb382152b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_reminder",
+          "memory_id": "hooli_eligibility",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "hooli_eligibility",
+          "memory_id": "hooli_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_eligibility",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_eligibility",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "hooli_eligibility",
+          "memory_id": "hooli_reminder",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "hooli_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "cdc329c8-6167-43ba-b662-8b4cb382152b",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "hooli_eligibility",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "wonka_reminder",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "hooli_opening",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cgpa",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "hooli_eligibility",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "suite": "news_v1",
+  "strategy": "ripple",
+  "split": "all",
+  "data": {
+    "source": "bench/data/news_v1",
+    "track": "news_v1",
+    "domain": "news",
+    "content": "synthetic",
+    "data_sha256": "d9b473dfcb246332962da836a3c528c835e75da15945ff769af8e56ffebfa2d1",
+    "extra_files": {},
+    "curated": {
+      "count": 0,
+      "sha256": null
+    },
+    "generator": {
+      "module": "bench.generate_news",
+      "version": 1
+    },
+    "split": "all"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "ripple.core.engine.WaveEngine (TODO(human); not runnable until implemented)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "models": null,
+  "prompt_versions": null,
+  "seeds": {
+    "generator_seed": 20261031,
+    "run_seed": null
+  },
+  "run_at": "2026-10-30T21:47:35.458167+00:00"
+}

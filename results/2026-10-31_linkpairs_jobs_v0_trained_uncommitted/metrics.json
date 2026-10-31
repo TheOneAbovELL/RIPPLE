@@ -1,0 +1,180 @@
+{
+  "overall": {
+    "tp": 58,
+    "fp": 19,
+    "fn": 35,
+    "tn": 280,
+    "typed_tp": 58,
+    "n": 392,
+    "precision": 0.7532467532467533,
+    "recall": 0.6236559139784946,
+    "f1": 0.6823529411764706,
+    "typed_precision": 0.7532467532467533,
+    "typed_recall": 0.6236559139784946,
+    "typed_f1": 0.6823529411764706
+  },
+  "by_provenance": {
+    "rule": {
+      "tp": 28,
+      "fp": 0,
+      "fn": 25,
+      "tn": 0,
+      "typed_tp": 28,
+      "n": 53,
+      "precision": null,
+      "recall": 0.5283018867924528,
+      "f1": null,
+      "typed_precision": null,
+      "typed_recall": 0.5283018867924528,
+      "typed_f1": null
+    },
+    "scenario": {
+      "tp": 30,
+      "fp": 19,
+      "fn": 10,
+      "tn": 280,
+      "typed_tp": 30,
+      "n": 339,
+      "precision": 0.6122448979591837,
+      "recall": 0.75,
+      "f1": 0.6741573033707865,
+      "typed_precision": 0.6122448979591837,
+      "typed_recall": 0.75,
+      "typed_f1": 0.6741573033707865
+    }
+  },
+  "by_held_out": {
+    "both": {
+      "tp": 11,
+      "fp": 9,
+      "fn": 11,
+      "tn": 69,
+      "typed_tp": 11,
+      "n": 100,
+      "precision": 0.55,
+      "recall": 0.5,
+      "f1": 0.5238095238095238,
+      "typed_precision": 0.55,
+      "typed_recall": 0.5,
+      "typed_f1": 0.5238095238095238
+    },
+    "persona": {
+      "tp": 31,
+      "fp": 1,
+      "fn": 7,
+      "tn": 101,
+      "typed_tp": 31,
+      "n": 140,
+      "precision": 0.96875,
+      "recall": 0.8157894736842105,
+      "f1": 0.8857142857142857,
+      "typed_precision": 0.96875,
+      "typed_recall": 0.8157894736842105,
+      "typed_f1": 0.8857142857142857
+    },
+    "template": {
+      "tp": 16,
+      "fp": 9,
+      "fn": 17,
+      "tn": 110,
+      "typed_tp": 16,
+      "n": 152,
+      "precision": 0.64,
+      "recall": 0.48484848484848486,
+      "f1": 0.5517241379310345,
+      "typed_precision": 0.64,
+      "typed_recall": 0.48484848484848486,
+      "typed_f1": 0.5517241379310345
+    }
+  },
+  "by_gold_link_type": {
+    "criteria_from": {
+      "tp": 0,
+      "fn": 10,
+      "recall": 0.0,
+      "typed_recall": 0.0,
+      "seen_in_train": false
+    },
+    "depends_on_fact": {
+      "tp": 10,
+      "fn": 6,
+      "recall": 0.625,
+      "typed_recall": 0.625,
+      "seen_in_train": true
+    },
+    "depends_on_time_period": {
+      "tp": 2,
+      "fn": 0,
+      "recall": 1.0,
+      "typed_recall": 1.0,
+      "seen_in_train": true
+    },
+    "eligibility_of": {
+      "tp": 39,
+      "fn": 3,
+      "recall": 0.9285714285714286,
+      "typed_recall": 0.9285714285714286,
+      "seen_in_train": true
+    },
+    "fit_of": {
+      "tp": 1,
+      "fn": 1,
+      "recall": 0.5,
+      "typed_recall": 0.5,
+      "seen_in_train": true
+    },
+    "reminder_for": {
+      "tp": 4,
+      "fn": 15,
+      "recall": 0.21052631578947367,
+      "typed_recall": 0.21052631578947367,
+      "seen_in_train": true
+    },
+    "sent_with_resume": {
+      "tp": 2,
+      "fn": 0,
+      "recall": 1.0,
+      "typed_recall": 1.0,
+      "seen_in_train": true
+    }
+  },
+  "false_positives_by_negative_kind": {
+    "reversed link": {
+      "n": 93,
+      "fp": 0,
+      "fp_rate": 0.0
+    },
+    "same scenario, no link": {
+      "n": 206,
+      "fp": 19,
+      "fp_rate": 0.09223300970873786
+    }
+  },
+  "type_confusion": {
+    "criteria_from -> none": 10,
+    "depends_on_fact -> depends_on_fact": 10,
+    "depends_on_fact -> none": 6,
+    "depends_on_time_period -> depends_on_time_period": 2,
+    "eligibility_of -> eligibility_of": 39,
+    "eligibility_of -> none": 3,
+    "fit_of -> fit_of": 1,
+    "fit_of -> none": 1,
+    "none -> eligibility_of": 19,
+    "none -> none": 280,
+    "reminder_for -> none": 15,
+    "reminder_for -> reminder_for": 4,
+    "sent_with_resume -> sent_with_resume": 2
+  },
+  "reversed_proposals": 78,
+  "abstentions": 0,
+  "linker_calls": 392,
+  "llm_calls": 0,
+  "elapsed_seconds": 97.009,
+  "cost": {
+    "wall_seconds_per_call": 0.247472,
+    "cpu_seconds_per_call": 1.641462,
+    "cpu_seconds": 643.453,
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "note": "process CPU time over all threads; an LLM call's provider-side cost is not in it"
+  }
+}

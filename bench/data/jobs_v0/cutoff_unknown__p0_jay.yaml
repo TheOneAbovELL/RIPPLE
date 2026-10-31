@@ -1,0 +1,74 @@
+name: cutoff_unknown__p0_jay
+description: jay's CGPA edges up; the umbrella cutoff is unclear (correction).
+meta:
+  track: jobs_v0
+  persona: p0_jay
+  template: cutoff_unknown
+  family: ask
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.2
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.2
+  umbrella_opening:
+    kind: opening
+    content: 'Umbrella SDE intern: CGPA cutoff 7.4'
+    structured:
+      subject: opening:umbrella_opening
+      attribute: cgpa_cutoff
+      value: 7.4
+  eligibility:
+    kind: derived
+    content: not eligible for umbrella
+  recommendation:
+    kind: derived
+    content: skip umbrella
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - umbrella_opening
+  - eligibility
+  - eligibility_of
+- - eligibility
+  - recommendation
+  - depends_on_fact
+resolutions:
+  eligibility:
+  - action: ask
+    question: Is the umbrella cutoff still 7.4?
+    reason: the new CGPA sits on the cutoff
+    trigger: cgpa
+  recommendation:
+  - action: update
+    new_content: apply to umbrella
+    reason: re-derived from its parent
+    trigger: eligibility
+events:
+- update: cgpa
+  content: CGPA is 7.3
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.3
+  expect:
+    eligibility:
+      status: PENDING_USER
+    recommendation:
+      status: SUSPECT
+      version: 1
+- answer: eligibility
+  content: eligible for umbrella (cutoff lowered to 7.3)
+  reply: correction
+  expect:
+    eligibility@latest:
+      status: VALID
+      content: eligible for umbrella (cutoff lowered to 7.3)
+      version: 2
+    recommendation@latest:
+      status: VALID
+      content: apply to umbrella
+      version: 2

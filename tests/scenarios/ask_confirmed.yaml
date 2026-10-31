@@ -1,0 +1,23 @@
+name: ask_confirmed
+description: A still-holds answer restores the asked memory and its subtree without any resolver call.
+memories:
+  cgpa: {kind: fact, content: "CGPA is 7.6", structured: {subject: student, attribute: cgpa, value: 7.6}}
+  eligibility: {kind: derived, content: "not eligible for Acme"}
+  recommendation: {kind: derived, content: "skip Acme"}
+links:
+  - [cgpa, eligibility, eligibility_of]
+  - [eligibility, recommendation, depends_on_fact]
+resolutions:
+  eligibility: {action: ask, question: "Still not eligible?"}
+events:
+  - update: cgpa
+    content: "CGPA is 7.7"
+    structured: {subject: student, attribute: cgpa, value: 7.7}
+    expect:
+      eligibility: {status: PENDING_USER}
+      recommendation: {status: SUSPECT}
+  - answer: eligibility
+    reply: still_holds
+    expect:
+      eligibility: {status: VALID, version: 1}
+      recommendation: {status: VALID, version: 1}

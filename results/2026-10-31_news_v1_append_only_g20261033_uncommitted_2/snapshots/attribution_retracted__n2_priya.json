@@ -1,0 +1,411 @@
+{
+  "scenario": "attribution_retracted__n2_priya",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a gas leak for the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a gas leak for the Duncliff factory fire"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a gas leak caused the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a gas leak caused the Duncliff factory fire"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a gas leak"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a gas leak"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a gas leak blamed for the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a gas leak blamed for the Duncliff factory fire"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 73 people injured in the Riverton bridge collapse"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 73 people injured in the Riverton bridge collapse"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton bridge collapse: 73 people injured"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton bridge collapse: 73 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a gas leak for the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "97e06488-d941-46f0-aa87-0c4ec434dbf4",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on a gas leak: new evidence emerged"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a gas leak caused the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a gas leak caused the Duncliff factory fire"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a gas leak"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a gas leak"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a gas leak blamed for the Duncliff factory fire"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a gas leak blamed for the Duncliff factory fire"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 73 people injured in the Riverton bridge collapse"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Ledger: 73 people injured in the Riverton bridge collapse"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton bridge collapse: 73 people injured"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton bridge collapse: 73 people injured"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "analysis",
+          "memory_id": "analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "briefing_item",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "attribution",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "97e06488-d941-46f0-aa87-0c4ec434dbf4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "follow_up",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "follow_up",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "attribution",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "briefing_item",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "97e06488-d941-46f0-aa87-0c4ec434dbf4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "briefing_item",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "attribution",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "97e06488-d941-46f0-aa87-0c4ec434dbf4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "follow_up",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "analysis",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "briefing_item",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "97e06488-d941-46f0-aa87-0c4ec434dbf4",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "attribution",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "follow_up",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

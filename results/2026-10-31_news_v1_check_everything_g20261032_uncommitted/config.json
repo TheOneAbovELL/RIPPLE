@@ -1,0 +1,48 @@
+{
+  "suite": "news_v1",
+  "strategy": "check_everything",
+  "ablation": null,
+  "linker": "scenario",
+  "linker_details": "links written from the scenario file (gold graph); no link finder ran",
+  "split": "test",
+  "data": {
+    "source": "generated in memory by bench.generate_news with seeds.generator_seed; the first seed reproduces bench/data/news_v1 (checked against its manifest)",
+    "track": "news_v1",
+    "domain": "news",
+    "content": "synthetic",
+    "generator": {
+      "module": "bench.generate_news",
+      "version": 1
+    },
+    "generator_seeds": [
+      20261031,
+      20261032,
+      20261033
+    ],
+    "data_sha256_by_seed": {
+      "20261031": "d9b473dfcb246332962da836a3c528c835e75da15945ff769af8e56ffebfa2d1",
+      "20261032": "e9ca624c82f7ef711c9447a8162cda54278b8b64d922b50147ee593fafb6ef8f",
+      "20261033": "849175dae613dc40586b890a9252d6f2b48abfca112ee10be98685462a823b94"
+    },
+    "curated": "not included: curated stories are not generated per seed",
+    "split": "test"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "source_sha256": "7e371da34fa18c96f10b76be91b8d0ce649b6257a08e5587aba382882098173b",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "bench/strategies.py check_everything (one-shot wave over every VALID memory; graph read only to order it parents first, ADR-0104)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "retrieval_probe": "bench/probe.py: HybridRetriever, lexical BM25 in memory, every match, graph expansion on, flagged included; one query per gold alias (its first content)",
+  "models": {},
+  "prompt_versions": {},
+  "seeds": {
+    "kind": "generator",
+    "generator_seed": 20261032,
+    "run_seed": null,
+    "data_sha256": "e9ca624c82f7ef711c9447a8162cda54278b8b64d922b50147ee593fafb6ef8f"
+  },
+  "run_at": "2026-10-31T09:35:16.542129+00:00"
+}

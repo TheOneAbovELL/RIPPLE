@@ -1,0 +1,284 @@
+{
+  "scenario": "deadline_moved__p1_dev",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-12"
+          },
+          "latest": {
+            "id": "wonka_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-12"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-12"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-12"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-24"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-24"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-24"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-24"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "wonka_opening",
+          "opening_alias": "wonka_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        },
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder",
+            "globex_eligibility"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:wonka_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "wonka_opening": {
+          "alias": "wonka_opening",
+          "root": {
+            "id": "wonka_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Wonka SDE intern: deadline 2026-11-12"
+          },
+          "latest": {
+            "id": "8b77dcd8-5dc1-44c7-8aba-66e170b0936e",
+            "status": "VALID",
+            "version": 2,
+            "content": "Wonka SDE intern: deadline 2026-12-16"
+          }
+        },
+        "wonka_reminder": {
+          "alias": "wonka_reminder",
+          "root": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-12"
+          },
+          "latest": {
+            "id": "wonka_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-12"
+          }
+        },
+        "globex_opening": {
+          "alias": "globex_opening",
+          "root": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-24"
+          },
+          "latest": {
+            "id": "globex_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Globex SDE engineer: deadline 2026-11-24"
+          }
+        },
+        "globex_reminder": {
+          "alias": "globex_reminder",
+          "root": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-24"
+          },
+          "latest": {
+            "id": "globex_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-24"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.4"
+          }
+        },
+        "globex_eligibility": {
+          "alias": "globex_eligibility",
+          "root": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          },
+          "latest": {
+            "id": "globex_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for globex"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "globex_opening",
+          "opening_alias": "globex_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "globex_reminder",
+            "globex_eligibility"
+          ]
+        },
+        {
+          "opening_id": "8b77dcd8-5dc1-44c7-8aba-66e170b0936e",
+          "opening_alias": null,
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "wonka_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "wonka_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-16",
+          "version": 2,
+          "deleted": false
+        },
+        "globex_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "globex_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

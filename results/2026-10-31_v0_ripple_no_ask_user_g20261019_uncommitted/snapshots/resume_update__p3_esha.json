@@ -1,0 +1,189 @@
+{
+  "scenario": "resume_update__p3_esha",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "resume",
+            "status": "VALID",
+            "version": 1,
+            "content": "resume v1"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to hooli with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to hooli with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the pytorch project for wonka"
+          },
+          "latest": {
+            "id": "tailoring",
+            "status": "VALID",
+            "version": 1,
+            "content": "highlight the pytorch project for wonka"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:resume",
+      "simulated_day": 0.0,
+      "memories": {
+        "resume": {
+          "alias": "resume",
+          "root": {
+            "id": "resume",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "resume v1"
+          },
+          "latest": {
+            "id": "d575de1d-b118-4824-838b-da6efc17162d",
+            "status": "VALID",
+            "version": 2,
+            "content": "resume v2"
+          }
+        },
+        "application": {
+          "alias": "application",
+          "root": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to hooli with resume v1"
+          },
+          "latest": {
+            "id": "application",
+            "status": "VALID",
+            "version": 1,
+            "content": "applied to hooli with resume v1"
+          }
+        },
+        "tailoring": {
+          "alias": "tailoring",
+          "root": {
+            "id": "tailoring",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "highlight the pytorch project for wonka"
+          },
+          "latest": {
+            "id": "308ba70f-30d5-47b7-a3bc-53604fc6a187",
+            "status": "VALID",
+            "version": 2,
+            "content": "highlight the new pytorch work for wonka"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "resume": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "application": {
+          "status": "VALID",
+          "content": "applied to hooli with resume v1",
+          "version": 1,
+          "deleted": false
+        },
+        "tailoring@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "resume",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "d575de1d-b118-4824-838b-da6efc17162d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "resume",
+          "memory_id": "308ba70f-30d5-47b7-a3bc-53604fc6a187",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "application",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "d575de1d-b118-4824-838b-da6efc17162d",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "application",
+          "memory_id": "308ba70f-30d5-47b7-a3bc-53604fc6a187",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "308ba70f-30d5-47b7-a3bc-53604fc6a187",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "tailoring",
+          "memory_id": "d575de1d-b118-4824-838b-da6efc17162d",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

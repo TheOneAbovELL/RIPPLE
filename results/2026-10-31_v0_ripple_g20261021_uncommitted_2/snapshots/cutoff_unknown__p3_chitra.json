@@ -1,0 +1,334 @@
+{
+  "scenario": "cutoff_unknown__p3_chitra",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for hooli"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for hooli"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip hooli"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "VALID",
+            "version": 1,
+            "content": "skip hooli"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          },
+          "latest": {
+            "id": "4a7cbdfd-fb17-43d2-ae87-e1f962163ae6",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.0"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "not eligible for hooli"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "not eligible for hooli"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "skip hooli"
+          },
+          "latest": {
+            "id": "recommendation",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "skip hooli"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "eligibility",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "recommendation",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "4a7cbdfd-fb17-43d2-ae87-e1f962163ae6",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "recommendation",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "eligibility",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "4a7cbdfd-fb17-43d2-ae87-e1f962163ae6",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:eligibility",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 6.9"
+          },
+          "latest": {
+            "id": "4a7cbdfd-fb17-43d2-ae87-e1f962163ae6",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.0"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE intern: CGPA cutoff 7.1"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for hooli"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for hooli"
+          }
+        },
+        "recommendation": {
+          "alias": "recommendation",
+          "root": {
+            "id": "recommendation",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "skip hooli"
+          },
+          "latest": {
+            "id": "e7339042-d8f6-4fd5-a777-971e88d16268",
+            "status": "VALID",
+            "version": 2,
+            "content": "apply to hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "e7339042-d8f6-4fd5-a777-971e88d16268"
+          ]
+        }
+      ],
+      "gold": {
+        "eligibility": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "recommendation@latest": {
+          "status": "VALID",
+          "content": "apply to hooli",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "e7339042-d8f6-4fd5-a777-971e88d16268",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "e7339042-d8f6-4fd5-a777-971e88d16268",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "recommendation",
+          "memory_id": "hooli_opening",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

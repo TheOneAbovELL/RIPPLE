@@ -1,0 +1,24 @@
+name: ask_unanswered_subtree
+description: An ask parks the memory and flags everything below it until the user answers.
+memories:
+  cgpa: {kind: fact, content: "CGPA is 7.6", structured: {subject: student, attribute: cgpa, value: 7.6}}
+  eligibility: {kind: derived, content: "not eligible for Acme"}
+  recommendation: {kind: derived, content: "skip Acme"}
+links:
+  - [cgpa, eligibility, eligibility_of]
+  - [eligibility, recommendation, depends_on_fact]
+resolutions:
+  eligibility: {action: ask, question: "Is the Acme cutoff still 7.8?"}
+  recommendation: {action: update, new_content: "apply to Acme"}
+events:
+  - update: cgpa
+    content: "CGPA is 7.9"
+    structured: {subject: student, attribute: cgpa, value: 7.9}
+    expect:
+      eligibility: {status: PENDING_USER}
+      recommendation: {status: SUSPECT, version: 1}
+  - answer: eligibility
+    reply: no_longer_holds
+    expect:
+      eligibility: {status: RETIRED}
+      recommendation@latest: {version: 2, status: VALID, content: "apply to Acme"}

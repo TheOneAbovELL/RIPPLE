@@ -1,0 +1,81 @@
+name: guidance_cut__f2_vikram
+description: Zenith Looms cuts guidance; vikram's estimate and thesis follow.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f2_vikram
+  template: guidance_cut
+  family: changed
+  seed: 20261031
+memories:
+  guidance:
+    content: ZNTH guides 21% revenue growth
+    structured:
+      subject: company:ZNTH
+      attribute: guidance
+      value: 21
+  estimate:
+    kind: derived
+    content: ZNTH revenue grows about 21% next year
+  thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 22%'
+  other_margin:
+    content: QUIL operating margin is 31%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 31
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 31%'
+links:
+- - guidance
+  - estimate
+  - estimate_from
+- - guidance
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  estimate:
+  - action: update
+    new_content: ZNTH revenue grows about 14% next year
+    reason: re-derived from its parent
+    trigger: guidance
+  thesis:
+  - action: update
+    new_content: 'ZNTH thesis weakened: growth guided down to 14%'
+    reason: re-derived from its parent
+    trigger: guidance
+events:
+- update: guidance
+  content: ZNTH guides 14% revenue growth
+  structured:
+    subject: company:ZNTH
+    attribute: guidance
+    value: 14
+  expect:
+    guidance:
+      status: RETIRED
+      version: 1
+    guidance@latest:
+      status: VALID
+      version: 2
+    estimate@latest:
+      status: VALID
+      content: ZNTH revenue grows about 14% next year
+      version: 2
+    thesis@latest:
+      status: VALID
+      content: 'ZNTH thesis weakened: growth guided down to 14%'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

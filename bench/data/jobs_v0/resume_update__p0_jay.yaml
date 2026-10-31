@@ -1,0 +1,55 @@
+name: resume_update__p0_jay
+description: jay uploads resume v2; the initech application keeps v1.
+meta:
+  track: jobs_v0
+  persona: p0_jay
+  template: resume_update
+  family: snapshot
+  seed: 20261019
+memories:
+  resume:
+    content: resume v1
+    structured:
+      subject: student
+      attribute: resume
+      value: v1
+  application:
+    kind: application
+    content: applied to initech with resume v1
+  tailoring:
+    kind: derived
+    content: highlight the django project for hooli
+links:
+- - resume
+  - application
+  - sent_with_resume
+- - resume
+  - tailoring
+  - depends_on_fact
+resolutions:
+  tailoring:
+  - action: update
+    new_content: highlight the new django work for hooli
+    reason: re-derived from its parent
+    trigger: resume
+  application:
+  - action: keep
+    reason: a sent application is a historical record
+    trigger: resume
+events:
+- update: resume
+  content: resume v2
+  structured:
+    subject: student
+    attribute: resume
+    value: v2
+  expect:
+    resume:
+      status: RETIRED
+    application:
+      status: VALID
+      content: applied to initech with resume v1
+      version: 1
+    tailoring@latest:
+      status: VALID
+      version: 2

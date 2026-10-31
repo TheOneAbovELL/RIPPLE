@@ -1,0 +1,78 @@
+name: road_closure__n1_nikhil
+description: the ring road near larkspur closes for 14 days.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n1_nikhil
+  template: road_closure
+  family: temporary
+  seed: 20261031
+memories:
+  region:
+    content: reader lives in larkspur
+    structured:
+      subject: reader
+      attribute: region
+      value: larkspur
+  travel_advice:
+    kind: derived
+    content: no travel disruption expected around larkspur
+  briefing:
+    kind: briefing
+    content: 'local briefing for larkspur: travel section'
+links:
+- - region
+  - travel_advice
+  - depends_on_fact
+- - travel_advice
+  - briefing
+  - briefing_from
+resolutions:
+  travel_advice:
+  - action: update
+    new_content: travel advice recomputed around the closure
+    reason: re-derived from its parent
+    trigger: closure
+  briefing:
+  - action: keep
+    reason: the travel section reads the advice live
+    trigger: closure
+events:
+- new: closure
+  content: the ring road closed for 14 days after the Larkspur power outage
+  structured:
+    subject: story:larkspur
+    attribute: closure
+    value: closed
+  valid_to_days: 14
+  kind: claim
+  links:
+  - - closure
+    - travel_advice
+    - depends_on_time_period
+  expect:
+    closure:
+      status: VALID
+    travel_advice@latest:
+      status: VALID
+      version: 2
+    region:
+      status: VALID
+      version: 1
+    briefing:
+      status: VALID
+      version: 1
+- advance_days: 15
+  expect:
+    closure:
+      status: RETIRED
+    travel_advice@latest:
+      status: VALID
+      version: 3
+    region:
+      status: VALID
+      version: 1
+    briefing:
+      status: VALID
+      version: 1

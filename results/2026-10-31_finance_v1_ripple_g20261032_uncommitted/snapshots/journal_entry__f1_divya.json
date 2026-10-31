@@ -1,0 +1,195 @@
+{
+  "scenario": "journal_entry__f1_divya",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 16%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 16%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following MPLW on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following MPLW on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if MPLW margin falls below 12%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if MPLW margin falls below 12%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "MPLW thesis: packaged food leader compounding on margins near 16%"
+          },
+          "latest": {
+            "id": "b27102c9-720b-4f94-8384-61b2d4d4aa9c",
+            "status": "VALID",
+            "version": 2,
+            "content": "MPLW thesis revised: margins can dip to 10%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following MPLW on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following MPLW on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if MPLW margin falls below 12%"
+          },
+          "latest": {
+            "id": "6289afa3-de6d-497b-bf70-747aaedf0315",
+            "status": "VALID",
+            "version": 2,
+            "content": "look again if MPLW margin falls below 10%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "journal": {
+          "status": "VALID",
+          "content": "2026-10-01: started following MPLW on the margin thesis",
+          "version": 1,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "look again if MPLW margin falls below 10%",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "b27102c9-720b-4f94-8384-61b2d4d4aa9c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "6289afa3-de6d-497b-bf70-747aaedf0315",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "6289afa3-de6d-497b-bf70-747aaedf0315",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "b27102c9-720b-4f94-8384-61b2d4d4aa9c",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "6289afa3-de6d-497b-bf70-747aaedf0315",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "b27102c9-720b-4f94-8384-61b2d4d4aa9c",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

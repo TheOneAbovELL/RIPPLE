@@ -1,0 +1,56 @@
+{
+  "suite": "linkpairs",
+  "track": "jobs_v0",
+  "linker": "rule",
+  "linker_details": {
+    "module": "ripple.linking.rules",
+    "confidence": 0.6,
+    "only_type": "depends_on_fact"
+  },
+  "plumbing_only": false,
+  "typed": false,
+  "models": {},
+  "prompt_versions": {},
+  "seeds": {
+    "pair_seed": 20261031,
+    "run_seed": 20261031
+  },
+  "split": "test",
+  "new_memory": "dependent",
+  "data": {
+    "pairs_file": "training/data/jobs_v0_pairs.jsonl",
+    "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+    "pairs_manifest": "training/data/jobs_v0_pairs.manifest.json",
+    "pairs_manifest_sha256": "520a1af58bc31c83e246f9b79ee58e0df18675244b261d9fe83fbe8444a6ff2b",
+    "generator": {
+      "module": "training.jobs_pairs",
+      "version": 1
+    },
+    "pair_seed": 20261031,
+    "negative_ratio": 3,
+    "source": {
+      "data_sha256": "26f01e9ab4d44e9be07348dc0c606a308e0178c40d80998ccd96c75a06097c0e",
+      "dir": "bench/data/jobs_v0",
+      "generator_seed": 20261019,
+      "test_personas": [
+        "p3_esha",
+        "p4_bharat"
+      ],
+      "test_templates": [
+        "cgpa_rise",
+        "deadline_moved"
+      ],
+      "track": "jobs_v0"
+    }
+  },
+  "pair_count": 392,
+  "provenances": [
+    "rule",
+    "scenario"
+  ],
+  "transfer": null,
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "run_at": "2026-10-31T06:50:13.662674+00:00"
+}

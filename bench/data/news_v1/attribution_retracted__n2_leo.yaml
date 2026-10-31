@@ -1,0 +1,85 @@
+name: attribution_retracted__n2_leo
+description: Officials withdraw the blame on a gas leak for the Ashgrove factory fire; a chain unwinds.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n2_leo
+  template: attribution_retracted
+  family: chain
+  seed: 20261031
+memories:
+  attribution:
+    kind: claim
+    content: officials blame a gas leak for the Ashgrove factory fire
+    structured:
+      subject: story:ashgrove
+      attribute: attribution
+      value: a gas leak
+  analysis:
+    kind: derived
+    content: a gas leak caused the Ashgrove factory fire
+  follow_up:
+    kind: derived
+    content: follow inspections linked to a gas leak
+  briefing_item:
+    kind: briefing
+    content: 'briefing: a gas leak blamed for the Ashgrove factory fire'
+  other_claim:
+    kind: claim
+    content: 'the Ledger: 164 accounts exposed in the Kestrel data breach'
+    structured:
+      subject: story:kestrel
+      attribute: figure
+      value: 164
+  other_summary:
+    kind: summary
+    content: 'Kestrel data breach: 164 accounts exposed'
+links:
+- - attribution
+  - analysis
+  - inferred_from
+- - analysis
+  - follow_up
+  - inferred_from
+- - follow_up
+  - briefing_item
+  - briefing_from
+- - other_claim
+  - other_summary
+  - summarises
+resolutions:
+  analysis:
+  - action: update
+    new_content: cause of the Ashgrove factory fire not established
+    reason: re-derived from its parent
+    trigger: attribution
+  follow_up:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+  briefing_item:
+  - action: retire
+    reason: no longer holds after its parent changed
+    trigger: attribution
+events:
+- update: attribution
+  content: 'officials withdraw the blame on a gas leak: new evidence emerged'
+  structured:
+    subject: story:ashgrove
+    attribute: attribution
+    value: unknown
+  expect:
+    analysis@latest:
+      status: VALID
+      version: 2
+    follow_up:
+      status: RETIRED
+    briefing_item:
+      status: RETIRED
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

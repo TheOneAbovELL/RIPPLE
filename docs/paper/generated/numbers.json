@@ -1,0 +1,1570 @@
+{
+  "generated_by": "python -m paper.numbers (ADR-0110)",
+  "macros": [
+    {
+      "name": "ablation.llm_linker.cost_per_ripple",
+      "status": "refused",
+      "description": "ripple without llm_linker: cost_per_ripple",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'llm_linker'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.llm_linker.stale_recommendation_rate",
+      "status": "refused",
+      "description": "ripple without llm_linker: stale_recommendation_rate",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'llm_linker'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.llm_linker.update_accuracy",
+      "status": "refused",
+      "description": "ripple without llm_linker: update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'llm_linker'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_ask_user.cost_per_ripple",
+      "status": "refused",
+      "description": "ripple without ask_user: cost_per_ripple",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_ask_user'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_ask_user.stale_recommendation_rate",
+      "status": "refused",
+      "description": "ripple without ask_user: stale_recommendation_rate",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_ask_user'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_ask_user.update_accuracy",
+      "status": "refused",
+      "description": "ripple without ask_user: update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_ask_user'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_curator.cost_per_ripple",
+      "status": "refused",
+      "description": "ripple without curator: cost_per_ripple",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_curator'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_curator.stale_recommendation_rate",
+      "status": "refused",
+      "description": "ripple without curator: stale_recommendation_rate",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_curator'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_curator.update_accuracy",
+      "status": "refused",
+      "description": "ripple without curator: update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_curator'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_evidence.cost_per_ripple",
+      "status": "refused",
+      "description": "ripple without evidence: cost_per_ripple",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_evidence'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_evidence.stale_recommendation_rate",
+      "status": "refused",
+      "description": "ripple without evidence: stale_recommendation_rate",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_evidence'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_evidence.update_accuracy",
+      "status": "refused",
+      "description": "ripple without evidence: update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_evidence'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_graph.cost_per_ripple",
+      "status": "refused",
+      "description": "ripple without graph: cost_per_ripple",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_graph'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_graph.stale_recommendation_rate",
+      "status": "refused",
+      "description": "ripple without graph: stale_recommendation_rate",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_graph'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "ablation.no_graph.update_accuracy",
+      "status": "refused",
+      "description": "ripple without graph: update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "ablation"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': 'no_graph'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys; bench.run has no ablation switch yet)"
+    },
+    {
+      "name": "h1.accuracy_ratio",
+      "status": "refused",
+      "description": "ripple update_accuracy / check_everything update_accuracy",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: mem.ripple.update_accuracy, mem.check_everything.update_accuracy"
+    },
+    {
+      "name": "h1.cost_ratio",
+      "status": "refused",
+      "description": "ripple cost_per_ripple / check_everything cost_per_ripple",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: mem.ripple.cost_per_ripple, mem.check_everything.cost_per_ripple"
+    },
+    {
+      "name": "h1.tokens_ratio",
+      "status": "refused",
+      "description": "ripple tokens_per_ripple / check_everything tokens_per_ripple",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: mem.ripple.tokens_per_ripple, mem.check_everything.tokens_per_ripple"
+    },
+    {
+      "name": "h1.usd_ratio",
+      "status": "refused",
+      "description": "ripple usd_per_ripple / check_everything usd_per_ripple",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: mem.ripple.usd_per_ripple, mem.check_everything.usd_per_ripple"
+    },
+    {
+      "name": "h2.stale_retrieval_gap_points",
+      "status": "refused",
+      "description": "append_only stale retrieval rate minus ripple's, in points",
+      "format": "points:1",
+      "headline": true,
+      "supports": [
+        "H2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: mem.append_only.stale_retrieval_rate, mem.ripple.stale_retrieval_rate"
+    },
+    {
+      "name": "h3.cost_ratio",
+      "status": "refused",
+      "description": "trained linker cost / LLM linker cost per 1k pairs",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H3",
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: link.trained.jobs_v0.usd_per_1k_pairs, link.llm.jobs_v0.usd_per_1k_pairs"
+    },
+    {
+      "name": "h3.f1_difference_points",
+      "status": "refused",
+      "description": "LLM linker F1 minus trained linker F1 on the jobs test split, points",
+      "format": "points:1",
+      "headline": true,
+      "supports": [
+        "H3",
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: link.llm.jobs_v0.f1, link.trained.jobs_v0.f1"
+    },
+    {
+      "name": "h4.transfer_difference_points",
+      "status": "refused",
+      "description": "trained linker F1 on jobs minus on finance (unseen domain), points",
+      "format": "points:1",
+      "headline": true,
+      "supports": [
+        "H4",
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: link.trained.jobs_v0.f1, link.trained.finance_v1.f1"
+    },
+    {
+      "name": "handcheck.jobs_v0.agreement",
+      "status": "refused",
+      "description": "hand-checked link pairs against silver labels: detection_agreement",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_handcheck_jobs_v0_* with config {'suite': 'handcheck'} (the hand labels are the author's (WS-14 protocol, ADR-0009))"
+    },
+    {
+      "name": "handcheck.jobs_v0.kappa",
+      "status": "refused",
+      "description": "hand-checked link pairs against silver labels: detection_kappa",
+      "format": "float:2",
+      "headline": false,
+      "supports": [
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_handcheck_jobs_v0_* with config {'suite': 'handcheck'} (the hand labels are the author's (WS-14 protocol, ADR-0009))"
+    },
+    {
+      "name": "handcheck.jobs_v0.pairs",
+      "status": "refused",
+      "description": "hand-checked link pairs against silver labels: n",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_handcheck_jobs_v0_* with config {'suite': 'handcheck'} (the hand labels are the author's (WS-14 protocol, ADR-0009))"
+    },
+    {
+      "name": "handcheck.jobs_v0.type_agreement",
+      "status": "refused",
+      "description": "hand-checked link pairs against silver labels: type_agreement_when_both_link",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "C1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_handcheck_jobs_v0_* with config {'suite': 'handcheck'} (the hand labels are the author's (WS-14 protocol, ADR-0009))"
+    },
+    {
+      "name": "link.llm.finance_v1.f1",
+      "status": "refused",
+      "description": "llm linker on finance_v1 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.finance_v1.f1_scenario",
+      "status": "refused",
+      "description": "llm linker on finance_v1 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.finance_v1.typed_f1",
+      "status": "refused",
+      "description": "llm linker on finance_v1 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.finance_v1.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "llm linker on finance_v1 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.jobs_v0.f1",
+      "status": "refused",
+      "description": "llm linker on jobs_v0 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.jobs_v0.f1_scenario",
+      "status": "refused",
+      "description": "llm linker on jobs_v0 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.jobs_v0.f1_strict",
+      "status": "refused",
+      "description": "llm linker on jobs_v0 strict_test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'llm', 'split': 'strict_test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.jobs_v0.typed_f1",
+      "status": "refused",
+      "description": "llm linker on jobs_v0 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.llm.jobs_v0.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "llm linker on jobs_v0 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'llm', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.finance_v1.f1",
+      "status": "refused",
+      "description": "rule linker on finance_v1 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'rule', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.finance_v1.f1_scenario",
+      "status": "refused",
+      "description": "rule linker on finance_v1 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'rule', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.finance_v1.typed_f1",
+      "status": "refused",
+      "description": "rule linker on finance_v1 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'rule', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.finance_v1.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "rule linker on finance_v1 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'rule', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.jobs_v0.f1",
+      "status": "refused",
+      "description": "rule linker on jobs_v0 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_linkpairs_jobs_v0_rule_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "link.rule.jobs_v0.f1_scenario",
+      "status": "refused",
+      "description": "rule linker on jobs_v0 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_linkpairs_jobs_v0_rule_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "link.rule.jobs_v0.f1_strict",
+      "status": "refused",
+      "description": "rule linker on jobs_v0 strict_test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'rule', 'split': 'strict_test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.rule.jobs_v0.typed_f1",
+      "status": "refused",
+      "description": "rule linker on jobs_v0 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_linkpairs_jobs_v0_rule_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "link.rule.jobs_v0.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "rule linker on jobs_v0 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_linkpairs_jobs_v0_rule_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "link.trained.finance_v1.f1",
+      "status": "refused",
+      "description": "trained linker on finance_v1 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.finance_v1.f1_scenario",
+      "status": "refused",
+      "description": "trained linker on finance_v1 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.finance_v1.typed_f1",
+      "status": "refused",
+      "description": "trained linker on finance_v1 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.finance_v1.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "trained linker on finance_v1 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H4"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_finance_v1_* with config {'suite': 'linkpairs', 'track': 'finance_v1', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.jobs_v0.f1",
+      "status": "refused",
+      "description": "trained linker on jobs_v0 test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.jobs_v0.f1_scenario",
+      "status": "refused",
+      "description": "trained linker on jobs_v0 test pairs: by_provenance.scenario.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.jobs_v0.f1_strict",
+      "status": "refused",
+      "description": "trained linker on jobs_v0 strict_test pairs: overall.f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'trained', 'split': 'strict_test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.jobs_v0.typed_f1",
+      "status": "refused",
+      "description": "trained linker on jobs_v0 test pairs: overall.typed_f1",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "link.trained.jobs_v0.usd_per_1k_pairs",
+      "status": "refused",
+      "description": "trained linker on jobs_v0 test pairs: overall.usd_per_1k_pairs",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "C1",
+        "H3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_linkpairs_jobs_v0_* with config {'suite': 'linkpairs', 'track': 'jobs_v0', 'linker': 'trained', 'split': 'test', 'plumbing_only': False} (WS-14's harness writes results/<date>_linkpairs_<track>_<sha>/; usd_per_1k_pairs and the strict split are a contract request; the trained linker is [human])"
+    },
+    {
+      "name": "mem.append_only.cost_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: resolver calls per ChangeEvent (H1 cost, C4)",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.questions_asked",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: ASK decisions across the scenario's ChangeEvents",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.stale_kept",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: should-change targets the strategy left untouched",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.stale_recommendation_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: unflagged recommendations on stale beliefs",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.stale_retrieval_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: unflagged gold-stale retrieved memories (H2)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.tokens_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: LLM tokens per ChangeEvent (C4)",
+      "format": "float:0",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.ttc_share_never_converged",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: should-change targets never consistent",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.update_accuracy",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: correct_updates / should-change targets (ADR-0063 H1)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.usd_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: priced from config/llm.default.toml (C4)",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.append_only.wrongful_changes",
+      "status": "refused",
+      "description": "RippleBench v0 test split, append_only: should-stay targets the strategy moved",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_append_only_* with config {'suite': 'v0', 'strategy': 'append_only', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.cost_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: resolver calls per ChangeEvent (H1 cost, C4)",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.questions_asked",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: ASK decisions across the scenario's ChangeEvents",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.stale_kept",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: should-change targets the strategy left untouched",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.stale_recommendation_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: unflagged recommendations on stale beliefs",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.stale_retrieval_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: unflagged gold-stale retrieved memories (H2)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.tokens_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: LLM tokens per ChangeEvent (C4)",
+      "format": "float:0",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.ttc_share_never_converged",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: should-change targets never consistent",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.update_accuracy",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: correct_updates / should-change targets (ADR-0063 H1)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.usd_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: priced from config/llm.default.toml (C4)",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.check_everything.wrongful_changes",
+      "status": "refused",
+      "description": "RippleBench v0 test split, check_everything: should-stay targets the strategy moved",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_check_everything_* with config {'suite': 'v0', 'strategy': 'check_everything', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.cost_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: resolver calls per ChangeEvent (H1 cost, C4)",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.questions_asked",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: ASK decisions across the scenario's ChangeEvents",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.stale_kept",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: should-change targets the strategy left untouched",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.stale_recommendation_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: unflagged recommendations on stale beliefs",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.stale_retrieval_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: unflagged gold-stale retrieved memories (H2)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.tokens_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: LLM tokens per ChangeEvent (C4)",
+      "format": "float:0",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.ttc_share_never_converged",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: should-change targets never consistent",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.update_accuracy",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: correct_updates / should-change targets (ADR-0063 H1)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.usd_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: priced from config/llm.default.toml (C4)",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.newest_wins.wrongful_changes",
+      "status": "refused",
+      "description": "RippleBench v0 test split, newest_wins: should-stay targets the strategy moved",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_newest_wins_* with config {'suite': 'v0', 'strategy': 'newest_wins', 'split': 'test', 'ablation': None} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.cost_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: resolver calls per ChangeEvent (H1 cost, C4)",
+      "format": "float:2",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.questions_asked",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: ASK decisions across the scenario's ChangeEvents",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.stale_kept",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: should-change targets the strategy left untouched",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.stale_recommendation_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: unflagged recommendations on stale beliefs",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.stale_retrieval_rate",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: unflagged gold-stale retrieved memories (H2)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.tokens_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: LLM tokens per ChangeEvent (C4)",
+      "format": "float:0",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.ttc_share_never_converged",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: should-change targets never consistent",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "C2",
+        "Q2"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.update_accuracy",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: correct_updates / should-change targets (ADR-0063 H1)",
+      "format": "pct:1",
+      "headline": true,
+      "supports": [
+        "H1",
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.usd_per_ripple",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: priced from config/llm.default.toml (C4)",
+      "format": "usd:4",
+      "headline": true,
+      "supports": [
+        "H1",
+        "C4",
+        "Q3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "mem.ripple.wrongful_changes",
+      "status": "refused",
+      "description": "RippleBench v0 test split, ripple: should-stay targets the strategy moved",
+      "format": "float:1",
+      "headline": true,
+      "supports": [
+        "Q1"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/*_v0_ripple_* with config {'suite': 'v0', 'strategy': 'ripple', 'split': 'test', 'ablation': None, 'linker': 'trained'} (bench.run writes memory_metrics as a TBD string until the author's bench/metrics.py exists; contract request: an object with these keys)"
+    },
+    {
+      "name": "oracle.v0.append_only.checks",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: checks",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_append_only_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.append_only.checks_failed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: checks failed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_append_only_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.append_only.pass_share",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: scenarios passed / scenarios",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: oracle.v0.append_only.scenarios_passed, oracle.v0.append_only.scenarios"
+    },
+    {
+      "name": "oracle.v0.append_only.resolver_calls",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: resolver calls",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_append_only_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.append_only.scenarios",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: scenarios",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_append_only_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.append_only.scenarios_passed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, append_only: scenarios passed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_append_only_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.check_everything.checks",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: checks",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_v0_check_everything_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.check_everything.checks_failed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: checks failed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_v0_check_everything_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.check_everything.pass_share",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: scenarios passed / scenarios",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: oracle.v0.check_everything.scenarios_passed, oracle.v0.check_everything.scenarios"
+    },
+    {
+      "name": "oracle.v0.check_everything.resolver_calls",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: resolver calls",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_v0_check_everything_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.check_everything.scenarios",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: scenarios",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_v0_check_everything_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.check_everything.scenarios_passed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, check_everything: scenarios passed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-30_v0_check_everything_uncommitted_2: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.newest_wins.checks",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: checks",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_newest_wins_uncommitted_3: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.newest_wins.checks_failed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: checks failed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_newest_wins_uncommitted_3: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.newest_wins.pass_share",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: scenarios passed / scenarios",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: oracle.v0.newest_wins.scenarios_passed, oracle.v0.newest_wins.scenarios"
+    },
+    {
+      "name": "oracle.v0.newest_wins.resolver_calls",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: resolver calls",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_newest_wins_uncommitted_3: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.newest_wins.scenarios",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: scenarios",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_newest_wins_uncommitted_3: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.newest_wins.scenarios_passed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, newest_wins: scenarios passed",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "baseline"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_newest_wins_uncommitted_3: git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.ripple.checks",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: checks",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_ripple_uncommitted_2: incomplete run: 35 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.ripple.checks_failed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: checks failed",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_ripple_uncommitted_2: incomplete run: 35 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.ripple.pass_share",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: scenarios passed / scenarios",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "input refused: oracle.v0.ripple.scenarios_passed, oracle.v0.ripple.scenarios"
+    },
+    {
+      "name": "oracle.v0.ripple.resolver_calls",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: resolver calls",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_ripple_uncommitted_2: incomplete run: 35 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.ripple.scenarios",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: scenarios",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_ripple_uncommitted_2: incomplete run: 35 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "oracle.v0.ripple.scenarios_passed",
+      "status": "refused",
+      "description": "v0 scripted-oracle replay, ripple: scenarios passed",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_v0_ripple_uncommitted_2: incomplete run: 35 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "pilot.days_earlier_than_self_discovery",
+      "status": "refused",
+      "description": "pilot season: median days earlier",
+      "format": "float:1",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "pilot.question_usefulness_share",
+      "status": "refused",
+      "description": "pilot season: questions marked useful",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "pilot.saved_or_applied_share",
+      "status": "refused",
+      "description": "pilot season: recommendations saved or applied",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "pilot.stale_recommendation_rate",
+      "status": "refused",
+      "description": "pilot season: recommendations shown on a stale belief",
+      "format": "pct:1",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "pilot.students",
+      "status": "refused",
+      "description": "pilot season: students who used the agent during the season (C3)",
+      "format": "int",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "pilot.trust_score",
+      "status": "refused",
+      "description": "pilot season: self-reported trust, survey scale",
+      "format": "float:1",
+      "headline": false,
+      "supports": [
+        "C3"
+      ],
+      "markdown": "TBD (pending run)",
+      "reason": "no run folder matches results/pilot/season* with config {'kind': 'pilot_season'} (the WS-16 weekly report writes results/pilot/<week>/; a season summary folder and these keys are a contract request)"
+    },
+    {
+      "name": "smoke.ripple.scenarios",
+      "status": "refused",
+      "description": "smoke suite (tests/scenarios), ripple: scenarios",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_smoke_uncommitted_2: incomplete run: 11 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    },
+    {
+      "name": "smoke.ripple.scenarios_passed",
+      "status": "refused",
+      "description": "smoke suite (tests/scenarios), ripple: scenarios passed",
+      "format": "int",
+      "headline": false,
+      "supports": [],
+      "markdown": "TBD (pending run)",
+      "reason": "newest candidate 2026-10-19_smoke_uncommitted_2: incomplete run: 11 scenarios not runnable; git_sha 'uncommitted' is not a clean commit"
+    }
+  ]
+}

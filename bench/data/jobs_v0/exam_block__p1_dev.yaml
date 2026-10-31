@@ -1,0 +1,75 @@
+name: exam_block__p1_dev
+description: dev is busy with exams for 36 days.
+meta:
+  track: jobs_v0
+  persona: p1_dev
+  template: exam_block
+  family: temporary
+  seed: 20261019
+memories:
+  looking:
+    content: actively looking for internships
+    structured:
+      subject: student
+      attribute: looking
+      value: true
+  availability:
+    kind: derived
+    content: available for interviews
+  reminder:
+    kind: derived
+    content: remind about the wonka interview slot
+links:
+- - looking
+  - availability
+  - depends_on_fact
+- - availability
+  - reminder
+  - reminder_for
+resolutions:
+  availability:
+  - action: update
+    new_content: availability recomputed around the exam block
+    reason: re-derived from its parent
+    trigger: exams
+  reminder:
+  - action: keep
+    reason: the slot is after the exams either way
+    trigger: exams
+events:
+- new: exams
+  content: busy with exams for the next 36 days
+  structured:
+    subject: student
+    attribute: availability
+    value: exams
+  valid_to_days: 36
+  links:
+  - - exams
+    - availability
+    - depends_on_time_period
+  expect:
+    exams:
+      status: VALID
+    availability@latest:
+      status: VALID
+      version: 2
+    looking:
+      status: VALID
+      version: 1
+    reminder:
+      status: VALID
+      version: 1
+- advance_days: 37
+  expect:
+    exams:
+      status: RETIRED
+    availability@latest:
+      status: VALID
+      version: 3
+    looking:
+      status: VALID
+      version: 1
+    reminder:
+      status: VALID
+      version: 1

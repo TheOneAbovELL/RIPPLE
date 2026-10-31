@@ -1,0 +1,195 @@
+{
+  "scenario": "shared_note__n1_tara",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          },
+          "latest": {
+            "id": "claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Eastmere ferry accident: 93 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:claim",
+      "simulated_day": 0.0,
+      "memories": {
+        "claim": {
+          "alias": "claim",
+          "root": {
+            "id": "claim",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Valley Wire: 93 passengers rescued in the Eastmere ferry accident"
+          },
+          "latest": {
+            "id": "6089350e-8b9d-4c63-8e1f-95efd0566900",
+            "status": "VALID",
+            "version": 2,
+            "content": "Valley Wire: 75 passengers rescued in the Eastmere ferry accident"
+          }
+        },
+        "shared": {
+          "alias": "shared",
+          "root": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "shared",
+            "status": "VALID",
+            "version": 1,
+            "content": "shared with the study group: Eastmere ferry accident: 93 passengers rescued"
+          }
+        },
+        "summary": {
+          "alias": "summary",
+          "root": {
+            "id": "summary",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Eastmere ferry accident: 93 passengers rescued"
+          },
+          "latest": {
+            "id": "6cd444fa-df64-4c52-8fbe-1afd3adf8c37",
+            "status": "VALID",
+            "version": 2,
+            "content": "Eastmere ferry accident: 75 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "claim": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "shared": {
+          "status": "VALID",
+          "content": "shared with the study group: Eastmere ferry accident: 93 passengers rescued",
+          "version": 1,
+          "deleted": false
+        },
+        "summary@latest": {
+          "status": "VALID",
+          "content": "Eastmere ferry accident: 75 passengers rescued",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "claim",
+          "memory_id": "6089350e-8b9d-4c63-8e1f-95efd0566900",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "claim",
+          "memory_id": "6cd444fa-df64-4c52-8fbe-1afd3adf8c37",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "6089350e-8b9d-4c63-8e1f-95efd0566900",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "shared",
+          "memory_id": "6cd444fa-df64-4c52-8fbe-1afd3adf8c37",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "shared",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "6cd444fa-df64-4c52-8fbe-1afd3adf8c37",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "summary",
+          "memory_id": "6089350e-8b9d-4c63-8e1f-95efd0566900",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

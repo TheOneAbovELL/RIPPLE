@@ -1,0 +1,20 @@
+name: keep_stops_propagation
+description: Dropping interest in quant roles re-ranks openings but keeps interview notes (keep halts the branch).
+memories:
+  interest: {kind: fact, content: "interested in quant roles", structured: {subject: student, attribute: interest_quant, value: true}}
+  ranking: {kind: derived, content: "Jane Street ranked first"}
+  notes: {kind: derived, content: "interview prep notes on probability puzzles"}
+links:
+  - [interest, ranking, depends_on_fact]
+  - [interest, notes, depends_on_fact]
+  - [ranking, notes, depends_on_fact]
+resolutions:
+  ranking: {action: update, new_content: "Jane Street ranked fortieth"}
+  notes: {action: keep}
+events:
+  - update: interest
+    content: "no longer interested in quant roles"
+    structured: {subject: student, attribute: interest_quant, value: false}
+    expect:
+      ranking@latest: {version: 2, content: "Jane Street ranked fortieth"}
+      notes: {status: VALID, version: 1}

@@ -1,0 +1,66 @@
+name: rate_edge__f2_vikram
+description: The policy rate nears vikram's 5.7% line (correction).
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f2_vikram
+  template: rate_edge
+  family: ask
+  seed: 20261031
+memories:
+  rate:
+    content: policy rate is 5.2%
+    structured:
+      subject: macro
+      attribute: policy_rate
+      value: 5.2
+  thesis:
+    kind: thesis
+    content: ZNTH thesis holds while the policy rate stays below 5.7%
+  alert:
+    kind: alert
+    content: review ZNTH monthly
+links:
+- - rate
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: ask
+    question: The policy rate is now 5.6%, just under your 5.7% line. Does your thesis still hold?
+    reason: the new rate sits on the line the thesis names
+    trigger: rate
+  alert:
+  - action: update
+    new_content: 'review ZNTH now: rate thesis under question'
+    reason: re-derived from its parent
+    trigger: thesis
+events:
+- update: rate
+  content: policy rate is 5.6%
+  structured:
+    subject: macro
+    attribute: policy_rate
+    value: 5.6
+  expect:
+    thesis:
+      status: PENDING_USER
+    alert:
+      status: SUSPECT
+      version: 1
+- answer: thesis
+  content: ZNTH thesis holds while the policy rate stays below 6.2%
+  reply: correction
+  expect:
+    thesis@latest:
+      status: VALID
+      content: ZNTH thesis holds while the policy rate stays below 6.2%
+      version: 2
+    alert@latest:
+      status: VALID
+      content: 'review ZNTH now: rate thesis under question'
+      version: 2

@@ -1,0 +1,28 @@
+name: temporary_unavailability
+description: A temporary fact ripples in, then expires and ripples out, with no permanent change.
+memories:
+  looking: {kind: fact, content: "actively looking for internships", structured: {subject: student, attribute: looking, value: true}}
+  availability: {kind: derived, content: "available for interviews"}
+  reminder: {kind: derived, content: "remind about the Globex interview slot next week"}
+links:
+  - [looking, availability, depends_on_fact]
+  - [availability, reminder, reminder_for]
+resolutions:
+  availability: {action: update, new_content: "availability recomputed"}
+  reminder: {action: keep}
+events:
+  - new: exams
+    kind: fact
+    content: "busy with exams this month"
+    valid_to_days: 30
+    links:
+      - [exams, availability, depends_on_time_period]
+    expect:
+      exams: {status: VALID}
+      availability@latest: {version: 2}
+      looking: {status: VALID, version: 1}
+  - advance_days: 31
+    expect:
+      exams: {status: RETIRED}
+      availability@latest: {version: 3, status: VALID}
+      looking: {status: VALID, version: 1}

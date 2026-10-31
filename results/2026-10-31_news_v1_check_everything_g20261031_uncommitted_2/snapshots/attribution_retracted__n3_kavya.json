@@ -1,0 +1,339 @@
+{
+  "scenario": "attribution_retracted__n3_kavya",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame storm damage for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame storm damage for the Ashgrove power outage"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "storm damage caused the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "storm damage caused the Ashgrove power outage"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to storm damage"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to storm damage"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: storm damage blamed for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: storm damage blamed for the Ashgrove power outage"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 58 workers evacuated in the Riverton factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 58 workers evacuated in the Riverton factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 58 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 58 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "officials blame storm damage for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "fe42ca75-5cf9-4ec4-a10e-5105a51f47c3",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on storm damage: the investigation is still open"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "storm damage caused the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "b688e9f3-fe41-49cf-b47e-59cd614c9200",
+            "status": "VALID",
+            "version": 2,
+            "content": "cause of the Ashgrove power outage not established"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to storm damage"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to storm damage"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: storm damage blamed for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: storm damage blamed for the Ashgrove power outage"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 58 workers evacuated in the Riverton factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 58 workers evacuated in the Riverton factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 58 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton factory fire: 58 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "analysis",
+          "memory_id": "b688e9f3-fe41-49cf-b47e-59cd614c9200",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "fe42ca75-5cf9-4ec4-a10e-5105a51f47c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "fe42ca75-5cf9-4ec4-a10e-5105a51f47c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "b688e9f3-fe41-49cf-b47e-59cd614c9200",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "b688e9f3-fe41-49cf-b47e-59cd614c9200",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "fe42ca75-5cf9-4ec4-a10e-5105a51f47c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "fe42ca75-5cf9-4ec4-a10e-5105a51f47c3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "b688e9f3-fe41-49cf-b47e-59cd614c9200",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "suite": "finance_v1",
+  "strategy": "append_only",
+  "split": "all",
+  "data": {
+    "source": "bench/data/finance_v1",
+    "track": "finance_v1",
+    "domain": "finance",
+    "content": "synthetic",
+    "data_sha256": "8b514dc76e0a577264e73fa956b9e727b28c3589005484dbf1ac3c7cf59ad037",
+    "extra_files": {
+      "pairs.jsonl": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be"
+    },
+    "curated": {
+      "count": 0,
+      "sha256": null
+    },
+    "generator": {
+      "module": "bench.generate_finance",
+      "version": 1
+    },
+    "split": "all"
+  },
+  "ripple_version": "0.0.1",
+  "git_sha": "uncommitted",
+  "source_sha256": "3439e52ca73b3520f4b6beffc8f5f36b88f91ec260ee29fdcda6e05fd9123c42",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "resolver": "scripted oracle (bench/scenario.py AliasResolver, trigger-aware)",
+  "engine": "bench/strategies.py append_only (no graph engine needed)",
+  "action_layer": "bench/replay.py StubActionLayer (deterministic placeholder ranking)",
+  "models": null,
+  "prompt_versions": null,
+  "seeds": {
+    "generator_seed": 20261031,
+    "run_seed": null
+  },
+  "run_at": "2026-10-30T22:00:38.689584+00:00"
+}

@@ -1,0 +1,428 @@
+{
+  "scenario": "trading_halt__f1_xavier",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          },
+          "latest": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:halt",
+      "simulated_day": 0.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          },
+          "latest": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          }
+        },
+        "halt": {
+          "alias": "halt",
+          "root": {
+            "id": "halt",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trading halted for 4 days pending a filing"
+          },
+          "latest": {
+            "id": "halt",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trading halted for 4 days pending a filing"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "halt": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "review@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "trading": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "plan": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "halt",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "halt",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "advance_days:5",
+      "simulated_day": 5.0,
+      "memories": {
+        "trading": {
+          "alias": "trading",
+          "root": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          },
+          "latest": {
+            "id": "trading",
+            "status": "VALID",
+            "version": 1,
+            "content": "KRVL trades normally"
+          }
+        },
+        "review": {
+          "alias": "review",
+          "root": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          },
+          "latest": {
+            "id": "review",
+            "status": "VALID",
+            "version": 1,
+            "content": "review KRVL every Friday"
+          }
+        },
+        "plan": {
+          "alias": "plan",
+          "root": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          },
+          "latest": {
+            "id": "plan",
+            "status": "VALID",
+            "version": 1,
+            "content": "next KRVL review covers the margin trend"
+          }
+        },
+        "halt": {
+          "alias": "halt",
+          "root": {
+            "id": "halt",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "KRVL trading halted for 4 days pending a filing"
+          },
+          "latest": {
+            "id": "halt",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "KRVL trading halted for 4 days pending a filing"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "halt": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "review@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "trading": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "plan": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "halt",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "halt",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "review",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "trading",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "plan",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "review",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "plan",
+          "memory_id": "trading",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

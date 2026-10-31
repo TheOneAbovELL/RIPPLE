@@ -1,0 +1,69 @@
+name: peer_margin__f3_uma
+description: Quillon Studios reports a new margin; nothing about Zenith Looms changes.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: peer_margin
+  family: unchanged
+  seed: 20261031
+memories:
+  margin:
+    content: QUIL operating margin is 21%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 21
+  thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 21%'
+  other_margin:
+    content: ZNTH operating margin is 20%
+    structured:
+      subject: company:ZNTH
+      attribute: margin
+      value: 20
+  other_thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 20%'
+  other_alert:
+    kind: alert
+    content: look again if ZNTH margin falls below 16%
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+- - other_thesis
+  - other_alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'QUIL thesis: margins now 24%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: QUIL operating margin is 24%
+  structured:
+    subject: company:QUIL
+    attribute: margin
+    value: 24
+  expect:
+    thesis@latest:
+      status: VALID
+      content: 'QUIL thesis: margins now 24%, re-checked'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_alert:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

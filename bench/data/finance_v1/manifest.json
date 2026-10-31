@@ -1,0 +1,372 @@
+{
+  "track": "finance_v1",
+  "domain": "finance",
+  "content": "synthetic",
+  "content_note": "synthetic: generated from templates with fictional names, places and companies; no real story, person or company is described",
+  "generator": {
+    "module": "bench.generate_finance",
+    "version": 1
+  },
+  "seed": 20261031,
+  "personas": {
+    "all": [
+      "f0_wen",
+      "f1_xavier",
+      "f2_vikram",
+      "f3_uma",
+      "f4_arjun"
+    ],
+    "train": [],
+    "test": [
+      "f0_wen",
+      "f1_xavier",
+      "f2_vikram",
+      "f3_uma",
+      "f4_arjun"
+    ]
+  },
+  "templates": {
+    "all": {
+      "guidance_cut": "changed",
+      "peer_margin": "unchanged",
+      "trading_halt": "temporary",
+      "ceo_departure": "chain",
+      "rate_edge": "ask",
+      "journal_entry": "snapshot",
+      "forget_holding": "forget"
+    },
+    "train": [],
+    "test": [
+      "ceo_departure",
+      "forget_holding",
+      "guidance_cut",
+      "journal_entry",
+      "peer_margin",
+      "rate_edge",
+      "trading_halt"
+    ]
+  },
+  "split_rule": "test only: the whole track is an unseen domain (H4); held_out = domain",
+  "curated": "hand-written real-story scenarios go in curated/ with meta.provenance (bench/tracks.py CuratedProvenance); always test; not covered by data_sha256",
+  "data_sha256": "8b514dc76e0a577264e73fa956b9e727b28c3589005484dbf1ac3c7cf59ad037",
+  "extra_files": {
+    "pairs.jsonl": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be"
+  },
+  "scenarios": [
+    {
+      "file": "guidance_cut__f0_wen.yaml",
+      "name": "guidance_cut__f0_wen",
+      "persona": "f0_wen",
+      "template": "guidance_cut",
+      "family": "changed",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "peer_margin__f0_wen.yaml",
+      "name": "peer_margin__f0_wen",
+      "persona": "f0_wen",
+      "template": "peer_margin",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "trading_halt__f0_wen.yaml",
+      "name": "trading_halt__f0_wen",
+      "persona": "f0_wen",
+      "template": "trading_halt",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "ceo_departure__f0_wen.yaml",
+      "name": "ceo_departure__f0_wen",
+      "persona": "f0_wen",
+      "template": "ceo_departure",
+      "family": "chain",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "rate_edge__f0_wen.yaml",
+      "name": "rate_edge__f0_wen",
+      "persona": "f0_wen",
+      "template": "rate_edge",
+      "family": "ask",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "journal_entry__f0_wen.yaml",
+      "name": "journal_entry__f0_wen",
+      "persona": "f0_wen",
+      "template": "journal_entry",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "forget_holding__f0_wen.yaml",
+      "name": "forget_holding__f0_wen",
+      "persona": "f0_wen",
+      "template": "forget_holding",
+      "family": "forget",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "guidance_cut__f1_xavier.yaml",
+      "name": "guidance_cut__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "guidance_cut",
+      "family": "changed",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "peer_margin__f1_xavier.yaml",
+      "name": "peer_margin__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "peer_margin",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "trading_halt__f1_xavier.yaml",
+      "name": "trading_halt__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "trading_halt",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "ceo_departure__f1_xavier.yaml",
+      "name": "ceo_departure__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "ceo_departure",
+      "family": "chain",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "rate_edge__f1_xavier.yaml",
+      "name": "rate_edge__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "rate_edge",
+      "family": "ask",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "journal_entry__f1_xavier.yaml",
+      "name": "journal_entry__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "journal_entry",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "forget_holding__f1_xavier.yaml",
+      "name": "forget_holding__f1_xavier",
+      "persona": "f1_xavier",
+      "template": "forget_holding",
+      "family": "forget",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "guidance_cut__f2_vikram.yaml",
+      "name": "guidance_cut__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "guidance_cut",
+      "family": "changed",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "peer_margin__f2_vikram.yaml",
+      "name": "peer_margin__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "peer_margin",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "trading_halt__f2_vikram.yaml",
+      "name": "trading_halt__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "trading_halt",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "ceo_departure__f2_vikram.yaml",
+      "name": "ceo_departure__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "ceo_departure",
+      "family": "chain",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "rate_edge__f2_vikram.yaml",
+      "name": "rate_edge__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "rate_edge",
+      "family": "ask",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "journal_entry__f2_vikram.yaml",
+      "name": "journal_entry__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "journal_entry",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "forget_holding__f2_vikram.yaml",
+      "name": "forget_holding__f2_vikram",
+      "persona": "f2_vikram",
+      "template": "forget_holding",
+      "family": "forget",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "guidance_cut__f3_uma.yaml",
+      "name": "guidance_cut__f3_uma",
+      "persona": "f3_uma",
+      "template": "guidance_cut",
+      "family": "changed",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "peer_margin__f3_uma.yaml",
+      "name": "peer_margin__f3_uma",
+      "persona": "f3_uma",
+      "template": "peer_margin",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "trading_halt__f3_uma.yaml",
+      "name": "trading_halt__f3_uma",
+      "persona": "f3_uma",
+      "template": "trading_halt",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "ceo_departure__f3_uma.yaml",
+      "name": "ceo_departure__f3_uma",
+      "persona": "f3_uma",
+      "template": "ceo_departure",
+      "family": "chain",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "rate_edge__f3_uma.yaml",
+      "name": "rate_edge__f3_uma",
+      "persona": "f3_uma",
+      "template": "rate_edge",
+      "family": "ask",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "journal_entry__f3_uma.yaml",
+      "name": "journal_entry__f3_uma",
+      "persona": "f3_uma",
+      "template": "journal_entry",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "forget_holding__f3_uma.yaml",
+      "name": "forget_holding__f3_uma",
+      "persona": "f3_uma",
+      "template": "forget_holding",
+      "family": "forget",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "guidance_cut__f4_arjun.yaml",
+      "name": "guidance_cut__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "guidance_cut",
+      "family": "changed",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "peer_margin__f4_arjun.yaml",
+      "name": "peer_margin__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "peer_margin",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "trading_halt__f4_arjun.yaml",
+      "name": "trading_halt__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "trading_halt",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "ceo_departure__f4_arjun.yaml",
+      "name": "ceo_departure__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "ceo_departure",
+      "family": "chain",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "rate_edge__f4_arjun.yaml",
+      "name": "rate_edge__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "rate_edge",
+      "family": "ask",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "journal_entry__f4_arjun.yaml",
+      "name": "journal_entry__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "journal_entry",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "domain"
+    },
+    {
+      "file": "forget_holding__f4_arjun.yaml",
+      "name": "forget_holding__f4_arjun",
+      "persona": "f4_arjun",
+      "template": "forget_holding",
+      "family": "forget",
+      "split": "test",
+      "held_out": "domain"
+    }
+  ]
+}

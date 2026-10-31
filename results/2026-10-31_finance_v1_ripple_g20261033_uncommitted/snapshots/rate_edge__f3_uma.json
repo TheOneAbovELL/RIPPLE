@@ -1,0 +1,278 @@
+{
+  "scenario": "rate_edge__f3_uma",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.0%"
+          },
+          "latest": {
+            "id": "rate",
+            "status": "VALID",
+            "version": 1,
+            "content": "policy rate is 5.0%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis holds while the policy rate stays below 5.5%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "MPLW thesis holds while the policy rate stays below 5.5%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review MPLW monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "review MPLW monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:rate",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.0%"
+          },
+          "latest": {
+            "id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.4%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "MPLW thesis holds while the policy rate stays below 5.5%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "PENDING_USER",
+            "version": 1,
+            "content": "MPLW thesis holds while the policy rate stays below 5.5%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "review MPLW monthly"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "SUSPECT",
+            "version": 1,
+            "content": "review MPLW monthly"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "PENDING_USER",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "alert": {
+          "status": "SUSPECT",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 1,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "thesis",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "alert",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "alert",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "thesis",
+          "flagged": true,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "answer:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "rate": {
+          "alias": "rate",
+          "root": {
+            "id": "rate",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "policy rate is 5.0%"
+          },
+          "latest": {
+            "id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+            "status": "VALID",
+            "version": 2,
+            "content": "policy rate is 5.4%"
+          }
+        },
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "MPLW thesis holds while the policy rate stays below 5.5%"
+          },
+          "latest": {
+            "id": "934e9650-eb17-4b64-86ee-96ec3c9f9d96",
+            "status": "VALID",
+            "version": 2,
+            "content": "MPLW thesis holds while the policy rate stays below 6.0%"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "review MPLW monthly"
+          },
+          "latest": {
+            "id": "f1532d4e-eceb-4797-bcf6-edb332bbcc50",
+            "status": "VALID",
+            "version": 2,
+            "content": "review MPLW now: rate thesis under question"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis@latest": {
+          "status": "VALID",
+          "content": "MPLW thesis holds while the policy rate stays below 6.0%",
+          "version": 2,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "review MPLW now: rate thesis under question",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "934e9650-eb17-4b64-86ee-96ec3c9f9d96",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "f1532d4e-eceb-4797-bcf6-edb332bbcc50",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "f1532d4e-eceb-4797-bcf6-edb332bbcc50",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "934e9650-eb17-4b64-86ee-96ec3c9f9d96",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "07dd9a91-2af9-4394-be92-c846842b8c00",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

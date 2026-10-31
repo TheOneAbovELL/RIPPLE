@@ -1,0 +1,284 @@
+{
+  "scenario": "deadline_moved__p0_jay",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-01"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-01"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-01"
+          },
+          "latest": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-01"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-07"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-07"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-07"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-07"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "initech_opening",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "initech_reminder"
+          ]
+        },
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        }
+      ],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:initech_opening",
+      "simulated_day": 0.0,
+      "memories": {
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "Initech SDE intern: deadline 2026-11-01"
+          },
+          "latest": {
+            "id": "d7c0321a-dbe0-44ad-99ec-a3757c2f0b9b",
+            "status": "VALID",
+            "version": 2,
+            "content": "Initech SDE intern: deadline 2026-12-19"
+          }
+        },
+        "initech_reminder": {
+          "alias": "initech_reminder",
+          "root": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-01"
+          },
+          "latest": {
+            "id": "initech_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-01"
+          }
+        },
+        "hooli_opening": {
+          "alias": "hooli_opening",
+          "root": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-07"
+          },
+          "latest": {
+            "id": "hooli_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hooli SDE engineer: deadline 2026-11-07"
+          }
+        },
+        "hooli_reminder": {
+          "alias": "hooli_reminder",
+          "root": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-07"
+          },
+          "latest": {
+            "id": "hooli_reminder",
+            "status": "VALID",
+            "version": 1,
+            "content": "remind two days before 2026-11-07"
+          }
+        },
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.2"
+          }
+        },
+        "hooli_eligibility": {
+          "alias": "hooli_eligibility",
+          "root": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          },
+          "latest": {
+            "id": "hooli_eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "eligible for hooli"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "hooli_opening",
+          "opening_alias": "hooli_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "hooli_reminder",
+            "hooli_eligibility"
+          ]
+        },
+        {
+          "opening_id": "d7c0321a-dbe0-44ad-99ec-a3757c2f0b9b",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "initech_reminder"
+          ]
+        }
+      ],
+      "gold": {
+        "initech_reminder@latest": {
+          "status": "VALID",
+          "content": "remind two days before 2026-12-19",
+          "version": 2,
+          "deleted": false
+        },
+        "hooli_reminder": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_eligibility": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "hooli_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

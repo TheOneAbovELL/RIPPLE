@@ -1,0 +1,284 @@
+{
+  "scenario": "cgpa_rise__p2_bharat",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          }
+        },
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: CGPA cutoff 8.7"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: CGPA cutoff 8.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for initech (8.5 < 8.7)"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for initech (8.5 < 8.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          },
+          "latest": {
+            "id": "criteria",
+            "status": "VALID",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "caa7c1dc-fc6f-4e29-b05a-a132f1bca709",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 9.0"
+          }
+        },
+        "initech_opening": {
+          "alias": "initech_opening",
+          "root": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: CGPA cutoff 8.7"
+          },
+          "latest": {
+            "id": "initech_opening",
+            "status": "VALID",
+            "version": 1,
+            "content": "Initech SDE intern: CGPA cutoff 8.7"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for initech (8.5 < 8.7)"
+          },
+          "latest": {
+            "id": "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for initech (9.0 >= 8.7)"
+          }
+        },
+        "criteria": {
+          "alias": "criteria",
+          "root": {
+            "id": "criteria",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "search openings with cutoff <= 8.5"
+          },
+          "latest": {
+            "id": "fd3d3660-5011-44ef-9e80-db5d650db167",
+            "status": "VALID",
+            "version": 2,
+            "content": "search openings with cutoff <= 9.0"
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "opening_id": "initech_opening",
+          "opening_alias": "initech_opening",
+          "eligible": true,
+          "fit_score": 1.0,
+          "flagged": false,
+          "based_on": [
+            "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5"
+          ]
+        }
+      ],
+      "gold": {
+        "cgpa": {
+          "status": "RETIRED",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "cgpa@latest": {
+          "status": "VALID",
+          "content": "CGPA is 9.0",
+          "version": 2,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": "eligible for initech (9.0 >= 8.7)",
+          "version": 2,
+          "deleted": false
+        },
+        "criteria@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "initech_opening": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "caa7c1dc-fc6f-4e29-b05a-a132f1bca709",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "fd3d3660-5011-44ef-9e80-db5d650db167",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "caa7c1dc-fc6f-4e29-b05a-a132f1bca709",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "fd3d3660-5011-44ef-9e80-db5d650db167",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "caa7c1dc-fc6f-4e29-b05a-a132f1bca709",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "criteria",
+          "memory_id": "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "initech_opening",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "cc5d6066-bf9c-409d-9020-ebf6e01cfcc5",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "caa7c1dc-fc6f-4e29-b05a-a132f1bca709",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_opening",
+          "memory_id": "fd3d3660-5011-44ef-9e80-db5d650db167",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

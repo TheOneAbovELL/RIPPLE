@@ -1,0 +1,21 @@
+name: two_cgpa_changes
+description: A second CGPA change must reach the already-updated eligibility (ADR-0014 outgoing copies).
+memories:
+  cgpa: {kind: fact, content: "CGPA is 7.6", structured: {subject: student, attribute: cgpa, value: 7.6}}
+  eligibility: {kind: derived, content: "not eligible for Acme"}
+links:
+  - [cgpa, eligibility, eligibility_of]
+resolutions:
+  eligibility: {action: update, new_content: "eligibility recomputed"}
+events:
+  - update: cgpa
+    content: "CGPA is 7.9"
+    structured: {subject: student, attribute: cgpa, value: 7.9}
+    expect:
+      eligibility@latest: {version: 2, content: "eligibility recomputed"}
+  - update: cgpa
+    content: "CGPA is 8.1"
+    structured: {subject: student, attribute: cgpa, value: 8.1}
+    expect:
+      cgpa@latest: {version: 3}
+      eligibility@latest: {version: 3, status: VALID}

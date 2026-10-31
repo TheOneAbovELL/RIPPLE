@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+coverage
+src/api/schema.d.ts
+openapi.json
+package-lock.json
+# next build rewrites this file in its own style
+tsconfig.json

@@ -1,0 +1,51 @@
+name: journal_entry__f3_uma
+description: uma revises the ZNTH thesis; the journal keeps v1.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: journal_entry
+  family: snapshot
+  seed: 20261031
+memories:
+  thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 20%'
+  journal:
+    kind: journal
+    content: '2026-10-01: started following ZNTH on the margin thesis'
+  alert:
+    kind: alert
+    content: look again if ZNTH margin falls below 16%
+links:
+- - thesis
+  - journal
+  - journaled_with
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  alert:
+  - action: update
+    new_content: look again if ZNTH margin falls below 13%
+    reason: re-derived from its parent
+    trigger: thesis
+  journal:
+  - action: keep
+    reason: a journal entry records the decision as it was made
+    trigger: thesis
+events:
+- update: thesis
+  content: 'ZNTH thesis revised: margins can dip to 13%'
+  expect:
+    thesis:
+      status: RETIRED
+    journal:
+      status: VALID
+      content: '2026-10-01: started following ZNTH on the margin thesis'
+      version: 1
+    alert@latest:
+      status: VALID
+      content: look again if ZNTH margin falls below 13%
+      version: 2

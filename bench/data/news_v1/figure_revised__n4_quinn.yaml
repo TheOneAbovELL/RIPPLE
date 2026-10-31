@@ -1,0 +1,89 @@
+name: figure_revised__n4_quinn
+description: the Ledger revises the Eastmere bridge collapse figure; quinn's briefing follows.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n4_quinn
+  template: figure_revised
+  family: changed
+  seed: 20261031
+memories:
+  claim:
+    kind: claim
+    content: 'the Ledger: 64 people injured in the Eastmere bridge collapse'
+    structured:
+      subject: story:eastmere
+      attribute: figure
+      value: 64
+  summary:
+    kind: summary
+    content: 'Eastmere bridge collapse: 64 people injured'
+  other_claim:
+    kind: claim
+    content: 'the Gazette: 44 workers evacuated in the Larkspur factory fire'
+    structured:
+      subject: story:larkspur
+      attribute: figure
+      value: 44
+  other_summary:
+    kind: summary
+    content: 'Larkspur factory fire: 44 workers evacuated'
+  briefing:
+    kind: briefing
+    content: 'today: Eastmere bridge collapse: 64 people injured; Larkspur factory fire: 44 workers evacuated'
+links:
+- - claim
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - summary
+  - briefing
+  - briefing_from
+- - other_summary
+  - briefing
+  - briefing_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Eastmere bridge collapse: 52 people injured'
+    reason: re-derived from its parent
+    trigger: claim
+  briefing:
+  - action: update
+    new_content: 'today: Eastmere bridge collapse: 52 people injured; Larkspur factory fire: 44 workers
+      evacuated'
+    reason: re-derived from its parent
+    trigger: claim
+events:
+- update: claim
+  content: 'the Ledger: 52 people injured in the Eastmere bridge collapse'
+  structured:
+    subject: story:eastmere
+    attribute: figure
+    value: 52
+  expect:
+    claim:
+      status: RETIRED
+      version: 1
+    claim@latest:
+      status: VALID
+      content: 'the Ledger: 52 people injured in the Eastmere bridge collapse'
+      version: 2
+    summary@latest:
+      status: VALID
+      content: 'Eastmere bridge collapse: 52 people injured'
+      version: 2
+    briefing@latest:
+      status: VALID
+      content: 'today: Eastmere bridge collapse: 52 people injured; Larkspur factory fire: 44 workers
+        evacuated'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

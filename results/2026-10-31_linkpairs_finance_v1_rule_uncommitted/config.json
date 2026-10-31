@@ -1,0 +1,33 @@
+{
+  "suite": "linkpairs",
+  "track": "finance_v1",
+  "linker": "rule",
+  "linker_details": {
+    "module": "ripple.linking.rules",
+    "confidence": 0.6,
+    "only_type": "depends_on_fact"
+  },
+  "plumbing_only": false,
+  "typed": false,
+  "models": {},
+  "prompt_versions": {},
+  "seeds": {
+    "pair_seed": null,
+    "run_seed": 20261031
+  },
+  "split": "test",
+  "new_memory": "dependent",
+  "data": {
+    "pairs_file": "bench/data/finance_v1/pairs.jsonl",
+    "pairs_sha256": "dcda968197073df5488a6c7ecaafeec263d679b0584f61720ffd1f8d583e70be"
+  },
+  "pair_count": 406,
+  "provenances": [
+    "scenario"
+  ],
+  "transfer": null,
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "run_at": "2026-10-31T06:50:22.608732+00:00"
+}

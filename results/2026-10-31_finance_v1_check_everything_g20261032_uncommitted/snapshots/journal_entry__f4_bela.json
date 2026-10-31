@@ -1,0 +1,195 @@
+{
+  "scenario": "journal_entry__f4_bela",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 31%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 27%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 27%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 31%"
+          },
+          "latest": {
+            "id": "28579c7c-16b2-4f9c-8603-1ae0050a42a3",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH thesis revised: margins can dip to 25%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 27%"
+          },
+          "latest": {
+            "id": "083bd26c-3375-448f-8dad-1d135306fb99",
+            "status": "VALID",
+            "version": 2,
+            "content": "look again if ZNTH margin falls below 25%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "journal": {
+          "status": "VALID",
+          "content": "2026-10-01: started following ZNTH on the margin thesis",
+          "version": 1,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "look again if ZNTH margin falls below 25%",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "thesis",
+          "memory_id": "28579c7c-16b2-4f9c-8603-1ae0050a42a3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "thesis",
+          "memory_id": "083bd26c-3375-448f-8dad-1d135306fb99",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "083bd26c-3375-448f-8dad-1d135306fb99",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "journal",
+          "memory_id": "28579c7c-16b2-4f9c-8603-1ae0050a42a3",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "083bd26c-3375-448f-8dad-1d135306fb99",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "journal",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "alert",
+          "memory_id": "28579c7c-16b2-4f9c-8603-1ae0050a42a3",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

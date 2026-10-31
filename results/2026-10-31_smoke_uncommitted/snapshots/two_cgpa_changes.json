@@ -1,0 +1,166 @@
+{
+  "scenario": "two_cgpa_changes",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for Acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "809e6133-6291-43e2-9101-e642644cf1f5",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 7.9"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for Acme"
+          },
+          "latest": {
+            "id": "02ceab69-4863-43f5-ba2f-f4bff6640b8a",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligibility recomputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility@latest": {
+          "status": null,
+          "content": "eligibility recomputed",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 2,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 7.6"
+          },
+          "latest": {
+            "id": "fb2640d9-19ef-4dd9-bdba-31dff2e9cdfc",
+            "status": "VALID",
+            "version": 3,
+            "content": "CGPA is 8.1"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for Acme"
+          },
+          "latest": {
+            "id": "f2af0298-dddb-4d28-add3-e93ad31bbacd",
+            "status": "VALID",
+            "version": 3,
+            "content": "eligibility recomputed"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "cgpa@latest": {
+          "status": null,
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "eligibility@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 2,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "cgpa",
+          "memory_id": "fb2640d9-19ef-4dd9-bdba-31dff2e9cdfc",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "cgpa",
+          "memory_id": "f2af0298-dddb-4d28-add3-e93ad31bbacd",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

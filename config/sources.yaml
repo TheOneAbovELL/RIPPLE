@@ -1,0 +1,34 @@
+# Allowed sources for the Scout (ADR-0008, ADR-0070). RIPPLE_SOURCES_CONFIG points the
+# worker at an override file. A source loads only with a terms_note that says where the
+# permission to fetch it comes from; robots_respected can only be true. Keep career
+# pages `enabled: false` until the site has confirmed, in writing, that automated
+# fetching at this rate is fine; the Scout never fetches a disabled source.
+
+user_agent: "RippleScout/0.1 (final-year B.Tech project; non-commercial; see README)"
+
+sources:
+  - id: forwarded_email
+    kind: forwarded_email
+    terms_note: >
+      The student forwards placement emails to their own agent; nothing is fetched.
+      The text is parsed through strip_email_envelope and parse_jd by the API and the
+      Telegram channel, not by the Scout.
+    robots_respected: true
+    rate_limit_per_minute: 1
+
+  # Example career page. Disabled until the author confirms permission with the site
+  # (ADR-0008). The hint shape: css_selector picks listing cards, follow_links fetches
+  # each card's link on the same host, detail_selector picks the JD body there.
+  - id: example_careers
+    kind: career_page
+    url: https://careers.example.com/jobs
+    terms_note: >
+      PLACEHOLDER: replace with the mail or terms page granting permission, with the
+      date, before enabling.
+    robots_respected: true
+    rate_limit_per_minute: 6
+    enabled: false
+    parser:
+      css_selector: "li.job"
+      follow_links: true
+      detail_selector: "article.job-description"

@@ -1,0 +1,63 @@
+name: rate_edge__f1_xavier
+description: The policy rate nears xavier's 5.6% line (no_longer_holds).
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f1_xavier
+  template: rate_edge
+  family: ask
+  seed: 20261031
+memories:
+  rate:
+    content: policy rate is 5.1%
+    structured:
+      subject: macro
+      attribute: policy_rate
+      value: 5.1
+  thesis:
+    kind: thesis
+    content: KRVL thesis holds while the policy rate stays below 5.6%
+  alert:
+    kind: alert
+    content: review KRVL monthly
+links:
+- - rate
+  - thesis
+  - premise_of
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: ask
+    question: The policy rate is now 5.5%, just under your 5.6% line. Does your thesis still hold?
+    reason: the new rate sits on the line the thesis names
+    trigger: rate
+  alert:
+  - action: update
+    new_content: 'review KRVL now: rate thesis under question'
+    reason: re-derived from its parent
+    trigger: thesis
+events:
+- update: rate
+  content: policy rate is 5.5%
+  structured:
+    subject: macro
+    attribute: policy_rate
+    value: 5.5
+  expect:
+    thesis:
+      status: PENDING_USER
+    alert:
+      status: SUSPECT
+      version: 1
+- answer: thesis
+  reply: no_longer_holds
+  expect:
+    thesis:
+      status: RETIRED
+    alert@latest:
+      status: VALID
+      content: 'review KRVL now: rate thesis under question'
+      version: 2

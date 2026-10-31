@@ -1,0 +1,60 @@
+name: forget_cgpa__p1_dev
+description: dev asks to forget the CGPA after one change to it.
+meta:
+  track: jobs_v0
+  persona: p1_dev
+  template: forget_cgpa
+  family: forget
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.4
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.4
+  eligibility:
+    kind: derived
+    content: not eligible for stark
+  skill:
+    content: knows react
+    structured:
+      subject: student
+      attribute: skill
+      value: react
+  fit:
+    kind: derived
+    content: fit for wonka
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - skill
+  - fit
+  - fit_of
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for stark
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.7
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.7
+  expect:
+    eligibility@latest:
+      version: 2
+- forget: cgpa
+  expect:
+    cgpa:
+      deleted: true
+    eligibility:
+      deleted: true
+    skill:
+      status: VALID
+    fit:
+      status: VALID

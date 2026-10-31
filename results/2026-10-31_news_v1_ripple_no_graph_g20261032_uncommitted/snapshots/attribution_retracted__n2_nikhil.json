@@ -1,0 +1,339 @@
+{
+  "scenario": "attribution_retracted__n2_nikhil",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame heavy rain for the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame heavy rain for the Hollowbay warehouse flood"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "heavy rain caused the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "heavy rain caused the Hollowbay warehouse flood"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to heavy rain"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to heavy rain"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: heavy rain blamed for the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: heavy rain blamed for the Hollowbay warehouse flood"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "officials blame heavy rain for the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "d76db3cc-5a4d-4447-b6e4-2b365ca98196",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on heavy rain: new evidence emerged"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "heavy rain caused the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "58768f33-da80-4047-a8b3-bbd25478525f",
+            "status": "VALID",
+            "version": 2,
+            "content": "cause of the Hollowbay warehouse flood not established"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to heavy rain"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to heavy rain"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: heavy rain blamed for the Hollowbay warehouse flood"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: heavy rain blamed for the Hollowbay warehouse flood"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Courier: 11 passengers rescued in the Riverton ferry accident"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton ferry accident: 11 passengers rescued"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "analysis",
+          "memory_id": "58768f33-da80-4047-a8b3-bbd25478525f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "d76db3cc-5a4d-4447-b6e4-2b365ca98196",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "d76db3cc-5a4d-4447-b6e4-2b365ca98196",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "58768f33-da80-4047-a8b3-bbd25478525f",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "58768f33-da80-4047-a8b3-bbd25478525f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "d76db3cc-5a4d-4447-b6e4-2b365ca98196",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "58768f33-da80-4047-a8b3-bbd25478525f",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "d76db3cc-5a4d-4447-b6e4-2b365ca98196",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

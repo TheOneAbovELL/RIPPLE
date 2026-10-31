@@ -1,0 +1,77 @@
+name: trading_halt__f3_uma
+description: Talon Railcar is halted for 11 days pending a filing.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f3_uma
+  template: trading_halt
+  family: temporary
+  seed: 20261031
+memories:
+  trading:
+    content: TALN trades normally
+    structured:
+      subject: company:TALN
+      attribute: trading_status
+      value: trading
+  review:
+    kind: alert
+    content: review TALN every Friday
+  plan:
+    kind: derived
+    content: next TALN review covers the margin trend
+links:
+- - trading
+  - review
+  - alert_for
+- - review
+  - plan
+  - depends_on_fact
+resolutions:
+  review:
+  - action: update
+    new_content: weekly review rescheduled around the halt
+    reason: re-derived from its parent
+    trigger: halt
+  plan:
+  - action: keep
+    reason: the review topic does not depend on trading days
+    trigger: halt
+events:
+- new: halt
+  content: TALN trading halted for 11 days pending a filing
+  structured:
+    subject: company:TALN
+    attribute: trading_status
+    value: halted
+  valid_to_days: 11
+  links:
+  - - halt
+    - review
+    - depends_on_time_period
+  expect:
+    halt:
+      status: VALID
+    review@latest:
+      status: VALID
+      version: 2
+    trading:
+      status: VALID
+      version: 1
+    plan:
+      status: VALID
+      version: 1
+- advance_days: 12
+  expect:
+    halt:
+      status: RETIRED
+    review@latest:
+      status: VALID
+      version: 3
+    trading:
+      status: VALID
+      version: 1
+    plan:
+      status: VALID
+      version: 1

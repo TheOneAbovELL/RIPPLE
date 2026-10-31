@@ -1,0 +1,255 @@
+{
+  "scenario": "road_closure__n0_meera",
+  "strategy": "newest_wins",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "new:closure",
+      "simulated_day": 0.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the ring road closed for 12 days after the Hollowbay power outage"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "VALID",
+            "version": 1,
+            "content": "the ring road closed for 12 days after the Hollowbay power outage"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 2,
+      "action": "advance_days:13",
+      "simulated_day": 13.0,
+      "memories": {
+        "region": {
+          "alias": "region",
+          "root": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          },
+          "latest": {
+            "id": "region",
+            "status": "VALID",
+            "version": 1,
+            "content": "reader lives in hollowbay"
+          }
+        },
+        "travel_advice": {
+          "alias": "travel_advice",
+          "root": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          },
+          "latest": {
+            "id": "travel_advice",
+            "status": "VALID",
+            "version": 1,
+            "content": "no travel disruption expected around hollowbay"
+          }
+        },
+        "briefing": {
+          "alias": "briefing",
+          "root": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          },
+          "latest": {
+            "id": "briefing",
+            "status": "VALID",
+            "version": 1,
+            "content": "local briefing for hollowbay: travel section"
+          }
+        },
+        "closure": {
+          "alias": "closure",
+          "root": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the ring road closed for 12 days after the Hollowbay power outage"
+          },
+          "latest": {
+            "id": "closure",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "the ring road closed for 12 days after the Hollowbay power outage"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "closure": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "travel_advice@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 3,
+          "deleted": false
+        },
+        "region": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "briefing": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

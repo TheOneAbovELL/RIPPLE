@@ -1,0 +1,138 @@
+{
+  "scenario": "journal_entry__f0_wen",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 21%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 17%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 17%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:thesis",
+      "simulated_day": 0.0,
+      "memories": {
+        "thesis": {
+          "alias": "thesis",
+          "root": {
+            "id": "thesis",
+            "status": "VALID",
+            "version": 1,
+            "content": "ZNTH thesis: textiles leader compounding on margins near 21%"
+          },
+          "latest": {
+            "id": "adb60a38-feae-4fa5-b9eb-4923b0ce4626",
+            "status": "VALID",
+            "version": 2,
+            "content": "ZNTH thesis revised: margins can dip to 16%"
+          }
+        },
+        "journal": {
+          "alias": "journal",
+          "root": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          },
+          "latest": {
+            "id": "journal",
+            "status": "VALID",
+            "version": 1,
+            "content": "2026-10-01: started following ZNTH on the margin thesis"
+          }
+        },
+        "alert": {
+          "alias": "alert",
+          "root": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 17%"
+          },
+          "latest": {
+            "id": "alert",
+            "status": "VALID",
+            "version": 1,
+            "content": "look again if ZNTH margin falls below 17%"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "thesis": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "journal": {
+          "status": "VALID",
+          "content": "2026-10-01: started following ZNTH on the margin thesis",
+          "version": 1,
+          "deleted": false
+        },
+        "alert@latest": {
+          "status": "VALID",
+          "content": "look again if ZNTH margin falls below 16%",
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "scenario": "forget_cgpa__p4_gauri",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "cgpa",
+            "status": "VALID",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for wonka"
+          },
+          "latest": {
+            "id": "eligibility",
+            "status": "VALID",
+            "version": 1,
+            "content": "not eligible for wonka"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": {
+            "id": "cgpa",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "CGPA is 8.5"
+          },
+          "latest": {
+            "id": "8ae44a6c-c340-4c1d-89fa-ff363ee918c0",
+            "status": "VALID",
+            "version": 2,
+            "content": "CGPA is 8.8"
+          }
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": {
+            "id": "eligibility",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "not eligible for wonka"
+          },
+          "latest": {
+            "id": "b94fc379-bf8c-48b3-b59b-3ae99ff7dbc9",
+            "status": "VALID",
+            "version": 2,
+            "content": "eligible for wonka"
+          }
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "eligibility@latest": {
+          "status": null,
+          "content": null,
+          "version": 2,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "b94fc379-bf8c-48b3-b59b-3ae99ff7dbc9",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "8ae44a6c-c340-4c1d-89fa-ff363ee918c0",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "action": "forget:cgpa",
+      "simulated_day": 0.0,
+      "memories": {
+        "cgpa": {
+          "alias": "cgpa",
+          "root": null,
+          "latest": null
+        },
+        "eligibility": {
+          "alias": "eligibility",
+          "root": null,
+          "latest": null
+        },
+        "skill": {
+          "alias": "skill",
+          "root": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          },
+          "latest": {
+            "id": "skill",
+            "status": "VALID",
+            "version": 1,
+            "content": "knows sql"
+          }
+        },
+        "fit": {
+          "alias": "fit",
+          "root": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          },
+          "latest": {
+            "id": "fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "fit for acme"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "cgpa": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "eligibility": {
+          "status": null,
+          "content": null,
+          "version": null,
+          "deleted": true
+        },
+        "skill": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "fit": {
+          "status": "VALID",
+          "content": null,
+          "version": null,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 1,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "eligibility",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "eligibility",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "skill",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "skill",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "fit",
+          "memory_id": "skill",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

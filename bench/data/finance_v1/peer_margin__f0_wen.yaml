@@ -1,0 +1,69 @@
+name: peer_margin__f0_wen
+description: Vestra Diagnostics reports a new margin; nothing about Zenith Looms changes.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f0_wen
+  template: peer_margin
+  family: unchanged
+  seed: 20261031
+memories:
+  margin:
+    content: VSTR operating margin is 31%
+    structured:
+      subject: company:VSTR
+      attribute: margin
+      value: 31
+  thesis:
+    kind: thesis
+    content: 'VSTR thesis: lab testing leader compounding on margins near 31%'
+  other_margin:
+    content: ZNTH operating margin is 21%
+    structured:
+      subject: company:ZNTH
+      attribute: margin
+      value: 21
+  other_thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 21%'
+  other_alert:
+    kind: alert
+    content: look again if ZNTH margin falls below 17%
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+- - other_thesis
+  - other_alert
+  - alert_for
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'VSTR thesis: margins now 28%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: VSTR operating margin is 28%
+  structured:
+    subject: company:VSTR
+    attribute: margin
+    value: 28
+  expect:
+    thesis@latest:
+      status: VALID
+      content: 'VSTR thesis: margins now 28%, re-checked'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_alert:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

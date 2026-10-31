@@ -1,0 +1,81 @@
+name: deadline_moved__p0_jay
+description: initech extends its deadline; nothing about hooli changes.
+meta:
+  track: jobs_v0
+  persona: p0_jay
+  template: deadline_moved
+  family: unchanged
+  seed: 20261019
+memories:
+  initech_opening:
+    kind: opening
+    content: 'Initech SDE intern: deadline 2026-11-01'
+    structured:
+      subject: opening:initech_opening
+      attribute: deadline
+      value: '2026-11-01T23:59:00+05:30'
+  initech_reminder:
+    kind: derived
+    content: remind two days before 2026-11-01
+  hooli_opening:
+    kind: opening
+    content: 'Hooli SDE engineer: deadline 2026-11-07'
+    structured:
+      subject: opening:hooli_opening
+      attribute: deadline
+      value: '2026-11-07T23:59:00+05:30'
+  hooli_reminder:
+    kind: derived
+    content: remind two days before 2026-11-07
+  cgpa:
+    content: CGPA is 7.2
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.2
+  hooli_eligibility:
+    kind: derived
+    content: eligible for hooli
+links:
+- - initech_opening
+  - initech_reminder
+  - reminder_for
+- - hooli_opening
+  - hooli_reminder
+  - reminder_for
+- - cgpa
+  - hooli_eligibility
+  - eligibility_of
+- - hooli_opening
+  - hooli_eligibility
+  - eligibility_of
+resolutions:
+  initech_reminder:
+  - action: update
+    new_content: remind two days before 2026-12-19
+    reason: re-derived from its parent
+    trigger: initech_opening
+events:
+- update: initech_opening
+  content: 'Initech SDE intern: deadline 2026-12-19'
+  structured:
+    subject: opening:initech_opening
+    attribute: deadline
+    value: '2026-12-19T23:59:00+05:30'
+  expect:
+    initech_reminder@latest:
+      status: VALID
+      content: remind two days before 2026-12-19
+      version: 2
+    hooli_reminder:
+      status: VALID
+      version: 1
+    hooli_eligibility:
+      status: VALID
+      version: 1
+    hooli_opening:
+      status: VALID
+      version: 1
+    cgpa:
+      status: VALID
+      version: 1

@@ -1,0 +1,62 @@
+name: forget_holding__f2_vikram
+description: vikram asks to forget ZNTH after one margin update.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f2_vikram
+  template: forget_holding
+  family: forget
+  seed: 20261031
+memories:
+  margin:
+    content: ZNTH operating margin is 22%
+    structured:
+      subject: company:ZNTH
+      attribute: margin
+      value: 22
+  thesis:
+    kind: thesis
+    content: 'ZNTH thesis: textiles leader compounding on margins near 22%'
+  other_margin:
+    content: QUIL operating margin is 31%
+    structured:
+      subject: company:QUIL
+      attribute: margin
+      value: 31
+  other_thesis:
+    kind: thesis
+    content: 'QUIL thesis: streaming leader compounding on margins near 31%'
+links:
+- - margin
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  thesis:
+  - action: update
+    new_content: 'ZNTH thesis: margins now 24%, re-checked'
+    reason: re-derived from its parent
+    trigger: margin
+events:
+- update: margin
+  content: ZNTH operating margin is 24%
+  structured:
+    subject: company:ZNTH
+    attribute: margin
+    value: 24
+  expect:
+    thesis@latest:
+      version: 2
+- forget: margin
+  expect:
+    margin:
+      deleted: true
+    thesis:
+      deleted: true
+    other_margin:
+      status: VALID
+    other_thesis:
+      status: VALID

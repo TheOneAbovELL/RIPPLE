@@ -1,0 +1,156 @@
+{
+  "scenario": "new_skill_hidden_link",
+  "strategy": "append_only",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "globex_fit": {
+          "alias": "globex_fit",
+          "root": {
+            "id": "globex_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "weak fit for Globex, which asks for PyTorch"
+          },
+          "latest": {
+            "id": "globex_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "weak fit for Globex, which asks for PyTorch"
+          }
+        },
+        "initech_fit": {
+          "alias": "initech_fit",
+          "root": {
+            "id": "initech_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "strong fit for Initech, which asks for Django"
+          },
+          "latest": {
+            "id": "initech_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "strong fit for Initech, which asks for Django"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "new:pytorch",
+      "simulated_day": 0.0,
+      "memories": {
+        "globex_fit": {
+          "alias": "globex_fit",
+          "root": {
+            "id": "globex_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "weak fit for Globex, which asks for PyTorch"
+          },
+          "latest": {
+            "id": "globex_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "weak fit for Globex, which asks for PyTorch"
+          }
+        },
+        "initech_fit": {
+          "alias": "initech_fit",
+          "root": {
+            "id": "initech_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "strong fit for Initech, which asks for Django"
+          },
+          "latest": {
+            "id": "initech_fit",
+            "status": "VALID",
+            "version": 1,
+            "content": "strong fit for Initech, which asks for Django"
+          }
+        },
+        "pytorch": {
+          "alias": "pytorch",
+          "root": {
+            "id": "pytorch",
+            "status": "VALID",
+            "version": 1,
+            "content": "finished a PyTorch project"
+          },
+          "latest": {
+            "id": "pytorch",
+            "status": "VALID",
+            "version": 1,
+            "content": "finished a PyTorch project"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "globex_fit@latest": {
+          "status": null,
+          "content": "strong fit for Globex now that the PyTorch project is done",
+          "version": 2,
+          "deleted": false
+        },
+        "initech_fit": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "globex_fit",
+          "memory_id": "globex_fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_fit",
+          "memory_id": "initech_fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "globex_fit",
+          "memory_id": "pytorch",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_fit",
+          "memory_id": "initech_fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_fit",
+          "memory_id": "globex_fit",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "initech_fit",
+          "memory_id": "pytorch",
+          "flagged": false,
+          "via": "graph"
+        }
+      ]
+    }
+  ]
+}

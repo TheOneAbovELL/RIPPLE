@@ -1,0 +1,240 @@
+{
+  "scenario": "attribution_retracted__n0_meera",
+  "strategy": "check_everything",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Duncliff data breach"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Duncliff data breach"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a phishing campaign caused the Duncliff data breach"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a phishing campaign caused the Duncliff data breach"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Duncliff data breach"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Duncliff data breach"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "officials blame a phishing campaign for the Duncliff data breach"
+          },
+          "latest": {
+            "id": "c8c3f02e-83e1-4c92-aaae-2a543de32842",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on a phishing campaign: the investigation is still open"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "a phishing campaign caused the Duncliff data breach"
+          },
+          "latest": {
+            "id": "09977105-b190-4555-857c-f5f13248ac55",
+            "status": "VALID",
+            "version": 2,
+            "content": "cause of the Duncliff data breach not established"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a phishing campaign"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Duncliff data breach"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a phishing campaign blamed for the Duncliff data breach"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Riverton warehouse flood: 196 tonnes of grain lost"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 5,
+      "pending_questions": 0
+    }
+  ]
+}

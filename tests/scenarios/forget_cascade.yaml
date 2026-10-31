@@ -1,0 +1,24 @@
+name: forget_cascade
+description: Forgetting the CGPA deletes every version and every belief derived from it, nothing else.
+memories:
+  cgpa: {kind: fact, content: "CGPA is 7.6", structured: {subject: student, attribute: cgpa, value: 7.6}}
+  eligibility: {kind: derived, content: "not eligible for Acme"}
+  skills: {kind: fact, content: "knows Python", structured: {subject: student, attribute: skills, value: python}}
+  fit: {kind: derived, content: "fit for Initech"}
+links:
+  - [cgpa, eligibility, eligibility_of]
+  - [skills, fit, fit_of]
+resolutions:
+  eligibility: {action: update, new_content: "eligible"}
+events:
+  - update: cgpa
+    content: "CGPA is 7.9"
+    structured: {subject: student, attribute: cgpa, value: 7.9}
+    expect:
+      eligibility@latest: {version: 2}
+  - forget: cgpa
+    expect:
+      cgpa: {deleted: true}
+      eligibility: {deleted: true}
+      skills: {status: VALID}
+      fit: {status: VALID}

@@ -1,0 +1,24 @@
+{
+  "suite": "linkpairs",
+  "track": "jobs_v0",
+  "linker": "fake_llm",
+  "linker_details": {
+    "module": "ripple.linking.llm",
+    "prompt_version": 1,
+    "model": "FakeLLM (tests/fakes/llm.py), scripted: no proposals"
+  },
+  "plumbing_only": true,
+  "split": "test",
+  "new_memory": "dependent",
+  "pairs_file": "training/data/jobs_v0_pairs.jsonl",
+  "pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+  "pair_count": 392,
+  "provenances": [
+    "rule",
+    "scenario"
+  ],
+  "git_sha": "uncommitted",
+  "python": "3.12.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "run_at": "2026-10-30T21:41:53.826164+00:00"
+}

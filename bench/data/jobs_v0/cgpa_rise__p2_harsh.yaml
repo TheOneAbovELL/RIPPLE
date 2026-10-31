@@ -1,0 +1,74 @@
+name: cgpa_rise__p2_harsh
+description: harsh's CGPA rises past the vandelay cutoff.
+meta:
+  track: jobs_v0
+  persona: p2_harsh
+  template: cgpa_rise
+  family: changed
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.1
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.1
+  vandelay_opening:
+    kind: opening
+    content: 'Vandelay SDE intern: CGPA cutoff 7.3'
+    structured:
+      subject: opening:vandelay_opening
+      attribute: cgpa_cutoff
+      value: 7.3
+  eligibility:
+    kind: derived
+    content: not eligible for vandelay (7.1 < 7.3)
+  criteria:
+    kind: criteria
+    content: search openings with cutoff <= 7.1
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - vandelay_opening
+  - eligibility
+  - eligibility_of
+- - cgpa
+  - criteria
+  - criteria_from
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for vandelay (7.4 >= 7.3)
+    reason: re-derived from its parent
+    trigger: cgpa
+  criteria:
+  - action: update
+    new_content: search openings with cutoff <= 7.4
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.4
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.4
+  expect:
+    cgpa:
+      status: RETIRED
+      version: 1
+    cgpa@latest:
+      status: VALID
+      content: CGPA is 7.4
+      version: 2
+    eligibility@latest:
+      status: VALID
+      content: eligible for vandelay (7.4 >= 7.3)
+      version: 2
+    criteria@latest:
+      status: VALID
+      version: 2
+    vandelay_opening:
+      status: VALID
+      version: 1

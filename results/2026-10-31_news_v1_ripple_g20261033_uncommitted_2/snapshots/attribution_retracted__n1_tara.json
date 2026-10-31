@@ -1,0 +1,339 @@
+{
+  "scenario": "attribution_retracted__n1_tara",
+  "strategy": "ripple",
+  "started_at": "2026-10-19T09:00:00+00:00",
+  "events": [
+    {
+      "index": 0,
+      "action": "seed",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a substation fault for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "attribution",
+            "status": "VALID",
+            "version": 1,
+            "content": "officials blame a substation fault for the Ashgrove power outage"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a substation fault caused the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "analysis",
+            "status": "VALID",
+            "version": 1,
+            "content": "a substation fault caused the Ashgrove power outage"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a substation fault"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "VALID",
+            "version": 1,
+            "content": "follow inspections linked to a substation fault"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a substation fault blamed for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "VALID",
+            "version": 1,
+            "content": "briefing: a substation fault blamed for the Ashgrove power outage"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {},
+      "resolver_calls": 0,
+      "pending_questions": 0,
+      "retrieved": []
+    },
+    {
+      "index": 1,
+      "action": "update:attribution",
+      "simulated_day": 0.0,
+      "memories": {
+        "attribution": {
+          "alias": "attribution",
+          "root": {
+            "id": "attribution",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "officials blame a substation fault for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "17029109-5e08-4a28-b8e0-cd12fa183214",
+            "status": "VALID",
+            "version": 2,
+            "content": "officials withdraw the blame on a substation fault: new evidence emerged"
+          }
+        },
+        "analysis": {
+          "alias": "analysis",
+          "root": {
+            "id": "analysis",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "a substation fault caused the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "024fdc26-3dca-4ac4-809f-61500938340a",
+            "status": "VALID",
+            "version": 2,
+            "content": "cause of the Ashgrove power outage not established"
+          }
+        },
+        "follow_up": {
+          "alias": "follow_up",
+          "root": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a substation fault"
+          },
+          "latest": {
+            "id": "follow_up",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "follow inspections linked to a substation fault"
+          }
+        },
+        "briefing_item": {
+          "alias": "briefing_item",
+          "root": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a substation fault blamed for the Ashgrove power outage"
+          },
+          "latest": {
+            "id": "briefing_item",
+            "status": "RETIRED",
+            "version": 1,
+            "content": "briefing: a substation fault blamed for the Ashgrove power outage"
+          }
+        },
+        "other_claim": {
+          "alias": "other_claim",
+          "root": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          },
+          "latest": {
+            "id": "other_claim",
+            "status": "VALID",
+            "version": 1,
+            "content": "the Gazette: 238 workers evacuated in the Hollowbay factory fire"
+          }
+        },
+        "other_summary": {
+          "alias": "other_summary",
+          "root": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          },
+          "latest": {
+            "id": "other_summary",
+            "status": "VALID",
+            "version": 1,
+            "content": "Hollowbay factory fire: 238 workers evacuated"
+          }
+        }
+      },
+      "recommendations": [],
+      "gold": {
+        "analysis@latest": {
+          "status": "VALID",
+          "content": null,
+          "version": 2,
+          "deleted": false
+        },
+        "follow_up": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "briefing_item": {
+          "status": "RETIRED",
+          "content": null,
+          "version": null,
+          "deleted": false
+        },
+        "other_summary": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        },
+        "other_claim": {
+          "status": "VALID",
+          "content": null,
+          "version": 1,
+          "deleted": false
+        }
+      },
+      "resolver_calls": 3,
+      "pending_questions": 0,
+      "retrieved": [
+        {
+          "query_alias": "analysis",
+          "memory_id": "024fdc26-3dca-4ac4-809f-61500938340a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "17029109-5e08-4a28-b8e0-cd12fa183214",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "analysis",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "17029109-5e08-4a28-b8e0-cd12fa183214",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "follow_up",
+          "memory_id": "024fdc26-3dca-4ac4-809f-61500938340a",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "024fdc26-3dca-4ac4-809f-61500938340a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "17029109-5e08-4a28-b8e0-cd12fa183214",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "briefing_item",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "graph"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_summary",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_claim",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "other_summary",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "024fdc26-3dca-4ac4-809f-61500938340a",
+          "flagged": false,
+          "via": "lexical"
+        },
+        {
+          "query_alias": "other_claim",
+          "memory_id": "17029109-5e08-4a28-b8e0-cd12fa183214",
+          "flagged": false,
+          "via": "lexical"
+        }
+      ]
+    }
+  ]
+}

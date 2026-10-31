@@ -1,0 +1,498 @@
+{
+  "suite": "v0",
+  "strategy": "append_only",
+  "split": "all",
+  "scenarios": 35,
+  "scenarios_runnable": 35,
+  "scenarios_not_runnable": 0,
+  "scenarios_passed": 0,
+  "checks": 175,
+  "checks_failed": 96,
+  "resolver_calls": 0,
+  "llm_calls": 0,
+  "memory_metrics": "TBD (pending run): bench/metrics.py is TODO(human)",
+  "wall_seconds": 0.273,
+  "per_scenario": [
+    {
+      "name": "cgpa_rise__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "cgpa: status VALID, expected RETIRED",
+        "eligibility@latest: content 'not eligible for umbrella (7.2 < 7.4)', expected 'eligible for umbrella (7.6 >= 7.4)'",
+        "eligibility@latest: version 1, expected 2",
+        "criteria@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "initech_reminder@latest: content 'remind two days before 2026-11-01', expected 'remind two days before 2026-12-19'",
+        "initech_reminder@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "availability@latest: version 1, expected 3"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation: status VALID, expected RETIRED"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "failures": [
+        "eligibility: status VALID, expected PENDING_USER",
+        "recommendation: status VALID, expected SUSPECT",
+        "answer:eligibility: memory 'eligibility' is VALID, not PENDING_USER",
+        "eligibility@latest: content 'not eligible for umbrella', expected 'eligible for umbrella (cutoff lowered to 7.3)'",
+        "eligibility@latest: version 1, expected 2",
+        "recommendation@latest: content 'skip umbrella', expected 'apply to umbrella'",
+        "recommendation@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "failures": [
+        "resume: status VALID, expected RETIRED",
+        "tailoring@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p0_jay",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "eligibility@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "cgpa: status VALID, expected RETIRED",
+        "eligibility@latest: content 'not eligible for stark (7.4 < 7.6)', expected 'eligible for stark (7.9 >= 7.6)'",
+        "eligibility@latest: version 1, expected 2",
+        "criteria@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "wonka_reminder@latest: content 'remind two days before 2026-11-12', expected 'remind two days before 2026-12-16'",
+        "wonka_reminder@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "availability@latest: version 1, expected 3"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation: status VALID, expected RETIRED"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "failures": [
+        "eligibility: status VALID, expected PENDING_USER",
+        "recommendation: status VALID, expected SUSPECT",
+        "answer:eligibility: memory 'eligibility' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "failures": [
+        "resume: status VALID, expected RETIRED",
+        "tailoring@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p1_dev",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "eligibility@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "cgpa: status VALID, expected RETIRED",
+        "eligibility@latest: content 'not eligible for vandelay (7.1 < 7.3)', expected 'eligible for vandelay (7.4 >= 7.3)'",
+        "eligibility@latest: version 1, expected 2",
+        "criteria@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "umbrella_reminder@latest: content 'remind two days before 2026-11-19', expected 'remind two days before 2026-12-23'",
+        "umbrella_reminder@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "availability@latest: version 1, expected 3"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation: status VALID, expected RETIRED"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "failures": [
+        "eligibility: status VALID, expected PENDING_USER",
+        "recommendation: status VALID, expected SUSPECT",
+        "answer:eligibility: memory 'eligibility' is VALID, not PENDING_USER",
+        "eligibility@latest: content 'not eligible for vandelay', expected 'eligible for vandelay (cutoff lowered to 7.2)'",
+        "eligibility@latest: version 1, expected 2",
+        "recommendation@latest: content 'skip vandelay', expected 'apply to vandelay'",
+        "recommendation@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "failures": [
+        "resume: status VALID, expected RETIRED",
+        "tailoring@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p2_harsh",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "eligibility@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "cgpa: status VALID, expected RETIRED",
+        "eligibility@latest: content 'not eligible for vandelay (7.5 < 7.7)', expected 'eligible for vandelay (7.9 >= 7.7)'",
+        "eligibility@latest: version 1, expected 2",
+        "criteria@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "hooli_reminder@latest: content 'remind two days before 2026-12-06', expected 'remind two days before 2026-12-16'",
+        "hooli_reminder@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "availability@latest: version 1, expected 3"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation: status VALID, expected RETIRED"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "failures": [
+        "eligibility: status VALID, expected PENDING_USER",
+        "recommendation: status VALID, expected SUSPECT",
+        "answer:eligibility: memory 'eligibility' is VALID, not PENDING_USER",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation@latest: content 'skip vandelay', expected 'apply to vandelay'",
+        "recommendation@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "failures": [
+        "resume: status VALID, expected RETIRED",
+        "tailoring@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p3_esha",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "eligibility@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cgpa_rise__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "cgpa: status VALID, expected RETIRED",
+        "eligibility@latest: content 'not eligible for umbrella (8.4 < 8.6)', expected 'eligible for umbrella (8.9 >= 8.6)'",
+        "eligibility@latest: version 1, expected 2",
+        "criteria@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "deadline_moved__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "globex_reminder@latest: content 'remind two days before 2026-11-28', expected 'remind two days before 2026-12-18'",
+        "globex_reminder@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "exam_block__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 8,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "availability@latest: version 1, expected 3"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "accepted_offer__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "availability@latest: version 1, expected 2",
+        "eligibility: status VALID, expected RETIRED",
+        "recommendation: status VALID, expected RETIRED"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "cutoff_unknown__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 4,
+      "failures": [
+        "eligibility: status VALID, expected PENDING_USER",
+        "recommendation: status VALID, expected SUSPECT",
+        "answer:eligibility: memory 'eligibility' is VALID, not PENDING_USER"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    },
+    {
+      "name": "resume_update__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 3,
+      "failures": [
+        "resume: status VALID, expected RETIRED",
+        "tailoring@latest: version 1, expected 2"
+      ],
+      "events_run": 1,
+      "resolver_calls": 0
+    },
+    {
+      "name": "forget_cgpa__p4_bharat",
+      "strategy": "append_only",
+      "runnable": true,
+      "passed": false,
+      "checks": 5,
+      "failures": [
+        "eligibility@latest: version 1, expected 2"
+      ],
+      "events_run": 2,
+      "resolver_calls": 0
+    }
+  ]
+}

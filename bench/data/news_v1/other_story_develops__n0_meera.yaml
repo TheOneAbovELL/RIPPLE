@@ -1,0 +1,72 @@
+name: other_story_develops__n0_meera
+description: The Duncliff data breach story moves on (inquiry opened); nothing about Riverton warehouse
+  flood changes.
+meta:
+  track: news_v1
+  domain: news
+  content: synthetic
+  persona: n0_meera
+  template: other_story_develops
+  family: unchanged
+  seed: 20261031
+memories:
+  outcome:
+    kind: claim
+    content: 'Duncliff data breach: no decision yet'
+    structured:
+      subject: story:duncliff
+      attribute: outcome
+      value: pending
+  summary:
+    kind: summary
+    content: 'Duncliff data breach: awaiting a decision'
+  other_claim:
+    kind: claim
+    content: 'Metro Desk: 196 tonnes of grain lost in the Riverton warehouse flood'
+    structured:
+      subject: story:riverton
+      attribute: figure
+      value: 196
+  other_summary:
+    kind: summary
+    content: 'Riverton warehouse flood: 196 tonnes of grain lost'
+  other_analysis:
+    kind: derived
+    content: Riverton warehouse flood is the larger story this week
+links:
+- - outcome
+  - summary
+  - summarises
+- - other_claim
+  - other_summary
+  - summarises
+- - other_claim
+  - other_analysis
+  - inferred_from
+resolutions:
+  summary:
+  - action: update
+    new_content: 'Duncliff data breach: inquiry opened'
+    reason: re-derived from its parent
+    trigger: outcome
+events:
+- update: outcome
+  content: 'Duncliff data breach: inquiry opened'
+  structured:
+    subject: story:duncliff
+    attribute: outcome
+    value: inquiry opened
+  expect:
+    summary@latest:
+      status: VALID
+      content: 'Duncliff data breach: inquiry opened'
+      version: 2
+    other_summary:
+      status: VALID
+      version: 1
+    other_analysis:
+      status: VALID
+      version: 1
+    other_claim:
+      status: VALID
+      version: 1

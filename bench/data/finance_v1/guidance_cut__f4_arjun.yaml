@@ -1,0 +1,81 @@
+name: guidance_cut__f4_arjun
+description: Maplewood Pantry cuts guidance; arjun's estimate and thesis follow.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f4_arjun
+  template: guidance_cut
+  family: changed
+  seed: 20261031
+memories:
+  guidance:
+    content: MPLW guides 17% revenue growth
+    structured:
+      subject: company:MPLW
+      attribute: guidance
+      value: 17
+  estimate:
+    kind: derived
+    content: MPLW revenue grows about 17% next year
+  thesis:
+    kind: thesis
+    content: 'MPLW thesis: packaged food leader compounding on margins near 21%'
+  other_margin:
+    content: KRVL operating margin is 24%
+    structured:
+      subject: company:KRVL
+      attribute: margin
+      value: 24
+  other_thesis:
+    kind: thesis
+    content: 'KRVL thesis: logistics leader compounding on margins near 24%'
+links:
+- - guidance
+  - estimate
+  - estimate_from
+- - guidance
+  - thesis
+  - premise_of
+- - other_margin
+  - other_thesis
+  - premise_of
+resolutions:
+  estimate:
+  - action: update
+    new_content: MPLW revenue grows about 9% next year
+    reason: re-derived from its parent
+    trigger: guidance
+  thesis:
+  - action: update
+    new_content: 'MPLW thesis weakened: growth guided down to 9%'
+    reason: re-derived from its parent
+    trigger: guidance
+events:
+- update: guidance
+  content: MPLW guides 9% revenue growth
+  structured:
+    subject: company:MPLW
+    attribute: guidance
+    value: 9
+  expect:
+    guidance:
+      status: RETIRED
+      version: 1
+    guidance@latest:
+      status: VALID
+      version: 2
+    estimate@latest:
+      status: VALID
+      content: MPLW revenue grows about 9% next year
+      version: 2
+    thesis@latest:
+      status: VALID
+      content: 'MPLW thesis weakened: growth guided down to 9%'
+      version: 2
+    other_thesis:
+      status: VALID
+      version: 1
+    other_margin:
+      status: VALID
+      version: 1

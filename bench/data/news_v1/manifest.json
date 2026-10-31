@@ -1,0 +1,372 @@
+{
+  "track": "news_v1",
+  "domain": "news",
+  "content": "synthetic",
+  "content_note": "synthetic: generated from templates with fictional names, places and companies; no real story, person or company is described",
+  "generator": {
+    "module": "bench.generate_news",
+    "version": 1
+  },
+  "seed": 20261031,
+  "personas": {
+    "all": [
+      "n0_meera",
+      "n1_nikhil",
+      "n2_leo",
+      "n3_kavya",
+      "n4_quinn"
+    ],
+    "train": [
+      "n0_meera",
+      "n3_kavya",
+      "n4_quinn"
+    ],
+    "test": [
+      "n1_nikhil",
+      "n2_leo"
+    ]
+  },
+  "templates": {
+    "all": {
+      "figure_revised": "changed",
+      "other_story_develops": "unchanged",
+      "road_closure": "temporary",
+      "attribution_retracted": "chain",
+      "conflicting_reports": "ask",
+      "shared_note": "snapshot",
+      "forget_story": "forget"
+    },
+    "train": [
+      "attribution_retracted",
+      "conflicting_reports",
+      "figure_revised",
+      "road_closure",
+      "shared_note"
+    ],
+    "test": [
+      "forget_story",
+      "other_story_develops"
+    ]
+  },
+  "split_rule": "train = train persona AND train template; everything else is test; held_out names the unseen half; strict test = both",
+  "curated": "hand-written real-story scenarios go in curated/ with meta.provenance (bench/tracks.py CuratedProvenance); always test; not covered by data_sha256",
+  "data_sha256": "d9b473dfcb246332962da836a3c528c835e75da15945ff769af8e56ffebfa2d1",
+  "extra_files": {},
+  "scenarios": [
+    {
+      "file": "figure_revised__n0_meera.yaml",
+      "name": "figure_revised__n0_meera",
+      "persona": "n0_meera",
+      "template": "figure_revised",
+      "family": "changed",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "other_story_develops__n0_meera.yaml",
+      "name": "other_story_develops__n0_meera",
+      "persona": "n0_meera",
+      "template": "other_story_develops",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "road_closure__n0_meera.yaml",
+      "name": "road_closure__n0_meera",
+      "persona": "n0_meera",
+      "template": "road_closure",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "attribution_retracted__n0_meera.yaml",
+      "name": "attribution_retracted__n0_meera",
+      "persona": "n0_meera",
+      "template": "attribution_retracted",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "conflicting_reports__n0_meera.yaml",
+      "name": "conflicting_reports__n0_meera",
+      "persona": "n0_meera",
+      "template": "conflicting_reports",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "shared_note__n0_meera.yaml",
+      "name": "shared_note__n0_meera",
+      "persona": "n0_meera",
+      "template": "shared_note",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_story__n0_meera.yaml",
+      "name": "forget_story__n0_meera",
+      "persona": "n0_meera",
+      "template": "forget_story",
+      "family": "forget",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "figure_revised__n1_nikhil.yaml",
+      "name": "figure_revised__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "figure_revised",
+      "family": "changed",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "other_story_develops__n1_nikhil.yaml",
+      "name": "other_story_develops__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "other_story_develops",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "road_closure__n1_nikhil.yaml",
+      "name": "road_closure__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "road_closure",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "attribution_retracted__n1_nikhil.yaml",
+      "name": "attribution_retracted__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "attribution_retracted",
+      "family": "chain",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "conflicting_reports__n1_nikhil.yaml",
+      "name": "conflicting_reports__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "conflicting_reports",
+      "family": "ask",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "shared_note__n1_nikhil.yaml",
+      "name": "shared_note__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "shared_note",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "forget_story__n1_nikhil.yaml",
+      "name": "forget_story__n1_nikhil",
+      "persona": "n1_nikhil",
+      "template": "forget_story",
+      "family": "forget",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "figure_revised__n2_leo.yaml",
+      "name": "figure_revised__n2_leo",
+      "persona": "n2_leo",
+      "template": "figure_revised",
+      "family": "changed",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "other_story_develops__n2_leo.yaml",
+      "name": "other_story_develops__n2_leo",
+      "persona": "n2_leo",
+      "template": "other_story_develops",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "road_closure__n2_leo.yaml",
+      "name": "road_closure__n2_leo",
+      "persona": "n2_leo",
+      "template": "road_closure",
+      "family": "temporary",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "attribution_retracted__n2_leo.yaml",
+      "name": "attribution_retracted__n2_leo",
+      "persona": "n2_leo",
+      "template": "attribution_retracted",
+      "family": "chain",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "conflicting_reports__n2_leo.yaml",
+      "name": "conflicting_reports__n2_leo",
+      "persona": "n2_leo",
+      "template": "conflicting_reports",
+      "family": "ask",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "shared_note__n2_leo.yaml",
+      "name": "shared_note__n2_leo",
+      "persona": "n2_leo",
+      "template": "shared_note",
+      "family": "snapshot",
+      "split": "test",
+      "held_out": "persona"
+    },
+    {
+      "file": "forget_story__n2_leo.yaml",
+      "name": "forget_story__n2_leo",
+      "persona": "n2_leo",
+      "template": "forget_story",
+      "family": "forget",
+      "split": "test",
+      "held_out": "both"
+    },
+    {
+      "file": "figure_revised__n3_kavya.yaml",
+      "name": "figure_revised__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "figure_revised",
+      "family": "changed",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "other_story_develops__n3_kavya.yaml",
+      "name": "other_story_develops__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "other_story_develops",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "road_closure__n3_kavya.yaml",
+      "name": "road_closure__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "road_closure",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "attribution_retracted__n3_kavya.yaml",
+      "name": "attribution_retracted__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "attribution_retracted",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "conflicting_reports__n3_kavya.yaml",
+      "name": "conflicting_reports__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "conflicting_reports",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "shared_note__n3_kavya.yaml",
+      "name": "shared_note__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "shared_note",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_story__n3_kavya.yaml",
+      "name": "forget_story__n3_kavya",
+      "persona": "n3_kavya",
+      "template": "forget_story",
+      "family": "forget",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "figure_revised__n4_quinn.yaml",
+      "name": "figure_revised__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "figure_revised",
+      "family": "changed",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "other_story_develops__n4_quinn.yaml",
+      "name": "other_story_develops__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "other_story_develops",
+      "family": "unchanged",
+      "split": "test",
+      "held_out": "template"
+    },
+    {
+      "file": "road_closure__n4_quinn.yaml",
+      "name": "road_closure__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "road_closure",
+      "family": "temporary",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "attribution_retracted__n4_quinn.yaml",
+      "name": "attribution_retracted__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "attribution_retracted",
+      "family": "chain",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "conflicting_reports__n4_quinn.yaml",
+      "name": "conflicting_reports__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "conflicting_reports",
+      "family": "ask",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "shared_note__n4_quinn.yaml",
+      "name": "shared_note__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "shared_note",
+      "family": "snapshot",
+      "split": "train",
+      "held_out": "none"
+    },
+    {
+      "file": "forget_story__n4_quinn.yaml",
+      "name": "forget_story__n4_quinn",
+      "persona": "n4_quinn",
+      "template": "forget_story",
+      "family": "forget",
+      "split": "test",
+      "held_out": "template"
+    }
+  ]
+}

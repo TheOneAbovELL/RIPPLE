@@ -1,0 +1,61 @@
+# Caddy: TLS, reverse proxy, static dashboard, security headers (ADR-0029).
+{
+	email {$ACME_EMAIL}
+}
+
+{$RIPPLE_DOMAIN} {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		# Next.js's static export bootstraps with inline scripts, so script-src needs
+		# 'unsafe-inline' (WS-12 handover); no third-party origins anywhere.
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'"
+		-Server
+	}
+
+	# Resume uploads are small PDFs; everything else is JSON. 8 MB covers both.
+	request_body {
+		max_size 8MB
+	}
+
+	# API and the Telegram webhook (WS-10 route) live under /api and /telegram.
+	handle_path /api/* {
+		reverse_proxy api:8000 {
+			header_up X-Request-Id {http.request.uuid}
+		}
+	}
+	handle /telegram/* {
+		reverse_proxy api:8000
+	}
+	# MCP over streamable HTTP for the student's own agents (ADR-0082); bearer auth
+	# is the MCP server's, the same tokens as the API.
+	handle /mcp* {
+		reverse_proxy mcp:8765
+	}
+	handle /healthz {
+		reverse_proxy api:8000
+	}
+	handle /readyz {
+		reverse_proxy api:8000
+	}
+
+	# The dashboard is a static export (apps/web/out) copied to infra/web-dist.
+	handle {
+		root * /srv/web
+		try_files {path} {path}/ /index.html
+		file_server
+	}
+
+	log {
+		output file /data/access.log {
+			roll_size 50mb
+			roll_keep 5
+		}
+		format json
+	}
+}

@@ -1,0 +1,232 @@
+# I8 allow-list (ADR-0111). Numbers the detector flags that are not results: targets,
+# example inputs, worked examples of a metric definition, configuration constants,
+# versions. Every entry has a reason and a source. A text entry matches the flagged span
+# exactly, in the named path, on a line holding `context`; an entry that matches nothing
+# is reported as stale. A real result never goes here: it is a macro, a citation of its
+# results/ folder, or a line in i8_known_violations.toml.
+
+# ---------------------------------------------------------------- categories
+
+[[category]]
+category = "verification"
+paths = ["docs/DEVLOG.md", "docs/plans/**"]
+reason = "test-runner output counts (the line names a runner and no bench vocabulary) in process records, pasted beside the command; engineering verification, not a research result"
+source = "ADR-0111 rule 3c; CLAUDE.md 'Verify: show real output'"
+
+# ---------------------------------------------------------------- targets
+
+[[text]]
+path = "docs/04-evaluation.md"
+text = "90%"
+context = "of check-everything accuracy at"
+reason = "H1 pre-registered target, not a measurement"
+source = "docs/04-evaluation.md Hypotheses"
+
+[[text]]
+path = "docs/04-evaluation.md"
+text = "20%"
+context = "of check-everything accuracy at"
+reason = "H1 pre-registered target, not a measurement"
+source = "docs/04-evaluation.md Hypotheses"
+
+[[text]]
+path = "docs/00-vision.md"
+text = "30–50 students"
+context = "Deployed agent used by"
+reason = "pilot size target, a success criterion, not a measurement"
+source = "docs/00-vision.md Success by May 2028"
+
+[[text]]
+path = "docs/adr/0029-deployment-topology.md"
+text = "30–50 students"
+context = "so the pilot ("
+reason = "restates the pilot size target"
+source = "docs/00-vision.md Success by May 2028"
+
+[[text]]
+path = "docs/adr/0107-pilot-incident-severities-and-monitoring.md"
+text = "30–50 students"
+context = "Accepted for a pilot of"
+reason = "restates the pilot size target"
+source = "docs/00-vision.md Success by May 2028"
+
+[[text]]
+path = "docs/adr/0040-identity-bearer-tokens-telegram-link.md"
+text = "15 students"
+context = "The pilot is 10 to 15 students"
+reason = "pilot enrolment assumption used to size identity, not a measurement"
+source = "ADR-0040 Context"
+
+[[text]]
+path = "docs/learning/telegram-bot.md"
+text = "15 users"
+context = "right for 15 users"
+reason = "pilot sizing assumption behind a design trade-off, not a measurement"
+source = "ADR-0040 Context (10 to 15 students)"
+
+[[text]]
+path = "docs/plans/production-plan.md"
+text = "11/11"
+context = "Smoke 11/11 and v0 ripple numbers"
+reason = "acceptance target for the smoke suite once the engine lands, not a result"
+source = "docs/plans/production-plan.md wave exit criteria"
+
+[[text]]
+path = "docs/plans/round-2.md"
+text = "11/11"
+context = "smoke 11/11 once the engine exists"
+reason = "acceptance target for the smoke suite, not a result"
+source = "docs/plans/round-2.md acceptance"
+
+[[text]]
+path = "docs/plans/status-2026-10-26.md"
+text = "11/11"
+context = "smoke 11/11 and v0 ripple numbers in results/"
+reason = "acceptance target for the smoke suite, not a result"
+source = "docs/plans/production-plan.md wave exit criteria"
+
+[[text]]
+path = "docs/plans/status-2026-10-26.md"
+text = "11/11"
+context = "makes smoke 11/11 possible"
+reason = "acceptance target for the smoke suite, not a result"
+source = "docs/plans/production-plan.md wave exit criteria"
+
+# ---------------------------------------------------------------- example inputs
+
+[[text]]
+path = "docs/adr/0035-parser-post-validation-policy.md"
+text = "75%"
+context = "\"75% or above\" yield nothing"
+reason = "example JD text a parser must handle, not a measurement"
+source = "ADR-0035 Decision"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-2.md"
+text = "75%"
+context = "or \"75%\" as a cutoff"
+reason = "example JD text a parser must handle, not a measurement"
+source = "ADR-0035 Decision"
+
+[[text]]
+path = "docs/learning/parsers.md"
+text = "70%"
+context = "Cutoff: 70% or 7.0 CGPA"
+reason = "example JD line for a learning exercise"
+source = "docs/learning/parsers.md exercise"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-2.md"
+text = "3.8/4.0"
+context = "\"3.8/4.0\" resume"
+reason = "example resume CGPA on a four-point scale"
+source = "ADR-0034 Context"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-6.md"
+text = "56%"
+context = "0.57 rendered \"56%\""
+reason = "example of a fixed rendering bug, not a measurement"
+source = "docs/plans/parallel-execution/ws-6.md Fixed"
+
+# ---------------------------------------------------------------- worked examples
+
+[[text]]
+path = "docs/learning/bench.md"
+text = "3/4"
+context = "(ADR-0063's H1 reading) = 3/4"
+reason = "hand computation of update accuracy over a synthetic trace"
+source = "ADR-0063; tests/scenarios/test_bench_metrics.py worked examples"
+
+[[text]]
+path = "docs/learning/bench.md"
+text = "1/4"
+context = "share never converged = 1/4"
+reason = "hand computation of the never-converged share over a synthetic trace"
+source = "ADR-0063; tests/scenarios/test_bench_metrics.py worked examples"
+
+[[text]]
+path = "docs/learning/bench.md"
+text = "2/2"
+context = "2/2 = 1.0"
+reason = "hand computation of the stale recommendation rate over a synthetic trace"
+source = "ADR-0063; tests/scenarios/test_bench_metrics.py worked examples"
+
+[[text]]
+path = "docs/learning/bench.md"
+text = "5 resolver calls"
+context = "5 resolver calls over 2 ChangeEvents"
+reason = "hand computation of cost per ripple over a synthetic trace"
+source = "ADR-0063; tests/scenarios/test_bench_metrics.py worked examples"
+
+[[text]]
+path = "docs/learning/pilot-ops.md"
+text = "3 questions asked"
+context = "by hand in comments"
+reason = "hand-derived expected value of a synthetic test week, a worked example"
+source = "tests/pilot/support.py"
+
+# ---------------------------------------------------------------- constants and versions
+
+[[text]]
+path = "docs/adr/0027-anthropic-first-provider-adapter.md"
+text = "5.5"
+context = "5.5 for resolver/conversation/tailor"
+reason = "model family version (Claude Sonnet 5.5), not a measurement"
+source = "config/llm.default.toml"
+
+[[text]]
+path = "docs/learning/retrieval.md"
+text = "0.5"
+context = "score = seed"
+reason = "graph-expansion score factor, a code constant"
+source = "ADR-0050; src/ripple/retrieval"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-2.md"
+text = "1.0"
+context = "WS-2's view is 1.0"
+reason = "confidence constant of a user-confirmed fact, a design value"
+source = "docs/plans/parallel-execution.md C2 follow-ups (confirmed fact carries confidence 1.0)"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-12.md"
+text = "12/112"
+context = "was 12/112"
+reason = "dashboard test counts (files/tests) in a handover: verification output written as a fraction"
+source = "ADR-0111 rule 3c"
+
+[[text]]
+path = "docs/ops/runbook.md"
+text = "80%"
+context = "below 80%"
+reason = "operational alert threshold for disk use, a configuration value"
+source = "docs/ops/runbook.md monitoring checklist"
+
+[[text]]
+path = "docs/adr/0050-lexical-bm25-fts-rrf-fusion-graph-expansion.md"
+text = "1.5"
+context = "BM25 (k1 = 1.5, b = 0.75)"
+reason = "BM25 parameter, a code constant"
+source = "ADR-0050 Decision"
+
+[[text]]
+path = "docs/adr/0050-lexical-bm25-fts-rrf-fusion-graph-expansion.md"
+text = "0.75"
+context = "BM25 (k1 = 1.5, b = 0.75)"
+reason = "BM25 parameter, a code constant"
+source = "ADR-0050 Decision"
+
+[[text]]
+path = "docs/proposals/0002-silver-labels-and-candidate-prefilter.md"
+text = "0.5"
+context = "scored near 0.5"
+reason = "decision boundary of a binary classifier in an uncertainty-sampling design, not a measurement"
+source = "proposal 0002"
+
+[[text]]
+path = "docs/plans/parallel-execution/ws-7.md"
+text = "566 passed"
+context = "reports 566 passed overall with the bench tests"
+reason = "pytest suite count; the line mentions 'bench tests', which the detector reads as bench vocabulary"
+source = "ADR-0111 rule 3c"

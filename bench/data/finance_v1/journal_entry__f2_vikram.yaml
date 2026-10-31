@@ -1,0 +1,51 @@
+name: journal_entry__f2_vikram
+description: vikram revises the TALN thesis; the journal keeps v1.
+meta:
+  track: finance_v1
+  domain: finance
+  content: synthetic
+  persona: f2_vikram
+  template: journal_entry
+  family: snapshot
+  seed: 20261031
+memories:
+  thesis:
+    kind: thesis
+    content: 'TALN thesis: rolling stock leader compounding on margins near 24%'
+  journal:
+    kind: journal
+    content: '2026-10-01: started following TALN on the margin thesis'
+  alert:
+    kind: alert
+    content: look again if TALN margin falls below 20%
+links:
+- - thesis
+  - journal
+  - journaled_with
+- - thesis
+  - alert
+  - alert_for
+resolutions:
+  alert:
+  - action: update
+    new_content: look again if TALN margin falls below 17%
+    reason: re-derived from its parent
+    trigger: thesis
+  journal:
+  - action: keep
+    reason: a journal entry records the decision as it was made
+    trigger: thesis
+events:
+- update: thesis
+  content: 'TALN thesis revised: margins can dip to 17%'
+  expect:
+    thesis:
+      status: RETIRED
+    journal:
+      status: VALID
+      content: '2026-10-01: started following TALN on the margin thesis'
+      version: 1
+    alert@latest:
+      status: VALID
+      content: look again if TALN margin falls below 17%
+      version: 2

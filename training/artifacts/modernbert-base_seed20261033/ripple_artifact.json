@@ -1,0 +1,174 @@
+{
+  "format": "ripple-trained-linker",
+  "version": 1,
+  "label_space": [
+    "criteria_from",
+    "depends_on_fact",
+    "depends_on_time_period",
+    "eligibility_of",
+    "fit_of",
+    "reminder_for",
+    "sent_with_resume",
+    "none"
+  ],
+  "train_pairs_file": "training/data/jobs_v0_pairs.jsonl",
+  "train_pairs_sha256": "cfee9ebb4d98901805083eaf04a22ff89083fb5d3b39f6c0b88e89146a8babd4",
+  "seed": 20261033,
+  "threshold": 0.1,
+  "threshold_source": "validation personas",
+  "base_model": "answerdotai/ModernBERT-base",
+  "base_model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "max_length": 128,
+  "text_template": "[kind] content || subject attribute value (pair: parent, dependent)",
+  "train_config": {
+    "pairs_file": "training/data/jobs_v0_pairs.jsonl",
+    "output_dir": "training/artifacts/modernbert-base_seed20261033",
+    "base_model": "answerdotai/ModernBERT-base",
+    "base_model_revision": null,
+    "seed": 20261033,
+    "epochs": 10,
+    "learning_rate": 5e-05,
+    "batch_size": 16,
+    "max_length": 128,
+    "domain": "jobs",
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "validation_personas": [
+      "p2_harsh"
+    ],
+    "provenances": [
+      "rule",
+      "scenario"
+    ]
+  },
+  "training": {
+    "fit_examples": 128,
+    "validation_examples": 72,
+    "fit_label_counts": {
+      "depends_on_fact": 10,
+      "depends_on_time_period": 2,
+      "eligibility_of": 14,
+      "fit_of": 2,
+      "none": 94,
+      "reminder_for": 4,
+      "sent_with_resume": 2
+    },
+    "validation_label_counts": {
+      "depends_on_fact": 5,
+      "depends_on_time_period": 1,
+      "eligibility_of": 8,
+      "fit_of": 1,
+      "none": 54,
+      "reminder_for": 2,
+      "sent_with_resume": 1
+    },
+    "class_weights": {
+      "criteria_from": 1.0,
+      "depends_on_fact": 1.8285714285714285,
+      "depends_on_time_period": 9.142857142857142,
+      "eligibility_of": 1.3061224489795917,
+      "fit_of": 9.142857142857142,
+      "reminder_for": 4.571428571428571,
+      "sent_with_resume": 9.142857142857142,
+      "none": 0.1945288753799392
+    },
+    "chosen_epoch": 7,
+    "validation": {
+      "f1": 0.972972972972973,
+      "threshold": 0.1,
+      "precision": 0.9473684210526315,
+      "recall": 1.0
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 2.134803906083107,
+        "f1": 0.6060606060606061,
+        "threshold": 0.25,
+        "precision": 0.6666666666666666,
+        "recall": 0.5555555555555556
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.4074993878602982,
+        "f1": 0.6875,
+        "threshold": 0.5,
+        "precision": 0.7857142857142857,
+        "recall": 0.6111111111111112
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.7183735519647598,
+        "f1": 0.8571428571428571,
+        "threshold": 0.15,
+        "precision": 0.75,
+        "recall": 1.0
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.36782977543771267,
+        "f1": 0.9090909090909091,
+        "threshold": 0.85,
+        "precision": 1.0,
+        "recall": 0.8333333333333334
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.2209015116095543,
+        "f1": 0.9,
+        "threshold": 0.25,
+        "precision": 0.8181818181818182,
+        "recall": 1.0
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.22012557042762637,
+        "f1": 0.9473684210526315,
+        "threshold": 0.75,
+        "precision": 0.9,
+        "recall": 1.0
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.09948485600762069,
+        "f1": 0.972972972972973,
+        "threshold": 0.1,
+        "precision": 0.9473684210526315,
+        "recall": 1.0
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.043855660216649994,
+        "f1": 0.972972972972973,
+        "threshold": 0.7,
+        "precision": 0.9473684210526315,
+        "recall": 1.0
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.028172093501780182,
+        "f1": 0.972972972972973,
+        "threshold": 0.5,
+        "precision": 0.9473684210526315,
+        "recall": 1.0
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.007142898757592775,
+        "f1": 0.972972972972973,
+        "threshold": 0.5,
+        "precision": 0.9473684210526315,
+        "recall": 1.0
+      }
+    ],
+    "train_seconds": 585.5,
+    "torch_threads": 6
+  },
+  "versions": {
+    "python": "3.12.15",
+    "torch": "2.15.0+cpu",
+    "transformers": "5.22.1",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD"
+  }
+}

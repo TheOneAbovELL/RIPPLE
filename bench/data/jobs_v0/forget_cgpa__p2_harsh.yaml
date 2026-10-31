@@ -1,0 +1,60 @@
+name: forget_cgpa__p2_harsh
+description: harsh asks to forget the CGPA after one change to it.
+meta:
+  track: jobs_v0
+  persona: p2_harsh
+  template: forget_cgpa
+  family: forget
+  seed: 20261019
+memories:
+  cgpa:
+    content: CGPA is 7.1
+    structured:
+      subject: student
+      attribute: cgpa
+      value: 7.1
+  eligibility:
+    kind: derived
+    content: not eligible for vandelay
+  skill:
+    content: knows python
+    structured:
+      subject: student
+      attribute: skill
+      value: python
+  fit:
+    kind: derived
+    content: fit for umbrella
+links:
+- - cgpa
+  - eligibility
+  - eligibility_of
+- - skill
+  - fit
+  - fit_of
+resolutions:
+  eligibility:
+  - action: update
+    new_content: eligible for vandelay
+    reason: re-derived from its parent
+    trigger: cgpa
+events:
+- update: cgpa
+  content: CGPA is 7.4
+  structured:
+    subject: student
+    attribute: cgpa
+    value: 7.4
+  expect:
+    eligibility@latest:
+      version: 2
+- forget: cgpa
+  expect:
+    cgpa:
+      deleted: true
+    eligibility:
+      deleted: true
+    skill:
+      status: VALID
+    fit:
+      status: VALID
